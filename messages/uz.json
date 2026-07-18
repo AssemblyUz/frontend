@@ -1,0 +1,266 @@
+{
+  "nav": {
+    "home": "Bosh sahifa",
+    "associations": "Uyushmalar",
+    "services": "Xizmatlar",
+    "projects": "Loyihalar",
+    "news": "Yangiliklar",
+    "about": "Biz haqimizda",
+    "contact": "Aloqa"
+  },
+  "theme": {
+    "toLight": "Yorug' rejim",
+    "toDark": "Tungi rejim"
+  },
+  "lang": {
+    "label": "Til"
+  },
+  "home": {
+    "heroBadge": "Yangi O'zbekiston — Yangi Renessans",
+    "heroTitle": "O'zbekiston Iqtisodiyot Assambleyasi",
+    "heroLead": "Birlashib, barqaror iqtisodiyot, innovatsiyalar va inson kapitalini rivojlantirish orqali Yangi O'zbekistonning yangi renessansini barpo etamiz.",
+    "ctaPrimary": "Uyushmalar bilan tanishing",
+    "ctaSecondary": "Xizmatlarni ko'rish",
+    "stats": {
+      "associations": "Uyushma",
+      "projects": "Loyiha",
+      "members": "A'zo",
+      "years": "Yillik tajriba"
+    },
+    "aboutTitle": "Assambleya haqida",
+    "aboutLead": "Milliy iqtisodiy integrator — davlat, biznes, ilm-fan, xalqaro hamkorlar va media imkoniyatlarini bitta natija atrofida birlashtiradi.",
+    "aboutMore": "Batafsil ma'lumot",
+    "assocTitle": "Uyushmalar",
+    "assocLead": "Turli sohalarni qamrab olgan a'zo uyushmalar",
+    "servicesTitle": "Xizmatlar",
+    "servicesLead": "A'zolar va hamkorlar uchun professional xizmatlar",
+    "projectsTitle": "Loyihalar",
+    "projectsLead": "Jamiyat manfaati uchun amalga oshirilayotgan tashabbuslar",
+    "newsTitle": "Yangiliklar",
+    "newsLead": "Assambleya faoliyati, loyihalar va hamkorlik bo'yicha so'nggi xabarlar",
+    "viewAll": "Barchasini ko'rish",
+    "ctaBannerTitle": "Bizga qo'shiling",
+    "ctaBannerLead": "Uyushmangizni ro'yxatdan o'tkazing yoki hamkor bo'ling — birgalikda ko'proq narsaga erishamiz.",
+    "ctaBannerBtn": "Bog'lanish"
+  },
+  "associations": {
+    "title": "Uyushmalar",
+    "lead": "Assembly platformasiga a'zo uyushmalar ro'yxati — turli tarmoq va yo'nalishlar bo'yicha.",
+    "searchPlaceholder": "Uyushma yoki yo'nalish bo'yicha qidirish...",
+    "activityLabel": "Faoliyati",
+    "details": "Batafsil",
+    "noResults": "Hech narsa topilmadi",
+    "unit": "ta uyushma",
+    "backToList": "Barcha uyushmalar",
+    "aboutTitle": "Uyushma haqida",
+    "notFound": "Uyushma topilmadi",
+    "about": "{name} — O'zbekiston Iqtisodiyot Assambleyasi tarkibiga kiruvchi uyushma bo'lib, o'z sohasidagi tashkilotlar va mutaxassislarni birlashtiradi hamda a'zolari manfaatlarini himoya qiladi."
+  },
+  "services": {
+    "title": "Xizmatlar",
+    "lead": "A'zolarimiz va hamkorlarimiz uchun to'liq professional xizmatlar spektri.",
+    "items": [
+      {"icon": "⚖️", "name": "Konsalting va huquqiy yordam", "desc": "Tashkilotni ro'yxatdan o'tkazish, hujjatlar bilan ishlash va yuridik maslahat."},
+      {"icon": "🎓", "name": "Ta'lim va treninglar", "desc": "Malaka oshirish kurslari, seminarlar va sertifikatlangan dasturlar."},
+      {"icon": "💰", "name": "Grant va moliyalashtirish", "desc": "Grant topish, ariza tayyorlash va loyihalarni moliyalashtirishda ko'mak."},
+      {"icon": "🌐", "name": "Networking va tadbirlar", "desc": "Konferensiyalar, forumlar va hamkorlik uchrashuvlarini tashkil etish."},
+      {"icon": "📣", "name": "Media va PR", "desc": "Brend rivoji, ijtimoiy tarmoqlar va ommaviy axborot vositalari bilan ishlash."},
+      {"icon": "🖥️", "name": "Raqamli transformatsiya", "desc": "Veb-saytlar, jarayonlarni avtomatlashtirish va raqamli vositalarni joriy etish."}
+    ]
+  },
+  "projects": {
+    "title": "Loyihalar",
+    "lead": "Assambleyaning 20 ta strategik loyihasi — iqtisodiyot, ta'lim, innovatsiya, media va ijtimoiy rivojlanish yo'nalishlarida.",
+    "visit": "Saytga o'tish",
+    "inDevelopment": "Ishlab chiqilmoqda",
+    "items": [
+      {"icon": "🎓", "name": "EDU-JOB", "desc": "Ta'lim tizimi va mehnat bozorini bog'lovchi platforma. Yoshlarni kasbga yo'naltirish, malaka va amaliyot orqali real ish imkoniyatlariga yetkazadi."},
+      {"icon": "📈", "name": "INVEST HUB", "desc": "Investorlar, loyihalar, moliya institutlari va xizmat ko'rsatuvchilarni yagona ekotizimga birlashtiradi. G'oyalarni kapital va amaliy loyihalarga aylantiradi."},
+      {"icon": "🏙️", "name": "CENTRAL ASIAN SMART CITY", "desc": "Markaziy Osiyoda xalqaro savdo, sanoat, logistika, moliya, R&D va yashash muhitini birlashtiruvchi zamonaviy aqlli shahar konsepsiyasi."},
+      {"icon": "🏭", "name": "TERMIZ INDUSTRIAL HUB", "desc": "Termiz orqali Janubiy Osiyo, Afg'oniston va mintaqaviy bozorlarga chiqishni kuchaytiradi. Eksport, ishlab chiqarish va transchegaraviy savdoni rivojlantiradi."},
+      {"icon": "🧩", "name": "KONGLOMERAT", "desc": "O'zbekistonning yirik, raqobatbardosh va xalqaro bozorlarga chiqa oladigan strategik kompaniyalarini shakllantiradi. Milliy biznesni global darajaga olib chiqadi."},
+      {"icon": "🔬", "name": "R&D HUB", "desc": "Ilmiy tadqiqot, tahlil, texnologiya, innovatsiya va yangi mahsulotlarni ishlab chiqishni qo'llab-quvvatlaydi. Ilm-fan va biznes o'rtasida amaliy ko'prik vazifasini bajaradi."},
+      {"icon": "🕊️", "name": "SOKIN OSMON", "desc": "Dronlar, past balandlikdagi havo hududi va osmon iqtisodiyotini xavfsiz boshqarishga qaratilgan milliy tashabbus. Xavfsizlik, texnologiya va yangi iqtisodiy sektorni birlashtiradi."},
+      {"icon": "🏔️", "name": "CHAQIRIQ", "desc": "Yoshlar, mutaxassislar va tashabbuskor insonlarni milliy maqsadlar atrofida birlashtiradi. Iqtidor, g'oya va harakatni uyg'otuvchi platforma."},
+      {"icon": "🎥", "name": "REPORTAJ GO", "desc": "Jamiyat, iqtisodiyot, islohotlar va real loyihalar haqida tezkor, ochiq va sifatli video-reportajlar tayyorlovchi zamonaviy media platforma."},
+      {"icon": "🌐", "name": "MOEX", "desc": "Xalqaro savdo, eksport-import va B2B hamkorlikni rivojlantiruvchi markaz. O'zbek mahsulotlarini tashqi bozorlarga olib chiqish va savdo jarayonlarini tizimlashtiradi."},
+      {"icon": "👥", "name": "YOSHLAR KAPITALI 2030", "desc": "Yoshlar tadbirkorligi, startaplari, bilim kapitali va innovatsion g'oyalarini moliyaviy hamda institutsional qo'llab-quvvatlovchi milliy rivojlanish dasturi."},
+      {"icon": "👩‍💼", "name": "WOMAN UP", "desc": "Ayollar tadbirkorligi, liderligi, kasbiy rivojlanishi va ijtimoiy faolligini oshirishga qaratilgan platforma. Zamonaviy o'zbek ayolining iqtisodiy salohiyatini kuchaytiradi."},
+      {"icon": "🧓", "name": "OQSOQOLLAR KENGASHI", "desc": "Tajriba, donolik, qadriyat va jamoatchilik ishonchiga tayangan maslahat kengashi. Davlat, jamiyat, yoshlar va katta avlod o'rtasida ishonchli ko'prik yaratadi."},
+      {"icon": "🤝", "name": "IQTISODIY DIPLOMATIYA DEPARTAMENTI", "desc": "Xalqaro tashkilotlar, elchixonalar, investorlar va xorijiy hamkorlar bilan tizimli aloqalarni rivojlantiradi. O'zbekiston manfaatlarini global iqtisodiy maydonda ilgari suradi."},
+      {"icon": "📺", "name": "BIZNES TV", "desc": "Biznes, iqtisodiyot, investitsiya va bozor tahlillarini ommaga sodda, sifatli va professional formatda yetkazuvchi zamonaviy telemedia platforma."},
+      {"icon": "📚", "name": "IQTISODIY ILMIY KENGASH", "desc": "Iqtisodiy siyosat, islohotlar, sanoatlashtirish, investitsiya va strategik loyihalar bo'yicha ilmiy-tahliliy xulosalar ishlab chiqaradi. Ekspertiza va tavsiyalar orqali samarali qarorlarga ko'maklashadi."},
+      {"icon": "🤲", "name": "TAYANCH CHARITABLE TRUST", "desc": "Ijtimoiy himoyaga muhtoj insonlar, ta'lim, sog'liqni saqlash va xayriya tashabbuslarini tizimli qo'llab-quvvatlaydi. Insonparvarlik va ijtimoiy mas'uliyat orqali jamiyatda ijobiy o'zgarishlar yaratadi."},
+      {"icon": "🐫", "name": "YANGI BUYUK IPAK YO'LI", "desc": "O'zbekistonning tarixiy savdo yo'llari, transport-logistika salohiyati, madaniy almashinuv va mintaqaviy iqtisodiy integratsiyasini kuchaytiradi. Mintaqa va dunyoni bog'lovchi strategik loyiha."},
+      {"icon": "📱", "name": "YA GO", "desc": "Yoshlar va aholi uchun zamonaviy mobil xizmatlar, raqamli servislar va qulay yechimlarni birlashtiruvchi innovatsion platforma. Kundalik hayotni oson va samarali qiladi."},
+      {"icon": "💬", "name": "FIKRAT TV", "desc": "Jamiyatdagi muhim masalalar, islohotlar, ekspert fikrlari va strategik g'oyalarni yorituvchi intellektual formatdagi media maydon."}
+    ]
+  },
+  "news": {
+    "title": "Yangiliklar",
+    "lead": "Assambleya faoliyati, strategik loyihalar, hamkorlik va media tashabbuslari bo'yicha so'nggi xabarlar.",
+    "readMore": "Batafsil o'qish",
+    "backToList": "Barcha yangiliklar",
+    "relatedTitle": "Boshqa yangiliklar",
+    "empty": "Hozircha yangiliklar yo'q."
+  },
+  "about": {
+    "title": "Biz haqimizda",
+    "lead": "O'zbekiston Iqtisodiyot Assambleyasi — milliy iqtisodiy integrator: davlat, biznes, ilm-fan, xalqaro hamkorlar va media imkoniyatlarini bitta natija atrofida birlashtiradi.",
+
+    "introTitle": "Assambleya haqida qisqacha",
+    "intro": "2021-yil 10-fevralda rasmiy ro'yxatdan o'tgan jamoatchilik-iqtisodiy platforma. Yaponiyaning Keidanren modelidan ilhomlangan holda, Yangi O'zbekiston iqtisodiy rivojlanishiga amaliy xizmat qilishga qaratilgan.",
+    "principle": "ASOS — inson. MAQSAD — taraqqiyot.",
+    "introNote": "Assambleya tadbirkorlarni, uyushmalarni, davlat organlarini, investorlarni va xalqaro hamkorlarni bitta natijaga yo'naltiruvchi GPPP ekotizim sifatida ishlaydi.",
+    "highlights": [
+      {"value": "50+", "label": "uyushma tarmog'i"},
+      {"value": "20", "label": "asosiy loyiha"},
+      {"value": "FR/BR/PR/GR", "label": "boshqaruv bloklari"},
+      {"value": "AI MediaNet", "label": "yoritish va ta'sir"}
+    ],
+    "roleTitle": "Strategik rol",
+    "role": [
+      "Tadbirkorlar ehtiyojini aniqlash va yechimga ulash",
+      "Davlat dasturlari bilan biznes tashabbuslarini bog'lash",
+      "Investitsiya, eksport, sanoat va innovatsiyani integratsiya qilish",
+      "Jamiyatda iqtisodiy faollik va ishonch yaratish"
+    ],
+
+    "missionSectionTitle": "Missiya va asosiy maqsad",
+    "missionSectionLead": "Missiya — nima uchun mavjudmiz. Maqsad — qaysi natijaga xizmat qilamiz.",
+    "missionTitle": "Missiya",
+    "mission": "O'zbekiston iqtisodiyotini rivojlantirish, tadbirkorlarni qo'llab-quvvatlash, investitsiya, eksport, sanoat, innovatsiya va inson kapitalini rivojlantirish orqali Yangi O'zbekistonning iqtisodiy renessansiga hissa qo'shish.",
+    "goalTitle": "Asosiy maqsad",
+    "goal": "O'zbekistonni Markaziy Osiyodagi yirik iqtisodiy, sanoat, savdo, investitsion va innovatsion markazga aylantirishda amaliy integratsion platforma bo'lish.",
+    "goalNote": "Maqsad faqat konsepsiya emas — u 50 ta uyushma, 20 ta loyiha, FR/BR/PR/GR tizimi va AI MediaNet orqali amaliy mexanizmga aylantiriladi.",
+
+    "valuesTitle": "Qadriyatlar",
+    "valuesLead": "Assambleya faoliyatini yo'naltiruvchi beshta tayanch",
+    "values": [
+      {"title": "Birlashuv", "sub": "kuch"},
+      {"title": "Innovatsiya", "sub": "rivojlanish"},
+      {"title": "Investitsiya", "sub": "kelajak"},
+      {"title": "Hamkorlik", "sub": "imkoniyat"},
+      {"title": "Renessans", "sub": "yuksalish"}
+    ],
+
+    "directionsTitle": "Ustuvor yo'nalishlar",
+    "directionsLead": "Assambleya faoliyatining asosiy tayanch yo'nalishlari",
+    "directions": ["Ta'lim", "Innovatsiya", "Investitsiya", "Sanoat", "Fan", "Texnologiya", "Ijtimoiy rivojlanish", "Xalqaro hamkorlik"],
+
+    "architectureTitle": "Strategik arxitektura",
+    "architectureLead": "GPPP: Government – Public – Private Partnership asosidagi iqtisodiy integratsiya",
+    "coreTitle": "Assambleya",
+    "coreSub": "Milliy iqtisodiy integrator",
+    "architecture": [
+      {"title": "Davlat", "desc": "strategiya va qo'llov"},
+      {"title": "Biznes", "desc": "tadbirkor va kapital"},
+      {"title": "Ilm-fan", "desc": "tahlil va innovatsiya"},
+      {"title": "Jamoatchilik", "desc": "ishonch va ishtirok"},
+      {"title": "Media va AI", "desc": "yoritish va boshqaruv"},
+      {"title": "Xalqaro hamkorlar", "desc": "investor va texnologiya"}
+    ],
+    "architectureNote": "Assambleya barcha iqtisodiy kuchlarni yagona milliy natijaga yo'naltiradi.",
+
+    "mechanismTitle": "Assambleyaning ishlash mexanizmi",
+    "mechanismLead": "Uzluksiz aylanma: ehtiyoj — yechim — yoritish — ishonch — yangi ishtirokchilar",
+    "mechanism": [
+      {"title": "50 ta uyushma", "desc": "Tadbirkorlar bilan bevosita aloqa"},
+      {"title": "Ehtiyojlar", "desc": "Muammo va takliflarni yig'ish"},
+      {"title": "Loyihalar", "desc": "Amaliy xizmatlar va yechimlar"},
+      {"title": "FR/BR/PR/GR", "desc": "Tizimli qo'llab-quvvatlash"},
+      {"title": "AI MediaNet", "desc": "Yoritish va ta'sir"},
+      {"title": "Natija", "desc": "Ishonch va yangi imkoniyat"}
+    ],
+    "formulaTitle": "Asosiy formula",
+    "formula": "50 ta uyushma tadbirkorni olib keladi, Assambleya loyihalari unga xizmat qiladi, FR xalqaro imkoniyat beradi, BR biznesni ulaydi, GR davlat bilan muvofiqlashtiradi, PR va AI MediaNet esa natijani xalqqa ko'rsatadi.",
+
+    "blocksTitle": "FR / BR / PR / GR — to'rt funksional qanot",
+    "blocksLead": "Har bir loyiha shu bloklar orqali xalqaro, biznes, jamoatchilik va davlat imkoniyatlariga ulanadi",
+    "blocks": [
+      {"code": "FR", "title": "Foreign Relations", "desc": "Xalqaro hamkorlar, investorlar, elchixonalar, xorijiy kompaniyalar va moliya institutlari bilan aloqalar."},
+      {"code": "BR", "title": "Business Relations", "desc": "Tadbirkorlar, kompaniyalar, uyushmalar, investorlar va xizmat ko'rsatuvchi tashkilotlar bilan ishlash."},
+      {"code": "PR", "title": "Public Relations", "desc": "Jamoatchilik, media, brend, ijtimoiy ishonch, Chaqiriq va Reportaj GO orqali kommunikatsiya."},
+      {"code": "GR", "title": "Government Relations", "desc": "Vazirliklar, agentliklar, hokimliklar, strategik dasturlar va davlat bilan muvofiqlashtirish."}
+    ],
+
+    "mediaTitle": "AI MediaNet — yoritish, tahlil va ta'sir qatlami",
+    "mediaLead": "Assambleya natijalari ijtimoiy tarmoqlar, media va AI yordamida ko'rinadigan kapitalga aylanadi",
+    "mediaTagline": "Kontent reja • monitoring • ijtimoiy ishonch • media ta'sir • liderlar va uyushmalar sahifalari",
+    "mediaSummary": "AI MediaNet Assambleya faoliyatini faqat yoritmaydi — auditoriya kayfiyati, kontent samaradorligi va iqtisodiy ishonchni ham kuzatadi.",
+    "media": [
+      {"title": "Loyihalar yoritilishi", "desc": "Har bir loyiha bo'yicha doimiy kontent oqimi"},
+      {"title": "Tadbirkor hikoyalari", "desc": "Real muvaffaqiyatlarni ko'rsatish"},
+      {"title": "FR/BR/PR/GR natijalari", "desc": "Ishonch va shaffoflik"},
+      {"title": "Tahlil va monitoring", "desc": "Qaysi mavzu ta'sirli ekanini aniqlash"},
+      {"title": "Brend kapitali", "desc": "Assambleya obro'sini oshirish"}
+    ],
+
+    "partnersTitle": "Hamkorlar ekotizimi",
+    "partnersLead": "Davlat, xalqaro moliya institutlari, banklar, konsalting va texnologik kompaniyalar bilan integratsiya",
+    "partners": [
+      {"title": "Davlat hamkorlari", "items": ["Vazirliklar va idoralar", "Agentliklar", "Hokimliklar", "Strategik markazlar", "Oliy Majlis va Senat"]},
+      {"title": "Xalqaro moliya institutlari", "items": ["EBRD", "ADB", "IsDB", "UzDIF", "UzVC"]},
+      {"title": "Bank va moliya hamkorlari", "items": ["OTP / Ipoteka Bank", "TBC Bank", "Apexbank", "Uzbeklizing"]},
+      {"title": "Konsalting hamkorlari", "items": ["KPMG", "Solvex Consulting", "Specto Consulting"]},
+      {"title": "Texnologik hamkorlar", "items": ["Huawei", "Samsung C&T", "JDI", "Arup", "Parsons"]}
+    ],
+
+    "valueTitle": "Natija: davlat, biznes, investor va jamiyat uchun qiymat",
+    "valueLead": "Har bir manfaatdor tomon uchun alohida foyda, lekin umumiy natija — barqaror iqtisodiy o'sish",
+    "valueItems": [
+      {"title": "Davlat uchun", "desc": "Tadbirkor muammolarini tizimli ko'rish, strategik dasturlarni biznes ehtiyojlari bilan bog'lash, iqtisodiy faollikni oshirish."},
+      {"title": "Tadbirkor uchun", "desc": "Investitsiya, eksport, kadr, media, konsalting, davlat bilan ishlash va xalqaro hamkorlikka chiqish imkoniyati."},
+      {"title": "Investor uchun", "desc": "Ishonchli kompaniyalar, tayyor loyihalar, hamkorlik kanali va lokal ekotizimga kirish nuqtasi."},
+      {"title": "Jamiyat uchun", "desc": "Yangi ish o'rinlari, iqtisodiy optimizm, yoshlar va ayollar faolligi, innovatsion muhit va ijtimoiy ishonch."}
+    ],
+
+    "roadmapTitle": "Yo'l xaritasi va KPI",
+    "roadmapLead": "Assambleya mexanizmini amaliy boshqaruv tizimiga aylantirish uchun o'lchanadigan natijalar",
+    "roadmap": [
+      {"period": "0–90 kun", "title": "CRM va xizmatlar katalogi", "desc": "Uyushmalar bazasi, tadbirkor ehtiyojlari va loyihalar kesimida xizmatlar paketi."},
+      {"period": "6 oy", "title": "Hamkorlik va portfel", "desc": "Investorlar, banklar, konsalting va texnologik hamkorlar bilan amaliy loyihalar."},
+      {"period": "12 oy", "title": "Natija va ta'sir", "desc": "Tadbirkorlar uchun real yechimlar, media yoritish, davlat va xalqaro ishonch."}
+    ],
+    "kpiTitle": "Asosiy ko'rsatkichlar",
+    "kpi": [
+      {"value": "50+", "label": "Uyushmalar"},
+      {"value": "10 000+", "label": "Tadbirkorlar bazasi"},
+      {"value": "20", "label": "Loyihalar portfeli"},
+      {"value": "100+", "label": "Hamkorlar"},
+      {"value": "doimiy", "label": "Media qamrov"},
+      {"value": "$ mlrd+", "label": "Investitsiya oqimi"}
+    ],
+
+    "resultsTitle": "Natijamiz",
+    "results": [
+      {"title": "Barqaror iqtisodiyot", "desc": "Raqobatbardosh, diversifikatsiyalangan va o'sib boruvchi milliy iqtisodiyot."},
+      {"title": "Farovon jamiyat", "desc": "Fuqarolar farovonligi va imkoniyatlar tengligiga asoslangan jamiyat."},
+      {"title": "Yangi renessans", "desc": "Ilm, madaniyat va tadbirkorlik gullab-yashnaydigan Yangi O'zbekiston."}
+    ],
+    "motto": "Bir maqsad — bir yo'l — bir kelajak!",
+    "slogan": "Buyuk kelajakni birga quramiz!"
+  },
+  "contact": {
+    "title": "Aloqa",
+    "lead": "Savol, taklif yoki hamkorlik bo'yicha biz bilan bog'laning.",
+    "addressTitle": "Manzil",
+    "phoneTitle": "Telefon",
+    "emailTitle": "Email",
+    "mapTitle": "Xaritada",
+    "socialTitle": "Ijtimoiy tarmoqlar",
+    "socialSoon": "Havolalar tez orada qo'shiladi",
+    "formTitle": "Xabar yuborish",
+    "formName": "Ismingiz",
+    "formEmail": "Email",
+    "formMessage": "Xabaringiz",
+    "formSubmit": "Yuborish",
+    "formNote": "\"Yuborish\" tugmasi orqali xabaringiz elektron pochtamizga jo'natiladi."
+  },
+  "footer": {
+    "about": "O'zbekiston Iqtisodiyot Assambleyasi — barqaror iqtisodiyot, innovatsiya va inson kapitalini rivojlantiruvchi platforma.",
+    "sections": "Bo'limlar",
+    "contact": "Aloqa",
+    "rights": "Barcha huquqlar himoyalangan."
+  }
+}

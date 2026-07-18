@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+/* Class-based dark mode: `dark:` utilities apply when <html class="dark"> */
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: #f8fafc;
+  --surface: #ffffff;
+  --card: #ffffff;
+  --foreground: #0f172a;
+  --muted: #64748b;
+  --border: #e2e8f0;
+  --brand: #4f46e5;
+  --brand-strong: #4338ca;
+  --brand-fg: #ffffff;
+  --accent: #0ea5e9;
+  --ring: rgba(79, 70, 229, 0.35);
+}
+
+.dark {
+  --background: #070b16;
+  --surface: #0d1424;
+  --card: #0f172a;
+  --foreground: #e5e9f2;
+  --muted: #94a3b8;
+  --border: #1e293b;
+  --brand: #818cf8;
+  --brand-strong: #a5b4fc;
+  --brand-fg: #0b1020;
+  --accent: #38bdf8;
+  --ring: rgba(129, 140, 248, 0.4);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border-base: var(--border);
+  --color-brand: var(--brand);
+  --color-brand-strong: var(--brand-strong);
+  --color-brand-fg: var(--brand-fg);
+  --color-accent: var(--accent);
+  --font-sans: var(--font-sans), system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+::selection {
+  background: var(--brand);
+  color: var(--brand-fg);
+}

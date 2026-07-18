@@ -1,0 +1,266 @@
+{
+  "nav": {
+    "home": "Home",
+    "associations": "Associations",
+    "services": "Services",
+    "projects": "Projects",
+    "news": "News",
+    "about": "About us",
+    "contact": "Contact"
+  },
+  "theme": {
+    "toLight": "Light mode",
+    "toDark": "Dark mode"
+  },
+  "lang": {
+    "label": "Language"
+  },
+  "home": {
+    "heroBadge": "New Uzbekistan — New Renaissance",
+    "heroTitle": "Uzbekistan Economy Assembly",
+    "heroLead": "By uniting, we build the new renaissance of New Uzbekistan through the development of a sustainable economy, innovation and human capital.",
+    "ctaPrimary": "Explore associations",
+    "ctaSecondary": "View services",
+    "stats": {
+      "associations": "Associations",
+      "projects": "Projects",
+      "members": "Members",
+      "years": "Years of experience"
+    },
+    "aboutTitle": "About the Assembly",
+    "aboutLead": "A national economic integrator — it brings the capabilities of government, business, science, international partners and media together around a single result.",
+    "aboutMore": "Learn more about us",
+    "assocTitle": "Associations",
+    "assocLead": "Member associations spanning diverse fields",
+    "servicesTitle": "Services",
+    "servicesLead": "Professional services for members and partners",
+    "projectsTitle": "Projects",
+    "projectsLead": "Initiatives carried out for the benefit of society",
+    "newsTitle": "News",
+    "newsLead": "The latest on the Assembly's work, its projects and its partnerships",
+    "viewAll": "View all",
+    "ctaBannerTitle": "Join us",
+    "ctaBannerLead": "Register your association or become a partner — together we achieve more.",
+    "ctaBannerBtn": "Get in touch"
+  },
+  "associations": {
+    "title": "Associations",
+    "lead": "The directory of associations that are members of the Assembly platform across various industries and fields.",
+    "searchPlaceholder": "Search by name or field...",
+    "activityLabel": "Field",
+    "details": "Details",
+    "noResults": "Nothing found",
+    "unit": "associations",
+    "backToList": "All associations",
+    "aboutTitle": "About the association",
+    "notFound": "Association not found",
+    "about": "{name} is a member association of the Uzbekistan Economy Assembly. It unites organisations and professionals in its field and protects the interests of its members."
+  },
+  "services": {
+    "title": "Services",
+    "lead": "A full range of professional services for our members and partners.",
+    "items": [
+      {"icon": "⚖️", "name": "Consulting & legal support", "desc": "Organisation registration, document handling and legal advice."},
+      {"icon": "🎓", "name": "Education & training", "desc": "Professional development courses, seminars and certified programmes."},
+      {"icon": "💰", "name": "Grants & funding", "desc": "Finding grants, preparing applications and support with project funding."},
+      {"icon": "🌐", "name": "Networking & events", "desc": "Organising conferences, forums and partnership meetings."},
+      {"icon": "📣", "name": "Media & PR", "desc": "Brand development, social media and work with mass media."},
+      {"icon": "🖥️", "name": "Digital transformation", "desc": "Websites, process automation and adoption of digital tools."}
+    ]
+  },
+  "projects": {
+    "title": "Projects",
+    "lead": "The Assembly's 20 strategic projects across economy, education, innovation, media and social development.",
+    "visit": "Visit site",
+    "inDevelopment": "In development",
+    "items": [
+      {"icon": "🎓", "name": "EDU-JOB", "desc": "A platform connecting the education system and the labour market. Guides youth into careers and brings them to real jobs through skills and practice."},
+      {"icon": "📈", "name": "INVEST HUB", "desc": "Brings investors, projects, financial institutions and service providers into a single ecosystem. Turns ideas into capital and practical projects."},
+      {"icon": "🏙️", "name": "CENTRAL ASIAN SMART CITY", "desc": "A modern smart-city concept uniting international trade, industry, logistics, finance, R&D and living environment in Central Asia."},
+      {"icon": "🏭", "name": "TERMIZ INDUSTRIAL HUB", "desc": "Strengthens access to South Asia, Afghanistan and regional markets through Termez. Develops export, manufacturing and cross-border trade."},
+      {"icon": "🧩", "name": "KONGLOMERAT", "desc": "Builds large, competitive strategic companies of Uzbekistan able to enter international markets. Takes national business to the global level."},
+      {"icon": "🔬", "name": "R&D HUB", "desc": "Supports scientific research, analysis, technology, innovation and new-product development. Acts as a practical bridge between science and business."},
+      {"icon": "🕊️", "name": "SOKIN OSMON", "desc": "A national initiative for the safe management of drones, low-altitude airspace and the sky economy. Unites security, technology and a new economic sector."},
+      {"icon": "🏔️", "name": "CHAQIRIQ", "desc": "Unites youth, professionals and proactive people around national goals. A platform that awakens talent, ideas and action."},
+      {"icon": "🎥", "name": "REPORTAJ GO", "desc": "A modern media platform producing fast, open and high-quality video reports on society, the economy, reforms and real projects."},
+      {"icon": "🌐", "name": "MOEX", "desc": "A hub developing international trade, export-import and B2B cooperation. Brings Uzbek products to foreign markets and systematises trade processes."},
+      {"icon": "👥", "name": "YOSHLAR KAPITALI 2030", "desc": "A national development programme providing financial and institutional support for youth entrepreneurship, startups, knowledge capital and innovative ideas."},
+      {"icon": "👩‍💼", "name": "WOMAN UP", "desc": "A platform to advance women's entrepreneurship, leadership, professional growth and social activity. Strengthens the economic potential of the modern Uzbek woman."},
+      {"icon": "🧓", "name": "OQSOQOLLAR KENGASHI", "desc": "An advisory council grounded in experience, wisdom, values and public trust. Builds a reliable bridge between the state, society, youth and the older generation."},
+      {"icon": "🤝", "name": "IQTISODIY DIPLOMATIYA DEPARTAMENTI", "desc": "Develops systematic ties with international organisations, embassies, investors and foreign partners. Advances Uzbekistan's interests in the global economic arena."},
+      {"icon": "📺", "name": "BIZNES TV", "desc": "A modern tele-media platform delivering business, economic, investment and market analysis to the public in a simple, high-quality and professional format."},
+      {"icon": "📚", "name": "IQTISODIY ILMIY KENGASH", "desc": "Produces scientific and analytical conclusions on economic policy, reforms, industrialisation, investment and strategic projects. Supports effective decisions through expertise and recommendations."},
+      {"icon": "🤲", "name": "TAYANCH CHARITABLE TRUST", "desc": "Systematically supports vulnerable people, education, healthcare and charitable initiatives. Creates positive change in society through humanity and social responsibility."},
+      {"icon": "🐫", "name": "YANGI BUYUK IPAK YO'LI", "desc": "Strengthens Uzbekistan's historic trade routes, transport-logistics potential, cultural exchange and regional economic integration. A strategic project connecting the region and the world."},
+      {"icon": "📱", "name": "YA GO", "desc": "An innovative platform uniting modern mobile services, digital services and convenient solutions for youth and the public. Makes daily life easy and efficient."},
+      {"icon": "💬", "name": "FIKRAT TV", "desc": "An intellectual-format media space covering important social issues, reforms, expert opinions and strategic ideas."}
+    ]
+  },
+  "news": {
+    "title": "News",
+    "lead": "The latest on the Assembly's work, its strategic projects, partnerships and media initiatives.",
+    "readMore": "Read more",
+    "backToList": "All news",
+    "relatedTitle": "More news",
+    "empty": "There is no news yet."
+  },
+  "about": {
+    "title": "About us",
+    "lead": "The Uzbekistan Economy Assembly is a national economic integrator: it brings the capabilities of government, business, science, international partners and media together around a single result.",
+
+    "introTitle": "The Assembly in brief",
+    "intro": "A public-economic platform officially registered on 10 February 2021. Inspired by Japan's Keidanren model, it exists to serve the economic development of New Uzbekistan in practical terms.",
+    "principle": "THE FOUNDATION is people. THE GOAL is progress.",
+    "introNote": "The Assembly operates as a GPPP ecosystem that directs entrepreneurs, associations, government bodies, investors and international partners towards a single result.",
+    "highlights": [
+      {"value": "50+", "label": "association network"},
+      {"value": "20", "label": "core projects"},
+      {"value": "FR/BR/PR/GR", "label": "governance blocks"},
+      {"value": "AI MediaNet", "label": "coverage and impact"}
+    ],
+    "roleTitle": "Strategic role",
+    "role": [
+      "Identifying entrepreneurs' needs and connecting them to solutions",
+      "Linking government programmes with business initiatives",
+      "Integrating investment, export, industry and innovation",
+      "Building economic activity and trust across society"
+    ],
+
+    "missionSectionTitle": "Mission and main goal",
+    "missionSectionLead": "The mission is why we exist. The goal is the result we serve.",
+    "missionTitle": "Mission",
+    "mission": "To contribute to the economic renaissance of New Uzbekistan by developing the country's economy and supporting entrepreneurs, investment, export, industry, innovation and human capital.",
+    "goalTitle": "Main goal",
+    "goal": "To be the practical integration platform that turns Uzbekistan into a major economic, industrial, trade, investment and innovation centre of Central Asia.",
+    "goalNote": "The goal is not merely a concept — it becomes a working mechanism through 50 associations, 20 projects, the FR/BR/PR/GR system and AI MediaNet.",
+
+    "valuesTitle": "Values",
+    "valuesLead": "The five pillars that guide the Assembly's work",
+    "values": [
+      {"title": "Unity", "sub": "strength"},
+      {"title": "Innovation", "sub": "growth"},
+      {"title": "Investment", "sub": "future"},
+      {"title": "Partnership", "sub": "opportunity"},
+      {"title": "Renaissance", "sub": "ascent"}
+    ],
+
+    "directionsTitle": "Priority directions",
+    "directionsLead": "The key pillars of the Assembly's work",
+    "directions": ["Education", "Innovation", "Investment", "Industry", "Science", "Technology", "Social development", "International cooperation"],
+
+    "architectureTitle": "Strategic architecture",
+    "architectureLead": "GPPP: economic integration built on Government – Public – Private Partnership",
+    "coreTitle": "Assembly",
+    "coreSub": "National economic integrator",
+    "architecture": [
+      {"title": "Government", "desc": "strategy and support"},
+      {"title": "Business", "desc": "entrepreneurs and capital"},
+      {"title": "Science", "desc": "analysis and innovation"},
+      {"title": "Public", "desc": "trust and participation"},
+      {"title": "Media & AI", "desc": "coverage and management"},
+      {"title": "International partners", "desc": "investors and technology"}
+    ],
+    "architectureNote": "The Assembly directs every economic force towards one national result.",
+
+    "mechanismTitle": "How the Assembly works",
+    "mechanismLead": "A continuous cycle: need — solution — coverage — trust — new participants",
+    "mechanism": [
+      {"title": "50 associations", "desc": "Direct contact with entrepreneurs"},
+      {"title": "Needs", "desc": "Collecting problems and proposals"},
+      {"title": "Projects", "desc": "Practical services and solutions"},
+      {"title": "FR/BR/PR/GR", "desc": "Systematic support"},
+      {"title": "AI MediaNet", "desc": "Coverage and impact"},
+      {"title": "Result", "desc": "Trust and new opportunity"}
+    ],
+    "formulaTitle": "The core formula",
+    "formula": "The 50 associations bring in the entrepreneur, the Assembly's projects serve them, FR opens international opportunity, BR connects business, GR aligns with government, and PR together with AI MediaNet shows the result to the public.",
+
+    "blocksTitle": "FR / BR / PR / GR — four functional wings",
+    "blocksLead": "Every project connects to international, business, public and government opportunity through these blocks",
+    "blocks": [
+      {"code": "FR", "title": "Foreign Relations", "desc": "Relations with international partners, investors, embassies, foreign companies and financial institutions."},
+      {"code": "BR", "title": "Business Relations", "desc": "Working with entrepreneurs, companies, associations, investors and service organisations."},
+      {"code": "PR", "title": "Public Relations", "desc": "Communication with the public and media: brand, social trust, and the Chaqiriq and Reportaj GO projects."},
+      {"code": "GR", "title": "Government Relations", "desc": "Ministries, agencies, regional administrations, strategic programmes and coordination with the state."}
+    ],
+
+    "mediaTitle": "AI MediaNet — the coverage, analysis and impact layer",
+    "mediaLead": "The Assembly's results become visible capital through social networks, media and artificial intelligence",
+    "mediaTagline": "Content plan • monitoring • social trust • media impact • pages for leaders and associations",
+    "mediaSummary": "AI MediaNet does more than cover the Assembly's work — it also tracks audience sentiment, content performance and the level of economic confidence.",
+    "media": [
+      {"title": "Project coverage", "desc": "A steady content stream for every project"},
+      {"title": "Entrepreneur stories", "desc": "Showing real achievements"},
+      {"title": "FR/BR/PR/GR outcomes", "desc": "Trust and transparency"},
+      {"title": "Analysis and monitoring", "desc": "Identifying which topics have real impact"},
+      {"title": "Brand capital", "desc": "Strengthening the Assembly's reputation"}
+    ],
+
+    "partnersTitle": "Partner ecosystem",
+    "partnersLead": "Integration with government, international financial institutions, banks, consulting firms and technology companies",
+    "partners": [
+      {"title": "Government partners", "items": ["Ministries and departments", "Agencies", "Regional administrations", "Strategic centres", "Oliy Majlis and Senate"]},
+      {"title": "International financial institutions", "items": ["EBRD", "ADB", "IsDB", "UzDIF", "UzVC"]},
+      {"title": "Banking and finance partners", "items": ["OTP / Ipoteka Bank", "TBC Bank", "Apexbank", "Uzbekleasing"]},
+      {"title": "Consulting partners", "items": ["KPMG", "Solvex Consulting", "Specto Consulting"]},
+      {"title": "Technology partners", "items": ["Huawei", "Samsung C&T", "JDI", "Arup", "Parsons"]}
+    ],
+
+    "valueTitle": "The result: value for government, business, investors and society",
+    "valueLead": "Each stakeholder gains something distinct, but the shared outcome is sustainable economic growth",
+    "valueItems": [
+      {"title": "For government", "desc": "A systematic view of entrepreneurs' problems, strategic programmes tied to real business needs, and greater economic activity."},
+      {"title": "For entrepreneurs", "desc": "Access to investment, export, talent, media, consulting, work with the state and entry into international cooperation."},
+      {"title": "For investors", "desc": "Reliable companies, ready projects, a partnership channel and an entry point into the local ecosystem."},
+      {"title": "For society", "desc": "New jobs, economic optimism, active youth and women, an innovative environment and social trust."}
+    ],
+
+    "roadmapTitle": "Roadmap and KPIs",
+    "roadmapLead": "Measurable results that turn the Assembly's mechanism into a working management system",
+    "roadmap": [
+      {"period": "0–90 days", "title": "CRM and service catalogue", "desc": "A register of associations, entrepreneurs' needs and a service package for each project."},
+      {"period": "6 months", "title": "Partnerships and portfolio", "desc": "Practical projects with investors, banks, consulting firms and technology partners."},
+      {"period": "12 months", "title": "Results and impact", "desc": "Real solutions for entrepreneurs, media coverage, and the trust of government and international partners."}
+    ],
+    "kpiTitle": "Key indicators",
+    "kpi": [
+      {"value": "50+", "label": "Associations"},
+      {"value": "10,000+", "label": "Entrepreneur base"},
+      {"value": "20", "label": "Project portfolio"},
+      {"value": "100+", "label": "Partners"},
+      {"value": "continuous", "label": "Media coverage"},
+      {"value": "$ bn+", "label": "Investment flow"}
+    ],
+
+    "resultsTitle": "Our result",
+    "results": [
+      {"title": "Sustainable economy", "desc": "A competitive, diversified and growing national economy."},
+      {"title": "Prosperous society", "desc": "A society built on citizens' wellbeing and equal opportunity."},
+      {"title": "New renaissance", "desc": "A New Uzbekistan where science, culture and entrepreneurship flourish."}
+    ],
+    "motto": "One goal — one path — one future!",
+    "slogan": "Let us build a great future together!"
+  },
+  "contact": {
+    "title": "Contact",
+    "lead": "Get in touch with us for questions, suggestions or cooperation.",
+    "addressTitle": "Address",
+    "phoneTitle": "Phone",
+    "emailTitle": "Email",
+    "mapTitle": "On the map",
+    "socialTitle": "Social networks",
+    "socialSoon": "Links will be added soon",
+    "formTitle": "Send a message",
+    "formName": "Your name",
+    "formEmail": "Email",
+    "formMessage": "Your message",
+    "formSubmit": "Send",
+    "formNote": "The \"Send\" button will forward your message to our email."
+  },
+  "footer": {
+    "about": "The Uzbekistan Economy Assembly — a platform for developing a sustainable economy, innovation and human capital.",
+    "sections": "Sections",
+    "contact": "Contact",
+    "rights": "All rights reserved."
+  }
+}
