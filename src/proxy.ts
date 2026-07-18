@@ -5,5 +5,5 @@ export default createMiddleware(routing);
 
 export const config = {
   // Skip Next.js internals, API routes and static assets
-  matcher: ['/((?!api|_next|_vercel|.*\\..*).*)'],
+  matcher: ['/((?!api|healthz|_next|_vercel|.*\\..*).*)'],
 };
