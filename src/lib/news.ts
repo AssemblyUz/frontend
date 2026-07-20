@@ -15,6 +15,16 @@ export type {LocalizedNewsItem};
  * translatable field arrives as a plain string. `dateLabel` is the one field
  * the backend does not send — it is derived here via `formatNewsDate`.
  */
+/** How wide a photo renders, chosen per photo by the editor. */
+export type PhotoSize = 'full' | 'half' | 'thumb';
+
+export type ArticlePhoto = {
+  /** Absolute when MEDIA_BASE_URL is configured, relative in local dev. */
+  url: string;
+  size: PhotoSize;
+  alt: string;
+};
+
 type ArticleResponse = {
   slug: string;
   date: string;
@@ -22,8 +32,11 @@ type ArticleResponse = {
   tag: string;
   title: string;
   excerpt: string;
+  /** First photo, or null. Present on both endpoints. */
+  cover?: ArticlePhoto | null;
   /** Absent on the list endpoint, which serialises the card shape only. */
   body?: string[];
+  images?: ArticlePhoto[];
 };
 
 function localize(article: ArticleResponse, locale: string): LocalizedNewsItem {
@@ -36,6 +49,8 @@ function localize(article: ArticleResponse, locale: string): LocalizedNewsItem {
     title: article.title,
     excerpt: article.excerpt,
     body: article.body ?? [],
+    cover: article.cover ?? null,
+    images: article.images ?? [],
   };
 }
 

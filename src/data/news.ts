@@ -22,6 +22,12 @@ export type LocalizedNewsItem = {
   title: string;
   excerpt: string;
   body: string[];
+  /**
+   * Photos come from the database only. The fallback posts in this file have
+   * none, so a card falls back to its emoji chip when the API is unreachable.
+   */
+  cover?: {url: string; size: 'full' | 'half' | 'thumb'; alt: string} | null;
+  images?: {url: string; size: 'full' | 'half' | 'thumb'; alt: string}[];
 };
 
 /**
