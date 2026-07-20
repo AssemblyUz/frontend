@@ -2,24 +2,28 @@ import type {Metadata} from 'next';
 import {notFound} from 'next/navigation';
 import {getTranslations, setRequestLocale} from 'next-intl/server';
 import {Link} from '@/i18n/navigation';
-import {routing} from '@/i18n/routing';
 import NewsCard from '@/components/NewsCard';
-import {getNews, getNewsItem, allNewsSlugs} from '@/data/news';
+import {getNews, getNewsItem} from '@/lib/news';
 
 const RELATED_COUNT = 3;
 
-export function generateStaticParams() {
-  const slugs = allNewsSlugs();
-  return routing.locales.flatMap((locale) => slugs.map((slug) => ({locale, slug})));
-}
-
+/**
+ * No `generateStaticParams`: the set of posts lives in the database and the
+ * production image is built without a reachable API, so there is nothing to
+ * enumerate at build time.
+ *
+ * The route is therefore server-rendered on demand — this component re-runs on
+ * every request. What bounds the load on Django is the Next.js Data Cache: the
+ * API response is reused for `REVALIDATE_SECONDS`, which is also what lets an
+ * editor publish without a redeploy.
+ */
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{locale: string; slug: string}>;
 }): Promise<Metadata> {
   const {locale, slug} = await params;
-  const item = getNewsItem(slug, locale);
+  const item = await getNewsItem(slug, locale);
   if (!item) return {};
   return {title: item.title, description: item.excerpt};
 }
@@ -31,13 +35,13 @@ export default async function NewsDetailPage({
 }) {
   const {locale, slug} = await params;
   setRequestLocale(locale);
-  const item = getNewsItem(slug, locale);
+  // Both in flight at once: awaiting them in sequence doubles the worst case to
+  // two full API timeouts when the backend is wedged rather than down.
+  const [item, all] = await Promise.all([getNewsItem(slug, locale), getNews(locale)]);
   if (!item) notFound();
 
   const t = await getTranslations('news');
-  const related = getNews(locale)
-    .filter((n) => n.slug !== item.slug)
-    .slice(0, RELATED_COUNT);
+  const related = all.filter((n) => n.slug !== item.slug).slice(0, RELATED_COUNT);
 
   return (
     <>

@@ -25,14 +25,16 @@ export type LocalizedNewsItem = {
 };
 
 /**
- * News and announcements shown on the home page and under /yangiliklar.
+ * Last known good posts, used only when the API is unreachable.
  *
- * There is no CMS behind this site — publishing a post means adding an entry to
- * this array. Order here does not matter; `getNews()` sorts newest first.
+ * Django owns the news now — editors publish under "Articles" in the admin and
+ * the site reads `/api/v1/news/` through `lib/news.ts`. This array is the same
+ * kind of degraded-mode fallback `data/social.ts` provides for `lib/site.ts`:
+ * a backend outage renders a stale page instead of an empty one.
  *
- * The seed posts below are written from the Assembly's own presentation deck so
- * the section renders with real copy. Their `date` values are placeholders —
- * replace them, and the posts themselves, with actual announcements.
+ * These are the posts the database was seeded from, written from the Assembly's
+ * own presentation deck. Do NOT publish here — an entry added to this array is
+ * invisible whenever the API is up, which is almost always.
  */
 export const news: NewsItem[] = [
   {
@@ -193,9 +195,4 @@ export function getNews(locale: string): LocalizedNewsItem[] {
 export function getNewsItem(slug: string, locale: string): LocalizedNewsItem | undefined {
   const item = news.find((n) => n.slug === slug);
   return item ? localize(item, locale) : undefined;
-}
-
-/** All post slugs — for generateStaticParams. */
-export function allNewsSlugs(): string[] {
-  return news.map((n) => n.slug);
 }

@@ -1,5 +1,5 @@
 import {Link} from '@/i18n/navigation';
-import type {LocalizedNewsItem} from '@/data/news';
+import type {LocalizedNewsItem} from '@/lib/news';
 
 export default function NewsCard({item, readMore}: {item: LocalizedNewsItem; readMore: string}) {
   return (
