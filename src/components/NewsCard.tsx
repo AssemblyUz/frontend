@@ -5,8 +5,26 @@ export default function NewsCard({item, readMore}: {item: LocalizedNewsItem; rea
   return (
     <Link
       href={`/yangiliklar/${item.slug}`}
-      className="group flex flex-col rounded-2xl border border-border-base bg-card p-6 transition hover:border-brand hover:shadow-lg"
+      className="group flex flex-col overflow-hidden rounded-2xl border border-border-base bg-card transition hover:border-brand hover:shadow-lg"
     >
+      {item.cover && (
+        // Fixed aspect box so a card's height does not depend on the photo the
+        // editor happened to upload, and the grid stays aligned.
+        <div className="aspect-[16/9] overflow-hidden bg-surface">
+          {/* eslint-disable-next-line @next/next/no-img-element -- matches Logo.tsx;
+              the project has no next/image config for the media host. */}
+          <img
+            src={item.cover.url}
+            alt={item.cover.alt}
+            loading="lazy"
+            width={640}
+            height={360}
+            className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
+          />
+        </div>
+      )}
+
+      <div className="flex flex-1 flex-col p-6">
       <div className="flex items-center gap-3">
         <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand/10 text-2xl">
           {item.icon}
@@ -29,6 +47,7 @@ export default function NewsCard({item, readMore}: {item: LocalizedNewsItem; rea
       <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-brand transition-all group-hover:gap-2.5">
         {readMore} →
       </span>
+      </div>
     </Link>
   );
 }

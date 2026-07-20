@@ -3,6 +3,7 @@ import {notFound} from 'next/navigation';
 import {getTranslations, setRequestLocale} from 'next-intl/server';
 import {Link} from '@/i18n/navigation';
 import NewsCard from '@/components/NewsCard';
+import ArticleGallery from '@/components/ArticleGallery';
 import {getNews, getNewsItem} from '@/lib/news';
 
 const RELATED_COUNT = 3;
@@ -82,6 +83,8 @@ export default async function NewsDetailPage({
             </p>
           ))}
         </div>
+
+        <ArticleGallery photos={item.images ?? []} />
       </article>
 
       {related.length > 0 && (
