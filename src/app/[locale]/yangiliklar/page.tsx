@@ -2,7 +2,7 @@ import type {Metadata} from 'next';
 import {getTranslations, setRequestLocale} from 'next-intl/server';
 import PageHero from '@/components/PageHero';
 import NewsCard from '@/components/NewsCard';
-import {getNews} from '@/data/news';
+import {getNews} from '@/lib/news';
 
 export async function generateMetadata({
   params,
@@ -22,7 +22,7 @@ export default async function NewsPage({
   const {locale} = await params;
   setRequestLocale(locale);
   const t = await getTranslations('news');
-  const items = getNews(locale);
+  const items = await getNews(locale);
 
   return (
     <>

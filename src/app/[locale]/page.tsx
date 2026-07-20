@@ -1,7 +1,7 @@
 import {getTranslations, setRequestLocale} from 'next-intl/server';
 import {Link} from '@/i18n/navigation';
 import {getAssociations} from '@/data/associations';
-import {getNews} from '@/data/news';
+import {getNews} from '@/lib/news';
 import NewsCard from '@/components/NewsCard';
 
 type ServiceItem = {icon: string; name: string; desc: string};
@@ -44,7 +44,7 @@ export default async function HomePage({
   const projects = (tProj.raw('items') as ProjectItem[]).slice(0, 3);
   const values = tAbout.raw('values') as ValueItem[];
   const blocks = tAbout.raw('blocks') as BlockItem[];
-  const latestNews = getNews(locale).slice(0, HOME_NEWS_COUNT);
+  const latestNews = (await getNews(locale)).slice(0, HOME_NEWS_COUNT);
 
   return (
     <>

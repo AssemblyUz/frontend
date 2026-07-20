@@ -5,8 +5,28 @@
  * variable — it is never exposed to the browser and needs no CORS entry.
  */
 
-/** Overridden in production. The default matches `manage.py runserver`. */
+/**
+ * Overridden in production. The default matches `manage.py runserver`.
+ *
+ * In production a missing `API_URL` must not quietly fall through to localhost:
+ * every request would fail, every page would render its static fallback, and
+ * the site would serve stale content indefinitely while still returning 200 —
+ * so no health check or alert would ever fire. Fail loudly instead.
+ *
+ * Checked at call time rather than module scope: `next build` runs with
+ * NODE_ENV=production and no API_URL, and must still be able to prerender
+ * pages from their fallbacks.
+ */
 const API_URL = process.env.API_URL ?? 'http://127.0.0.1:8000';
+
+function assertConfigured(): void {
+  if (process.env.NODE_ENV === 'production' && !process.env.API_URL) {
+    throw new ApiError(
+      'API_URL is not set. Refusing to fall back to localhost in production — ' +
+        'the site would serve stale content while still returning 200.',
+    );
+  }
+}
 
 /**
  * How long a fetched page stays cached before Next.js revalidates it.
@@ -33,6 +53,7 @@ export class ApiError extends Error {
  * timeout, or network failure — callers decide whether to degrade or fail.
  */
 export async function apiGet<T>(path: string, locale: string): Promise<T> {
+  assertConfigured();
   const url = `${API_URL}/api/v1/${path}?locale=${encodeURIComponent(locale)}`;
 
   let response: Response;
