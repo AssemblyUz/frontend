@@ -2,26 +2,18 @@ import {getTranslations, setRequestLocale} from 'next-intl/server';
 import {Link} from '@/i18n/navigation';
 import {getAssociations} from '@/data/associations';
 import {getNews} from '@/lib/news';
+import Emblem from '@/components/Emblem';
+import MainGate from '@/components/gate/MainGate';
 import NewsCard from '@/components/NewsCard';
 
 type ServiceItem = {icon: string; name: string; desc: string};
 type ProjectItem = {icon: string; name: string; desc: string};
-type ValueItem = {title: string; sub: string};
-type BlockItem = {code: string; title: string; desc: string};
 
 const STATS = [
   {value: '20', key: 'projects'},
   {value: '46', key: 'associations'},
   {value: '15 000+', key: 'members'},
   {value: '12', key: 'years'},
-] as const;
-
-/** One accent per FR/BR/PR/GR wing, in message order. Full class strings so Tailwind keeps them. */
-const BLOCK_ACCENT = [
-  'text-sky-500 dark:text-sky-400',
-  'text-emerald-500 dark:text-emerald-400',
-  'text-violet-500 dark:text-violet-400',
-  'text-amber-500 dark:text-amber-400',
 ] as const;
 
 const HOME_NEWS_COUNT = 3;
@@ -36,14 +28,11 @@ export default async function HomePage({
   const t = await getTranslations('home');
   const tServ = await getTranslations('services');
   const tProj = await getTranslations('projects');
-  const tAbout = await getTranslations('about');
   const tNews = await getTranslations('news');
 
   const assoc = getAssociations(locale).slice(0, 3);
   const services = (tServ.raw('items') as ServiceItem[]).slice(0, 3);
   const projects = (tProj.raw('items') as ProjectItem[]).slice(0, 3);
-  const values = tAbout.raw('values') as ValueItem[];
-  const blocks = tAbout.raw('blocks') as BlockItem[];
   const latestNews = (await getNews(locale)).slice(0, HOME_NEWS_COUNT);
 
   return (
@@ -52,7 +41,10 @@ export default async function HomePage({
       <section className="relative overflow-hidden">
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-brand/10 to-transparent" />
         <div className="pointer-events-none absolute -top-32 right-0 h-80 w-80 rounded-full bg-brand/10 blur-3xl" />
-        <div className="relative mx-auto max-w-6xl px-4 py-20 sm:py-28">
+        <div className="relative mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:py-20 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:items-center lg:gap-14 lg:py-28">
+          {/* The seal opens the page. Kept after the heading in the DOM so the
+              h1 still comes first, and pulled above it visually on narrow
+              screens where the two-column split collapses. */}
           <div className="max-w-3xl">
             <span className="inline-flex items-center gap-2 rounded-full border border-border-base bg-surface px-3 py-1 text-xs font-medium text-brand">
               <span className="h-1.5 w-1.5 rounded-full bg-brand" />
@@ -77,6 +69,18 @@ export default async function HomePage({
               </Link>
             </div>
           </div>
+
+          <div className="order-first flex justify-center lg:order-none lg:justify-end">
+            <span className="relative block aspect-square w-40 sm:w-52 lg:w-72">
+              <span
+                aria-hidden
+                className="absolute inset-[-10%] rounded-full bg-brand/15 blur-2xl dark:bg-brand/20"
+              />
+              <span aria-hidden className="absolute inset-[-7%] rounded-full border border-brand/20" />
+              <span aria-hidden className="absolute inset-[2%] rounded-full border border-brand/10" />
+              <Emblem className="relative h-full w-full object-contain" />
+            </span>
+          </div>
         </div>
       </section>
 
@@ -92,61 +96,10 @@ export default async function HomePage({
         </div>
       </section>
 
-      {/* About the Assembly — condensed. Full story lives on /haqida. */}
-      <section className="mx-auto max-w-6xl px-4 py-14 sm:py-20">
-        <div className="flex flex-wrap items-end justify-between gap-4">
-          <div>
-            <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
-              {t('aboutTitle')}
-            </h2>
-            <p className="mt-2 max-w-2xl text-muted">{t('aboutLead')}</p>
-          </div>
-          <Link
-            href="/haqida"
-            className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand transition-all hover:gap-2.5"
-          >
-            {t('aboutMore')} →
-          </Link>
-        </div>
-
-        <div className="mt-8 grid gap-5 lg:grid-cols-2">
-          <div className="rounded-2xl border border-border-base bg-card p-6 sm:p-8">
-            <span className="text-sm font-semibold uppercase tracking-wide text-brand">
-              {tAbout('missionTitle')}
-            </span>
-            <p className="mt-3 leading-relaxed text-muted">{tAbout('mission')}</p>
-          </div>
-          <div className="rounded-2xl border border-border-base bg-card p-6 sm:p-8">
-            <span className="text-sm font-semibold uppercase tracking-wide text-accent">
-              {tAbout('goalTitle')}
-            </span>
-            <p className="mt-3 leading-relaxed text-muted">{tAbout('goal')}</p>
-          </div>
-        </div>
-
-        {/* Values */}
-        <ul className="mt-5 flex flex-wrap gap-2.5">
-          {values.map((v) => (
-            <li
-              key={v.title}
-              className="flex items-baseline gap-2 rounded-xl border border-border-base bg-card px-4 py-2.5"
-            >
-              <span className="text-sm font-semibold text-foreground">{v.title}</span>
-              <span className="text-xs text-muted">{v.sub}</span>
-            </li>
-          ))}
-        </ul>
-
-        {/* Four functional wings */}
-        <div className="mt-5 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-border-base bg-border-base lg:grid-cols-4">
-          {blocks.map((b, i) => (
-            <div key={b.code} className="bg-card px-5 py-6">
-              <div className={`text-2xl font-bold tracking-tight ${BLOCK_ACCENT[i]}`}>{b.code}</div>
-              <div className="mt-1 text-sm font-medium text-foreground">{b.title}</div>
-            </div>
-          ))}
-        </div>
-      </section>
+      {/* The Main Gate: the Assembly's whole overview, and the doors into it. */}
+      <div className="mt-14 sm:mt-20">
+        <MainGate />
+      </div>
 
       {/* Associations preview */}
       <div className="bg-surface/60">
