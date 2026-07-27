@@ -27,9 +27,6 @@
       "members": "Members",
       "years": "Years of experience"
     },
-    "aboutTitle": "About the Assembly",
-    "aboutLead": "A national economic integrator — it brings the capabilities of government, business, science, international partners and media together around a single result.",
-    "aboutMore": "Learn more about us",
     "assocTitle": "Associations",
     "assocLead": "Member associations spanning diverse fields",
     "servicesTitle": "Services",
@@ -42,6 +39,182 @@
     "ctaBannerTitle": "Join us",
     "ctaBannerLead": "Register your association or become a partner — together we achieve more.",
     "ctaBannerBtn": "Get in touch"
+  },
+  "gate": {
+    "kicker": "Main gate",
+    "title": "The Assembly at a glance",
+    "lead": "The mission, the operating model, the 20 strategic projects, the FR/BR/PR/GR wings, AI MediaNet and the results they produce — the whole system in one gate.",
+    "more": "Full presentation",
+    "missionTitle": "Mission",
+    "mission": "To unite entrepreneurs, strengthen the economy, attract investment, expand exports, drive innovation and raise Uzbekistan's standing in the global economy. Together we build a New Renaissance.",
+    "purposeTitle": "Core purpose",
+    "purpose": "To develop Uzbekistan's economy through the unity of entrepreneurs, investment, innovation and international cooperation — and to build a New Renaissance on that foundation.",
+    "hubValue": "20",
+    "hubTitle": "Strategic projects",
+    "hubLead": "Education and jobs, investment, industry, trade, science, media and social support — the Assembly's portfolio.",
+    "hubCta": "Enter the portfolio",
+    "modelTitle": "How the Assembly operates",
+    "modelLead": "A single chain from the sectoral association to the delivered result.",
+    "modelSteps": [
+      {
+        "title": "50 sectoral associations",
+        "desc": "Every industry has a direct channel into the Assembly."
+      },
+      {
+        "title": "Entrepreneurs and companies",
+        "desc": "Members, investors and service providers join the network."
+      },
+      {
+        "title": "Identifying needs",
+        "desc": "Problems and proposals are collected and turned into tasks."
+      },
+      {
+        "title": "Assembly projects",
+        "desc": "The need is answered by one of the 20 strategic projects."
+      }
+    ],
+    "pillars": [
+      {
+        "word": "Unity",
+        "claim": "is power"
+      },
+      {
+        "word": "Innovation",
+        "claim": "is the driver"
+      },
+      {
+        "word": "Investment",
+        "claim": "is the future"
+      },
+      {
+        "word": "National unity",
+        "claim": "is our strength"
+      },
+      {
+        "word": "Renaissance",
+        "claim": "is our goal"
+      }
+    ],
+    "blocksTitle": "Core functional blocks",
+    "blocksLead": "Each project connects to international, business, public and government capability through these four wings.",
+    "blocks": [
+      {
+        "code": "FR",
+        "title": "Foreign Relations",
+        "desc": "International relations, embassies and chambers of commerce."
+      },
+      {
+        "code": "BR",
+        "title": "Business Relations",
+        "desc": "Entrepreneurs, companies, investors, service providers and associations."
+      },
+      {
+        "code": "PR",
+        "title": "Public Relations",
+        "desc": "Media, public trust and the AI MediaNet layer."
+      },
+      {
+        "code": "GR",
+        "title": "Government Relations",
+        "desc": "State bodies, national programmes, permits, policy and strategic support."
+      }
+    ],
+    "mediaLabel": "AI MediaNet — the future of communications",
+    "mediaLead": "The layer that carries everything the model produces outward.",
+    "mediaSummary": "Content planning, monitoring and impact measurement in one managed flow — media turns the work into visible capital.",
+    "mediaVerbs": ["Connect", "Cover", "Analyse", "Enhance"],
+    "mediaItems": [
+      "All Assembly leaders and the 50 associations are AI-synchronised across social platforms.",
+      "Covers, promotes and analyses our activities and achievements.",
+      "Strengthens public trust and business reputation through AI.",
+      "Expands national and international reach, impact and influence."
+    ],
+    "outputs": ["Result", "Trust", "Impact"],
+    "outcomesTitle": "What the Assembly delivers",
+    "outcomesLead": "Every participant gains something of their own — the shared outcome is a stronger economy.",
+    "outcomes": [
+      {
+        "audience": "For entrepreneurs",
+        "items": [
+          "International partnerships",
+          "Investment and funding",
+          "Access to global markets",
+          "Sustainable business growth"
+        ]
+      },
+      {
+        "audience": "For the state",
+        "items": [
+          "Economic growth and new jobs",
+          "Higher tax revenues",
+          "A stronger national economy",
+          "International prestige"
+        ]
+      },
+      {
+        "audience": "For investors",
+        "items": [
+          "Transparent, reliable projects",
+          "Access to professional markets",
+          "Strong return on investment",
+          "Diverse investment platforms"
+        ]
+      },
+      {
+        "audience": "For society",
+        "items": [
+          "Quality jobs and decent income",
+          "Innovation, technology and education",
+          "Social wellbeing",
+          "A bright future for the next generation"
+        ]
+      }
+    ],
+    "partnersTitle": "Partner ecosystem",
+    "partnersLead": "State institutions, international financial institutions, banks, consulting firms and technology companies.",
+    "partners": [
+      {
+        "title": "State institutions",
+        "items": [
+          "Agency for Project Efficiency",
+          "Ministry of Foreign Affairs",
+          "Ministry of Investment, Industry and Trade",
+          "Ministry of Economy and Finance",
+          "Business Ombudsman"
+        ]
+      },
+      {
+        "title": "International financial institutions",
+        "items": [
+          "Asian Development Bank (ADB)",
+          "Islamic Development Bank (IsDB)",
+          "UzDIF",
+          "UzVC"
+        ]
+      },
+      {
+        "title": "Banks and financial institutions",
+        "items": ["Ipoteka Bank (OTP)", "TBC Bank", "Apexbank", "Uzbekleasing"]
+      },
+      {
+        "title": "Consulting firms",
+        "items": ["KPMG", "Solvex Consulting", "Specto Consulting"]
+      },
+      {
+        "title": "International and local partners",
+        "items": [
+          "Huawei",
+          "Samsung C&T",
+          "Japan Development Institute (JDI)",
+          "Arup",
+          "Parsons Corporation"
+        ]
+      }
+    ],
+    "partnersNote": "and many other reputable organisations",
+    "motto": "One purpose — one nation — one future!",
+    "mottoLead": "Together we build a New Renaissance for New Uzbekistan.",
+    "doorsLabel": "Go to a section"
   },
   "associations": {
     "title": "Associations",

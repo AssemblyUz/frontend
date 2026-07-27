@@ -27,9 +27,6 @@
       "members": "A'zo",
       "years": "Yillik tajriba"
     },
-    "aboutTitle": "Assambleya haqida",
-    "aboutLead": "Milliy iqtisodiy integrator — davlat, biznes, ilm-fan, xalqaro hamkorlar va media imkoniyatlarini bitta natija atrofida birlashtiradi.",
-    "aboutMore": "Batafsil ma'lumot",
     "assocTitle": "Uyushmalar",
     "assocLead": "Turli sohalarni qamrab olgan a'zo uyushmalar",
     "servicesTitle": "Xizmatlar",
@@ -42,6 +39,182 @@
     "ctaBannerTitle": "Bizga qo'shiling",
     "ctaBannerLead": "Uyushmangizni ro'yxatdan o'tkazing yoki hamkor bo'ling — birgalikda ko'proq narsaga erishamiz.",
     "ctaBannerBtn": "Bog'lanish"
+  },
+  "gate": {
+    "kicker": "Bosh darvoza",
+    "title": "Assambleya — bir ko'rinishda",
+    "lead": "Missiya, ishlash modeli, 20 strategik loyiha, FR/BR/PR/GR qanotlari, AI MediaNet va ular keltiradigan natija — butun tizim bitta darvozada.",
+    "more": "To'liq taqdimot",
+    "missionTitle": "Missiya",
+    "mission": "Tadbirkorlarni birlashtirish, iqtisodiyotni mustahkamlash, investitsiya jalb qilish, eksportni kengaytirish, innovatsiyani rivojlantirish va O'zbekistonning global iqtisodiyotdagi o'rnini yuksaltirish. Birgalikda Yangi Renessansni barpo etamiz.",
+    "purposeTitle": "Bosh maqsad",
+    "purpose": "Tadbirkorlar, investitsiya, innovatsiya va xalqaro hamkorlik birligi orqali O'zbekiston iqtisodiyotini rivojlantirish va shu asosda Yangi Renessansni barpo etish.",
+    "hubValue": "20",
+    "hubTitle": "Strategik loyiha",
+    "hubLead": "Ta'lim va ish o'rni, investitsiya, sanoat, savdo, ilm-fan, media va ijtimoiy qo'llov — Assambleya portfeli.",
+    "hubCta": "Portfelga kirish",
+    "modelTitle": "Assambleyaning ishlash modeli",
+    "modelLead": "Soha uyushmasidan tayyor natijaga qadar yagona zanjir.",
+    "modelSteps": [
+      {
+        "title": "50 ta soha uyushmasi",
+        "desc": "Har bir soha Assambleyaga bevosita kanalga ega."
+      },
+      {
+        "title": "Tadbirkorlar va kompaniyalar",
+        "desc": "A'zolar, investorlar va xizmat ko'rsatuvchilar tarmoqqa qo'shiladi."
+      },
+      {
+        "title": "Ehtiyojni aniqlash",
+        "desc": "Muammo va takliflar yig'iladi hamda aniq vazifaga aylantiriladi."
+      },
+      {
+        "title": "Assambleya loyihalari",
+        "desc": "Ehtiyojga 20 strategik loyihadan biri javob beradi."
+      }
+    ],
+    "pillars": [
+      {
+        "word": "Birlik",
+        "claim": "kuch beradi"
+      },
+      {
+        "word": "Innovatsiya",
+        "claim": "harakatga keltiradi"
+      },
+      {
+        "word": "Investitsiya",
+        "claim": "kelajakni yaratadi"
+      },
+      {
+        "word": "Milliy birdamlik",
+        "claim": "qudratimiz"
+      },
+      {
+        "word": "Renessans",
+        "claim": "maqsadimiz"
+      }
+    ],
+    "blocksTitle": "Asosiy funksional bloklar",
+    "blocksLead": "Har bir loyiha shu to'rt qanot orqali xalqaro, biznes, jamoatchilik va davlat imkoniyatiga ulanadi.",
+    "blocks": [
+      {
+        "code": "FR",
+        "title": "Foreign Relations",
+        "desc": "Xalqaro aloqalar, elchixonalar va savdo-sanoat palatalari bilan ishlash."
+      },
+      {
+        "code": "BR",
+        "title": "Business Relations",
+        "desc": "Tadbirkorlar, kompaniyalar, investorlar, xizmat ko'rsatuvchilar va uyushmalar."
+      },
+      {
+        "code": "PR",
+        "title": "Public Relations",
+        "desc": "Media, jamoatchilik ishonchi va AI MediaNet qatlami."
+      },
+      {
+        "code": "GR",
+        "title": "Government Relations",
+        "desc": "Davlat organlari, milliy dasturlar, ruxsatlar, siyosat va strategik qo'llov."
+      }
+    ],
+    "mediaLabel": "AI MediaNet — kommunikatsiyaning kelajagi",
+    "mediaLead": "Model ishlab chiqqan natijani tashqariga olib chiqadigan qatlam.",
+    "mediaSummary": "Kontent rejasi, monitoring va ta'sir o'lchovi bitta boshqariladigan oqimda — media faoliyatni ko'rinadigan kapitalga aylantiradi.",
+    "mediaVerbs": ["Ulaydi", "Yoritadi", "Tahlil qiladi", "Kuchaytiradi"],
+    "mediaItems": [
+      "Assambleya rahbarlari va 50 ta uyushma ijtimoiy tarmoqlarda AI orqali sinxronlashtirilgan.",
+      "Faoliyat va erishilgan natijalarni yoritadi, targ'ib qiladi va tahlil qiladi.",
+      "AI yordamida jamoatchilik ishonchi va biznes obro'sini mustahkamlaydi.",
+      "Milliy va xalqaro qamrov, ta'sir va nufuzni kengaytiradi."
+    ],
+    "outputs": ["Natija", "Ishonch", "Ta'sir"],
+    "outcomesTitle": "Assambleya faoliyati natijalari",
+    "outcomesLead": "Har bir ishtirokchi o'z foydasini oladi — umumiy natija esa kuchli iqtisodiyot.",
+    "outcomes": [
+      {
+        "audience": "Tadbirkorlar uchun",
+        "items": [
+          "Xalqaro hamkorlik",
+          "Investitsiya va moliyalashtirish",
+          "Global bozorlarga chiqish",
+          "Barqaror biznes o'sishi"
+        ]
+      },
+      {
+        "audience": "Davlat uchun",
+        "items": [
+          "Iqtisodiy o'sish va yangi ish o'rinlari",
+          "Soliq tushumlarining ortishi",
+          "Milliy iqtisodiyotning mustahkamlanishi",
+          "Xalqaro nufuz"
+        ]
+      },
+      {
+        "audience": "Investorlar uchun",
+        "items": [
+          "Shaffof va ishonchli loyihalar",
+          "Professional bozorlarga kirish",
+          "Yuqori investitsiya qaytimi",
+          "Turli investitsiya platformalari"
+        ]
+      },
+      {
+        "audience": "Jamiyat uchun",
+        "items": [
+          "Sifatli ish o'rni va munosib daromad",
+          "Innovatsiya, texnologiya va ta'lim",
+          "Ijtimoiy farovonlik",
+          "Kelgusi avlod uchun yorqin kelajak"
+        ]
+      }
+    ],
+    "partnersTitle": "Hamkorlik ekotizimi",
+    "partnersLead": "Davlat institutlari, xalqaro moliya tashkilotlari, banklar, konsalting va texnologiya kompaniyalari.",
+    "partners": [
+      {
+        "title": "Davlat institutlari",
+        "items": [
+          "Loyiha samaradorligi agentligi",
+          "Tashqi ishlar vazirligi",
+          "Investitsiyalar, sanoat va savdo vazirligi",
+          "Iqtisodiyot va moliya vazirligi",
+          "Biznes ombudsmani"
+        ]
+      },
+      {
+        "title": "Xalqaro moliya institutlari",
+        "items": [
+          "Osiyo taraqqiyot banki (ADB)",
+          "Islom taraqqiyot banki (IsDB)",
+          "UzDIF",
+          "UzVC"
+        ]
+      },
+      {
+        "title": "Banklar va moliya tashkilotlari",
+        "items": ["Ipoteka Bank (OTP)", "TBC Bank", "Apexbank", "Uzbekleasing"]
+      },
+      {
+        "title": "Konsalting kompaniyalari",
+        "items": ["KPMG", "Solvex Consulting", "Specto Consulting"]
+      },
+      {
+        "title": "Xalqaro va mahalliy hamkorlar",
+        "items": [
+          "Huawei",
+          "Samsung C&T",
+          "Japan Development Institute (JDI)",
+          "Arup",
+          "Parsons Corporation"
+        ]
+      }
+    ],
+    "partnersNote": "va boshqa ko'plab e'tiborli tashkilotlar",
+    "motto": "Bir maqsad — bir millat — bir kelajak!",
+    "mottoLead": "Birgalikda Yangi O'zbekiston uchun Yangi Renessansni barpo etamiz.",
+    "doorsLabel": "Bo'limlarga o'tish"
   },
   "associations": {
     "title": "Uyushmalar",
