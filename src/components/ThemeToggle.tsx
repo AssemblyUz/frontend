@@ -3,11 +3,20 @@
 import {useSyncExternalStore} from 'react';
 import {useTranslations} from 'next-intl';
 
-const THEME_CHANGE_EVENT = 'assembly-theme-change';
-
+/**
+ * Watches the class on <html> itself, rather than an event this component
+ * dispatches to itself.
+ *
+ * The class has three writers: the inline script on load, this button, and the
+ * observer in the layout that re-asserts the theme after React resets <html> on
+ * a language switch. Subscribing to the attribute means the button cannot fall
+ * out of step with any of them — when it did, its next click toggled the wrong
+ * way.
+ */
 function subscribe(callback: () => void) {
-  window.addEventListener(THEME_CHANGE_EVENT, callback);
-  return () => window.removeEventListener(THEME_CHANGE_EVENT, callback);
+  const observer = new MutationObserver(callback);
+  observer.observe(document.documentElement, {attributes: true, attributeFilter: ['class']});
+  return () => observer.disconnect();
 }
 
 function getSnapshot() {
@@ -27,14 +36,18 @@ export default function ThemeToggle() {
   const dark = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
   function toggle() {
-    const next = !dark;
-    document.documentElement.classList.toggle('dark', next);
+    // Read the DOM rather than trusting `dark`, so a click is always relative to
+    // what is actually on screen.
+    const next = !document.documentElement.classList.contains('dark');
+    // Persist first: the layout's observer re-reads this the moment the class
+    // changes, so writing it afterwards could have it read the old preference
+    // and undo the toggle.
     try {
       localStorage.setItem('theme', next ? 'dark' : 'light');
     } catch {
       /* storage unavailable - theme just won't persist */
     }
-    window.dispatchEvent(new Event(THEME_CHANGE_EVENT));
+    document.documentElement.classList.toggle('dark', next);
   }
 
   const label = dark ? t('toLight') : t('toDark');

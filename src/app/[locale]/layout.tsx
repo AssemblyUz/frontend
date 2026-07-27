@@ -16,14 +16,50 @@ const inter = Inter({
   display: 'swap',
 });
 
-// Applied before hydration so the correct theme paints on first frame (no flash).
+/**
+ * Applied before hydration so the correct theme paints on the first frame.
+ *
+ * It then keeps watching, because React treats <html> as a host singleton and
+ * resets its attributes whenever this layout remounts. That happens on every
+ * language switch — the `locale` segment changes — which wiped the `dark` class
+ * and threw the visitor into the light theme (and back again on the next
+ * switch). The observer re-asserts the class the moment it is cleared; its
+ * callback runs as a microtask, before paint, so nothing flashes.
+ *
+ * The theme cannot simply be rendered as a prop instead: it is only known on the
+ * client, and reading it from a cookie on the server would opt every page out of
+ * static generation.
+ */
 const themeScript = `
 (function () {
+  var root = document.documentElement;
+
+  function wantsDark() {
+    try {
+      var stored = localStorage.getItem('theme');
+      if (stored) return stored === 'dark';
+    } catch (e) {}
+    try {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches;
+    } catch (e) {
+      return false;
+    }
+  }
+
+  function apply() {
+    var dark = wantsDark();
+    // Only touch the class when it actually differs, so re-asserting it here
+    // cannot loop with the observer below.
+    if (root.classList.contains('dark') !== dark) root.classList.toggle('dark', dark);
+  }
+
+  apply();
+
   try {
-    var stored = localStorage.getItem('theme');
-    var dark = stored ? stored === 'dark'
-      : window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if (dark) document.documentElement.classList.add('dark');
+    new MutationObserver(apply).observe(root, {
+      attributes: true,
+      attributeFilter: ['class'],
+    });
   } catch (e) {}
 })();
 `;
@@ -61,8 +97,16 @@ export default async function LocaleLayout({
   setRequestLocale(locale);
 
   return (
-    <html lang={locale} className={inter.variable} suppressHydrationWarning>
-      <body className="min-h-screen flex flex-col bg-background text-foreground">
+    // No className on <html>. The theme lives in a `dark` class that the inline
+    // script and ThemeToggle set imperatively, and React overwrites the whole
+    // class attribute on any element it controls one for. Switching language
+    // re-renders this layout with a new `locale`, which used to wipe `dark` and
+    // throw the visitor back to the light theme. The font variable therefore
+    // rides on <body>, where it still cascades to everything.
+    <html lang={locale} suppressHydrationWarning>
+      <body
+        className={`${inter.variable} min-h-screen flex flex-col bg-background text-foreground`}
+      >
         <Script id="theme-init" strategy="beforeInteractive">
           {themeScript}
         </Script>
