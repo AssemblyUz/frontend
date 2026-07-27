@@ -30,7 +30,7 @@ export const site: Record<'uz' | 'ru' | 'en', SiteDetails> = {
     tagline: "Yangi O'zbekiston — Yangi Renessans",
     description:
       "Birlashib, barqaror iqtisodiyot, innovatsiyalar va inson kapitalini rivojlantirish orqali Yangi O'zbekistonning yangi renessansini barpo etamiz.",
-    address: "Toshkent sh., Amir Temur shoh ko'chasi, 1",
+    address: "Toshkent sh., Shayxontohur tumani, Furqat ko'chasi, 1",
     email: 'info@assembly.uz',
     phone: '+998 77 3035665',
   },
@@ -40,7 +40,7 @@ export const site: Record<'uz' | 'ru' | 'en', SiteDetails> = {
     tagline: 'Новый Узбекистан — Новый Ренессанс',
     description:
       'Объединяясь, мы создаём новый ренессанс Нового Узбекистана через развитие устойчивой экономики, инноваций и человеческого капитала.',
-    address: 'г. Ташкент, проспект Амира Темура, 1',
+    address: 'г. Ташкент, Шайхантахурский район, улица Фурката, 1',
     email: 'info@assembly.uz',
     phone: '+998 77 3035665',
   },
@@ -50,7 +50,7 @@ export const site: Record<'uz' | 'ru' | 'en', SiteDetails> = {
     tagline: 'New Uzbekistan — New Renaissance',
     description:
       'By uniting, we build the new renaissance of New Uzbekistan through the development of a sustainable economy, innovation and human capital.',
-    address: '1 Amir Temur Avenue, Tashkent',
+    address: '1 Furkat Street, Shaykhantahur District, Tashkent',
     email: 'info@assembly.uz',
     phone: '+998 77 3035665',
   },
