@@ -1,13 +1,15 @@
 import {getTranslations} from 'next-intl/server';
 import {Link} from '@/i18n/navigation';
 import Emblem from '@/components/Emblem';
-import {GateEyebrow, GateIndex, GatePanel} from './GateShell';
+import {GateIndex} from './GateShell';
+import GatePanelAssociations from './GatePanelAssociations';
+import GatePanelBlocks from './GatePanelBlocks';
 import type {GatePillar} from './types';
 
 /**
- * The centre of the gate: what the Assembly is for (mission and core purpose)
- * flanking the seal, which doubles as the door into the 20-project portfolio.
- * Below them, the five pillars the whole model rests on.
+ * The centre of the gate: the four functional wings and the association network
+ * flanking the seal, which doubles as the door into the 20-project portfolio —
+ * the three ways into the Assembly. Below them, the five pillars it rests on.
  */
 export default async function GateHub() {
   const t = await getTranslations('gate');
@@ -15,12 +17,9 @@ export default async function GateHub() {
 
   return (
     <div className="mt-10 grid gap-4 sm:gap-5 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.9fr)_minmax(0,1fr)]">
-      <GatePanel className="p-6 sm:p-7">
-        <GateEyebrow tone="gold">{t('missionTitle')}</GateEyebrow>
-        <p className="mt-4 leading-relaxed text-gate-fg/85">{t('mission')}</p>
-      </GatePanel>
+      <GatePanelBlocks />
 
-      {/* The seal is the portfolio door — the one interactive element in the row. */}
+      {/* The seal is the portfolio door. */}
       <Link
         href="/loyihalar"
         className="group relative overflow-hidden rounded-2xl border border-gate-gold/30 bg-gate-panel-strong p-6 text-center transition hover:border-gate-gold/70 sm:p-7"
@@ -49,10 +48,7 @@ export default async function GateHub() {
         </span>
       </Link>
 
-      <GatePanel className="p-6 sm:p-7">
-        <GateEyebrow tone="cyan">{t('purposeTitle')}</GateEyebrow>
-        <p className="mt-4 leading-relaxed text-gate-fg/85">{t('purpose')}</p>
-      </GatePanel>
+      <GatePanelAssociations />
 
       <ul className="grid gap-3 sm:grid-cols-2 lg:col-span-3 lg:grid-cols-5">
         {pillars.map((p, i) => (

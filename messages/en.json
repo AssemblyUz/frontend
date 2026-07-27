@@ -44,16 +44,17 @@
   "gate": {
     "kicker": "Main gate",
     "title": "The Assembly at a glance",
-    "lead": "The mission, the operating model, the 20 strategic projects, the FR/BR/PR/GR wings, AI MediaNet and the results they produce — the whole system in one gate.",
+    "lead": "The 50 sectoral associations, the 20 strategic projects, the FR/BR/PR/GR wings, the operating model, AI MediaNet and the results they produce — the whole system in one gate.",
     "more": "Full presentation",
-    "missionTitle": "Mission",
-    "mission": "To unite entrepreneurs, strengthen the economy, attract investment, expand exports, drive innovation and raise Uzbekistan's standing in the global economy. Together we build a New Renaissance.",
-    "purposeTitle": "Core purpose",
-    "purpose": "To develop Uzbekistan's economy through the unity of entrepreneurs, investment, innovation and international cooperation — and to build a New Renaissance on that foundation.",
     "hubValue": "20",
     "hubTitle": "Strategic projects",
     "hubLead": "Education and jobs, investment, industry, trade, science, media and social support — the Assembly's portfolio.",
     "hubCta": "Enter the portfolio",
+    "assocTitle": "Sectoral associations",
+    "assocValue": "50",
+    "assocUnit": "sectoral associations",
+    "assocLead": "Every industry reaches the Assembly through its own association. Entrepreneurs, companies and service providers meet in that network — it is where the need begins.",
+    "assocCta": "View the associations",
     "modelTitle": "How the Assembly operates",
     "modelLead": "A single chain from the sectoral association to the delivered result.",
     "modelSteps": [
@@ -98,39 +99,45 @@
     ],
     "blocksTitle": "Core functional blocks",
     "blocksLead": "Each project connects to international, business, public and government capability through these four wings.",
+    "blocksCta": "Explore the blocks",
     "blocks": [
       {
         "code": "FR",
-        "title": "Foreign Relations",
-        "desc": "International relations, embassies and chambers of commerce."
+        "title": "Foreign Relations"
       },
       {
         "code": "BR",
-        "title": "Business Relations",
-        "desc": "Entrepreneurs, companies, investors, service providers and associations."
+        "title": "Business Relations"
       },
       {
         "code": "PR",
-        "title": "Public Relations",
-        "desc": "Media, public trust and the AI MediaNet layer."
+        "title": "Public Relations"
       },
       {
         "code": "GR",
-        "title": "Government Relations",
-        "desc": "State bodies, national programmes, permits, policy and strategic support."
+        "title": "Government Relations"
       }
     ],
     "mediaLabel": "AI MediaNet — the future of communications",
     "mediaLead": "The layer that carries everything the model produces outward.",
     "mediaSummary": "Content planning, monitoring and impact measurement in one managed flow — media turns the work into visible capital.",
-    "mediaVerbs": ["Connect", "Cover", "Analyse", "Enhance"],
+    "mediaVerbs": [
+      "Connect",
+      "Cover",
+      "Analyse",
+      "Enhance"
+    ],
     "mediaItems": [
       "All Assembly leaders and the 50 associations are AI-synchronised across social platforms.",
       "Covers, promotes and analyses our activities and achievements.",
       "Strengthens public trust and business reputation through AI.",
       "Expands national and international reach, impact and influence."
     ],
-    "outputs": ["Result", "Trust", "Impact"],
+    "outputs": [
+      "Result",
+      "Trust",
+      "Impact"
+    ],
     "outcomesTitle": "What the Assembly delivers",
     "outcomesLead": "Every participant gains something of their own — the shared outcome is a stronger economy.",
     "outcomes": [
@@ -195,11 +202,20 @@
       },
       {
         "title": "Banks and financial institutions",
-        "items": ["Ipoteka Bank (OTP)", "TBC Bank", "Apexbank", "Uzbekleasing"]
+        "items": [
+          "Ipoteka Bank (OTP)",
+          "TBC Bank",
+          "Apexbank",
+          "Uzbekleasing"
+        ]
       },
       {
         "title": "Consulting firms",
-        "items": ["KPMG", "Solvex Consulting", "Specto Consulting"]
+        "items": [
+          "KPMG",
+          "Solvex Consulting",
+          "Specto Consulting"
+        ]
       },
       {
         "title": "International and local partners",

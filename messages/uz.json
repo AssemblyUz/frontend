@@ -44,16 +44,17 @@
   "gate": {
     "kicker": "Bosh darvoza",
     "title": "Assambleya — bir ko'rinishda",
-    "lead": "Missiya, ishlash modeli, 20 strategik loyiha, FR/BR/PR/GR qanotlari, AI MediaNet va ular keltiradigan natija — butun tizim bitta darvozada.",
+    "lead": "50 ta soha uyushmasi, 20 strategik loyiha, FR/BR/PR/GR qanotlari, ishlash modeli, AI MediaNet va ular keltiradigan natija — butun tizim bitta darvozada.",
     "more": "To'liq taqdimot",
-    "missionTitle": "Missiya",
-    "mission": "Tadbirkorlarni birlashtirish, iqtisodiyotni mustahkamlash, investitsiya jalb qilish, eksportni kengaytirish, innovatsiyani rivojlantirish va O'zbekistonning global iqtisodiyotdagi o'rnini yuksaltirish. Birgalikda Yangi Renessansni barpo etamiz.",
-    "purposeTitle": "Bosh maqsad",
-    "purpose": "Tadbirkorlar, investitsiya, innovatsiya va xalqaro hamkorlik birligi orqali O'zbekiston iqtisodiyotini rivojlantirish va shu asosda Yangi Renessansni barpo etish.",
     "hubValue": "20",
     "hubTitle": "Strategik loyiha",
     "hubLead": "Ta'lim va ish o'rni, investitsiya, sanoat, savdo, ilm-fan, media va ijtimoiy qo'llov — Assambleya portfeli.",
     "hubCta": "Portfelga kirish",
+    "assocTitle": "Soha uyushmalari",
+    "assocValue": "50",
+    "assocUnit": "ta soha uyushmasi",
+    "assocLead": "Har bir tarmoq o'z uyushmasi orqali Assambleyaga bevosita ulanadi. Tadbirkorlar, kompaniyalar va xizmat ko'rsatuvchilar shu tarmoqda birlashadi — ehtiyoj shu yerdan boshlanadi.",
+    "assocCta": "Uyushmalarni ko'rish",
     "modelTitle": "Assambleyaning ishlash modeli",
     "modelLead": "Soha uyushmasidan tayyor natijaga qadar yagona zanjir.",
     "modelSteps": [
@@ -98,39 +99,45 @@
     ],
     "blocksTitle": "Asosiy funksional bloklar",
     "blocksLead": "Har bir loyiha shu to'rt qanot orqali xalqaro, biznes, jamoatchilik va davlat imkoniyatiga ulanadi.",
+    "blocksCta": "Bloklar bilan tanishish",
     "blocks": [
       {
         "code": "FR",
-        "title": "Foreign Relations",
-        "desc": "Xalqaro aloqalar, elchixonalar va savdo-sanoat palatalari bilan ishlash."
+        "title": "Foreign Relations"
       },
       {
         "code": "BR",
-        "title": "Business Relations",
-        "desc": "Tadbirkorlar, kompaniyalar, investorlar, xizmat ko'rsatuvchilar va uyushmalar."
+        "title": "Business Relations"
       },
       {
         "code": "PR",
-        "title": "Public Relations",
-        "desc": "Media, jamoatchilik ishonchi va AI MediaNet qatlami."
+        "title": "Public Relations"
       },
       {
         "code": "GR",
-        "title": "Government Relations",
-        "desc": "Davlat organlari, milliy dasturlar, ruxsatlar, siyosat va strategik qo'llov."
+        "title": "Government Relations"
       }
     ],
     "mediaLabel": "AI MediaNet — kommunikatsiyaning kelajagi",
     "mediaLead": "Model ishlab chiqqan natijani tashqariga olib chiqadigan qatlam.",
     "mediaSummary": "Kontent rejasi, monitoring va ta'sir o'lchovi bitta boshqariladigan oqimda — media faoliyatni ko'rinadigan kapitalga aylantiradi.",
-    "mediaVerbs": ["Ulaydi", "Yoritadi", "Tahlil qiladi", "Kuchaytiradi"],
+    "mediaVerbs": [
+      "Ulaydi",
+      "Yoritadi",
+      "Tahlil qiladi",
+      "Kuchaytiradi"
+    ],
     "mediaItems": [
       "Assambleya rahbarlari va 50 ta uyushma ijtimoiy tarmoqlarda AI orqali sinxronlashtirilgan.",
       "Faoliyat va erishilgan natijalarni yoritadi, targ'ib qiladi va tahlil qiladi.",
       "AI yordamida jamoatchilik ishonchi va biznes obro'sini mustahkamlaydi.",
       "Milliy va xalqaro qamrov, ta'sir va nufuzni kengaytiradi."
     ],
-    "outputs": ["Natija", "Ishonch", "Ta'sir"],
+    "outputs": [
+      "Natija",
+      "Ishonch",
+      "Ta'sir"
+    ],
     "outcomesTitle": "Assambleya faoliyati natijalari",
     "outcomesLead": "Har bir ishtirokchi o'z foydasini oladi — umumiy natija esa kuchli iqtisodiyot.",
     "outcomes": [
@@ -195,11 +202,20 @@
       },
       {
         "title": "Banklar va moliya tashkilotlari",
-        "items": ["Ipoteka Bank (OTP)", "TBC Bank", "Apexbank", "Uzbekleasing"]
+        "items": [
+          "Ipoteka Bank (OTP)",
+          "TBC Bank",
+          "Apexbank",
+          "Uzbekleasing"
+        ]
       },
       {
         "title": "Konsalting kompaniyalari",
-        "items": ["KPMG", "Solvex Consulting", "Specto Consulting"]
+        "items": [
+          "KPMG",
+          "Solvex Consulting",
+          "Specto Consulting"
+        ]
       },
       {
         "title": "Xalqaro va mahalliy hamkorlar",
