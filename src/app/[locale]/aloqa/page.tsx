@@ -4,15 +4,7 @@ import PageHero from '@/components/PageHero';
 import ContactForm from '@/components/ContactForm';
 import SocialIcon from '@/components/SocialIcon';
 import {getSiteInfo} from '@/lib/site';
-
-/**
- * Google geocodes an English address far more reliably than a transliterated
- * Uzbek one, so the map always uses the English copy regardless of the page's
- * locale. Both come from "Site settings" in the admin.
- */
-function mapSrc(address: string): string {
-  return `https://maps.google.com/maps?q=${encodeURIComponent(address)}&z=14&output=embed`;
-}
+import {mapEmbedSrc} from '@/data/mapLocation';
 
 export async function generateMetadata({
   params,
@@ -33,7 +25,7 @@ export default async function ContactPage({
   setRequestLocale(locale);
   const t = await getTranslations('contact');
 
-  const [site, siteEn] = await Promise.all([getSiteInfo(locale), getSiteInfo('en')]);
+  const site = await getSiteInfo(locale);
 
   const info = [
     {icon: '📍', title: t('addressTitle'), value: site.address, href: undefined},
@@ -135,7 +127,7 @@ export default async function ContactPage({
           <h2 className="mb-3 text-sm font-semibold text-foreground">{t('mapTitle')}</h2>
           <div className="overflow-hidden rounded-2xl border border-border-base">
             <iframe
-              src={mapSrc(siteEn.address)}
+              src={mapEmbedSrc()}
               title={t('mapTitle')}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
