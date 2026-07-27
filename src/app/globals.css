@@ -82,3 +82,122 @@ body {
   background: var(--brand);
   color: var(--brand-fg);
 }
+
+/* ===========================================================================
+   Motion
+   Only transform, opacity and filter are animated, so everything stays on the
+   compositor. Every effect here degrades to a static layout: the reduced-motion
+   block at the bottom switches all of it off, and MainGate carries a <noscript>
+   rule that reveals content when JavaScript never arrives.
+   =========================================================================== */
+
+/* Reveal-on-scroll. The pre-animation state is server-rendered; `RevealScope`
+   `RevealScope` eases its `[data-reveal]` descendants to their resting state,
+   staggered, once the group enters the viewport.
+
+   The hidden state is deliberately scoped to `[data-reveal-scope]`, which only
+   RevealScope renders: a `data-reveal` marker left outside a scope then has
+   nothing to hide it, so the failure mode is "does not animate" rather than
+   "never appears". */
+[data-reveal-scope] [data-reveal] {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 700ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* RevealScope sets opacity/transform inline to reach the resting state. */
+
+/* Slow drift for the gate's atmosphere. */
+@keyframes gate-aurora {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.75;
+  }
+  100% {
+    transform: translate3d(4%, 3%, 0) scale(1.12);
+    opacity: 1;
+  }
+}
+
+@keyframes gate-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes gate-breathe {
+  50% {
+    opacity: 0.45;
+    transform: scale(1.05);
+  }
+}
+
+/* A pulse travelling along the operating-model chain. */
+@keyframes gate-travel {
+  0% {
+    transform: translateX(-60%);
+    opacity: 0;
+  }
+  35%,
+  65% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(60%);
+    opacity: 0;
+  }
+}
+
+.gate-aurora {
+  animation: gate-aurora 26s ease-in-out infinite alternate;
+}
+
+.gate-ring-spin {
+  animation: gate-spin 48s linear infinite;
+}
+
+.gate-ring-spin-reverse {
+  animation: gate-spin 72s linear infinite reverse;
+}
+
+.gate-breathe {
+  animation: gate-breathe 7s ease-in-out infinite;
+}
+
+.gate-travel {
+  animation: gate-travel 2.8s ease-in-out infinite;
+}
+
+/* The seal follows the pointer a few pixels; the custom properties are set by
+   GateHubStage and eased back to zero on pointer leave. */
+.gate-parallax {
+  transform: translate3d(var(--gate-tx, 0px), var(--gate-ty, 0px), 0);
+  transition: transform 400ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal-scope] [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .gate-aurora,
+  .gate-ring-spin,
+  .gate-ring-spin-reverse,
+  .gate-breathe,
+  .gate-travel {
+    animation: none !important;
+  }
+
+  .gate-parallax {
+    transform: none !important;
+    transition: none !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}

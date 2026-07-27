@@ -1,4 +1,6 @@
 import {getTranslations} from 'next-intl/server';
+import RevealScope from '@/components/motion/RevealScope';
+import GateVerbs from './GateVerbs';
 import {GateRow} from './GateShell';
 
 /**
@@ -22,23 +24,15 @@ export default async function GateMedia() {
             </div>
             {/* A 2×2 grid rather than wrapping chips: the four verbs are one
                 sequence, and their length differs a lot between locales. */}
-            <ul className="mt-5 grid max-w-sm grid-cols-2 gap-2">
-              {verbs.map((verb) => (
-                <li
-                  key={verb}
-                  className="rounded-lg border border-violet-400/30 bg-violet-400/10 px-3 py-2 text-center text-xs font-semibold uppercase tracking-[0.14em] text-violet-200"
-                >
-                  {verb}
-                </li>
-              ))}
-            </ul>
+            <GateVerbs verbs={verbs} />
             <p className="mt-5 text-sm leading-relaxed text-gate-muted">{t('mediaSummary')}</p>
           </div>
 
-          <ul className="grid gap-3 sm:grid-cols-2">
+          <RevealScope stagger={90} className="grid gap-3 sm:grid-cols-2">
             {items.map((item) => (
-              <li
+              <div
                 key={item}
+                data-reveal
                 className="flex gap-3 rounded-xl border border-gate-line bg-gate-panel p-4 text-sm leading-relaxed text-gate-fg/85"
               >
                 <span
@@ -46,9 +40,9 @@ export default async function GateMedia() {
                   className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gate-cyan"
                 />
                 {item}
-              </li>
+              </div>
             ))}
-          </ul>
+          </RevealScope>
         </div>
 
         {/* Result — Trust — Impact: what the chain above is measured by. */}

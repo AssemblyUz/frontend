@@ -1,4 +1,5 @@
 import {getTranslations} from 'next-intl/server';
+import RevealScope from '@/components/motion/RevealScope';
 import {GateRow} from './GateShell';
 import type {GateOutcome, GatePartnerTier} from './types';
 
@@ -24,11 +25,12 @@ export default async function GateOutcomes() {
   return (
     <>
       <GateRow label={t('outcomesTitle')} lead={t('outcomesLead')}>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <RevealScope stagger={110} className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {outcomes.map((outcome, i) => (
             <div
               key={outcome.audience}
-              className="rounded-2xl border border-gate-line bg-gate-panel p-5"
+              data-reveal
+              className="rounded-2xl border border-gate-line bg-gate-panel p-5 transition-transform duration-500 hover:-translate-y-1"
             >
               <h4
                 className={`text-[0.7rem] font-semibold uppercase tracking-[0.16em] ${
@@ -50,13 +52,17 @@ export default async function GateOutcomes() {
               </ul>
             </div>
           ))}
-        </div>
+        </RevealScope>
       </GateRow>
 
       <GateRow label={t('partnersTitle')} lead={t('partnersLead')}>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+        <RevealScope stagger={90} className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
           {partners.map((tier, i) => (
-            <div key={tier.title} className="rounded-2xl border border-gate-line bg-gate-panel p-5">
+            <div
+              key={tier.title}
+              data-reveal
+              className="rounded-2xl border border-gate-line bg-gate-panel p-5 transition-colors duration-500 hover:border-gate-cyan/40"
+            >
               <h4 className="text-sm font-semibold text-gate-fg">{tier.title}</h4>
               <div
                 className={`mt-3 h-0.5 w-10 rounded-full bg-current ${
@@ -70,7 +76,7 @@ export default async function GateOutcomes() {
               </ul>
             </div>
           ))}
-        </div>
+        </RevealScope>
         <p className="mt-4 text-xs uppercase tracking-[0.14em] text-gate-muted">
           {t('partnersNote')}
         </p>

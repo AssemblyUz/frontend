@@ -1,5 +1,6 @@
 import {getTranslations} from 'next-intl/server';
 import {Link} from '@/i18n/navigation';
+import RevealScope from '@/components/motion/RevealScope';
 import GateHub from './GateHub';
 import GateModel from './GateModel';
 import GateMedia from './GateMedia';
@@ -37,10 +38,21 @@ export default async function MainGate() {
       aria-labelledby="main-gate-title"
       className="relative isolate overflow-hidden bg-gate-bg text-gate-fg"
     >
-      {/* Atmosphere: a cool glow overhead, a warm one in the far corner. */}
+      {/* Content stays visible when JavaScript never arrives: the reveal
+          animation's resting state is server-rendered. */}
+      <noscript>
+        <style>{`[data-reveal]{opacity:1 !important;transform:none !important}`}</style>
+      </noscript>
+
+      {/* Atmosphere: a cool glow overhead and a warm one in the far corner,
+          drifting slowly, over a faint network field. */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 [background:radial-gradient(65%_45%_at_50%_-5%,rgba(78,195,234,0.15),transparent_70%),radial-gradient(45%_45%_at_100%_100%,rgba(223,180,105,0.1),transparent_70%)]"
+        className="gate-aurora pointer-events-none absolute inset-0 [background:radial-gradient(65%_45%_at_50%_-5%,rgba(78,195,234,0.16),transparent_70%),radial-gradient(45%_45%_at_100%_100%,rgba(223,180,105,0.12),transparent_70%)]"
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 opacity-[0.18] [background-image:radial-gradient(rgba(148,172,214,0.55)_1px,transparent_1px)] [background-size:44px_44px]"
       />
       {/* Gold hairlines frame the band. On the dark theme the page behind it is
           nearly the same value, so these edges are what make it read as its own
@@ -90,18 +102,18 @@ export default async function MainGate() {
           <p className="mx-auto mt-3 max-w-2xl text-gate-muted">{t('mottoLead')}</p>
 
           <nav aria-label={t('doorsLabel')} className="mt-8">
-            <ul className="flex flex-wrap justify-center gap-2.5">
+            <RevealScope stagger={60} className="flex flex-wrap justify-center gap-2.5">
               {DOORS.map((door) => (
-                <li key={door.key}>
-                  <Link
-                    href={door.href}
-                    className="inline-flex rounded-xl border border-gate-line bg-gate-panel px-4 py-2.5 text-sm font-semibold text-gate-fg transition hover:border-gate-cyan/60 hover:bg-gate-panel-strong hover:text-gate-cyan"
-                  >
-                    {tNav(door.key)}
-                  </Link>
-                </li>
+                <Link
+                  key={door.key}
+                  href={door.href}
+                  data-reveal
+                  className="inline-flex rounded-xl border border-gate-line bg-gate-panel px-4 py-2.5 text-sm font-semibold text-gate-fg transition-all duration-300 hover:-translate-y-0.5 hover:border-gate-cyan/60 hover:bg-gate-panel-strong hover:text-gate-cyan hover:shadow-[0_8px_24px_-12px_rgba(78,195,234,0.6)]"
+                >
+                  {tNav(door.key)}
+                </Link>
               ))}
-            </ul>
+            </RevealScope>
           </nav>
         </div>
       </div>

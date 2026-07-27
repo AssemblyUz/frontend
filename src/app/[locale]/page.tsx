@@ -3,17 +3,19 @@ import {Link} from '@/i18n/navigation';
 import {getAssociations} from '@/data/associations';
 import {getNews} from '@/lib/news';
 import Logo from '@/components/Logo';
+import CountUp from '@/components/motion/CountUp';
 import MainGate from '@/components/gate/MainGate';
 import NewsCard from '@/components/NewsCard';
 
 type ServiceItem = {icon: string; name: string; desc: string};
 type ProjectItem = {icon: string; name: string; desc: string};
 
+/** Counted up on reveal, so the figures are numbers plus an optional suffix. */
 const STATS = [
-  {value: '20', key: 'projects'},
-  {value: '46', key: 'associations'},
-  {value: '15 000+', key: 'members'},
-  {value: '12', key: 'years'},
+  {to: 20, key: 'projects'},
+  {to: 46, key: 'associations'},
+  {to: 15000, suffix: '+', key: 'members'},
+  {to: 12, key: 'years'},
 ] as const;
 
 const HOME_NEWS_COUNT = 3;
@@ -77,8 +79,13 @@ export default async function HomePage({
       <section className="mx-auto -mt-8 max-w-6xl px-4">
         <div className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-border-base bg-border-base shadow-sm lg:grid-cols-4">
           {STATS.map((s) => (
-            <div key={s.key} className="bg-card px-6 py-7 text-center">
-              <div className="text-3xl font-bold tracking-tight text-brand sm:text-4xl">{s.value}</div>
+            <div
+              key={s.key}
+              className="group bg-card px-6 py-7 text-center transition-colors duration-500 hover:bg-brand/5"
+            >
+              <div className="text-3xl font-bold tracking-tight text-brand transition-transform duration-500 group-hover:scale-105 sm:text-4xl">
+                <CountUp to={s.to} suffix={'suffix' in s ? s.suffix : ''} />
+              </div>
               <div className="mt-1 text-sm text-muted">{t(`stats.${s.key}`)}</div>
             </div>
           ))}
