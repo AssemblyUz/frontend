@@ -11,10 +11,11 @@ import NewsCard from '@/components/NewsCard';
 type ServiceItem = {icon: string; name: string; desc: string};
 type ProjectItem = {icon: string; name: string; desc: string};
 
-/** Counted up on reveal, so the figures are numbers plus an optional suffix. */
+/** Counted up on reveal, so the figures are numbers plus an optional suffix.
+ *  The association figure matches the registry in `data/associations.ts`. */
 const STATS = [
   {to: 20, key: 'projects'},
-  {to: 46, key: 'associations'},
+  {to: 50, key: 'associations'},
   {to: 15000, suffix: '+', key: 'members'},
   {to: 12, key: 'years'},
 ] as const;
