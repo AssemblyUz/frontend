@@ -2,7 +2,7 @@ import {getTranslations, setRequestLocale} from 'next-intl/server';
 import {Link} from '@/i18n/navigation';
 import {getAssociations} from '@/data/associations';
 import {getNews} from '@/lib/news';
-import Emblem from '@/components/Emblem';
+import Logo from '@/components/Logo';
 import MainGate from '@/components/gate/MainGate';
 import NewsCard from '@/components/NewsCard';
 
@@ -41,19 +41,20 @@ export default async function HomePage({
       <section className="relative overflow-hidden">
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-brand/10 to-transparent" />
         <div className="pointer-events-none absolute -top-32 right-0 h-80 w-80 rounded-full bg-brand/10 blur-3xl" />
-        <div className="relative mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:py-20 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:items-center lg:gap-14 lg:py-28">
-          {/* The seal opens the page. Kept after the heading in the DOM so the
-              h1 still comes first, and pulled above it visually on narrow
-              screens where the two-column split collapses. */}
+        <div className="relative mx-auto max-w-6xl px-4 py-16 sm:py-20 lg:py-28">
           <div className="max-w-3xl">
             <span className="inline-flex items-center gap-2 rounded-full border border-border-base bg-surface px-3 py-1 text-xs font-medium text-brand">
               <span className="h-1.5 w-1.5 rounded-full bg-brand" />
               {t('heroBadge')}
             </span>
-            <h1 className="mt-5 text-4xl font-bold leading-tight tracking-tight text-foreground sm:text-5xl md:text-6xl">
-              {t('heroTitle')}
+            {/* The organisation's own lockup stands in for the name in type. The
+                heading keeps its localised text for assistive technology and
+                search engines, so the artwork itself is marked decorative. */}
+            <h1 className="mt-7">
+              <span className="sr-only">{t('heroTitle')}</span>
+              <Logo decorative className="h-auto w-full max-w-md sm:max-w-lg lg:max-w-2xl" />
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">{t('heroLead')}</p>
+            <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted">{t('heroLead')}</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
                 href="/uyushmalar"
@@ -68,18 +69,6 @@ export default async function HomePage({
                 {t('ctaSecondary')}
               </Link>
             </div>
-          </div>
-
-          <div className="order-first flex justify-center lg:order-none lg:justify-end">
-            <span className="relative block aspect-square w-40 sm:w-52 lg:w-72">
-              <span
-                aria-hidden
-                className="absolute inset-[-10%] rounded-full bg-brand/15 blur-2xl dark:bg-brand/20"
-              />
-              <span aria-hidden className="absolute inset-[-7%] rounded-full border border-brand/20" />
-              <span aria-hidden className="absolute inset-[2%] rounded-full border border-brand/10" />
-              <Emblem className="relative h-full w-full object-contain" />
-            </span>
           </div>
         </div>
       </section>
