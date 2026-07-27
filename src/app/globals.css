@@ -109,6 +109,74 @@ body {
 
 /* RevealScope sets opacity/transform inline to reach the resting state. */
 
+/* ---------------------------------------------------------------------------
+   Hero media wall — two columns of press photos drifting past each other.
+   Each column renders its list twice and travels exactly half the track height,
+   so the loop is seamless. Pure CSS: no client component involved.
+--------------------------------------------------------------------------- */
+@keyframes hero-marquee-up {
+  to {
+    transform: translate3d(0, -50%, 0);
+  }
+}
+
+@keyframes hero-marquee-down {
+  from {
+    transform: translate3d(0, -50%, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes hero-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  70%,
+  100% {
+    transform: scale(2.6);
+    opacity: 0;
+  }
+}
+
+.hero-marquee-up {
+  animation: hero-marquee-up 46s linear infinite;
+}
+
+.hero-marquee-down {
+  animation: hero-marquee-down 58s linear infinite;
+}
+
+/* Hovering the wall holds it still so a photo can be looked at. */
+.hero-marquee:hover .hero-marquee-up,
+.hero-marquee:hover .hero-marquee-down {
+  animation-play-state: paused;
+}
+
+.hero-marquee-mask {
+  /* Prefixed first for Safari before 15.4, which only knows -webkit-mask-image. */
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 10%,
+    black 88%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 10%,
+    black 88%,
+    transparent 100%
+  );
+}
+
+.hero-pulse {
+  animation: hero-pulse 2.4s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
 /* Slow drift for the gate's atmosphere. */
 @keyframes gate-aurora {
   0% {
@@ -188,7 +256,10 @@ body {
   .gate-ring-spin,
   .gate-ring-spin-reverse,
   .gate-breathe,
-  .gate-travel {
+  .gate-travel,
+  .hero-marquee-up,
+  .hero-marquee-down,
+  .hero-pulse {
     animation: none !important;
   }
 

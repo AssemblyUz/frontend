@@ -2,6 +2,7 @@ import {getTranslations, setRequestLocale} from 'next-intl/server';
 import {Link} from '@/i18n/navigation';
 import {getAssociations} from '@/data/associations';
 import {getNews} from '@/lib/news';
+import HeroMedia from '@/components/HeroMedia';
 import Logo from '@/components/Logo';
 import CountUp from '@/components/motion/CountUp';
 import MainGate from '@/components/gate/MainGate';
@@ -43,8 +44,8 @@ export default async function HomePage({
       <section className="relative overflow-hidden">
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-brand/10 to-transparent" />
         <div className="pointer-events-none absolute -top-32 right-0 h-80 w-80 rounded-full bg-brand/10 blur-3xl" />
-        <div className="relative mx-auto max-w-6xl px-4 py-16 sm:py-20 lg:py-28">
-          <div className="max-w-3xl">
+        <div className="relative mx-auto grid max-w-6xl gap-12 px-4 py-16 sm:py-20 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.82fr)] lg:items-center lg:gap-14 lg:py-24">
+          <div>
             <span className="inline-flex items-center gap-2 rounded-full border border-border-base bg-surface px-3 py-1 text-xs font-medium text-brand">
               <span className="h-1.5 w-1.5 rounded-full bg-brand" />
               {t('heroBadge')}
@@ -54,9 +55,9 @@ export default async function HomePage({
                 search engines, so the artwork itself is marked decorative. */}
             <h1 className="mt-7">
               <span className="sr-only">{t('heroTitle')}</span>
-              <Logo decorative className="h-auto w-full max-w-md sm:max-w-lg lg:max-w-2xl" />
+              <Logo decorative className="h-auto w-full max-w-xs sm:max-w-sm lg:max-w-md" />
             </h1>
-            <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted">{t('heroLead')}</p>
+            <p className="mt-7 max-w-xl text-lg leading-relaxed text-muted">{t('heroLead')}</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
                 href="/uyushmalar"
@@ -72,6 +73,8 @@ export default async function HomePage({
               </Link>
             </div>
           </div>
+
+          <HeroMedia badge={t('mediaBadge')} label={t('mediaLabel')} />
         </div>
       </section>
 
