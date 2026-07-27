@@ -3,7 +3,7 @@
 import {heroPhotoColumns} from '@/data/heroPhotos';
 
 /**
- * The hero's media wall: two columns of press photographs drifting in opposite
+ * The hero's media wall: columns of press photographs drifting in alternating
  * directions, fading out at the top and bottom.
  *
  * Animated entirely in CSS — no client component, so it adds nothing to the
@@ -14,7 +14,15 @@ import {heroPhotoColumns} from '@/data/heroPhotos';
  * The collage is one image as far as assistive technology is concerned: the
  * region carries the description and the individual photos are marked
  * decorative, since no single one of them carries meaning on its own.
+ *
+ * Three columns from the `sm` breakpoint; the third is dropped on phones, where
+ * thirds would leave the cards too small to read.
  */
+const TRACK = [
+  'hero-marquee-up',
+  'hero-marquee-down',
+  'hero-marquee-up-slow',
+] as const;
 export default function HeroMedia({badge, label}: {badge: string; label: string}) {
   return (
     <div className="relative">
@@ -26,22 +34,22 @@ export default function HeroMedia({badge, label}: {badge: string; label: string}
       <div
         role="img"
         aria-label={label}
-        className="hero-marquee hero-marquee-mask relative grid h-[22rem] grid-cols-2 gap-3 overflow-hidden sm:h-[26rem] sm:gap-4 lg:h-[34rem]"
+        className="hero-marquee hero-marquee-mask relative grid h-[22rem] grid-cols-2 gap-3 overflow-hidden sm:h-[26rem] sm:grid-cols-3 lg:h-[34rem]"
       >
         {heroPhotoColumns.map((column, index) => (
           <div
             key={index}
-            className={`flex flex-col gap-3 sm:gap-4 ${
-              index % 2 === 0 ? 'hero-marquee-up' : 'hero-marquee-down'
+            className={`flex-col gap-3 ${TRACK[index % TRACK.length]} ${
+              index === 2 ? 'hidden sm:flex' : 'flex'
             }`}
           >
             {[...column, ...column].map((photo, position) => (
               <figure
                 key={`${photo.slug}-${position}`}
-                className="group relative overflow-hidden rounded-2xl border border-border-base bg-card shadow-lg shadow-slate-900/10 dark:shadow-black/40"
+                className="group relative shrink-0 overflow-hidden rounded-2xl border border-border-base bg-card shadow-lg shadow-slate-900/10 dark:shadow-black/40"
               >
                 <img
-                  src={`/media/${photo.slug}.webp`}
+                  src={`/press/${photo.slug}.webp`}
                   alt=""
                   width={photo.width}
                   height={photo.height}

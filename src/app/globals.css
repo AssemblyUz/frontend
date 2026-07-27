@@ -149,9 +149,15 @@ body {
   animation: hero-marquee-down 58s linear infinite;
 }
 
+/* A third speed so the columns never fall into step with each other. */
+.hero-marquee-up-slow {
+  animation: hero-marquee-up 68s linear infinite;
+}
+
 /* Hovering the wall holds it still so a photo can be looked at. */
 .hero-marquee:hover .hero-marquee-up,
-.hero-marquee:hover .hero-marquee-down {
+.hero-marquee:hover .hero-marquee-down,
+.hero-marquee:hover .hero-marquee-up-slow {
   animation-play-state: paused;
 }
 
@@ -161,14 +167,14 @@ body {
     to bottom,
     transparent 0%,
     black 10%,
-    black 88%,
+    black 80%,
     transparent 100%
   );
   mask-image: linear-gradient(
     to bottom,
     transparent 0%,
     black 10%,
-    black 88%,
+    black 80%,
     transparent 100%
   );
 }
@@ -259,6 +265,7 @@ body {
   .gate-travel,
   .hero-marquee-up,
   .hero-marquee-down,
+  .hero-marquee-up-slow,
   .hero-pulse {
     animation: none !important;
   }
