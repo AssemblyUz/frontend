@@ -4,6 +4,7 @@
     "associations": "Uyushmalar",
     "services": "Xizmatlar",
     "projects": "Loyihalar",
+    "blocks": "Funksional bloklar",
     "news": "Yangiliklar",
     "about": "Biz haqimizda",
     "contact": "Aloqa"
@@ -370,6 +371,137 @@
         "icon": "💬",
         "name": "FIKRAT TV",
         "desc": "Jamiyatdagi muhim masalalar, islohotlar, ekspert fikrlari va strategik g'oyalarni yorituvchi intellektual formatdagi media maydon."
+      }
+    ]
+  },
+  "blocks": {
+    "title": "FR / BR / PR / GR — to'rt funksional blok",
+    "lead": "Assambleyaning to'rt funksional bloki. Har biri loyihalarni alohida imkoniyat maydoniga ulaydi: xalqaro, biznes, jamoatchilik va davlat.",
+    "more": "Batafsil",
+    "backToList": "Barcha bloklar",
+    "indexNote": "Bloklar Assambleya modelining o'rtasida turadi: 50 ta soha uyushmasi tadbirkorni olib keladi, ehtiyoj aniqlanadi, loyiha yechim beradi — bloklar esa shu yechim uchun kerakli eshiklarni ochadi. Natija AI MediaNet orqali yoritiladi.",
+    "roleTitle": "Nima bilan shug'ullanadi",
+    "partnersTitle": "Kim bilan ishlaydi",
+    "projectsTitle": "Bog'liq loyihalar",
+    "projectsNote": "Har bir loyiha to'rt blok orqali ishlaydi — bu ro'yxatda shu blok eng ko'p xizmat qiladigan loyihalar keltirilgan.",
+    "allProjects": "Barcha loyihalar",
+    "outcomesTitle": "Qanday natija beradi",
+    "siblingsTitle": "To'rt blok",
+    "ctaTitle": "{code} bloki bo'yicha hamkorlik",
+    "ctaLead": "Taklif, loyiha yoki hamkorlik bo'yicha murojaat qiling — mas'ul yo'nalish bilan bog'laymiz.",
+    "ctaBtn": "Bog'lanish",
+    "items": [
+      {
+        "code": "FR",
+        "name": "Foreign Relations",
+        "short": "Xalqaro aloqalar",
+        "tagline": "Xalqaro hamkorlar, elchixonalar va savdo-sanoat palatalari bilan ishlaydi.",
+        "lead": "FR bloki Assambleyani tashqi dunyoga ulaydi: xalqaro moliya institutlari, elchixonalar, savdo-sanoat palatalari, xorijiy kompaniyalar va investorlar bilan tizimli aloqa o'rnatadi. Har bir loyiha shu blok orqali xalqaro imkoniyatga chiqadi.",
+        "role": [
+          "Xalqaro moliya institutlari va investorlar bilan muzokaralar olib boradi",
+          "Elchixonalar va savdo-sanoat palatalari bilan doimiy aloqani yuritadi",
+          "Xorijiy kompaniyalar bilan hamkorlik va texnologiya almashinuvini tashkil etadi",
+          "Eksport bozorlarini ochish va xalqaro shartnomalarni tayyorlashda ko'mak beradi",
+          "O'zbekiston manfaatlarini global iqtisodiy maydonda ilgari suradi"
+        ],
+        "partners": [
+          "Xalqaro moliya institutlari: ADB, IsDB, UzDIF, UzVC",
+          "Xalqaro kompaniyalar: Huawei, Samsung C&T, Japan Development Institute, Arup, Parsons",
+          "Elchixonalar va savdo-sanoat palatalari",
+          "Tashqi ishlar vazirligi",
+          "Xorijiy investorlar va fondlar"
+        ],
+        "outcomes": [
+          "Xalqaro hamkorlik va qo'shma loyihalar",
+          "Xorijiy investitsiya va moliyalashtirish",
+          "Global bozorlarga chiqish",
+          "Texnologiya va tajriba almashinuvi",
+          "O'zbekistonning xalqaro nufuzi"
+        ]
+      },
+      {
+        "code": "BR",
+        "name": "Business Relations",
+        "short": "Biznes aloqalari",
+        "tagline": "Tadbirkorlar, kompaniyalar, investorlar, xizmat ko'rsatuvchilar va uyushmalar bilan ishlaydi.",
+        "lead": "BR bloki Assambleyaning ichki dvigateli: 50 ta soha uyushmasi, tadbirkorlar, kompaniyalar va investorlarni bitta tarmoqqa bog'laydi, ehtiyojni aniqlab, unga mos xizmat va yechimni topadi.",
+        "role": [
+          "50 ta soha uyushmasi va ularning a'zolari bilan bevosita ishlaydi",
+          "Tadbirkorlarning ehtiyojini aniqlaydi va yechimga ulaydi",
+          "Investor bilan loyihani, xaridor bilan ishlab chiqaruvchini bog'laydi",
+          "Bank, konsalting va xizmat ko'rsatuvchi tashkilotlar bilan shartlarni kelishadi",
+          "Yirik va raqobatbardosh milliy kompaniyalar shakllanishiga ko'mak beradi"
+        ],
+        "partners": [
+          "50 ta soha uyushmasi va ularning a'zolari",
+          "Banklar: Ipoteka Bank (OTP), TBC Bank, Apexbank, Uzbekleasing",
+          "Konsalting: KPMG, Solvex Consulting, Specto Consulting",
+          "Investorlar va venchur fondlari",
+          "Xizmat ko'rsatuvchi kompaniyalar"
+        ],
+        "outcomes": [
+          "Investitsiya va moliyalashtirish",
+          "Yangi bozor va buyurtmalar",
+          "Professional xizmatlarga kirish",
+          "Barqaror biznes o'sishi",
+          "Turli investitsiya platformalari"
+        ]
+      },
+      {
+        "code": "PR",
+        "name": "Public Relations",
+        "short": "Jamoatchilik bilan aloqalar",
+        "tagline": "Media, jamoatchilik ishonchi va AI MediaNet qatlamini boshqaradi.",
+        "lead": "PR bloki natijani ko'rinadigan qiladi: Assambleya va uyushmalar faoliyatini media va ijtimoiy tarmoqlarda yoritadi, AI MediaNet orqali auditoriya kayfiyati va kontent samaradorligini tahlil qiladi.",
+        "role": [
+          "Assambleya va uyushmalar faoliyatini media va ijtimoiy tarmoqlarda yoritadi",
+          "AI MediaNet orqali kontent rejasi, monitoring va tahlilni yuritadi",
+          "Tadbirkorlarning real natijalari haqida hikoyalar tayyorlaydi",
+          "Brend va ijtimoiy ishonch kapitalini mustahkamlaydi",
+          "Milliy va xalqaro qamrovni kengaytiradi"
+        ],
+        "partners": [
+          "AI MediaNet platformasi",
+          "Media loyihalar: Reportaj GO, Biznes TV, Fikrat TV",
+          "Ommaviy axborot vositalari va jurnalistlar",
+          "Ijtimoiy tarmoq platformalari",
+          "Assambleya rahbarlari va uyushma sahifalari"
+        ],
+        "outcomes": [
+          "Jamoatchilik ishonchi",
+          "Biznes obro'si va brend kapitali",
+          "Kengaygan milliy va xalqaro qamrov",
+          "Iqtisodiy optimizm va faollik",
+          "Shaffoflik va ochiq hisobot"
+        ]
+      },
+      {
+        "code": "GR",
+        "name": "Government Relations",
+        "short": "Davlat bilan aloqalar",
+        "tagline": "Davlat organlari, milliy dasturlar, ruxsatlar, siyosat va strategik qo'llovni muvofiqlashtiradi.",
+        "lead": "GR bloki biznes ehtiyojini davlat imkoniyati bilan bog'laydi: vazirliklar, agentliklar va hokimliklar bilan ishlaydi, milliy dasturlar, ruxsat va siyosat masalalarida muvofiqlashtirishni yuritadi.",
+        "role": [
+          "Vazirliklar, agentliklar va hokimliklar bilan tizimli ishlaydi",
+          "Tadbirkorlar muammosini davlat organlariga yetkazadi",
+          "Milliy dasturlar bilan biznes tashabbuslarini bog'laydi",
+          "Ruxsat, litsenziya va tartibga solish masalalarida ko'mak beradi",
+          "Strategik davlat qo'llovini loyihalarga jalb qiladi"
+        ],
+        "partners": [
+          "Loyiha samaradorligi agentligi",
+          "Investitsiyalar, sanoat va savdo vazirligi",
+          "Iqtisodiyot va moliya vazirligi",
+          "Biznes ombudsmani",
+          "Hokimliklar va hududiy boshqarmalar"
+        ],
+        "outcomes": [
+          "Strategik davlat qo'llovi",
+          "Real ehtiyojga asoslangan dasturlar",
+          "Tezroq ruxsat va aniq tartib",
+          "Yangi ish o'rinlari va soliq tushumi",
+          "Davlat va biznes o'rtasida ishonch"
+        ]
       }
     ]
   },

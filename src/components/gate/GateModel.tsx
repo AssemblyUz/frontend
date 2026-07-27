@@ -1,4 +1,6 @@
 import {getTranslations} from 'next-intl/server';
+import {Link} from '@/i18n/navigation';
+import {functionalBlocks} from '@/data/functionalBlocks';
 import {GateIndex, GateRow} from './GateShell';
 import type {GateBlock, GateStep} from './types';
 
@@ -27,6 +29,7 @@ const BLOCK_TONE = [
  */
 export default async function GateModel() {
   const t = await getTranslations('gate');
+  const tBlocks = await getTranslations('blocks');
   const steps = t.raw('modelSteps') as GateStep[];
   const blocks = t.raw('blocks') as GateBlock[];
 
@@ -59,11 +62,9 @@ export default async function GateModel() {
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {blocks.map((block, i) => {
             const tone = BLOCK_TONE[i % BLOCK_TONE.length];
-            return (
-              <div
-                key={block.code}
-                className={`rounded-2xl border bg-gate-panel p-5 transition ${tone.border}`}
-              >
+            const target = functionalBlocks.find((fb) => fb.code === block.code);
+            const body = (
+              <>
                 <span
                   className={`flex h-11 w-11 items-center justify-center rounded-xl text-base font-bold ${tone.badge}`}
                 >
@@ -71,7 +72,31 @@ export default async function GateModel() {
                 </span>
                 <h4 className="mt-4 font-semibold text-gate-fg">{block.title}</h4>
                 <p className="mt-1.5 text-sm leading-relaxed text-gate-muted">{block.desc}</p>
-              </div>
+              </>
+            );
+
+            if (!target) {
+              return (
+                <div
+                  key={block.code}
+                  className={`rounded-2xl border bg-gate-panel p-5 ${tone.border}`}
+                >
+                  {body}
+                </div>
+              );
+            }
+
+            return (
+              <Link
+                key={block.code}
+                href={`/bloklar/${target.slug}`}
+                className={`group block rounded-2xl border bg-gate-panel p-5 transition ${tone.border}`}
+              >
+                {body}
+                <span className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold text-gate-cyan transition-all group-hover:gap-2.5">
+                  {tBlocks('more')} →
+                </span>
+              </Link>
             );
           })}
         </div>

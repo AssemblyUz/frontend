@@ -1,6 +1,8 @@
 import type {Metadata} from 'next';
 import {getTranslations, setRequestLocale} from 'next-intl/server';
+import {Link} from '@/i18n/navigation';
 import PageHero from '@/components/PageHero';
+import {functionalBlocks} from '@/data/functionalBlocks';
 
 type Highlight = {value: string; label: string};
 type ValueItem = {title: string; sub: string};
@@ -48,6 +50,7 @@ export default async function AboutPage({
   const {locale} = await params;
   setRequestLocale(locale);
   const t = await getTranslations('about');
+  const tBlocks = await getTranslations('blocks');
 
   const highlights = t.raw('highlights') as Highlight[];
   const role = t.raw('role') as string[];
@@ -204,16 +207,14 @@ export default async function AboutPage({
           </div>
         </Section>
 
-        {/* FR / BR / PR / GR */}
+        {/* FR / BR / PR / GR — each card opens the block's own page. */}
         <Section title={t('blocksTitle')} lead={t('blocksLead')}>
           <div className="grid gap-5 sm:grid-cols-2">
             {blocks.map((b, i) => {
               const style = BLOCK_STYLE[i % BLOCK_STYLE.length];
-              return (
-                <div
-                  key={b.code}
-                  className={`rounded-2xl border bg-card p-6 sm:p-8 ${style.border}`}
-                >
+              const block = functionalBlocks.find((fb) => fb.code === b.code);
+              const card = (
+                <>
                   <div className="flex items-center gap-4">
                     <span
                       className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl text-lg font-bold ${style.bg} ${style.text}`}
@@ -223,7 +224,30 @@ export default async function AboutPage({
                     <h3 className="font-semibold text-foreground">{b.title}</h3>
                   </div>
                   <p className="mt-4 text-sm leading-relaxed text-muted">{b.desc}</p>
-                </div>
+                </>
+              );
+
+              if (!block) {
+                return (
+                  <div key={b.code} className={`rounded-2xl border bg-card p-6 sm:p-8 ${style.border}`}>
+                    {card}
+                  </div>
+                );
+              }
+
+              return (
+                <Link
+                  key={b.code}
+                  href={`/bloklar/${block.slug}`}
+                  className={`group rounded-2xl border bg-card p-6 transition hover:shadow-lg sm:p-8 ${style.border} ${block.tone.hoverBorder}`}
+                >
+                  {card}
+                  <span
+                    className={`mt-5 inline-flex items-center gap-1.5 text-sm font-semibold transition-all group-hover:gap-2.5 ${style.text}`}
+                  >
+                    {tBlocks('more')} →
+                  </span>
+                </Link>
               );
             })}
           </div>

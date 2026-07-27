@@ -4,6 +4,7 @@
     "associations": "Associations",
     "services": "Services",
     "projects": "Projects",
+    "blocks": "Functional blocks",
     "news": "News",
     "about": "About us",
     "contact": "Contact"
@@ -370,6 +371,137 @@
         "icon": "💬",
         "name": "FIKRAT TV",
         "desc": "An intellectual-format media space covering important social issues, reforms, expert opinions and strategic ideas."
+      }
+    ]
+  },
+  "blocks": {
+    "title": "FR / BR / PR / GR — four functional blocks",
+    "lead": "The Assembly's four functional blocks. Each connects the projects to a different field of opportunity: international, business, public and government.",
+    "more": "Read more",
+    "backToList": "All blocks",
+    "indexNote": "The blocks sit in the middle of the Assembly's model: the 50 sectoral associations bring the entrepreneur in, the need is identified, a project answers it — and the blocks open the doors that answer requires. The result is then carried outward by AI MediaNet.",
+    "roleTitle": "What it does",
+    "partnersTitle": "Who it works with",
+    "projectsTitle": "Related projects",
+    "projectsNote": "Every project works through all four blocks — this list shows the ones this block serves most directly.",
+    "allProjects": "All projects",
+    "outcomesTitle": "What it delivers",
+    "siblingsTitle": "The four blocks",
+    "ctaTitle": "Working with the {code} block",
+    "ctaLead": "Write to us about a proposal, a project or a partnership — we will connect you with the right team.",
+    "ctaBtn": "Get in touch",
+    "items": [
+      {
+        "code": "FR",
+        "name": "Foreign Relations",
+        "short": "International relations",
+        "tagline": "Works with international partners, embassies and chambers of commerce.",
+        "lead": "The FR block connects the Assembly to the world beyond: it builds systematic relations with international financial institutions, embassies, chambers of commerce, foreign companies and investors. Every project reaches international opportunity through this block.",
+        "role": [
+          "Negotiates with international financial institutions and investors",
+          "Maintains standing relations with embassies and chambers of commerce",
+          "Arranges cooperation and technology exchange with foreign companies",
+          "Helps open export markets and prepare international agreements",
+          "Advances Uzbekistan's interests in the global economic arena"
+        ],
+        "partners": [
+          "International financial institutions: ADB, IsDB, UzDIF, UzVC",
+          "International companies: Huawei, Samsung C&T, Japan Development Institute, Arup, Parsons",
+          "Embassies and chambers of commerce",
+          "Ministry of Foreign Affairs",
+          "Foreign investors and funds"
+        ],
+        "outcomes": [
+          "International partnerships and joint projects",
+          "Foreign investment and funding",
+          "Access to global markets",
+          "Technology and knowledge exchange",
+          "Uzbekistan's international standing"
+        ]
+      },
+      {
+        "code": "BR",
+        "name": "Business Relations",
+        "short": "Entrepreneurs and investors",
+        "tagline": "Works with entrepreneurs, companies, investors, service providers and associations.",
+        "lead": "The BR block is the Assembly's internal engine: it binds the 50 sectoral associations, entrepreneurs, companies and investors into one network, identifies the need and finds the service or solution that answers it.",
+        "role": [
+          "Works directly with the 50 sectoral associations and their members",
+          "Identifies what entrepreneurs need and connects them to a solution",
+          "Matches investors with projects, and buyers with producers",
+          "Agrees terms with banks, consulting firms and service providers",
+          "Helps build large, competitive national companies"
+        ],
+        "partners": [
+          "The 50 sectoral associations and their members",
+          "Banks: Ipoteka Bank (OTP), TBC Bank, Apexbank, Uzbekleasing",
+          "Consulting: KPMG, Solvex Consulting, Specto Consulting",
+          "Investors and venture funds",
+          "Service companies"
+        ],
+        "outcomes": [
+          "Investment and funding",
+          "New markets and orders",
+          "Access to professional services",
+          "Sustainable business growth",
+          "Diverse investment platforms"
+        ]
+      },
+      {
+        "code": "PR",
+        "name": "Public Relations",
+        "short": "Media and public trust",
+        "tagline": "Manages media, public trust and the AI MediaNet layer.",
+        "lead": "The PR block makes the result visible: it covers the work of the Assembly and its associations across media and social platforms, and uses AI MediaNet to analyse audience sentiment and content performance.",
+        "role": [
+          "Covers the work of the Assembly and its associations in media and on social platforms",
+          "Runs content planning, monitoring and analysis through AI MediaNet",
+          "Tells the stories behind entrepreneurs' real results",
+          "Strengthens the brand and the capital of public trust",
+          "Expands national and international reach"
+        ],
+        "partners": [
+          "The AI MediaNet platform",
+          "Media projects: Reportaj GO, Biznes TV, Fikrat TV",
+          "Mass media and journalists",
+          "Social media platforms",
+          "Pages of Assembly leaders and member associations"
+        ],
+        "outcomes": [
+          "Public trust",
+          "Business reputation and brand capital",
+          "Wider national and international reach",
+          "Economic optimism and activity",
+          "Transparency and open reporting"
+        ]
+      },
+      {
+        "code": "GR",
+        "name": "Government Relations",
+        "short": "Government and policy",
+        "tagline": "Coordinates state bodies, national programmes, permits, policy and strategic support.",
+        "lead": "The GR block ties business need to state capability: it works with ministries, agencies and regional administrations, and coordinates on national programmes, permits and policy questions.",
+        "role": [
+          "Works systematically with ministries, agencies and regional administrations",
+          "Carries entrepreneurs' problems to the relevant state bodies",
+          "Links national programmes with business initiatives",
+          "Assists with permits, licensing and regulatory questions",
+          "Draws strategic state support into projects"
+        ],
+        "partners": [
+          "Agency for Project Efficiency",
+          "Ministry of Investment, Industry and Trade",
+          "Ministry of Economy and Finance",
+          "Business Ombudsman",
+          "Regional administrations and departments"
+        ],
+        "outcomes": [
+          "Strategic state support",
+          "Programmes grounded in real needs",
+          "Faster permits and clearer procedure",
+          "New jobs and tax revenue",
+          "Trust between government and business"
+        ]
       }
     ]
   },

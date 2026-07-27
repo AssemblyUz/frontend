@@ -8,6 +8,7 @@ const LINKS = [
   {href: '/uyushmalar', key: 'associations'},
   {href: '/xizmatlar', key: 'services'},
   {href: '/loyihalar', key: 'projects'},
+  {href: '/bloklar', key: 'blocks'},
   {href: '/yangiliklar', key: 'news'},
   {href: '/haqida', key: 'about'},
   {href: '/aloqa', key: 'contact'},
