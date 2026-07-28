@@ -92,7 +92,7 @@ export default async function HomePage({
               key={s.key}
               className="group bg-card px-6 py-7 text-center transition-colors duration-500 hover:bg-brand/5"
             >
-              <div className="numeral text-3xl font-semibold tracking-tight text-brand transition-transform duration-500 group-hover:scale-105 sm:text-4xl">
+              <div className="text-3xl font-bold tracking-tight text-brand transition-transform duration-500 group-hover:scale-105 sm:text-4xl">
                 <CountUp to={s.to} suffix={'suffix' in s ? s.suffix : ''} />
               </div>
               <div className="mt-1 text-sm text-muted">{t(`stats.${s.key}`)}</div>
@@ -233,9 +233,8 @@ function HomeSection({
     <section className="mx-auto max-w-6xl px-4 py-14 sm:py-20">
       <div className="flex flex-wrap items-end justify-between gap-4">
         <div>
-          <h2 className="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">{title}</h2>
-          <div aria-hidden className="mt-3 h-px w-16 bg-border-base" />
-          <p className="mt-3 max-w-xl text-muted">{lead}</p>
+          <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">{title}</h2>
+          <p className="mt-2 max-w-xl text-muted">{lead}</p>
         </div>
         <Link
           href={href}

@@ -4,40 +4,38 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  /* Paper: a warm cream page with ink-dark text and rules the colour of a
-     printed margin note. */
-  --background: #f6f3ea;
-  --surface: #fffdf7;
-  --card: #fffdf8;
-  --foreground: #1b1815;
-  --muted: #6c6355;
-  --border: #e3dccd;
+  --background: #f8fafc;
+  --surface: #ffffff;
+  --card: #ffffff;
+  --foreground: #0f172a;
+  --muted: #64748b;
+  --border: #e2e8f0;
   --brand: #4f46e5;
   --brand-strong: #4338ca;
   --brand-fg: #ffffff;
-  --accent: #0f766e;
+  --accent: #0ea5e9;
   --ring: rgba(79, 70, 229, 0.35);
 
-  /* Main Gate — a tinted plate on the same paper: a deeper stock than the page
-     around it, warm rather than cool so it sits with the cream instead of
-     fighting it. Follows the theme; the dark values are under `.dark`. */
-  --gate-bg: #ece4d2;
-  --gate-panel: rgba(255, 253, 247, 0.8);
-  --gate-panel-strong: #fffdf7;
-  --gate-line: rgba(27, 24, 21, 0.13);
-  --gate-fg: #1b1815;
-  --gate-muted: #6c6355;
+  /* Main Gate — a distinct band with its own gold and cyan accents, one shade
+     deeper than the page so it still reads as its own section. It follows the
+     theme like everything else; the dark values are under `.dark`. */
+  --gate-bg: #eaeffa;
+  --gate-panel: rgba(255, 255, 255, 0.78);
+  --gate-panel-strong: #ffffff;
+  --gate-line: rgba(15, 23, 42, 0.1);
+  --gate-fg: #0f172a;
+  --gate-muted: #55657f;
   --gate-gold: #8a5f14;
-  --gate-cyan: #0f766e;
+  --gate-cyan: #0e7490;
 }
 
 .dark {
-  --background: #100e0b;
-  --surface: #191612;
-  --card: #1c1914;
-  --foreground: #ece6da;
-  --muted: #9d9689;
-  --border: #2c2721;
+  --background: #070b16;
+  --surface: #0d1424;
+  --card: #0f172a;
+  --foreground: #e5e9f2;
+  --muted: #94a3b8;
+  --border: #1e293b;
   --brand: #818cf8;
   --brand-strong: #a5b4fc;
   --brand-fg: #0b1020;
@@ -75,7 +73,6 @@
   --color-gate-gold: var(--gate-gold);
   --color-gate-cyan: var(--gate-cyan);
   --font-sans: var(--font-sans), system-ui, sans-serif;
-  --font-serif: var(--font-serif), Georgia, 'Times New Roman', serif;
 }
 
 html {
@@ -96,93 +93,6 @@ body {
 }
 
 /* ===========================================================================
-   Book typography
-   Headings and display figures are set in the serif; interface text stays in
-   Inter. Applied here rather than per component so every page — including the
-   control panel — picks it up.
-   =========================================================================== */
-h1,
-h2,
-h3,
-h4 {
-  font-family: var(--font-serif), Georgia, 'Times New Roman', serif;
-  letter-spacing: -0.015em;
-}
-
-/* Display figures read as printed numerals rather than UI digits. */
-.numeral {
-  font-family: var(--font-serif), Georgia, serif;
-  font-variant-numeric: lining-nums;
-}
-
-/* Opening paragraph of a chapter. */
-.drop-cap::first-letter {
-  float: left;
-  margin: 0.02em 0.08em 0 0;
-  font-family: var(--font-serif), Georgia, serif;
-  font-size: 3.1em;
-  font-weight: 600;
-  line-height: 0.84;
-  color: var(--brand);
-}
-
-/* The double rule that closes a chapter opener. */
-.rule-double {
-  border-top: 3px double var(--border);
-}
-
-/* ---------------------------------------------------------------------------
-   Page turn
-   Navigating turns the leaf: the incoming page swings in from the spine on the
-   left, with the gutter shadow deepening and lifting as it settles. Transform
-   and opacity only, and no fill-mode, so nothing lingers once it is done.
---------------------------------------------------------------------------- */
-@keyframes page-turn-in {
-  from {
-    opacity: 0.3;
-    transform: perspective(1500px) rotateY(-13deg) translateX(-3%);
-  }
-  to {
-    opacity: 1;
-    transform: perspective(1500px) rotateY(0deg) translateX(0);
-  }
-}
-
-@keyframes page-gutter {
-  from {
-    opacity: 0.5;
-  }
-  to {
-    opacity: 0;
-  }
-}
-
-.page-turn {
-  transform-origin: left center;
-  animation: page-turn-in 700ms cubic-bezier(0.33, 1, 0.68, 1);
-  /* Flattened deliberately: a paper leaf is one surface, and preserve-3d would
-     put every card on its own plane — which blurs text and re-orders overlays. */
-  transform-style: flat;
-}
-
-/* The shadow that falls in the gutter as the page swings. */
-.page-turn::before {
-  content: '';
-  position: absolute;
-  inset: 0 auto 0 0;
-  width: 180px;
-  z-index: 1;
-  pointer-events: none;
-  background: linear-gradient(to right, rgba(27, 24, 21, 0.3), transparent);
-  animation: page-gutter 700ms cubic-bezier(0.33, 1, 0.68, 1);
-  opacity: 0;
-}
-
-.dark .page-turn::before {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), transparent);
-}
-
-/* ===========================================================================
    Motion
    Only transform, opacity and filter are animated, so everything stays on the
    compositor. Every effect here degrades to a static layout: the reduced-motion
@@ -191,8 +101,8 @@ h4 {
    =========================================================================== */
 
 /* Reveal-on-scroll. The pre-animation state is server-rendered; `RevealScope`
-   eases its `[data-reveal]` descendants to their resting state, staggered, once
-   the group enters the viewport.
+   `RevealScope` eases its `[data-reveal]` descendants to their resting state,
+   staggered, once the group enters the viewport.
 
    The hidden state is deliberately scoped to `[data-reveal-scope]`, which only
    RevealScope renders: a `data-reveal` marker left outside a scope then has
@@ -200,9 +110,7 @@ h4 {
    "never appears". */
 [data-reveal-scope] [data-reveal] {
   opacity: 0;
-  /* Hinged at the top edge, like a leaf being laid flat. */
-  transform: perspective(1200px) rotateX(7deg) translateY(14px);
-  transform-origin: top center;
+  transform: translateY(16px);
   transition:
     opacity 700ms cubic-bezier(0.16, 1, 0.3, 1),
     transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
@@ -359,8 +267,6 @@ h4 {
     transition: none !important;
   }
 
-  .page-turn,
-  .page-turn::before,
   .gate-aurora,
   .gate-ring-spin,
   .gate-ring-spin-reverse,

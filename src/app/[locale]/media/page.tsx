@@ -32,7 +32,7 @@ export default async function MediaPage({
 
   return (
     <>
-      <PageHero title={t('title')} lead={t('lead')} chapter="V" />
+      <PageHero title={t('title')} lead={t('lead')} />
 
       <div className="mx-auto max-w-6xl px-4 py-12 sm:py-16">
         {/* The projects themselves, whether or not their channel is connected. */}

@@ -30,7 +30,7 @@ export default async function BlocksPage({
 
   return (
     <>
-      <PageHero title={t('title')} lead={t('lead')} chapter="IV" />
+      <PageHero title={t('title')} lead={t('lead')} />
 
       <div className="mx-auto max-w-6xl px-4 py-12 sm:py-16">
         <div className="grid gap-5 sm:grid-cols-2">

@@ -285,7 +285,7 @@ export default function GateHubStage({
           />
         </span>
 
-        <span className="numeral relative mt-8 block text-5xl font-semibold leading-none tracking-tight text-gate-fg">
+        <span className="relative mt-8 block text-5xl font-bold leading-none tracking-tight text-gate-fg">
           {Number.isFinite(hubCount) ? <CountUp to={hubCount} /> : labels.hubValue}
         </span>
         <span className="relative mt-2 block text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-gate-gold">
@@ -307,7 +307,7 @@ export default function GateHubStage({
         <GateEyebrow tone="cyan">{labels.assocTitle}</GateEyebrow>
 
         <div className="mt-4 flex items-baseline gap-2">
-          <span className="numeral text-3xl font-semibold leading-none tracking-tight text-gate-fg sm:text-4xl">
+          <span className="text-3xl font-bold leading-none tracking-tight text-gate-fg sm:text-4xl">
             {Number.isFinite(assocCount) ? <CountUp to={assocCount} /> : labels.assocValue}
           </span>
           <span className="text-sm text-gate-muted">{labels.assocUnit}</span>

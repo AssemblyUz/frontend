@@ -26,7 +26,7 @@ export default async function ServicesPage({
 
   return (
     <>
-      <PageHero title={t('title')} lead={t('lead')} chapter="II" />
+      <PageHero title={t('title')} lead={t('lead')} />
       <section className="mx-auto max-w-6xl px-4 py-12 sm:py-16">
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((it, i) => (
