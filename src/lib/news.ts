@@ -1,10 +1,5 @@
 import {apiGet, ApiError} from './api';
-import {
-  formatNewsDate,
-  getNews as staticNews,
-  getNewsItem as staticNewsItem,
-  type LocalizedNewsItem,
-} from '@/data/news';
+import {formatNewsDate, type LocalizedNewsItem} from '@/data/news';
 
 export type {LocalizedNewsItem};
 
@@ -66,33 +61,35 @@ function newestFirst(items: LocalizedNewsItem[]): LocalizedNewsItem[] {
 /**
  * All published posts for a locale, newest first.
  *
- * Falls back to the seed posts in `data/news.ts` when the API is unreachable,
- * matching how `lib/site.ts` degrades: a backend outage renders a stale page
- * rather than an empty one. The failure is logged, never swallowed silently.
+ * An unreachable API yields no posts, so `/yangiliklar` shows its empty state.
+ * It deliberately does NOT fall back to the seed posts in `data/news.ts` the
+ * way `lib/site.ts` falls back for site details, and the difference matters:
+ * those are invented articles with invented dates. Serving them presents
+ * fiction as this organisation's news, and it hides a real outage behind a page
+ * that looks fine — an editor who had just published something reasonably read
+ * it as their post having disappeared.
  *
- * Note this fallback covers an *unreachable* API only. An API that responds
- * with an empty list is a legitimate answer — no posts published yet — and is
- * passed through so `/yangiliklar` shows its empty state.
+ * A missing address degrades to a stale address. A missing article list must not
+ * degrade to a fabricated one.
  */
 export async function getNews(locale: string): Promise<LocalizedNewsItem[]> {
   try {
     const data = await apiGet<ArticleResponse[]>('news/', locale);
     return newestFirst(data.map((article) => localize(article, locale)));
   } catch (error) {
-    console.error(
-      `[news] API unreachable for locale "${locale}"; serving static fallback.`,
-      error,
-    );
-    return staticNews(locale);
+    console.error(`[news] API unreachable for locale "${locale}"; serving no posts.`, error);
+    return [];
   }
 }
 
 /**
  * A single published post, or undefined when the slug is unknown.
  *
- * A 404 is a real answer — the post is unpublished, future-dated or gone — so
- * it must not fall through to the static seed data, or a deleted post would
- * stay reachable forever. Only a transport failure degrades to the fallback.
+ * Only a 404 means undefined: the post is unpublished, future-dated or gone.
+ * Any other failure is rethrown rather than reported as a missing post, because
+ * the caller turns undefined into a 404 page — which would tell a reader, and a
+ * search engine, that a live article no longer exists because the backend
+ * happened to be restarting. An error page is the honest answer to an outage.
  */
 export async function getNewsItem(
   slug: string,
@@ -105,10 +102,7 @@ export async function getNewsItem(
     if (error instanceof ApiError && error.status === 404) {
       return undefined;
     }
-    console.error(
-      `[news] API unreachable for "${slug}" (${locale}); serving static fallback.`,
-      error,
-    );
-    return staticNewsItem(slug, locale);
+    console.error(`[news] could not load "${slug}" (${locale}).`, error);
+    throw error;
   }
 }

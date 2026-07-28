@@ -4,6 +4,21 @@ import PageHero from '@/components/PageHero';
 import NewsCard from '@/components/NewsCard';
 import {getNews} from '@/lib/news';
 
+/**
+ * Rendered per request, never prerendered.
+ *
+ * `next build` runs inside Docker with no API to reach, so a prerender of this
+ * page cannot contain a single real article — and every deploy ships that
+ * render, serving it to whoever arrives before the first background refresh
+ * finishes. Measured on the live site: three of four requests after a deploy
+ * returned the build's content rather than the published articles.
+ *
+ * The five-minute cycle on the locale layout still governs everything else. This
+ * page is the one whose whole purpose is to be current, and its cost is a single
+ * query to a container on the same Docker network.
+ */
+export const dynamic = 'force-dynamic';
+
 export async function generateMetadata({
   params,
 }: {

@@ -11,6 +11,17 @@ import CountUp from '@/components/motion/CountUp';
 import MainGate from '@/components/gate/MainGate';
 import NewsCard from '@/components/NewsCard';
 
+/**
+ * Rendered per request, for the same reason as `/yangiliklar`: this page carries
+ * the latest articles, and a build that cannot reach the API produces a version
+ * with none of them — which every deploy then serves until a background refresh
+ * replaces it. See that page for the measurement.
+ *
+ * The YouTube feed keeps its own half-hour cache, so this does not mean polling
+ * YouTube on every visit.
+ */
+export const dynamic = 'force-dynamic';
+
 type ServiceItem = {icon: string; name: string; desc: string};
 type ProjectItem = {icon: string; name: string; desc: string};
 
