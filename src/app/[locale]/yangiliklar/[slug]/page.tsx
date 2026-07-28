@@ -44,11 +44,7 @@ export default async function NewsDetailPage({
   const t = await getTranslations('news');
   const related = all.filter((n) => n.slug !== item.slug).slice(0, RELATED_COUNT);
 
-  // Split rather than render `cover` separately: cover *is* the first image, so
-  // drawing both would show it twice.
   const photos = item.images ?? [];
-  const lead = photos.slice(0, 1);
-  const rest = photos.slice(1);
 
   return (
     <>
@@ -81,10 +77,11 @@ export default async function NewsDetailPage({
           <p className="mt-4 text-lg leading-relaxed text-muted">{item.excerpt}</p>
         </header>
 
-        {/* The first photo leads the article, where it is visible on arrival.
-            Below the text it was reachable only by scrolling past the whole
-            body — an odd place for the one thing a reader looks at first. */}
-        <ArticleGallery photos={lead} />
+        {/* Photos lead the article, all of them together.
+            Below the body they were reachable only by scrolling past the entire
+            text, and splitting the first one off broke the row an editor gets
+            when they give several photos the same width. */}
+        <ArticleGallery photos={photos} />
 
         <div className="mt-8 space-y-5">
           {item.body.map((paragraph, i) => (
@@ -94,8 +91,6 @@ export default async function NewsDetailPage({
             </p>
           ))}
         </div>
-
-        <ArticleGallery photos={rest} />
       </article>
 
       {related.length > 0 && (

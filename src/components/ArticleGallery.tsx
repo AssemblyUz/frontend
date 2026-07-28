@@ -13,22 +13,25 @@ const WIDTH: Record<ArticlePhoto['size'], string> = {
 };
 
 /**
- * Every photo gets a fixed frame: tall enough to read, short enough to fit on
- * screen beside some text.
+ * Each photo sits in a frame of a fixed shape.
  *
- * Photos arrive straight from a phone, so a 4000x3000 shot rendered at the
- * column's own width stood some 700px tall — one photo filled the viewport and
- * pushed the next entirely out of view, leaving no sense of how many there were.
+ * Photos arrive straight from a phone, so one rendered at its own proportions
+ * across the column stood some 700px tall: it filled the viewport and pushed
+ * anything after it out of view, with no hint that more photos followed.
  *
- * The frame doubles as the layout reservation. Photo dimensions are not stored
- * server-side, so there is nothing to size the box from; one that does not
- * depend on the image cannot shift when it loads. Viewport units with a rem
- * ceiling: proportional on a laptop, not absurd on a large monitor.
+ * The shapes match what cameras produce — 4:3 for the smaller widths, a wider
+ * 3:2 for a photo given the whole column, capped so a lead photo cannot outgrow
+ * the screen on a short window. Anything else is contained inside, not cropped.
+ *
+ * The frame is also the layout reservation. Photo dimensions are not stored
+ * server-side, so there is nothing to size a box from; one whose shape is known
+ * in advance cannot shift when the image loads. The width and height attributes
+ * this replaces were fixed guesses that were wrong for every portrait photo.
  */
 const FRAME: Record<ArticlePhoto['size'], string> = {
-  full: 'h-[58vh] max-h-[32rem] min-h-[15rem]',
-  half: 'h-[38vh] max-h-[21rem] min-h-[12rem]',
-  thumb: 'h-[26vh] max-h-[14rem] min-h-[9rem]',
+  full: 'aspect-[3/2] max-h-[58vh]',
+  half: 'aspect-[4/3]',
+  thumb: 'aspect-[4/3]',
 };
 
 export default function ArticleGallery({photos}: {photos: ArticlePhoto[]}) {
