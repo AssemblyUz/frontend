@@ -58,19 +58,48 @@ export default function ArticleForm({article}: {article?: PanelArticle}) {
     });
   }
 
-  /** Derive the slug from the Uzbek title, but never overwrite a published one. */
-  function handleTitleUz(value: string) {
-    setDraft((current) => ({
-      ...current,
-      title_uz: value,
-      slug: isNew && !current.slug.trim() ? slugify(value) : current.slug,
-    }));
+  /**
+   * Fill an empty slug from whichever title has content, preferring Uzbek.
+   *
+   * It used to derive from the Uzbek title alone, so an editor writing the
+   * Russian version first was left with an empty slug — and the form silently
+   * refused to submit. A slug already on the article is never overwritten.
+   */
+  function handleTitle(target: ContentLocale, value: string) {
+    setDraft((current) => {
+      const next = {...current, [`title_${target}`]: value};
+      if (isNew && !current.slug.trim()) {
+        const derived = LOCALES.map((l) => slugify(next[`title_${l}`])).find(Boolean);
+        if (derived) next.slug = derived;
+      }
+      return next;
+    });
+    setFieldErrors((current) => {
+      const key = `title_${target}`;
+      if (!(key in current) && !('slug' in current)) return current;
+      const rest = {...current};
+      delete rest[key];
+      delete rest.slug;
+      return rest;
+    });
   }
 
   async function handleSubmit(event: React.FormEvent) {
     event.preventDefault();
     setError(null);
     setFieldErrors({});
+
+    // Checked here rather than with a native `required`: the slug sits in the
+    // settings column, and the browser's own validation blocks the submit with
+    // a tooltip on a field the editor may not have scrolled to — which reads as
+    // "the button does nothing".
+    if (!draft.slug.trim()) {
+      setFieldErrors({slug: t('slugRequired')});
+      setError(t('slugRequired'));
+      document.getElementById('slug')?.focus();
+      return;
+    }
+
     setBusy(true);
 
     try {
@@ -84,7 +113,10 @@ export default function ArticleForm({article}: {article?: PanelArticle}) {
       router.refresh();
     } catch (caught) {
       if (caught instanceof PanelError) {
-        setError(caught.detail);
+        // A validation failure gets a localised banner: PanelError's fallback
+        // detail is an English string, and the specifics are already shown
+        // under the individual inputs.
+        setError(caught.fields ? t('checkFields') : caught.detail);
         if (caught.fields) {
           setFieldErrors(caught.fields);
           // Jump to the language that actually holds the rejected field, or the
@@ -138,7 +170,6 @@ export default function ArticleForm({article}: {article?: PanelArticle}) {
               id="slug"
               value={draft.slug}
               onChange={(e) => set('slug', e.target.value)}
-              required
               className={inputCls}
             />
             <p className={hintCls}>{isNew ? t('slugHint') : t('slugWarning')}</p>
@@ -205,11 +236,7 @@ export default function ArticleForm({article}: {article?: PanelArticle}) {
             <input
               id={`title_${locale}`}
               value={draft[`title_${locale}`]}
-              onChange={(e) =>
-                locale === 'uz'
-                  ? handleTitleUz(e.target.value)
-                  : set(`title_${locale}`, e.target.value)
-              }
+              onChange={(e) => handleTitle(locale, e.target.value)}
               className={inputCls}
             />
             {field(`title_${locale}`) && <p className={errCls}>{field(`title_${locale}`)}</p>}
