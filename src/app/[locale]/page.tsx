@@ -4,6 +4,7 @@ import {getAssociations} from '@/data/associations';
 import {getNews} from '@/lib/news';
 import {getMediaVideos} from '@/lib/youtube';
 import HeroMedia from '@/components/HeroMedia';
+import IdeaDialog from '@/components/IdeaDialog';
 import Logo from '@/components/Logo';
 import VideoCard from '@/components/VideoCard';
 import CountUp from '@/components/motion/CountUp';
@@ -64,19 +65,11 @@ export default async function HomePage({
               <Logo decorative className="h-auto w-full max-w-xs sm:max-w-sm lg:max-w-md" />
             </h1>
             <p className="mt-7 max-w-xl text-lg leading-relaxed text-muted">{t('heroLead')}</p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link
-                href="/uyushmalar"
-                className="inline-flex items-center gap-2 rounded-xl bg-brand px-5 py-3 text-sm font-semibold text-brand-fg shadow-sm transition hover:bg-brand-strong"
-              >
-                {t('ctaPrimary')} →
-              </Link>
-              <Link
-                href="/xizmatlar"
-                className="inline-flex items-center gap-2 rounded-xl border border-border-base bg-surface px-5 py-3 text-sm font-semibold text-foreground transition hover:border-brand hover:text-brand"
-              >
-                {t('ctaSecondary')}
-              </Link>
+            {/* One call to action, opening the idea behind the Assembly. The two
+                links this replaces went to Uyushmalar and Xizmatlar, both of
+                which are in the header on every page, so nothing lost a route. */}
+            <div className="mt-8">
+              <IdeaDialog label={t('ideaCta')} closeLabel={t('ideaClose')} />
             </div>
           </div>
 

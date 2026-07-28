@@ -288,3 +288,13 @@ body {
     scroll-behavior: auto;
   }
 }
+
+/*
+ * A native modal dialog makes the page behind it inert but, in several browsers,
+ * still scrollable — so a wheel gesture over the backdrop scrolls the page away
+ * beneath the panel the reader just opened. The dialog's own content scrolls on
+ * its own container and is unaffected.
+ */
+html:has(dialog[open]) {
+  overflow: hidden;
+}
