@@ -43,7 +43,11 @@ export default function IdeaDialog({label, closeLabel}: {label: string; closeLab
         // `m-auto` is what centres it: a native dialog relies on `margin: auto`
         // from the UA stylesheet, and Tailwind's preflight resets every margin
         // to zero — without this the panel sits in the top-left corner.
-        className="m-auto max-h-[85vh] w-[min(46rem,calc(100vw-2rem))] rounded-2xl border border-border-base bg-card p-0 text-foreground shadow-2xl backdrop:bg-black/70"
+        // The height limit belongs to the scrolling child alone, and this
+        // element takes whatever height that leaves. Setting it on both put the
+        // child's border-box 2px over this one's limit, so the dialog scrolled
+        // as well and the panel showed two scrollbars side by side.
+        className="m-auto w-[min(46rem,calc(100vw-2rem))] overflow-hidden rounded-2xl border border-border-base bg-card p-0 text-foreground shadow-2xl backdrop:bg-black/70"
       >
         {/* The scroll container is this child, not the dialog: a sticky header
             inside a scrolling dialog scrolls away with the rest of it. */}
