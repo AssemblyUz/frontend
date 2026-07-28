@@ -14,15 +14,28 @@ export class PanelError extends Error {
     readonly detail: string,
     /** Per-field messages from DRF, keyed by field name. */
     readonly fields?: Record<string, string>,
+    {isTransport = false}: {isTransport?: boolean} = {},
   ) {
     super(detail);
     this.name = 'PanelError';
+    this.isTransport = isTransport;
   }
 
   /** A dead session needs a different response than a validation failure. */
   get isSignedOut(): boolean {
     return this.status === 401 || this.status === 403;
   }
+
+  /**
+   * The response carried nothing usable — no `detail`, no field errors.
+   *
+   * That means the failure happened below the API: a proxy rejecting the body
+   * size, a 502 while the container restarts, an unhandled 500. Callers show a
+   * localised message naming the status instead of a generic apology, because
+   * "something went wrong" is indistinguishable from a validation problem and
+   * leaves nothing to act on.
+   */
+  readonly isTransport: boolean;
 }
 
 /**
@@ -86,8 +99,9 @@ export async function panelFetch<T>(
 
     throw new PanelError(
       response.status,
-      typeof detail === 'string' ? detail : 'Something went wrong. Please try again.',
+      typeof detail === 'string' ? detail : `HTTP ${response.status}`,
       fields.length ? Object.fromEntries(fields) : undefined,
+      {isTransport: typeof detail !== 'string' && fields.length === 0},
     );
   }
 

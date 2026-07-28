@@ -960,6 +960,8 @@
       "save": "Saqlash",
       "saving": "Saqlanmoqda…",
       "saveFailed": "Saqlab bo‘lmadi.",
+      "saved": "Saqlandi.",
+      "serverError": "Server javob bermadi (xato {status}). Bir oz kutib, qayta urinib ko‘ring.",
       "checkFields": "Ba’zi maydonlarni tekshiring — xatolar quyida ko‘rsatilgan.",
       "delete": "O‘chirish",
       "confirmDelete": "Tasdiqlang",

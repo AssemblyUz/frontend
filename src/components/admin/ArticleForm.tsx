@@ -39,6 +39,7 @@ export default function ArticleForm({article}: {article?: PanelArticle}) {
   const [locale, setLocale] = useState<ContentLocale>('uz');
   const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
   const [error, setError] = useState<string | null>(null);
+  const [saved, setSaved] = useState(false);
   const [busy, setBusy] = useState(false);
 
   // A language counts as incomplete when its title is blank -- the same rule
@@ -88,6 +89,7 @@ export default function ArticleForm({article}: {article?: PanelArticle}) {
     event.preventDefault();
     setError(null);
     setFieldErrors({});
+    setSaved(false);
 
     // Checked here rather than with a native `required`: the slug sits in the
     // settings column, and the browser's own validation blocks the submit with
@@ -103,20 +105,37 @@ export default function ArticleForm({article}: {article?: PanelArticle}) {
     setBusy(true);
 
     try {
-      const saved = await panelFetch<PanelArticle>(
+      const result = await panelFetch<PanelArticle>(
         isNew ? 'articles/' : `articles/${article.slug}/`,
         {method: isNew ? 'POST' : 'PATCH', json: draft},
       );
-      // Land on the edit page: a new article has no photos yet, and photos can
-      // only be attached once it exists.
-      router.replace(`/admin/${saved.slug}/tahrir`);
+      // A new article moves to its edit page — photos can only be attached once
+      // it exists. Editing stays put, unless the slug itself changed.
+      if (isNew || result.slug !== article.slug) {
+        router.replace(`/admin/${result.slug}/tahrir`);
+        router.refresh();
+        return; // this page is going away; leave the button disabled
+      }
+
+      // Same URL, so nothing unmounts: the button has to be handed back here.
+      // Without this it stayed on "Saving…" forever after a successful edit,
+      // which reads as the save having hung.
       router.refresh();
+      setBusy(false);
+      setSaved(true);
+      window.setTimeout(() => setSaved(false), 4000);
     } catch (caught) {
       if (caught instanceof PanelError) {
         // A validation failure gets a localised banner: PanelError's fallback
         // detail is an English string, and the specifics are already shown
         // under the individual inputs.
-        setError(caught.fields ? t('checkFields') : caught.detail);
+        setError(
+          caught.isTransport
+            ? t('serverError', {status: caught.status})
+            : caught.fields
+              ? t('checkFields')
+              : caught.detail,
+        );
         if (caught.fields) {
           setFieldErrors(caught.fields);
           // Jump to the language that actually holds the rejected field, or the
@@ -308,6 +327,12 @@ export default function ArticleForm({article}: {article?: PanelArticle}) {
         >
           {busy ? t('saving') : isNew ? t('create') : t('save')}
         </button>
+
+        {saved && (
+          <span role="status" className="text-sm font-medium text-accent">
+            {t('saved')}
+          </span>
+        )}
 
         {!isNew && user.canDelete && (
           <ConfirmButton

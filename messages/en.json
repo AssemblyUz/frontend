@@ -960,6 +960,8 @@
       "save": "Save",
       "saving": "Saving…",
       "saveFailed": "Could not save.",
+      "saved": "Saved.",
+      "serverError": "The server did not accept it (error {status}). Wait a moment and try again.",
       "checkFields": "Check the highlighted fields — the errors are shown below.",
       "delete": "Delete",
       "confirmDelete": "Confirm",

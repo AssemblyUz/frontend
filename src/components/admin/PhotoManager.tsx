@@ -36,6 +36,8 @@ export default function PhotoManager({
   canEdit: boolean;
 }) {
   const t = useTranslations('admin.photos');
+  // The transport-level message lives with the form strings, not the photo ones.
+  const tf = useTranslations('admin.form');
   const input = useRef<HTMLInputElement>(null);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -75,7 +77,13 @@ export default function PhotoManager({
       });
       onChange([...photos, ...created]);
     } catch (caught) {
-      setError(caught instanceof PanelError ? caught.detail : t('uploadFailed'));
+      setError(
+        caught instanceof PanelError
+          ? caught.isTransport
+            ? tf('serverError', {status: caught.status})
+            : caught.detail
+          : t('uploadFailed'),
+      );
     } finally {
       setBusy(false);
       // Clear the input or picking the same file twice in a row does nothing.
