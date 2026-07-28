@@ -64,6 +64,22 @@ const themeScript = `
 })();
 `;
 
+/**
+ * Regenerate every page under this layout on a five-minute cycle.
+ *
+ * Declared here rather than left to `next: {revalidate}` in lib/api.ts, which
+ * looked equivalent and was not. `next build` runs inside Docker with no API to
+ * reach, so those fetches *throw*, the fallback data renders, and a fetch that
+ * threw registers no revalidation window — the route was baked as permanently
+ * static. Published articles then never appeared: the site kept serving its
+ * build-time seed content and returned 200 while doing it.
+ *
+ * A route segment export is static configuration, applied whether or not any
+ * fetch succeeded, so it cannot be lost that way. Matches REVALIDATE_SECONDS.
+ * The panel keeps its own `force-dynamic`, which takes precedence.
+ */
+export const revalidate = 300;
+
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({locale}));
 }
