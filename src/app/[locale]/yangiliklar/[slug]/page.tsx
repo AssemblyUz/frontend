@@ -44,6 +44,12 @@ export default async function NewsDetailPage({
   const t = await getTranslations('news');
   const related = all.filter((n) => n.slug !== item.slug).slice(0, RELATED_COUNT);
 
+  // Split rather than render `cover` separately: cover *is* the first image, so
+  // drawing both would show it twice.
+  const photos = item.images ?? [];
+  const lead = photos.slice(0, 1);
+  const rest = photos.slice(1);
+
   return (
     <>
       <article className="mx-auto max-w-3xl px-4 py-10 sm:py-14">
@@ -75,6 +81,11 @@ export default async function NewsDetailPage({
           <p className="mt-4 text-lg leading-relaxed text-muted">{item.excerpt}</p>
         </header>
 
+        {/* The first photo leads the article, where it is visible on arrival.
+            Below the text it was reachable only by scrolling past the whole
+            body — an odd place for the one thing a reader looks at first. */}
+        <ArticleGallery photos={lead} />
+
         <div className="mt-8 space-y-5">
           {item.body.map((paragraph, i) => (
             // Static, never-reordered array — index is a stable key here.
@@ -84,7 +95,7 @@ export default async function NewsDetailPage({
           ))}
         </div>
 
-        <ArticleGallery photos={item.images ?? []} />
+        <ArticleGallery photos={rest} />
       </article>
 
       {related.length > 0 && (

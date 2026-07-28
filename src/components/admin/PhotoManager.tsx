@@ -4,6 +4,7 @@ import {useRef, useState} from 'react';
 import {useTranslations} from 'next-intl';
 import {panelFetch, PanelError} from '@/lib/adminClient';
 import {compressImage} from '@/lib/compressImage';
+import {publishToSite} from '@/lib/publishToSite';
 import {
   ACCEPT_IMAGES,
   MAX_PHOTOS,
@@ -90,6 +91,7 @@ export default function PhotoManager({
         form,
       });
       onChange([...photos, ...created]);
+      await publishToSite();
     } catch (caught) {
       setError(
         caught instanceof PanelError
@@ -111,6 +113,7 @@ export default function PhotoManager({
     onChange(photos.map((p) => (p.id === photo.id ? {...p, ...changes} : p)));
     try {
       await panelFetch<PanelPhoto>(`photos/${photo.id}/`, {method: 'PATCH', json: changes});
+      await publishToSite();
     } catch (caught) {
       setError(caught instanceof PanelError ? caught.detail : t('saveFailed'));
       onChange(photos); // roll back to what the server still holds
@@ -121,6 +124,7 @@ export default function PhotoManager({
     try {
       await panelFetch(`photos/${photo.id}/`, {method: 'DELETE'});
       onChange(photos.filter((p) => p.id !== photo.id));
+      await publishToSite();
     } catch (caught) {
       setError(caught instanceof PanelError ? caught.detail : t('deleteFailed'));
     }

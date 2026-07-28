@@ -4,6 +4,7 @@ import {useState} from 'react';
 import {useTranslations} from 'next-intl';
 import {useRouter} from '@/i18n/navigation';
 import {panelFetch, PanelError} from '@/lib/adminClient';
+import {publishToSite} from '@/lib/publishToSite';
 import {
   EMPTY_DRAFT,
   LOCALES,
@@ -109,6 +110,8 @@ export default function ArticleForm({article}: {article?: PanelArticle}) {
         isNew ? 'articles/' : `articles/${article.slug}/`,
         {method: isNew ? 'POST' : 'PATCH', json: draft},
       );
+      await publishToSite();
+
       // A new article moves to its edit page — photos can only be attached once
       // it exists. Editing stays put, unless the slug itself changed.
       if (isNew || result.slug !== article.slug) {
@@ -156,6 +159,7 @@ export default function ArticleForm({article}: {article?: PanelArticle}) {
     if (!article) return;
     try {
       await panelFetch(`articles/${article.slug}/`, {method: 'DELETE'});
+      await publishToSite();
       router.replace('/admin');
       router.refresh();
     } catch (caught) {
