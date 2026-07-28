@@ -94,7 +94,10 @@ export async function generateMetadata({
   // fetch is deduplicated with the one the footer makes on the same render.
   const site = await getSiteInfo(locale);
   return {
-    title: {default: `${site.name} — ${site.tagline}`, template: `%s — ${site.short}`},
+    // A middle dot on the front page, not a dash: the tagline is itself
+    // "Yangi Oʻzbekiston — Yangi Renessans", and a second em dash in the same
+    // title reads as a typo rather than a separator.
+    title: {default: `${site.name} · ${site.tagline}`, template: `%s — ${site.short}`},
     description: site.description,
   };
 }

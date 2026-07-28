@@ -43,6 +43,36 @@ function narrowSocials(socials: SiteResponse['socials']): SiteSocial[] {
 }
 
 /**
+ * Fill anything the API left blank from the bundled defaults.
+ *
+ * Site settings is a single admin row, and until someone types into it every
+ * field comes back as an empty string — a successful response, so no error path
+ * catches it. The site then rendered `<title> — </title>` on every page: the
+ * template is "%s — {short name}", and the short name was "".
+ *
+ * A blank field here means an unfilled form, not a considered answer, which is
+ * why it defers to the defaults. That is the opposite of an empty article list,
+ * where the empty answer is the true one — nothing has been published — and must
+ * not be replaced with invented posts. See lib/news.ts.
+ */
+function withDefaults(data: SiteResponse, locale: string): SiteInfo {
+  const defaults = fallback(locale);
+  const filled = (value: string, byDefault: string) => (value?.trim() ? value : byDefault);
+  const socials = narrowSocials(data.socials ?? []);
+
+  return {
+    name: filled(data.name, defaults.name),
+    short: filled(data.short, defaults.short),
+    tagline: filled(data.tagline, defaults.tagline),
+    description: filled(data.description, defaults.description),
+    address: filled(data.address, defaults.address),
+    email: filled(data.email, defaults.email),
+    phone: filled(data.phone, defaults.phone),
+    socials: socials.length ? socials : defaults.socials,
+  };
+}
+
+/**
  * Organisation name, contact details and social profiles, edited in the Django
  * admin under "Site settings" and "Social links".
  *
@@ -53,7 +83,7 @@ function narrowSocials(socials: SiteResponse['socials']): SiteSocial[] {
 export async function getSiteInfo(locale: string): Promise<SiteInfo> {
   try {
     const data = await apiGet<SiteResponse>('site/', locale);
-    return {...data, socials: narrowSocials(data.socials)};
+    return withDefaults(data, locale);
   } catch (error) {
     console.error(
       `[site] API unreachable for locale "${locale}"; serving static fallback.`,
