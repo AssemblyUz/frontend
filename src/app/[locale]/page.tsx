@@ -2,8 +2,10 @@ import {getTranslations, setRequestLocale} from 'next-intl/server';
 import {Link} from '@/i18n/navigation';
 import {getAssociations} from '@/data/associations';
 import {getNews} from '@/lib/news';
+import {getMediaVideos} from '@/lib/youtube';
 import HeroMedia from '@/components/HeroMedia';
 import Logo from '@/components/Logo';
+import VideoCard from '@/components/VideoCard';
 import CountUp from '@/components/motion/CountUp';
 import MainGate from '@/components/gate/MainGate';
 import NewsCard from '@/components/NewsCard';
@@ -21,6 +23,7 @@ const STATS = [
 ] as const;
 
 const HOME_NEWS_COUNT = 3;
+const HOME_VIDEO_COUNT = 3;
 
 export default async function HomePage({
   params,
@@ -33,11 +36,13 @@ export default async function HomePage({
   const tServ = await getTranslations('services');
   const tProj = await getTranslations('projects');
   const tNews = await getTranslations('news');
+  const tMedia = await getTranslations('media');
 
   const assoc = getAssociations(locale).slice(0, 3);
   const services = (tServ.raw('items') as ServiceItem[]).slice(0, 3);
   const projects = (tProj.raw('items') as ProjectItem[]).slice(0, 3);
   const latestNews = (await getNews(locale)).slice(0, HOME_NEWS_COUNT);
+  const latestVideos = await getMediaVideos(HOME_VIDEO_COUNT);
 
   return (
     <>
@@ -160,6 +165,24 @@ export default async function HomePage({
           ))}
         </HomeSection>
       </div>
+
+      {/* Media projects — hidden until at least one channel is connected. */}
+      {latestVideos.length > 0 && (
+        <HomeSection
+          title={t('mediaProjectsTitle')}
+          lead={t('mediaProjectsLead')}
+          href="/media"
+          viewAll={t('viewAll')}
+        >
+          {latestVideos.map((video) => (
+            <VideoCard
+              key={video.id}
+              video={video}
+              labels={{play: tMedia('play'), watchOn: tMedia('watchOn')}}
+            />
+          ))}
+        </HomeSection>
+      )}
 
       {/* News */}
       {latestNews.length > 0 && (

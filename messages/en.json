@@ -4,6 +4,7 @@
     "associations": "Associations",
     "services": "Services",
     "projects": "Projects",
+    "media": "Media projects",
     "blocks": "Functional blocks",
     "news": "News",
     "about": "About us",
@@ -36,6 +37,8 @@
     "servicesLead": "Professional services for members and partners",
     "projectsTitle": "Projects",
     "projectsLead": "Initiatives carried out for the benefit of society",
+    "mediaProjectsTitle": "Media projects",
+    "mediaProjectsLead": "The latest videos from the Assembly's channels",
     "newsTitle": "News",
     "newsLead": "The latest on the Assembly's work, its projects and its partnerships",
     "viewAll": "View all",
@@ -522,6 +525,18 @@
         ]
       }
     ]
+  },
+  "media": {
+    "title": "Media projects",
+    "lead": "The Assembly's media projects — reports, business and economy programmes, analytical conversations. A new video appears here as soon as it is published.",
+    "projectsTitle": "Our media projects",
+    "latestTitle": "Latest videos",
+    "latestLead": "The newest videos from every channel — the list updates itself.",
+    "videoCount": "{count, plural, one {# video} other {# videos}}",
+    "soon": "coming soon",
+    "empty": "No videos to show yet. Once the channels are connected they will appear here automatically.",
+    "play": "Play video",
+    "watchOn": "Watch on YouTube"
   },
   "news": {
     "title": "News",

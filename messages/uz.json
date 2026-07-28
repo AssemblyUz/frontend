@@ -4,6 +4,7 @@
     "associations": "Uyushmalar",
     "services": "Xizmatlar",
     "projects": "Loyihalar",
+    "media": "Media loyihalar",
     "blocks": "Funksional bloklar",
     "news": "Yangiliklar",
     "about": "Biz haqimizda",
@@ -36,6 +37,8 @@
     "servicesLead": "A'zolar va hamkorlar uchun professional xizmatlar",
     "projectsTitle": "Loyihalar",
     "projectsLead": "Jamiyat manfaati uchun amalga oshirilayotgan tashabbuslar",
+    "mediaProjectsTitle": "Media loyihalar",
+    "mediaProjectsLead": "Assambleya kanallaridagi so‘nggi videolar",
     "newsTitle": "Yangiliklar",
     "newsLead": "Assambleya faoliyati, loyihalar va hamkorlik bo'yicha so'nggi xabarlar",
     "viewAll": "Barchasini ko'rish",
@@ -522,6 +525,18 @@
         ]
       }
     ]
+  },
+  "media": {
+    "title": "Media loyihalar",
+    "lead": "Assambleyaning media loyihalari — reportajlar, biznes va iqtisodiyot ko‘rsatuvlari, tahliliy suhbatlar. Yangi video chiqishi bilan shu yerda paydo bo‘ladi.",
+    "projectsTitle": "Media loyihalarimiz",
+    "latestTitle": "So‘nggi videolar",
+    "latestLead": "Barcha kanallardagi eng yangi videolar — ro‘yxat o‘zi yangilanadi.",
+    "videoCount": "{count} video",
+    "soon": "tez orada",
+    "empty": "Videolar hozircha ko‘rsatilmayapti. Kanallar ulangach, ular shu yerda o‘zi paydo bo‘ladi.",
+    "play": "Videoni ko‘rish",
+    "watchOn": "YouTube’da ko‘rish"
   },
   "news": {
     "title": "Yangiliklar",

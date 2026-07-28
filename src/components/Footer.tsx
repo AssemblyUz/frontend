@@ -9,6 +9,7 @@ const LINKS = [
   {href: '/xizmatlar', key: 'services'},
   {href: '/loyihalar', key: 'projects'},
   {href: '/bloklar', key: 'blocks'},
+  {href: '/media', key: 'media'},
   {href: '/yangiliklar', key: 'news'},
   {href: '/haqida', key: 'about'},
   {href: '/aloqa', key: 'contact'},
