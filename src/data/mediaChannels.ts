@@ -25,9 +25,14 @@ export type MediaChannel = {
 };
 
 export const mediaChannels: readonly MediaChannel[] = [
-  {key: 'reportaj-go', name: 'Reportaj GO', channelId: ''},
-  {key: 'biznes-tv', name: 'Biznes TV', channelId: ''},
-  {key: 'fikrat-tv', name: 'Fikrat TV', channelId: ''},
+  // youtube.com/@assemblyuz — "O'zbekiston Iqtisodiyot Assambleyasi".
+  {key: 'assembly', name: 'Assambleya', channelId: 'UCyeiMGUb4XQbixP3QJbh7ig'},
+  // youtube.com/@chaqiriquz — the Chaqiriq platform. Note there is an unrelated
+  // @chaqiriq (a personal channel of programming tutorials); this is not it.
+  {key: 'chaqiriq', name: 'Chaqiriq', channelId: 'UCrCE2xlfB5-oe6VcSbqgvyQ'},
+  // youtube.com/@UmarovMuhtor — the Assembly's chairman. Not @muhtorumarov or
+  // @muxtorumarov, which are separate empty accounts under the same name.
+  {key: 'muhtor-umarov', name: 'Muhtor Umarov', channelId: 'UCd4mg44bbgWVQLfJkv3IMkg'},
 ];
 
 /** Only the channels that actually have an ID. */
