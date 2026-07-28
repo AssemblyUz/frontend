@@ -7,6 +7,7 @@ import Script from 'next/script';
 import {routing} from '@/i18n/routing';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import PageTurn from '@/components/motion/PageTurn';
 import {getSiteInfo} from '@/lib/site';
 import '../globals.css';
 
@@ -123,7 +124,9 @@ export default async function LocaleLayout({
         </Script>
         <NextIntlClientProvider>
           <Header />
-          <main className="flex-1">{children}</main>
+          <main className="flex-1">
+            <PageTurn>{children}</PageTurn>
+          </main>
           <Footer />
         </NextIntlClientProvider>
       </body>
