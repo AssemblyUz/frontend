@@ -80,7 +80,7 @@ export default async function HomePage({
                 links this replaces went to Uyushmalar and Xizmatlar, both of
                 which are in the header on every page, so nothing lost a route. */}
             <div className="mt-8">
-              <IdeaDialog label={t('ideaCta')} closeLabel={t('ideaClose')} />
+              <IdeaDialog locale={locale} closeLabel={t('ideaClose')} />
             </div>
           </div>
 

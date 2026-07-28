@@ -1,7 +1,7 @@
 'use client';
 
 import {useRef} from 'react';
-import {IDEA_BLOCKS, IDEA_TITLE} from '@/data/idea';
+import {ideaFor} from '@/data/idea';
 
 /**
  * The hero's single call to action: the idea's name, opening the statement
@@ -12,8 +12,11 @@ import {IDEA_BLOCKS, IDEA_TITLE} from '@/data/idea';
  * reimplementing any of the three. It is display:none until opened, so no
  * conditional rendering is needed either.
  */
-export default function IdeaDialog({label, closeLabel}: {label: string; closeLabel: string}) {
+export default function IdeaDialog({locale, closeLabel}: {locale: string; closeLabel: string}) {
   const dialog = useRef<HTMLDialogElement>(null);
+  // Title and body come from one place, so the button cannot name the idea
+  // differently from the panel it opens.
+  const {title, blocks} = ideaFor(locale);
 
   /**
    * A click on the dialog element itself landed on the backdrop: the content
@@ -32,7 +35,7 @@ export default function IdeaDialog({label, closeLabel}: {label: string; closeLab
         onClick={() => dialog.current?.showModal()}
         className="inline-flex items-center gap-2 rounded-xl bg-brand px-5 py-3 text-left text-sm font-semibold text-brand-fg shadow-sm transition hover:bg-brand-strong focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/40"
       >
-        {label}
+        {title}
         <span aria-hidden="true">→</span>
       </button>
 
@@ -54,7 +57,7 @@ export default function IdeaDialog({label, closeLabel}: {label: string; closeLab
         <div className="max-h-[85vh] overflow-y-auto overscroll-contain">
           <div className="sticky top-0 flex items-start justify-between gap-4 border-b border-border-base bg-card/95 px-5 py-4 backdrop-blur sm:px-7">
             <h2 id="idea-title" className="text-lg font-bold leading-snug tracking-tight sm:text-xl">
-              {IDEA_TITLE}
+              {title}
             </h2>
             <button
               type="button"
@@ -67,7 +70,7 @@ export default function IdeaDialog({label, closeLabel}: {label: string; closeLab
           </div>
 
           <div className="space-y-4 px-5 py-5 sm:px-7 sm:py-6">
-            {IDEA_BLOCKS.map((block, i) =>
+            {blocks.map((block, i) =>
               block.kind === 'paragraph' ? (
                 // Fixed, never-reordered content — the index is a stable key.
                 <p key={i} className="leading-relaxed text-muted">
