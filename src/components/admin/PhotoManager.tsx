@@ -3,6 +3,7 @@
 import {useRef, useState} from 'react';
 import {useTranslations} from 'next-intl';
 import {panelFetch, PanelError} from '@/lib/adminClient';
+import {compressImage} from '@/lib/compressImage';
 import {
   ACCEPT_IMAGES,
   MAX_PHOTOS,
@@ -57,19 +58,32 @@ export default function PhotoManager({
       setError(t('toomany', {limit: MAX_PHOTOS, room: Math.max(room, 0)}));
       return;
     }
-    const oversized = chosen.find((f) => f.size > MAX_UPLOAD_BYTES);
+    setBusy(true);
+
+    // Re-encode first: camera originals are several megabytes, and anything much
+    // over 5 MB is dropped by the gateway before Django ever sees it. This also
+    // means the size check below is judging what will actually be sent.
+    let prepared: File[];
+    try {
+      prepared = await Promise.all(chosen.map(compressImage));
+    } catch {
+      prepared = chosen;
+    }
+
+    const oversized = prepared.find((f) => f.size > MAX_UPLOAD_BYTES);
     if (oversized) {
       setError(t('toolarge', {name: oversized.name, limit: MAX_UPLOAD_BYTES / 1024 / 1024}));
+      setBusy(false);
+      if (input.current) input.current.value = '';
       return;
     }
 
     const form = new FormData();
-    for (const file of chosen) {
+    for (const file of prepared) {
       form.append('images', file);
       form.append('sizes', 'full');
     }
 
-    setBusy(true);
     try {
       const created = await panelFetch<PanelPhoto[]>(`articles/${slug}/photos/`, {
         method: 'POST',
