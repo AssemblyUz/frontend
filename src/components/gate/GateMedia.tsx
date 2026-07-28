@@ -16,7 +16,7 @@ export default async function GateMedia() {
 
   return (
     <GateRow label={t('mediaLabel')} lead={t('mediaLead')}>
-      <div className="rounded-2xl border border-violet-400/30 bg-gate-panel-strong p-6 sm:p-8">
+      <div className="rounded-2xl border border-violet-500/25 bg-gate-panel-strong p-6 dark:border-violet-400/30 sm:p-8">
         <div className="grid gap-8 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-10">
           <div>
             <div className="text-3xl font-bold tracking-tight text-gate-fg sm:text-4xl">

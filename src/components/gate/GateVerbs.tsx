@@ -30,8 +30,8 @@ export default function GateVerbs({verbs}: {verbs: string[]}) {
             key={verb}
             className={`rounded-lg border px-3 py-2 text-center text-xs font-semibold uppercase tracking-[0.14em] transition-all duration-500 ${
               isActive
-                ? 'border-violet-300/60 bg-violet-400/20 text-violet-100'
-                : 'border-violet-400/30 bg-violet-400/10 text-violet-200'
+                ? 'border-violet-500/45 bg-violet-500/15 text-violet-800 dark:border-violet-300/60 dark:bg-violet-400/20 dark:text-violet-100'
+                : 'border-violet-500/25 bg-violet-500/8 text-violet-700 dark:border-violet-400/30 dark:bg-violet-400/10 dark:text-violet-200'
             }`}
           >
             {verb}

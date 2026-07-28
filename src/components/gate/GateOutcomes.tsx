@@ -6,10 +6,10 @@ import type {GateOutcome, GatePartnerTier} from './types';
 /** Cycled across the outcome columns and partner tiers so the rows are readable
  *  as separate groups rather than one flat band. Full class strings. */
 const TIER_TONE = [
-  'text-sky-300',
-  'text-emerald-300',
-  'text-amber-300',
-  'text-violet-300',
+  'text-sky-700 dark:text-sky-300',
+  'text-emerald-700 dark:text-emerald-300',
+  'text-amber-700 dark:text-amber-300',
+  'text-violet-700 dark:text-violet-300',
   'text-gate-cyan',
 ] as const;
 

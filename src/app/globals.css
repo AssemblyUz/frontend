@@ -16,18 +16,17 @@
   --accent: #0ea5e9;
   --ring: rgba(79, 70, 229, 0.35);
 
-  /* Main Gate — the Assembly's presentation identity: deep navy, silver rules,
-     gold and cyan accents. Deliberately NOT redefined under `.dark`: the gate is
-     one fixed stage that reads the same in both themes, the way the printed
-     overview does. */
-  --gate-bg: #050b1a;
-  --gate-panel: rgba(255, 255, 255, 0.035);
-  --gate-panel-strong: rgba(255, 255, 255, 0.06);
-  --gate-line: rgba(148, 172, 214, 0.16);
-  --gate-fg: #eaf0fb;
-  --gate-muted: #97a8c6;
-  --gate-gold: #dfb469;
-  --gate-cyan: #4ec3ea;
+  /* Main Gate — a distinct band with its own gold and cyan accents, one shade
+     deeper than the page so it still reads as its own section. It follows the
+     theme like everything else; the dark values are under `.dark`. */
+  --gate-bg: #eaeffa;
+  --gate-panel: rgba(255, 255, 255, 0.78);
+  --gate-panel-strong: #ffffff;
+  --gate-line: rgba(15, 23, 42, 0.1);
+  --gate-fg: #0f172a;
+  --gate-muted: #55657f;
+  --gate-gold: #8a5f14;
+  --gate-cyan: #0e7490;
 }
 
 .dark {
@@ -42,6 +41,16 @@
   --brand-fg: #0b1020;
   --accent: #38bdf8;
   --ring: rgba(129, 140, 248, 0.4);
+
+  /* Main Gate, dark: deep navy with silver rules. */
+  --gate-bg: #050b1a;
+  --gate-panel: rgba(255, 255, 255, 0.035);
+  --gate-panel-strong: rgba(255, 255, 255, 0.06);
+  --gate-line: rgba(148, 172, 214, 0.16);
+  --gate-fg: #eaf0fb;
+  --gate-muted: #97a8c6;
+  --gate-gold: #dfb469;
+  --gate-cyan: #4ec3ea;
 }
 
 @theme inline {

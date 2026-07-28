@@ -48,11 +48,11 @@ export default async function MainGate() {
           drifting slowly, over a faint network field. */}
       <div
         aria-hidden
-        className="gate-aurora pointer-events-none absolute inset-0 [background:radial-gradient(65%_45%_at_50%_-5%,rgba(78,195,234,0.16),transparent_70%),radial-gradient(45%_45%_at_100%_100%,rgba(223,180,105,0.12),transparent_70%)]"
+        className="gate-aurora pointer-events-none absolute inset-0 [background:radial-gradient(65%_45%_at_50%_-5%,rgba(14,116,144,0.1),transparent_70%),radial-gradient(45%_45%_at_100%_100%,rgba(138,95,20,0.08),transparent_70%)] dark:[background:radial-gradient(65%_45%_at_50%_-5%,rgba(78,195,234,0.16),transparent_70%),radial-gradient(45%_45%_at_100%_100%,rgba(223,180,105,0.12),transparent_70%)]"
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 opacity-[0.18] [background-image:radial-gradient(rgba(148,172,214,0.55)_1px,transparent_1px)] [background-size:44px_44px]"
+        className="pointer-events-none absolute inset-0 opacity-[0.14] [background-image:radial-gradient(rgba(15,23,42,0.5)_1px,transparent_1px)] [background-size:44px_44px] dark:opacity-[0.18] dark:[background-image:radial-gradient(rgba(148,172,214,0.55)_1px,transparent_1px)]"
       />
       {/* Gold hairlines frame the band. On the dark theme the page behind it is
           nearly the same value, so these edges are what make it read as its own
@@ -108,7 +108,7 @@ export default async function MainGate() {
                   key={door.key}
                   href={door.href}
                   data-reveal
-                  className="inline-flex rounded-xl border border-gate-line bg-gate-panel px-4 py-2.5 text-sm font-semibold text-gate-fg transition-all duration-300 hover:-translate-y-0.5 hover:border-gate-cyan/60 hover:bg-gate-panel-strong hover:text-gate-cyan hover:shadow-[0_8px_24px_-12px_rgba(78,195,234,0.6)]"
+                  className="inline-flex rounded-xl border border-gate-line bg-gate-panel px-4 py-2.5 text-sm font-semibold text-gate-fg transition-all duration-300 hover:-translate-y-0.5 hover:border-gate-cyan/60 hover:bg-gate-panel-strong hover:text-gate-cyan hover:shadow-[0_8px_24px_-12px_rgba(14,116,144,0.45)] dark:hover:shadow-[0_8px_24px_-12px_rgba(78,195,234,0.6)]"
                 >
                   {tNav(door.key)}
                 </Link>

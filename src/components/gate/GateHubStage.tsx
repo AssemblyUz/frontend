@@ -24,36 +24,37 @@ export type GateHubLabels = {
   assocCta: string;
 };
 
-/** Each wing's hue on the gate's dark stage. Full class strings so Tailwind keeps them. */
+/** Each wing's hue, in both themes — the darker shade carries the contrast on the
+ *  light gate, the lighter one on the dark. Full class strings so Tailwind keeps them. */
 const WING_TONE: Record<string, {badge: string; arc: string; glow: string; text: string}> = {
   FR: {
-    badge: 'bg-sky-400/15 text-sky-300',
-    arc: 'text-sky-400',
-    glow: 'bg-sky-400/25',
-    text: 'text-sky-300',
+    badge: 'bg-sky-500/12 text-sky-700 dark:bg-sky-400/15 dark:text-sky-300',
+    arc: 'text-sky-600 dark:text-sky-400',
+    glow: 'bg-sky-500/15 dark:bg-sky-400/25',
+    text: 'text-sky-700 dark:text-sky-300',
   },
   BR: {
-    badge: 'bg-emerald-400/15 text-emerald-300',
-    arc: 'text-emerald-400',
-    glow: 'bg-emerald-400/25',
-    text: 'text-emerald-300',
+    badge: 'bg-emerald-500/12 text-emerald-700 dark:bg-emerald-400/15 dark:text-emerald-300',
+    arc: 'text-emerald-600 dark:text-emerald-400',
+    glow: 'bg-emerald-500/15 dark:bg-emerald-400/25',
+    text: 'text-emerald-700 dark:text-emerald-300',
   },
   PR: {
-    badge: 'bg-violet-400/15 text-violet-300',
-    arc: 'text-violet-400',
-    glow: 'bg-violet-400/25',
-    text: 'text-violet-300',
+    badge: 'bg-violet-500/12 text-violet-700 dark:bg-violet-400/15 dark:text-violet-300',
+    arc: 'text-violet-600 dark:text-violet-400',
+    glow: 'bg-violet-500/15 dark:bg-violet-400/25',
+    text: 'text-violet-700 dark:text-violet-300',
   },
   GR: {
-    badge: 'bg-amber-400/15 text-amber-300',
-    arc: 'text-amber-400',
-    glow: 'bg-amber-400/25',
-    text: 'text-amber-300',
+    badge: 'bg-amber-500/15 text-amber-700 dark:bg-amber-400/15 dark:text-amber-300',
+    arc: 'text-amber-600 dark:text-amber-400',
+    glow: 'bg-amber-500/15 dark:bg-amber-400/25',
+    text: 'text-amber-700 dark:text-amber-300',
   },
 };
 
 const FALLBACK_TONE = {
-  badge: 'bg-white/10 text-gate-fg',
+  badge: 'bg-gate-fg/8 text-gate-fg dark:bg-white/10',
   arc: 'text-gate-cyan',
   glow: 'bg-gate-cyan/20',
   text: 'text-gate-cyan',
@@ -276,8 +277,9 @@ export default function GateHubStage({
             aria-hidden
             className="gate-breathe absolute inset-[6%] rounded-full bg-gate-cyan/5 blur-md"
           />
+          {/* `auto`, not `white`: the gate is light in the light theme, where the
+              white artwork would disappear. */}
           <Emblem
-            tone="white"
             decorative
             className="relative h-full w-full object-contain transition-transform duration-700 group-hover:scale-[1.04]"
           />
