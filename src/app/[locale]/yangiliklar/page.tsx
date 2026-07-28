@@ -26,7 +26,7 @@ export default async function NewsPage({
 
   return (
     <>
-      <PageHero title={t('title')} lead={t('lead')} />
+      <PageHero title={t('title')} lead={t('lead')} chapter="VI" />
 
       <div className="mx-auto max-w-6xl px-4 py-12 sm:py-16">
         {items.length === 0 ? (

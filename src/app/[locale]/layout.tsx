@@ -2,7 +2,7 @@ import type {Metadata} from 'next';
 import {NextIntlClientProvider, hasLocale} from 'next-intl';
 import {setRequestLocale} from 'next-intl/server';
 import {notFound} from 'next/navigation';
-import {Inter} from 'next/font/google';
+import {Inter, Lora} from 'next/font/google';
 import Script from 'next/script';
 import {routing} from '@/i18n/routing';
 import Header from '@/components/Header';
@@ -13,6 +13,17 @@ import '../globals.css';
 const inter = Inter({
   subsets: ['latin', 'cyrillic'],
   variable: '--font-sans',
+  display: 'swap',
+});
+
+/**
+ * The display face. Lora is a book serif and carries Cyrillic, which the Russian
+ * pages need — headings, leads and display figures are set in it, while Inter
+ * keeps the interface text and small labels crisp.
+ */
+const lora = Lora({
+  subsets: ['latin', 'latin-ext', 'cyrillic'],
+  variable: '--font-serif',
   display: 'swap',
 });
 
@@ -105,7 +116,7 @@ export default async function LocaleLayout({
     // rides on <body>, where it still cascades to everything.
     <html lang={locale} suppressHydrationWarning>
       <body
-        className={`${inter.variable} min-h-screen flex flex-col bg-background text-foreground`}
+        className={`${inter.variable} ${lora.variable} min-h-screen flex flex-col bg-background text-foreground`}
       >
         <Script id="theme-init" strategy="beforeInteractive">
           {themeScript}

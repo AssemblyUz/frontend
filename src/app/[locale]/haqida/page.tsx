@@ -68,7 +68,7 @@ export default async function AboutPage({
 
   return (
     <>
-      <PageHero title={t('title')} lead={t('lead')} />
+      <PageHero title={t('title')} lead={t('lead')} chapter="VII" />
 
       <div className="mx-auto max-w-6xl px-4 py-12 sm:py-16">
         {/* Who we are */}

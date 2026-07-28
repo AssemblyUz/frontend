@@ -41,7 +41,7 @@ export default async function ContactPage({
 
   return (
     <>
-      <PageHero title={t('title')} lead={t('lead')} />
+      <PageHero title={t('title')} lead={t('lead')} chapter="VIII" />
 
       <div className="mx-auto max-w-6xl px-4 py-12 sm:py-16">
         <div className="grid gap-10 lg:grid-cols-2">

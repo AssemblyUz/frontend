@@ -17,6 +17,9 @@
   "lang": {
     "label": "Language"
   },
+  "book": {
+    "chapter": "Chapter"
+  },
   "home": {
     "heroBadge": "New Uzbekistan — New Renaissance",
     "heroTitle": "Uzbekistan Economy Assembly",

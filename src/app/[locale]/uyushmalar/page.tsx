@@ -25,7 +25,7 @@ export default async function AssociationsPage({
 
   return (
     <>
-      <PageHero title={t('title')} lead={t('lead')} />
+      <PageHero title={t('title')} lead={t('lead')} chapter="I" />
       <section className="mx-auto max-w-6xl px-4 py-12 sm:py-16">
         <AssociationsDirectory
           items={getAssociations(locale).map(({id, name, activity}) => ({id, name, activity}))}
