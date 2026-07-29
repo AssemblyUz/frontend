@@ -203,14 +203,19 @@ body {
   overflow-x: clip;
 }
 
-/* Nothing may outgrow its column — the usual cause of a phone scrolling
-   sideways is one uploaded photo or embed wider than the viewport. Preflight
-   already covers img and video; this adds the two it does not.
+/* An embed may not outgrow its column — a map or a player wider than the
+   viewport is the usual cause of a phone scrolling sideways. Preflight already
+   covers img and video; iframe is the one it leaves out.
 
    Inside `@layer base` deliberately. Written unlayered it would outrank every
-   utility, and a `max-w-sm` on the header lockup would stop doing anything. */
+   utility, and a `max-w-sm` on the header lockup would stop doing anything.
+
+   `svg` is deliberately NOT in this list. An SVG is usually sized by the
+   element itself rather than by its content, so clamping it to its container
+   silently overrules that: it collapsed the gate seal's ring — drawn at 136%
+   so the wing arcs orbit outside the emblem — down to the emblem's own width,
+   leaving the arcs cutting across the artwork. */
 @layer base {
-  svg,
   iframe {
     max-width: 100%;
   }
