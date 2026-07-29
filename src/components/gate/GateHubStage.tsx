@@ -142,21 +142,21 @@ export default function GateHubStage({
   const assocCount = Number(labels.assocValue);
 
   return (
-    /* Three abreast only once there is room for three readable columns. A
-       tablet gets two: the wings beside the seal, with the network panel
-       spanning the row beneath them — which keeps the panels in the order they
-       are written, so what a keyboard tabs through matches what is on screen.
-       A phone stacks all three. */
-    <div className="mt-10 grid gap-4 sm:gap-5 md:grid-cols-2 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.9fr)_minmax(0,1fr)]">
+    /* Three abreast at every width, phones included. The gutters, padding and
+       type all step down to make that fit rather than the columns collapsing —
+       the composition is the point, so it is what survives the small screen. */
+    <div className="mt-6 grid grid-cols-[minmax(0,1fr)_minmax(0,0.9fr)_minmax(0,1fr)] gap-1.5 xs:gap-2.5 sm:mt-10 sm:gap-4 lg:gap-5">
       {/* Wings */}
       <div
         data-reveal
-        className="flex flex-col rounded-2xl border border-gate-line bg-gate-panel p-5 xs:p-6 sm:p-7"
+        className="flex flex-col rounded-lg border border-gate-line bg-gate-panel p-2 xs:rounded-xl xs:p-3 sm:rounded-2xl sm:p-5 lg:p-7"
       >
         <GateEyebrow tone="gold">{labels.blocksTitle}</GateEyebrow>
-        <p className="mt-3 text-sm leading-relaxed text-gate-muted">{labels.blocksLead}</p>
+        <p className="mt-2 text-[0.55rem] leading-snug text-gate-muted xs:text-[0.65rem] sm:mt-3 sm:text-sm sm:leading-relaxed">
+          {labels.blocksLead}
+        </p>
 
-        <ul className="mt-5 space-y-1.5" onPointerLeave={() => setHovered(null)}>
+        <ul className="mt-2.5 space-y-0.5 sm:mt-5 sm:space-y-1.5" onPointerLeave={() => setHovered(null)}>
           {blocks.map((block) => {
             const target = functionalBlocks.find((wing) => wing.code === block.code);
             const wing = tone(block.code);
@@ -165,22 +165,23 @@ export default function GateHubStage({
             const row = (
               <>
                 <span
-                  className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-xs font-bold transition-transform duration-300 ${
+                  className={`flex h-5 w-5 shrink-0 items-center justify-center rounded text-[0.5rem] font-bold transition-transform duration-300 xs:h-6 xs:w-6 xs:text-[0.6rem] sm:h-9 sm:w-9 sm:rounded-lg sm:text-xs ${
                     wing.badge
                   } ${isActive ? 'scale-110' : ''}`}
                 >
                   {block.code}
                 </span>
                 <span
-                  className={`text-sm font-medium transition-colors duration-300 ${
+                  className={`min-w-0 text-[0.5rem] font-medium leading-tight tracking-tight transition-colors duration-300 xs:text-[0.6rem] xs:tracking-normal sm:text-sm sm:leading-normal ${
                     isActive ? wing.text : 'text-gate-fg'
                   }`}
                 >
                   {block.title}
                 </span>
+                {/* No room for it beside a wrapped two-line title on a phone. */}
                 <span
                   aria-hidden
-                  className={`ml-auto text-xs transition-all duration-300 ${
+                  className={`ml-auto hidden text-xs transition-all duration-300 sm:inline ${
                     isActive ? 'translate-x-0 opacity-100' : '-translate-x-1 opacity-0'
                   } ${wing.text}`}
                 >
@@ -191,7 +192,7 @@ export default function GateHubStage({
 
             if (!target) {
               return (
-                <li key={block.code} className="flex items-center gap-3 px-2 py-2">
+                <li key={block.code} className="flex items-center gap-1.5 px-1 py-1 xs:gap-2 sm:gap-3 sm:px-2 sm:py-2">
                   {row}
                 </li>
               );
@@ -204,7 +205,7 @@ export default function GateHubStage({
                   onPointerEnter={() => setHovered(block.code)}
                   onFocus={() => setHovered(block.code)}
                   onBlur={() => setHovered(null)}
-                  className={`flex items-center gap-3 rounded-xl px-2 py-2 transition-colors duration-300 ${
+                  className={`flex items-center gap-1.5 rounded-md px-1 py-1 transition-colors duration-300 xs:gap-2 sm:gap-3 sm:rounded-xl sm:px-2 sm:py-2 ${
                     isActive ? 'bg-gate-panel-strong' : ''
                   }`}
                 >
@@ -217,7 +218,7 @@ export default function GateHubStage({
 
         <Link
           href="/bloklar"
-          className="mt-auto inline-flex items-center gap-1.5 pt-5 text-sm font-semibold text-gate-cyan transition-all hover:gap-2.5"
+          className="mt-auto inline-flex items-center gap-1 pt-3 text-[0.55rem] font-semibold text-gate-cyan transition-all xs:text-[0.65rem] sm:gap-1.5 sm:pt-5 sm:text-sm sm:hover:gap-2.5"
         >
           {labels.blocksCta} →
         </Link>
@@ -229,18 +230,18 @@ export default function GateHubStage({
         onPointerMove={handlePointerMove}
         onPointerLeave={resetParallax}
         data-reveal
-        className="group relative overflow-hidden rounded-2xl border border-gate-gold/30 bg-gate-panel-strong p-5 text-center transition-colors duration-500 hover:border-gate-gold/70 xs:p-6 sm:p-7"
+        className="group relative overflow-hidden rounded-lg border border-gate-gold/30 bg-gate-panel-strong p-2 text-center transition-colors duration-500 hover:border-gate-gold/70 xs:rounded-xl xs:p-3 sm:rounded-2xl sm:p-5 lg:p-7"
       >
         <span
           aria-hidden
-          className={`pointer-events-none absolute left-1/2 top-8 h-40 w-40 -translate-x-1/2 rounded-full blur-3xl transition-colors duration-700 ${
+          className={`pointer-events-none absolute left-1/2 top-4 h-20 w-20 -translate-x-1/2 rounded-full blur-2xl transition-colors duration-700 sm:top-8 sm:h-40 sm:w-40 sm:blur-3xl ${
             activeCode ? tone(activeCode).glow : 'bg-gate-cyan/15'
           }`}
         />
 
         <span
           ref={sealRef}
-          className="gate-parallax relative mx-auto block aspect-square w-32 sm:w-36"
+          className="gate-parallax relative mx-auto block aspect-square w-12 xs:w-16 sm:w-28 lg:w-36"
         >
           {/* One arc per wing — a single ring, set well outside the emblem's own
               circle and turning slowly, so it reads as a system around the seal
@@ -290,16 +291,16 @@ export default function GateHubStage({
           />
         </span>
 
-        <span className="relative mt-8 block text-fluid-4xl font-bold leading-none tracking-tight text-gate-fg">
+        <span className="relative mt-3 block text-lg font-bold leading-none tracking-tight text-gate-fg xs:text-2xl sm:mt-8 sm:text-fluid-4xl">
           {Number.isFinite(hubCount) ? <CountUp to={hubCount} /> : labels.hubValue}
         </span>
-        <span className="relative mt-2 block text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-gate-gold">
+        <span className="relative mt-1 block text-[0.45rem] font-semibold uppercase tracking-[0.08em] text-gate-gold xs:text-[0.55rem] sm:mt-2 sm:text-[0.7rem] sm:tracking-[0.2em]">
           {labels.hubTitle}
         </span>
-        <span className="relative mt-3 block text-sm leading-relaxed text-gate-muted">
+        <span className="relative mt-1.5 block text-[0.55rem] leading-snug text-gate-muted xs:text-[0.65rem] sm:mt-3 sm:text-sm sm:leading-relaxed">
           {labels.hubLead}
         </span>
-        <span className="relative mt-4 inline-flex items-center gap-1.5 py-1 text-sm font-semibold text-gate-cyan transition-all group-hover:gap-2.5">
+        <span className="relative mt-2 inline-flex items-center gap-1 py-1 text-[0.55rem] font-semibold text-gate-cyan transition-all xs:text-[0.65rem] sm:mt-4 sm:gap-1.5 sm:text-sm sm:group-hover:gap-2.5">
           {labels.hubCta} →
         </span>
       </Link>
@@ -307,22 +308,22 @@ export default function GateHubStage({
       {/* Association network */}
       <div
         data-reveal
-        className="flex flex-col rounded-2xl border border-gate-line bg-gate-panel p-5 xs:p-6 sm:p-7 md:col-span-2 lg:col-span-1"
+        className="flex flex-col rounded-lg border border-gate-line bg-gate-panel p-2 xs:rounded-xl xs:p-3 sm:rounded-2xl sm:p-5 lg:p-7"
       >
         <GateEyebrow tone="cyan">{labels.assocTitle}</GateEyebrow>
 
-        <div className="mt-4 flex items-baseline gap-2">
-          <span className="text-fluid-3xl font-bold leading-none tracking-tight text-gate-fg">
+        <div className="mt-2 flex flex-wrap items-baseline gap-x-1 sm:mt-4 sm:gap-2">
+          <span className="text-lg font-bold leading-none tracking-tight text-gate-fg xs:text-2xl sm:text-fluid-3xl">
             {Number.isFinite(assocCount) ? <CountUp to={assocCount} /> : labels.assocValue}
           </span>
-          <span className="text-sm text-gate-muted">{labels.assocUnit}</span>
+          <span className="text-[0.55rem] text-gate-muted xs:text-[0.65rem] sm:text-sm">{labels.assocUnit}</span>
         </div>
 
-        <p className="mt-4 text-sm leading-relaxed text-gate-fg/85">{labels.assocLead}</p>
+        <p className="mt-2 text-[0.55rem] leading-snug text-gate-fg/85 xs:text-[0.65rem] sm:mt-4 sm:text-sm sm:leading-relaxed">{labels.assocLead}</p>
 
         <Link
           href="/uyushmalar"
-          className="mt-auto inline-flex items-center gap-1.5 pt-5 text-sm font-semibold text-gate-cyan transition-all hover:gap-2.5"
+          className="mt-auto inline-flex items-center gap-1 pt-3 text-[0.55rem] font-semibold text-gate-cyan transition-all xs:text-[0.65rem] sm:gap-1.5 sm:pt-5 sm:text-sm sm:hover:gap-2.5"
         >
           {labels.assocCta} →
         </Link>

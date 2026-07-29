@@ -31,7 +31,11 @@ export function GateEyebrow({
 }) {
   const color = tone === 'gold' ? 'text-gate-gold' : 'text-gate-cyan';
   return (
-    <span className={`text-[0.7rem] font-semibold uppercase tracking-[0.2em] ${color}`}>
+    // The letter-spacing is the first thing to go on a narrow column: at 0.2em
+    // a three-word label wraps to four lines inside a third of a phone.
+    <span
+      className={`block text-[0.45rem] font-semibold uppercase leading-tight tracking-[0.06em] xs:text-[0.55rem] xs:tracking-[0.1em] sm:text-[0.7rem] sm:tracking-[0.2em] ${color}`}
+    >
       {children}
     </span>
   );
@@ -64,7 +68,9 @@ export function GateRow({
 export function GateIndex({value, tone = 'cyan'}: {value: number; tone?: 'gold' | 'cyan'}) {
   const color = tone === 'gold' ? 'text-gate-gold/80' : 'text-gate-cyan/80';
   return (
-    <span className={`text-[0.65rem] font-semibold tracking-[0.22em] ${color}`}>
+    <span
+      className={`text-[0.5rem] font-semibold tracking-[0.1em] xs:text-[0.55rem] sm:text-[0.65rem] sm:tracking-[0.22em] ${color}`}
+    >
       {String(value).padStart(2, '0')}
     </span>
   );

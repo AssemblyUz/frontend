@@ -29,9 +29,8 @@ export default function GatePillars({pillars}: {pillars: GatePillar[]}) {
 
   return (
     <ul
-      /* Five is only readable once each still holds a word and a claim: two up
-         from `xs`, three on a tablet, the full row from `lg`. */
-      className="grid gap-3 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-5"
+      /* All five abreast at every width, matching the panels above them. */
+      className="grid grid-cols-5 gap-1 xs:gap-1.5 sm:gap-3"
       onPointerLeave={() => setHovered(null)}
     >
       {pillars.map((pillar, i) => {
@@ -41,7 +40,7 @@ export default function GatePillars({pillars}: {pillars: GatePillar[]}) {
             key={pillar.word}
             data-reveal
             onPointerEnter={() => setHovered(i)}
-            className={`relative overflow-hidden rounded-xl border bg-gate-panel px-4 py-4 transition-all duration-500 ${
+            className={`relative overflow-hidden rounded-md border bg-gate-panel px-1 py-2 transition-all duration-500 xs:rounded-lg xs:px-2 sm:rounded-xl sm:px-4 sm:py-4 ${
               isActive
                 ? 'border-gate-gold/50 bg-gate-panel-strong'
                 : 'border-gate-line hover:border-gate-gold/30'
@@ -62,13 +61,19 @@ export default function GatePillars({pillars}: {pillars: GatePillar[]}) {
             />
             <GateIndex value={i + 1} tone="gold" />
             <div
-              className={`relative mt-2 text-sm font-bold uppercase tracking-wide transition-colors duration-500 ${
+              /* Sized so the longest of the five words — INVESTITSIYA, twelve
+                 characters — clears a fifth of a 360px screen in one piece.
+                 Below about 340px it has to hyphenate; there is no size that
+                 both fits and stays readable there. */
+              className={`relative mt-1 text-[0.4rem] font-bold uppercase leading-tight tracking-tight transition-colors duration-500 xs:text-[0.55rem] sm:mt-2 sm:text-sm sm:tracking-wide ${
                 isActive ? 'text-gate-gold' : 'text-gate-fg'
               }`}
             >
               {pillar.word}
             </div>
-            <div className="relative mt-0.5 text-xs text-gate-muted">{pillar.claim}</div>
+            <div className="relative mt-0.5 text-[0.45rem] leading-tight text-gate-muted xs:text-[0.55rem] sm:text-xs sm:leading-normal">
+              {pillar.claim}
+            </div>
           </li>
         );
       })}
