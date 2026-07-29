@@ -22,17 +22,39 @@ export type MediaChannel = {
   name: string;
   /** YouTube channel ID (`UC…`). Empty means "not connected yet". */
   channelId: string;
+  /**
+   * Drop Shorts, keeping only full-length uploads.
+   *
+   * Set per channel rather than site-wide on purpose: Chaqiriq posts its
+   * episodes alongside vertical teasers for them, and only the episodes belong
+   * here — but the Assembly's own channel is, at the time of writing, entirely
+   * Shorts, so the same rule there would empty its column.
+   */
+  longFormOnly?: boolean;
+  /** Show at most this many of the channel's most recent videos. */
+  maxVideos?: number;
 };
 
+/** Order is load-bearing: it is the order of the columns on the media page. */
 export const mediaChannels: readonly MediaChannel[] = [
+  // youtube.com/@UmarovMuhtor — the Assembly's chairman. Not @muhtorumarov or
+  // @muxtorumarov, which are separate empty accounts under the same name.
+  {
+    key: 'muhtor-umarov',
+    name: 'Muhtor Umarov',
+    channelId: 'UCd4mg44bbgWVQLfJkv3IMkg',
+    maxVideos: 1,
+  },
   // youtube.com/@assemblyuz — "O'zbekiston Iqtisodiyot Assambleyasi".
   {key: 'assembly', name: 'Assambleya', channelId: 'UCyeiMGUb4XQbixP3QJbh7ig'},
   // youtube.com/@chaqiriquz — the Chaqiriq platform. Note there is an unrelated
   // @chaqiriq (a personal channel of programming tutorials); this is not it.
-  {key: 'chaqiriq', name: 'Chaqiriq', channelId: 'UCrCE2xlfB5-oe6VcSbqgvyQ'},
-  // youtube.com/@UmarovMuhtor — the Assembly's chairman. Not @muhtorumarov or
-  // @muxtorumarov, which are separate empty accounts under the same name.
-  {key: 'muhtor-umarov', name: 'Muhtor Umarov', channelId: 'UCd4mg44bbgWVQLfJkv3IMkg'},
+  {
+    key: 'chaqiriq',
+    name: 'Chaqiriq',
+    channelId: 'UCrCE2xlfB5-oe6VcSbqgvyQ',
+    longFormOnly: true,
+  },
 ];
 
 /** Only the channels that actually have an ID. */

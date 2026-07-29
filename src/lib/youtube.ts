@@ -79,38 +79,102 @@ async function fetchChannel(channel: MediaChannel): Promise<MediaVideo[]> {
   return parseFeed(await response.text(), channel);
 }
 
+const SHORTS_PROBE_TIMEOUT_MS = 6000;
+
 /**
- * The latest videos across every connected media project, newest first.
+ * Whether a video is a Short.
+ *
+ * The feed carries neither a duration nor a Shorts flag, so this asks YouTube
+ * directly: /shorts/<id> answers 200 for a Short, and redirects with a 303 to
+ * /watch for a full-length upload. `redirect: 'manual'` is what makes that
+ * difference readable instead of silently followed.
+ *
+ * Cached indefinitely, because the answer is a fixed property of the video: it
+ * costs one request per video ID ever, not one per render — which matters,
+ * since the home page is `force-dynamic` and would otherwise re-ask on every
+ * visit.
+ *
+ * A probe that fails counts the video as full-length. A momentary YouTube error
+ * letting one Short through until the next fetch is a smaller fault than the
+ * same error emptying the column.
+ */
+async function isShort(id: string): Promise<boolean> {
+  try {
+    const response = await fetch(`https://www.youtube.com/shorts/${id}`, {
+      method: 'HEAD',
+      redirect: 'manual',
+      cache: 'force-cache',
+      signal: AbortSignal.timeout(SHORTS_PROBE_TIMEOUT_MS),
+    });
+    return response.status === 200;
+  } catch (reason) {
+    console.error(`[youtube] could not tell whether ${id} is a Short.`, reason);
+    return false;
+  }
+}
+
+/** One channel's feed with that channel's own rules applied. */
+async function channelVideos(channel: MediaChannel): Promise<MediaVideo[]> {
+  const videos = await fetchChannel(channel);
+  videos.sort((a, b) => b.published.localeCompare(a.published));
+
+  let kept = videos;
+  if (channel.longFormOnly) {
+    // Probed in parallel: this is a handful of HEAD requests, and after the
+    // first render they are served from the cache anyway.
+    const shorts = await Promise.all(videos.map((video) => isShort(video.id)));
+    kept = videos.filter((_, i) => !shorts[i]);
+  }
+
+  return channel.maxVideos === undefined ? kept : kept.slice(0, channel.maxVideos);
+}
+
+export type MediaChannelVideos = {channel: MediaChannel; videos: MediaVideo[]};
+
+/**
+ * Every connected media project with its own videos, in the order the channels
+ * are declared — which is the order of the columns on the media page.
  *
  * Each channel is fetched independently: one unreachable or renamed channel
- * costs its own videos, not the whole section. A total failure — no channels
- * configured, or YouTube unreachable from the server — returns an empty list, so
- * callers render their empty state instead of erroring.
+ * costs its own videos, not the whole section.
  */
-export async function getMediaVideos(limit?: number): Promise<MediaVideo[]> {
+export async function getMediaByChannel(): Promise<MediaChannelVideos[]> {
   const channels = connectedChannels();
   if (channels.length === 0) return [];
 
-  const results = await Promise.allSettled(channels.map(fetchChannel));
+  const results = await Promise.allSettled(channels.map(channelVideos));
 
-  const videos: MediaVideo[] = [];
-  results.forEach((result, i) => {
-    if (result.status === 'fulfilled') {
-      videos.push(...result.value);
-    } else {
-      console.error(
-        `[youtube] could not load the feed for "${channels[i].name}" (${channels[i].channelId}).`,
-        result.reason,
-      );
-    }
+  return channels.map((channel, i) => {
+    const result = results[i];
+    if (result.status === 'fulfilled') return {channel, videos: result.value};
+
+    console.error(
+      `[youtube] could not load the feed for "${channel.name}" (${channel.channelId}).`,
+      result.reason,
+    );
+    return {channel, videos: []};
   });
+}
+
+/**
+ * The same videos as one list, newest first — for the home page, which shows a
+ * handful across all the projects rather than a column each.
+ *
+ * A total failure — no channels configured, or YouTube unreachable from the
+ * server — returns an empty list, so callers render their empty state instead
+ * of erroring.
+ */
+export async function getMediaVideos(limit?: number): Promise<MediaVideo[]> {
+  const groups = await getMediaByChannel();
 
   const seen = new Set<string>();
-  const unique = videos.filter((video) => {
-    if (seen.has(video.id)) return false;
-    seen.add(video.id);
-    return true;
-  });
+  const unique = groups
+    .flatMap((group) => group.videos)
+    .filter((video) => {
+      if (seen.has(video.id)) return false;
+      seen.add(video.id);
+      return true;
+    });
 
   unique.sort((a, b) => b.published.localeCompare(a.published));
   return limit ? unique.slice(0, limit) : unique;
