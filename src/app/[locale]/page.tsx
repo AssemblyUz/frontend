@@ -82,11 +82,14 @@ export default async function HomePage({
                 className="h-auto w-full max-w-[min(20rem,88%)] sm:max-w-sm lg:max-w-md"
               />
             </h1>
-            <p className="mt-6 max-w-xl text-fluid-lg text-muted sm:mt-7">{t('heroLead')}</p>
             {/* One call to action, opening the idea behind the Assembly. The two
                 links this replaces went to Uyushmalar and Xizmatlar, both of
-                which are in the header on every page, so nothing lost a route. */}
-            <div className="mt-8">
+                which are in the header on every page, so nothing lost a route.
+
+                It follows the lockup directly: the standfirst that used to sit
+                between them said the same thing as the statement this button
+                opens, at less length and with no way to read the rest. */}
+            <div className="mt-7 sm:mt-8">
               <IdeaDialog locale={locale} closeLabel={t('ideaClose')} />
             </div>
           </div>
