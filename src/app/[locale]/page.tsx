@@ -216,7 +216,7 @@ export default async function HomePage({
 
       {/* CTA banner */}
       <section className="shell pb-section-sm">
-        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-indigo-600 to-sky-500 px-5 py-12 text-center shadow-lg sm:px-12 sm:py-14">
+        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-teal-600 to-cyan-500 px-5 py-12 text-center shadow-lg sm:px-12 sm:py-14">
           <div className="pointer-events-none absolute -right-10 -top-10 h-48 w-48 rounded-full bg-white/10 blur-2xl" />
           <h2 className="relative text-fluid-3xl font-bold text-white">{t('ctaBannerTitle')}</h2>
           <p className="relative mx-auto mt-3 max-w-xl text-fluid-base text-white/85">
@@ -224,7 +224,7 @@ export default async function HomePage({
           </p>
           <a
             href="mailto:info@assembly.uz"
-            className="relative mt-7 inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-semibold text-indigo-700 shadow-sm transition hover:bg-white/90"
+            className="relative mt-7 inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-semibold text-teal-700 shadow-sm transition hover:bg-white/90"
           >
             {t('ctaBannerBtn')} →
           </a>
