@@ -29,7 +29,9 @@ export default function GatePillars({pillars}: {pillars: GatePillar[]}) {
 
   return (
     <ul
-      className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5"
+      /* Five is only readable once each still holds a word and a claim: two up
+         from `xs`, three on a tablet, the full row from `lg`. */
+      className="grid gap-3 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-5"
       onPointerLeave={() => setHovered(null)}
     >
       {pillars.map((pillar, i) => {

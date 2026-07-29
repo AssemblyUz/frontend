@@ -50,11 +50,16 @@ export default function IdeaDialog({locale, closeLabel}: {locale: string; closeL
         // element takes whatever height that leaves. Setting it on both put the
         // child's border-box 2px over this one's limit, so the dialog scrolled
         // as well and the panel showed two scrollbars side by side.
-        className="m-auto w-[min(46rem,calc(100vw-2rem))] overflow-hidden rounded-2xl border border-border-base bg-card p-0 text-foreground shadow-2xl backdrop:bg-black/70"
+        className="m-auto w-[min(46rem,100vw-1.5rem)] overflow-hidden rounded-2xl border border-border-base bg-card p-0 text-foreground shadow-2xl backdrop:bg-black/70 sm:w-[min(46rem,100vw-3rem)]"
       >
         {/* The scroll container is this child, not the dialog: a sticky header
-            inside a scrolling dialog scrolls away with the rest of it. */}
-        <div className="max-h-[85vh] overflow-y-auto overscroll-contain">
+            inside a scrolling dialog scrolls away with the rest of it.
+
+            `dvh`, not `vh`: on a phone `vh` is measured against the viewport
+            with the browser's toolbars retracted, so 85vh of a screen that
+            still has them on show is taller than what is actually visible —
+            the panel's last lines sat under the address bar. */}
+        <div className="max-h-[85dvh] overflow-y-auto overscroll-contain">
           <div className="sticky top-0 flex items-start justify-between gap-4 border-b border-border-base bg-card/95 px-5 py-4 backdrop-blur sm:px-7">
             <h2 id="idea-title" className="text-lg font-bold leading-snug tracking-tight sm:text-xl">
               {title}

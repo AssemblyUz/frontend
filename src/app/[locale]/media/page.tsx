@@ -34,7 +34,7 @@ export default async function MediaPage({
     <>
       <PageHero title={t('title')} lead={t('lead')} />
 
-      <div className="mx-auto max-w-6xl px-4 py-12 sm:py-16">
+      <div className="shell py-section-sm">
         {/* The projects themselves, whether or not their channel is connected. */}
         <section>
           <h2 className="text-sm font-semibold uppercase tracking-wide text-brand">
@@ -58,10 +58,10 @@ export default async function MediaPage({
           </ul>
         </section>
 
-        <section className="mt-12 sm:mt-16">
+        <section className="mt-section-sm">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
-              <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+              <h2 className="text-fluid-3xl font-bold tracking-tight text-foreground">
                 {t('latestTitle')}
               </h2>
               <p className="mt-2 max-w-2xl text-muted">{t('latestLead')}</p>

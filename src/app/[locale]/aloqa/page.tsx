@@ -43,7 +43,7 @@ export default async function ContactPage({
     <>
       <PageHero title={t('title')} lead={t('lead')} />
 
-      <div className="mx-auto max-w-6xl px-4 py-12 sm:py-16">
+      <div className="shell py-section-sm">
         <div className="grid gap-10 lg:grid-cols-2">
           {/* Left: info + socials */}
           <div>
@@ -61,7 +61,7 @@ export default async function ContactPage({
                     {it.href ? (
                       <a
                         href={it.href}
-                        className="break-words font-semibold text-foreground transition hover:text-brand"
+                        className="inline-block break-words font-semibold text-foreground transition hover:text-brand pointer-coarse:py-1"
                       >
                         {it.value}
                       </a>
@@ -105,7 +105,7 @@ export default async function ContactPage({
           </div>
 
           {/* Right: form */}
-          <div className="rounded-2xl border border-border-base bg-card p-6 sm:p-8">
+          <div className="rounded-2xl border border-border-base bg-card p-5 xs:p-6 sm:p-8">
             <h2 className="text-lg font-semibold text-foreground">{t('formTitle')}</h2>
             <div className="mt-5">
               <ContactForm
@@ -131,7 +131,7 @@ export default async function ContactPage({
               title={t('mapTitle')}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              className="h-72 w-full sm:h-96"
+              className="h-64 w-full xs:h-72 sm:h-96 lg:h-[28rem]"
             />
           </div>
         </div>

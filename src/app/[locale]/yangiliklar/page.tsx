@@ -43,7 +43,7 @@ export default async function NewsPage({
     <>
       <PageHero title={t('title')} lead={t('lead')} />
 
-      <div className="mx-auto max-w-6xl px-4 py-12 sm:py-16">
+      <div className="shell py-section-sm">
         {items.length === 0 ? (
           <p className="rounded-2xl border border-dashed border-border-base bg-card px-6 py-16 text-center text-muted">
             {t('empty')}

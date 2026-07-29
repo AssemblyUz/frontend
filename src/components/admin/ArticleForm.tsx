@@ -323,7 +323,12 @@ export default function ArticleForm({article}: {article?: PanelArticle}) {
         )}
       </section>
 
-      <div className="mt-6 flex flex-wrap items-center gap-3">
+      {/* Save stays in reach on a phone. The form is four sections and a
+          260px body field long, so a bar at the natural end of the document
+          meant scrolling the whole thing again to commit an edit made near the
+          top. From `lg` there is a sidebar and enough height that the bar can
+          sit where it belongs. */}
+      <div className="sticky bottom-0 z-20 mt-6 flex flex-wrap items-center gap-3 border-t border-border-base bg-background/95 pt-4 pb-safe backdrop-blur lg:static lg:border-0 lg:bg-transparent lg:pt-0 lg:pb-0 lg:backdrop-blur-none">
         <button
           type="submit"
           disabled={busy}

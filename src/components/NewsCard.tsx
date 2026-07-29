@@ -24,7 +24,7 @@ export default function NewsCard({item, readMore}: {item: LocalizedNewsItem; rea
         </div>
       )}
 
-      <div className="flex flex-1 flex-col p-6">
+      <div className="flex flex-1 flex-col p-5 sm:p-6">
       <div className="flex items-center gap-3">
         <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand/10 text-2xl">
           {item.icon}
@@ -44,7 +44,7 @@ export default function NewsCard({item, readMore}: {item: LocalizedNewsItem; rea
 
       <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-muted">{item.excerpt}</p>
 
-      <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-brand transition-all group-hover:gap-2.5">
+      <span className="mt-5 inline-flex items-center gap-1.5 py-1 text-sm font-semibold text-brand transition-all group-hover:gap-2.5">
         {readMore} →
       </span>
       </div>

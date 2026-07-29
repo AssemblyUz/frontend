@@ -39,10 +39,10 @@ export default async function AssociationDetailPage({
   const t = await getTranslations('associations');
 
   return (
-    <article className="mx-auto max-w-3xl px-4 py-10 sm:py-14">
+    <article className="shell shell-tight py-section-sm">
       <Link
         href="/uyushmalar"
-        className="inline-flex items-center gap-1.5 text-sm font-medium text-muted transition hover:text-brand"
+        className="inline-flex items-center gap-1.5 py-1 text-sm font-medium text-muted transition hover:text-brand"
       >
         ← {t('backToList')}
       </Link>
@@ -53,7 +53,7 @@ export default async function AssociationDetailPage({
         </span>
         <div>
           <p className="text-xs font-medium uppercase tracking-wide text-brand">{t('title')}</p>
-          <h1 className="mt-1 text-2xl font-bold leading-tight tracking-tight text-foreground sm:text-3xl">
+          <h1 className="mt-1 text-fluid-3xl font-bold leading-tight tracking-tight text-foreground">
             {assoc.name}
           </h1>
         </div>

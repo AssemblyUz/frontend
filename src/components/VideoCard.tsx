@@ -82,7 +82,7 @@ export default function VideoCard({
           href={`https://www.youtube.com/watch?v=${video.id}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-muted transition-all hover:gap-2.5 hover:text-brand"
+          className="mt-3 inline-flex items-center gap-1.5 py-1 text-sm font-medium text-muted transition-all hover:gap-2.5 hover:text-brand"
         >
           {labels.watchOn} ↗
         </a>

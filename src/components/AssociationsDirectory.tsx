@@ -77,7 +77,7 @@ export default function AssociationsDirectory({
                 <p className="mt-3 line-clamp-2 text-sm leading-relaxed text-muted">{it.activity}</p>
               )}
 
-              <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-brand transition group-hover:gap-2">
+              <span className="mt-4 inline-flex items-center gap-1 py-1 text-sm font-medium text-brand transition group-hover:gap-2">
                 {labels.details} →
               </span>
             </Link>

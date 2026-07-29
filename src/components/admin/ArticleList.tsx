@@ -43,7 +43,7 @@ export default function ArticleList({
               key={key}
               type="button"
               onClick={() => setFilter(key)}
-              className={`rounded-lg px-3 py-1.5 text-sm font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/40 ${
+              className={`tap rounded-lg px-3 py-1.5 text-sm font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/40 ${
                 filter === key
                   ? 'bg-brand text-brand-fg'
                   : 'text-muted hover:bg-background hover:text-foreground'

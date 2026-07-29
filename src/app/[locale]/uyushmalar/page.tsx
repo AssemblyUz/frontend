@@ -26,7 +26,7 @@ export default async function AssociationsPage({
   return (
     <>
       <PageHero title={t('title')} lead={t('lead')} />
-      <section className="mx-auto max-w-6xl px-4 py-12 sm:py-16">
+      <section className="shell py-section-sm">
         <AssociationsDirectory
           items={getAssociations(locale).map(({id, name, activity}) => ({id, name, activity}))}
           labels={{

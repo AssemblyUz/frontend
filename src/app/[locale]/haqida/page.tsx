@@ -70,14 +70,14 @@ export default async function AboutPage({
     <>
       <PageHero title={t('title')} lead={t('lead')} />
 
-      <div className="mx-auto max-w-6xl px-4 py-12 sm:py-16">
+      <div className="shell py-section-sm">
         {/* Who we are */}
         <section className="grid gap-5 lg:grid-cols-[1.3fr_1fr]">
-          <div className="rounded-3xl border border-border-base bg-card p-6 sm:p-10">
+          <div className="rounded-3xl border border-border-base bg-card p-5 xs:p-6 sm:p-10">
             <span className="text-sm font-semibold uppercase tracking-wide text-brand">
               {t('introTitle')}
             </span>
-            <p className="mt-4 text-base leading-relaxed text-muted sm:text-lg">{t('intro')}</p>
+            <p className="mt-4 text-fluid-lg text-muted">{t('intro')}</p>
             <p className="mt-6 text-lg font-semibold text-foreground">{t('principle')}</p>
             <p className="mt-3 leading-relaxed text-muted">{t('introNote')}</p>
           </div>
@@ -85,8 +85,8 @@ export default async function AboutPage({
           <div className="grid gap-5">
             <div className="grid grid-cols-2 gap-px overflow-hidden rounded-3xl border border-border-base bg-border-base">
               {highlights.map((h, i) => (
-                <div key={h.label} className="bg-card px-5 py-6">
-                  <div className={`text-xl font-bold tracking-tight sm:text-2xl ${CYCLE[i % CYCLE.length]}`}>
+                <div key={h.label} className="bg-card px-4 py-5 xs:px-5 xs:py-6">
+                  <div className={`text-fluid-xl font-bold tracking-tight ${CYCLE[i % CYCLE.length]}`}>
                     {h.value}
                   </div>
                   <div className="mt-1 text-xs text-muted">{h.label}</div>
@@ -94,7 +94,7 @@ export default async function AboutPage({
               ))}
             </div>
 
-            <div className="rounded-3xl border border-border-base bg-card p-6 sm:p-8">
+            <div className="rounded-3xl border border-border-base bg-card p-5 xs:p-6 sm:p-8">
               <h2 className="text-sm font-semibold uppercase tracking-wide text-accent">
                 {t('roleTitle')}
               </h2>
@@ -113,13 +113,13 @@ export default async function AboutPage({
         {/* Mission & goal */}
         <Section title={t('missionSectionTitle')} lead={t('missionSectionLead')}>
           <div className="grid gap-5 lg:grid-cols-2">
-            <div className="rounded-2xl border border-border-base bg-card p-6 sm:p-8">
+            <div className="rounded-2xl border border-border-base bg-card p-5 xs:p-6 sm:p-8">
               <span className="text-sm font-semibold uppercase tracking-wide text-brand">
                 {t('missionTitle')}
               </span>
               <p className="mt-3 leading-relaxed text-muted">{t('mission')}</p>
             </div>
-            <div className="rounded-2xl border border-border-base bg-card p-6 sm:p-8">
+            <div className="rounded-2xl border border-border-base bg-card p-5 xs:p-6 sm:p-8">
               <span className="text-sm font-semibold uppercase tracking-wide text-accent">
                 {t('goalTitle')}
               </span>
@@ -133,7 +133,7 @@ export default async function AboutPage({
 
         {/* Values */}
         <Section title={t('valuesTitle')} lead={t('valuesLead')}>
-          <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-5">
+          <div className="grid gap-3 xs:grid-cols-2 sm:grid-cols-3 sm:gap-4 lg:grid-cols-5">
             {values.map((v, i) => (
               <div key={v.title} className="rounded-2xl border border-border-base bg-card p-5 transition hover:border-brand">
                 <div className={`text-sm font-bold uppercase tracking-wide ${CYCLE[i % CYCLE.length]}`}>
@@ -147,7 +147,7 @@ export default async function AboutPage({
 
         {/* Priority directions */}
         <Section title={t('directionsTitle')} lead={t('directionsLead')}>
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+          <div className="grid gap-3 xs:grid-cols-2 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4">
             {directions.map((d, i) => (
               <div
                 key={d}
@@ -164,7 +164,7 @@ export default async function AboutPage({
 
         {/* Strategic architecture (GPPP) */}
         <Section title={t('architectureTitle')} lead={t('architectureLead')}>
-          <div className="rounded-3xl border border-border-base bg-card p-6 sm:p-10">
+          <div className="rounded-3xl border border-border-base bg-card p-5 xs:p-6 sm:p-10">
             <div className="mx-auto max-w-md rounded-2xl bg-gradient-to-br from-indigo-600 to-sky-500 px-6 py-8 text-center shadow-lg">
               <div className="text-2xl font-bold tracking-tight text-white">{t('coreTitle')}</div>
               <div className="mt-1 text-sm text-white/85">{t('coreSub')}</div>
@@ -199,7 +199,7 @@ export default async function AboutPage({
             ))}
           </ol>
 
-          <div className="mt-5 rounded-2xl border border-brand/30 bg-brand/5 p-6 sm:p-8">
+          <div className="mt-5 rounded-2xl border border-brand/30 bg-brand/5 p-5 xs:p-6 sm:p-8">
             <span className="text-sm font-semibold uppercase tracking-wide text-brand">
               {t('formulaTitle')}
             </span>
@@ -229,7 +229,7 @@ export default async function AboutPage({
 
               if (!block) {
                 return (
-                  <div key={b.code} className={`rounded-2xl border bg-card p-6 sm:p-8 ${style.border}`}>
+                  <div key={b.code} className={`rounded-2xl border bg-card p-5 xs:p-6 sm:p-8 ${style.border}`}>
                     {card}
                   </div>
                 );
@@ -239,11 +239,11 @@ export default async function AboutPage({
                 <Link
                   key={b.code}
                   href={`/bloklar/${block.slug}`}
-                  className={`group rounded-2xl border bg-card p-6 transition hover:shadow-lg sm:p-8 ${style.border} ${block.tone.hoverBorder}`}
+                  className={`group rounded-2xl border bg-card p-5 transition hover:shadow-lg xs:p-6 sm:p-8 ${style.border} ${block.tone.hoverBorder}`}
                 >
                   {card}
                   <span
-                    className={`mt-5 inline-flex items-center gap-1.5 text-sm font-semibold transition-all group-hover:gap-2.5 ${style.text}`}
+                    className={`mt-5 inline-flex items-center gap-1.5 py-1 text-sm font-semibold transition-all group-hover:gap-2.5 ${style.text}`}
                   >
                     {tBlocks('more')} →
                   </span>
@@ -256,8 +256,8 @@ export default async function AboutPage({
         {/* AI MediaNet */}
         <Section title={t('mediaTitle')} lead={t('mediaLead')}>
           <div className="grid gap-5 lg:grid-cols-[1fr_1.4fr]">
-            <div className="rounded-3xl border border-violet-500/40 bg-card p-6 sm:p-8">
-              <div className="text-3xl font-bold tracking-tight text-violet-500 dark:text-violet-400">
+            <div className="rounded-3xl border border-violet-500/40 bg-card p-5 xs:p-6 sm:p-8">
+              <div className="text-fluid-3xl font-bold tracking-tight text-violet-500 dark:text-violet-400">
                 AI MediaNet
               </div>
               <p className="mt-4 leading-relaxed text-accent">{t('mediaTagline')}</p>
@@ -298,7 +298,7 @@ export default async function AboutPage({
         <Section title={t('valueTitle')} lead={t('valueLead')}>
           <div className="grid gap-5 sm:grid-cols-2">
             {valueItems.map((v, i) => (
-              <div key={v.title} className="rounded-2xl border border-border-base bg-card p-6 sm:p-8">
+              <div key={v.title} className="rounded-2xl border border-border-base bg-card p-5 xs:p-6 sm:p-8">
                 <h3 className={`font-semibold ${CYCLE[i % CYCLE.length]}`}>{v.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted">{v.desc}</p>
               </div>
@@ -308,7 +308,7 @@ export default async function AboutPage({
 
         {/* Roadmap & KPI */}
         <Section title={t('roadmapTitle')} lead={t('roadmapLead')}>
-          <div className="grid gap-5 sm:grid-cols-3">
+          <div className="grid gap-4 xs:grid-cols-2 sm:grid-cols-3 sm:gap-5">
             {roadmap.map((stage, i) => (
               <div key={stage.period} className="rounded-2xl border border-border-base bg-card p-6 text-center">
                 <div className={`text-2xl font-bold tracking-tight ${CYCLE[i % CYCLE.length]}`}>
@@ -323,7 +323,7 @@ export default async function AboutPage({
           <h3 className="mt-10 text-sm font-semibold uppercase tracking-wide text-brand">
             {t('kpiTitle')}
           </h3>
-          <div className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
+          <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-6">
             {kpi.map((k, i) => (
               <div key={k.label} className="rounded-2xl border border-border-base bg-card p-5 text-center">
                 <div className={`text-xl font-bold tracking-tight ${CYCLE[i % CYCLE.length]}`}>
@@ -337,7 +337,7 @@ export default async function AboutPage({
 
         {/* Results */}
         <Section title={t('resultsTitle')}>
-          <div className="grid gap-5 sm:grid-cols-3">
+          <div className="grid gap-4 xs:grid-cols-2 sm:grid-cols-3 sm:gap-5">
             {results.map((r) => (
               <div key={r.title} className="rounded-2xl border border-border-base bg-card p-6">
                 <h3 className="text-lg font-semibold text-brand">{r.title}</h3>
@@ -348,9 +348,9 @@ export default async function AboutPage({
         </Section>
 
         {/* Slogan banner */}
-        <section className="mt-14 sm:mt-20">
-          <div className="rounded-3xl bg-gradient-to-br from-indigo-600 to-sky-500 px-6 py-12 text-center sm:px-12">
-            <p className="text-2xl font-bold text-white sm:text-3xl">{t('motto')}</p>
+        <section className="mt-section">
+          <div className="rounded-3xl bg-gradient-to-br from-indigo-600 to-sky-500 px-5 py-12 text-center sm:px-12">
+            <p className="text-fluid-3xl font-bold text-white">{t('motto')}</p>
             <p className="mt-3 text-white/85">{t('slogan')}</p>
           </div>
         </section>
@@ -369,8 +369,8 @@ function Section({
   children: React.ReactNode;
 }) {
   return (
-    <section className="mt-14 sm:mt-20">
-      <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">{title}</h2>
+    <section className="mt-section">
+      <h2 className="text-fluid-3xl font-bold tracking-tight text-foreground">{title}</h2>
       {lead && <p className="mt-2 max-w-3xl text-muted">{lead}</p>}
       <div className="mt-8">{children}</div>
     </section>

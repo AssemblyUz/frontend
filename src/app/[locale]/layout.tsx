@@ -124,7 +124,10 @@ export default async function LocaleLayout({
     // rides on <body>, where it still cascades to everything.
     <html lang={locale} suppressHydrationWarning>
       <body
-        className={`${inter.variable} min-h-screen flex flex-col bg-background text-foreground`}
+        // `min-h-dvh`, not `min-h-screen`: on a phone `100vh` is the viewport
+        // with the browser's toolbars retracted, so a short page was always
+        // that bit taller than the screen and scrolled for no reason.
+        className={`${inter.variable} min-h-dvh flex flex-col bg-background text-foreground`}
       >
         <Script id="theme-init" strategy="beforeInteractive">
           {themeScript}

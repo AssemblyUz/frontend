@@ -17,7 +17,7 @@ export default async function NewArticlePage({
     <div>
       <Link
         href="/admin"
-        className="inline-flex items-center gap-1.5 text-sm font-medium text-muted transition hover:text-brand"
+        className="inline-flex items-center gap-1.5 py-1 text-sm font-medium text-muted transition hover:text-brand"
       >
         ← {t('backToDashboard')}
       </Link>

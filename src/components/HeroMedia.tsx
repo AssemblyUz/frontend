@@ -26,20 +26,29 @@ const TRACK = [
 export default function HeroMedia({badge, label}: {badge: string; label: string}) {
   return (
     <div className="relative">
+      {/* A softer radius on phones: a 64px blur over this area is one of the
+          more expensive things a mid-range device paints, and at this size the
+          difference between the two is not visible. */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -inset-8 rounded-[3rem] bg-brand/10 blur-3xl dark:bg-brand/15"
+        className="pointer-events-none absolute -inset-8 rounded-[3rem] bg-brand/10 blur-2xl dark:bg-brand/15 sm:blur-3xl"
       />
 
       <div
         role="img"
         aria-label={label}
-        className="hero-marquee hero-marquee-mask relative grid h-[22rem] grid-cols-2 gap-3 overflow-hidden sm:h-[26rem] sm:grid-cols-3 lg:h-[34rem]"
+        /* Every step is capped against the viewport as well as the breakpoint.
+           A phone turned sideways is 844px wide and 390px tall — wide enough
+           to pass `sm`, so a plain `sm:h-[26rem]` made the wall taller than the
+           whole screen. The dvh cap is what actually governs there, and the rem
+           value governs everywhere the window is a normal shape. `dvh` rather
+           than `vh` so the browser's retracting toolbar is counted. */
+        className="hero-marquee hero-marquee-mask relative grid h-[min(22rem,60dvh)] grid-cols-2 gap-2.5 overflow-hidden xs:gap-3 sm:h-[min(26rem,70dvh)] sm:grid-cols-3 lg:h-[min(30rem,78dvh)] xl:h-[min(34rem,78dvh)]"
       >
         {heroPhotoColumns.map((column, index) => (
           <div
             key={index}
-            className={`flex-col gap-3 ${TRACK[index % TRACK.length]} ${
+            className={`flex-col gap-2.5 xs:gap-3 ${TRACK[index % TRACK.length]} ${
               index === 2 ? 'hidden sm:flex' : 'flex'
             }`}
           >

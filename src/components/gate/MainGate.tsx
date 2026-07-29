@@ -66,7 +66,7 @@ export default async function MainGate() {
         className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-gate-gold/40 to-transparent"
       />
 
-      <div className="relative mx-auto max-w-6xl px-4 py-16 sm:py-24">
+      <div className="relative shell py-section">
         <div className="flex flex-wrap items-end justify-between gap-x-8 gap-y-4">
           <div className="max-w-3xl">
             <span className="inline-flex items-center gap-2 rounded-full border border-gate-gold/40 px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-gate-gold">
@@ -75,15 +75,15 @@ export default async function MainGate() {
             </span>
             <h2
               id="main-gate-title"
-              className="mt-5 text-3xl font-bold leading-tight tracking-tight sm:text-4xl"
+              className="mt-5 text-fluid-4xl font-bold tracking-tight text-balance"
             >
               {t('title')}
             </h2>
-            <p className="mt-4 leading-relaxed text-gate-muted">{t('lead')}</p>
+            <p className="mt-4 text-fluid-base text-gate-muted">{t('lead')}</p>
           </div>
           <Link
             href="/haqida"
-            className="inline-flex items-center gap-1.5 text-sm font-semibold text-gate-cyan transition-all hover:gap-2.5"
+            className="inline-flex items-center gap-1.5 py-1 text-sm font-semibold text-gate-cyan transition-all hover:gap-2.5"
           >
             {t('more')} →
           </Link>
@@ -96,10 +96,10 @@ export default async function MainGate() {
 
         {/* The doors themselves. */}
         <div className="mt-10 border-t border-gate-line pt-10 text-center sm:mt-14">
-          <p className="text-xl font-bold tracking-tight text-gate-gold sm:text-2xl">
+          <p className="text-fluid-2xl font-bold tracking-tight text-gate-gold text-balance">
             {t('motto')}
           </p>
-          <p className="mx-auto mt-3 max-w-2xl text-gate-muted">{t('mottoLead')}</p>
+          <p className="mx-auto mt-3 max-w-2xl text-fluid-base text-gate-muted">{t('mottoLead')}</p>
 
           <nav aria-label={t('doorsLabel')} className="mt-8">
             <RevealScope stagger={60} className="flex flex-wrap justify-center gap-2.5">
@@ -108,7 +108,9 @@ export default async function MainGate() {
                   key={door.key}
                   href={door.href}
                   data-reveal
-                  className="inline-flex rounded-xl border border-gate-line bg-gate-panel px-4 py-2.5 text-sm font-semibold text-gate-fg transition-all duration-300 hover:-translate-y-0.5 hover:border-gate-cyan/60 hover:bg-gate-panel-strong hover:text-gate-cyan hover:shadow-[0_8px_24px_-12px_rgba(14,116,144,0.45)] dark:hover:shadow-[0_8px_24px_-12px_rgba(78,195,234,0.6)]"
+                  /* py-3 rather than py-2.5: these are the section's main
+                     navigation and the only place it is reached by thumb. */
+                  className="inline-flex rounded-xl border border-gate-line bg-gate-panel px-4 py-3 text-sm font-semibold text-gate-fg transition-all duration-300 hover:-translate-y-0.5 hover:border-gate-cyan/60 hover:bg-gate-panel-strong hover:text-gate-cyan hover:shadow-[0_8px_24px_-12px_rgba(14,116,144,0.45)] dark:hover:shadow-[0_8px_24px_-12px_rgba(78,195,234,0.6)]"
                 >
                   {tNav(door.key)}
                 </Link>

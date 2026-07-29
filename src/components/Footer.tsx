@@ -23,8 +23,8 @@ export default async function Footer() {
   const year = 2026;
 
   return (
-    <footer className="mt-16 border-t border-border-base bg-surface">
-      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:grid-cols-2 lg:grid-cols-4">
+    <footer className="mt-section border-t border-border-base bg-surface">
+      <div className="shell grid gap-8 py-section-sm sm:grid-cols-2 sm:gap-10 lg:grid-cols-4">
         <div className="lg:col-span-2">
           <Logo className="h-10 w-auto" />
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted">{t('about')}</p>
@@ -37,7 +37,7 @@ export default async function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   title={s.name}
-                  className="flex h-9 w-9 items-center justify-center rounded-lg border border-border-base text-muted transition hover:border-brand hover:text-brand"
+                  className="tap flex h-9 w-9 items-center justify-center rounded-lg border border-border-base text-muted transition hover:border-brand hover:text-brand"
                 >
                   <SocialIcon id={s.platform} className="h-4 w-4" />
                 </a>
@@ -56,10 +56,18 @@ export default async function Footer() {
 
         <div>
           <h3 className="text-sm font-semibold text-foreground">{t('sections')}</h3>
-          <ul className="mt-4 space-y-2.5 text-sm">
+          {/* A 14px line of text is a 17px-tall tap target, and eight of them
+              stacked 10px apart is the hardest thing on the site to hit with a
+              thumb. Where the pointer is coarse the rows get real height and
+              the gap between them shrinks to keep the block much the same
+              size; a mouse sees the original spacing. */}
+          <ul className="mt-4 space-y-2.5 text-sm pointer-coarse:space-y-0.5">
             {LINKS.map((l) => (
               <li key={l.key}>
-                <Link href={l.href} className="text-muted transition hover:text-brand">
+                <Link
+                  href={l.href}
+                  className="inline-block text-muted transition hover:text-brand pointer-coarse:py-1.5"
+                >
                   {tNav(l.key)}
                 </Link>
               </li>
@@ -72,12 +80,18 @@ export default async function Footer() {
           <ul className="mt-4 space-y-2.5 text-sm text-muted">
             <li>{site.address}</li>
             <li>
-              <a href={`mailto:${site.email}`} className="transition hover:text-brand">
+              <a
+                href={`mailto:${site.email}`}
+                className="inline-block break-all transition hover:text-brand pointer-coarse:py-1"
+              >
                 {site.email}
               </a>
             </li>
             <li>
-              <a href={`tel:${site.phone.replace(/\s/g, '')}`} className="transition hover:text-brand">
+              <a
+                href={`tel:${site.phone.replace(/\s/g, '')}`}
+                className="inline-block transition hover:text-brand pointer-coarse:py-1"
+              >
                 {site.phone}
               </a>
             </li>
@@ -86,7 +100,9 @@ export default async function Footer() {
       </div>
 
       <div className="border-t border-border-base">
-        <div className="mx-auto max-w-6xl px-4 py-5 text-center text-xs text-muted">
+        {/* pb-safe clears the home indicator on gesture-navigation phones,
+            where a plain padding put this line under the system bar. */}
+        <div className="shell pb-safe pt-5 text-center text-xs text-muted">
           © {year} {site.name}. {t('rights')}
         </div>
       </div>

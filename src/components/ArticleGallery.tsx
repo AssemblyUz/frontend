@@ -2,14 +2,14 @@ import type {ArticlePhoto} from '@/lib/news';
 
 /**
  * Photos attached to an article, each at the width its editor chose in the
- * admin. `full` spans the column, `half` pairs up on wide screens, `thumb`
- * sits three-up — all collapse to one column on mobile, where anything
- * narrower than full width is unreadable.
+ * admin. `full` spans the column, `half` pairs up once there is room for two,
+ * `thumb` reaches three-up on a tablet — and below `xs` every size collapses to
+ * one column, since a third of a 360px screen shows nothing legible.
  */
 const WIDTH: Record<ArticlePhoto['size'], string> = {
   full: 'col-span-6',
-  half: 'col-span-6 sm:col-span-3',
-  thumb: 'col-span-6 sm:col-span-2',
+  half: 'col-span-6 xs:col-span-3',
+  thumb: 'col-span-6 xs:col-span-3 sm:col-span-2',
 };
 
 /**
@@ -29,7 +29,7 @@ const WIDTH: Record<ArticlePhoto['size'], string> = {
  * this replaces were fixed guesses that were wrong for every portrait photo.
  */
 const FRAME: Record<ArticlePhoto['size'], string> = {
-  full: 'aspect-[3/2] max-h-[58vh]',
+  full: 'aspect-[3/2] max-h-[58dvh]',
   half: 'aspect-[4/3]',
   thumb: 'aspect-[4/3]',
 };
@@ -38,7 +38,7 @@ export default function ArticleGallery({photos}: {photos: ArticlePhoto[]}) {
   if (photos.length === 0) return null;
 
   return (
-    <div className="mt-10 grid grid-cols-6 gap-4">
+    <div className="mt-10 grid grid-cols-6 gap-3 sm:gap-4">
       {photos.map((photo) => (
         <figure key={photo.url} className={WIDTH[photo.size]}>
           <div

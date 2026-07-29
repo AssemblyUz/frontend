@@ -37,10 +37,14 @@ export default async function AdminLayout({
 
   return (
     <AdminSessionProvider user={user}>
-      <div className="min-h-screen bg-background lg:flex">
+      <div className="min-h-dvh bg-background lg:flex">
         {/* Desktop sidebar. Rendered alongside the mobile bar and switched
-            purely by CSS — no breakpoint state, no drawer to get stuck open. */}
-        <aside className="sticky top-0 hidden h-screen w-60 shrink-0 flex-col border-r border-border-base bg-surface px-4 py-5 lg:flex">
+            purely by CSS — no breakpoint state, no drawer to get stuck open.
+
+            It scrolls on its own once the viewport is shorter than its
+            contents, so the sign-out block pinned to the bottom stays
+            reachable on a laptop in a small window. */}
+        <aside className="sticky top-0 hidden h-dvh w-56 shrink-0 flex-col overflow-y-auto border-r border-border-base bg-surface px-4 py-5 lg:flex xl:w-60">
           <div className="mb-6 px-1">
             <Link href="/admin" className="inline-flex items-center">
               <Logo className="h-8 w-auto" />
@@ -69,9 +73,10 @@ export default async function AdminLayout({
           </div>
         </aside>
 
-        {/* Mobile top bar */}
-        <header className="border-b border-border-base bg-surface lg:hidden">
-          <div className="flex items-center gap-3 px-4 py-3">
+        {/* Mobile top bar. Sticky so the panel's own navigation stays in reach
+            while a long article form is being scrolled through. */}
+        <header className="sticky top-0 z-30 border-b border-border-base bg-surface/95 backdrop-blur lg:hidden">
+          <div className="flex items-center gap-3 px-gutter py-3">
             <Link href="/admin" className="inline-flex items-center">
               <Logo className="h-7 w-auto" />
             </Link>
@@ -85,7 +90,7 @@ export default async function AdminLayout({
 
         {/* min-w-0 stops a wide table or long slug from forcing the whole
             layout to scroll horizontally. */}
-        <main className="min-w-0 flex-1 px-4 py-6 sm:px-7 sm:py-8">
+        <main className="min-w-0 flex-1 px-gutter pt-6 pb-safe [--pb-safe-min:1.5rem] sm:pt-8">
           <div className="mx-auto max-w-5xl">{children}</div>
         </main>
       </div>

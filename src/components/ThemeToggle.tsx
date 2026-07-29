@@ -57,7 +57,7 @@ export default function ThemeToggle() {
       onClick={toggle}
       title={label}
       aria-label={label}
-      className="flex h-9 w-9 items-center justify-center rounded-lg border border-border-base bg-surface text-muted transition hover:border-brand hover:text-brand"
+      className="tap flex h-9 w-9 items-center justify-center rounded-lg border border-border-base bg-surface text-muted transition hover:border-brand hover:text-brand"
     >
       <span suppressHydrationWarning className="text-base leading-none">
         {dark ? '☀️' : '🌙'}

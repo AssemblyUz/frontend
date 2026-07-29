@@ -61,10 +61,10 @@ export default async function FunctionalBlockPage({
       {/* Header */}
       <section className="relative overflow-hidden border-b border-border-base">
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-brand/10 to-transparent" />
-        <div className="relative mx-auto max-w-6xl px-4 py-12 sm:py-16">
+        <div className="relative shell py-section-sm">
           <Link
             href="/bloklar"
-            className="inline-flex items-center gap-1.5 text-sm font-medium text-muted transition hover:text-brand"
+            className="inline-flex items-center gap-1.5 py-1 text-sm font-medium text-muted transition hover:text-brand"
           >
             ← {t('backToList')}
           </Link>
@@ -76,20 +76,20 @@ export default async function FunctionalBlockPage({
               {block.code}
             </span>
             <div>
-              <h1 className="text-2xl font-bold leading-tight tracking-tight text-foreground sm:text-3xl">
+              <h1 className="text-fluid-3xl font-bold leading-tight tracking-tight text-foreground">
                 {content.name}
               </h1>
               <p className={`mt-1 font-medium ${block.tone.text}`}>{content.short}</p>
             </div>
           </div>
 
-          <p className="mt-6 max-w-3xl text-base leading-relaxed text-muted sm:text-lg">
+          <p className="mt-6 max-w-3xl text-fluid-lg text-muted">
             {content.lead}
           </p>
         </div>
       </section>
 
-      <div className="mx-auto max-w-6xl px-4 py-12 sm:py-16">
+      <div className="shell py-section-sm">
         {/* What it does / who it works with */}
         <div className="grid gap-5 lg:grid-cols-2">
           <Panel title={t('roleTitle')} rule={block.tone.rule}>
@@ -121,17 +121,17 @@ export default async function FunctionalBlockPage({
         </div>
 
         {/* Related projects */}
-        <section className="mt-12 sm:mt-16">
+        <section className="mt-section-sm">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
-              <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+              <h2 className="text-fluid-3xl font-bold tracking-tight text-foreground">
                 {t('projectsTitle')}
               </h2>
               <p className="mt-2 max-w-2xl text-muted">{t('projectsNote')}</p>
             </div>
             <Link
               href="/loyihalar"
-              className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand transition-all hover:gap-2.5"
+              className="inline-flex items-center gap-1.5 py-1 text-sm font-semibold text-brand transition-all hover:gap-2.5"
             >
               {t('allProjects')} →
             </Link>
@@ -154,8 +154,8 @@ export default async function FunctionalBlockPage({
         </section>
 
         {/* Outcomes */}
-        <section className="mt-12 sm:mt-16">
-          <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+        <section className="mt-section-sm">
+          <h2 className="text-fluid-3xl font-bold tracking-tight text-foreground">
             {t('outcomesTitle')}
           </h2>
           <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -174,7 +174,7 @@ export default async function FunctionalBlockPage({
         </section>
 
         {/* Siblings — the four blocks double as navigation between these pages. */}
-        <section className="mt-12 sm:mt-16">
+        <section className="mt-section-sm">
           <h2 className="text-sm font-semibold uppercase tracking-wide text-brand">
             {t('siblingsTitle')}
           </h2>
@@ -215,9 +215,9 @@ export default async function FunctionalBlockPage({
         </section>
 
         {/* CTA */}
-        <section className="mt-12 sm:mt-16">
-          <div className="rounded-3xl border border-border-base bg-surface p-6 text-center sm:p-10">
-            <h2 className="text-xl font-bold tracking-tight text-foreground sm:text-2xl">
+        <section className="mt-section-sm">
+          <div className="rounded-3xl border border-border-base bg-surface p-6 text-center xs:p-8 sm:p-10">
+            <h2 className="text-fluid-2xl font-bold tracking-tight text-foreground">
               {t('ctaTitle', {code: block.code})}
             </h2>
             <p className="mx-auto mt-3 max-w-xl leading-relaxed text-muted">{t('ctaLead')}</p>
@@ -244,7 +244,7 @@ function Panel({
   children: React.ReactNode;
 }) {
   return (
-    <section className="rounded-2xl border border-border-base bg-card p-6 sm:p-8">
+    <section className="rounded-2xl border border-border-base bg-card p-5 xs:p-6 sm:p-8">
       <h2 className="text-lg font-semibold text-foreground">{title}</h2>
       <div className={`mt-3 h-0.5 w-12 rounded-full ${rule}`} />
       <div className="mt-6">{children}</div>

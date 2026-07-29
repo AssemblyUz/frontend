@@ -28,7 +28,7 @@ export default async function ProjectsPage({
   return (
     <>
       <PageHero title={t('title')} lead={t('lead')} />
-      <section className="mx-auto max-w-6xl px-4 py-12 sm:py-16">
+      <section className="shell py-section-sm">
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((it, i) => {
             const url = getProjectLink(it.name);
@@ -50,7 +50,7 @@ export default async function ProjectsPage({
                 <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">{it.desc}</p>
                 <div className="mt-5">
                   {url ? (
-                    <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand transition group-hover:gap-2.5">
+                    <span className="inline-flex items-center gap-1.5 py-1 text-sm font-semibold text-brand transition group-hover:gap-2.5">
                       {t('visit')} →
                     </span>
                   ) : (

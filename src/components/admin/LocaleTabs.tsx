@@ -45,7 +45,7 @@ export default function LocaleTabs({
             role="tab"
             aria-selected={selected}
             onClick={() => onChange(locale)}
-            className={`inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-sm font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/40 ${
+            className={`tap inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-sm font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/40 ${
               selected
                 ? 'bg-brand text-brand-fg'
                 : 'text-muted hover:bg-background hover:text-foreground'

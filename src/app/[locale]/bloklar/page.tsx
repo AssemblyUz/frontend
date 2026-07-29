@@ -32,7 +32,7 @@ export default async function BlocksPage({
     <>
       <PageHero title={t('title')} lead={t('lead')} />
 
-      <div className="mx-auto max-w-6xl px-4 py-12 sm:py-16">
+      <div className="shell py-section-sm">
         <div className="grid gap-5 sm:grid-cols-2">
           {functionalBlocks.map((block) => {
             const content = findBlockContent(items, block.code);
@@ -41,7 +41,7 @@ export default async function BlocksPage({
               <Link
                 key={block.slug}
                 href={`/bloklar/${block.slug}`}
-                className={`group rounded-2xl border bg-card p-6 transition hover:shadow-lg sm:p-8 ${block.tone.border} ${block.tone.hoverBorder}`}
+                className={`group rounded-2xl border bg-card p-5 transition hover:shadow-lg xs:p-6 sm:p-8 ${block.tone.border} ${block.tone.hoverBorder}`}
               >
                 <div className="flex items-center gap-4">
                   <span
@@ -58,7 +58,7 @@ export default async function BlocksPage({
                 <p className="mt-5 leading-relaxed text-muted">{content.tagline}</p>
 
                 <span
-                  className={`mt-5 inline-flex items-center gap-1.5 text-sm font-semibold transition-all group-hover:gap-2.5 ${block.tone.text}`}
+                  className={`mt-5 inline-flex items-center gap-1.5 py-1 text-sm font-semibold transition-all group-hover:gap-2.5 ${block.tone.text}`}
                 >
                   {t('more')} →
                 </span>

@@ -48,10 +48,10 @@ export default async function NewsDetailPage({
 
   return (
     <>
-      <article className="mx-auto max-w-3xl px-4 py-10 sm:py-14">
+      <article className="shell shell-tight py-section-sm">
         <Link
           href="/yangiliklar"
-          className="inline-flex items-center gap-1.5 text-sm font-medium text-muted transition hover:text-brand"
+          className="inline-flex items-center gap-1.5 py-1 text-sm font-medium text-muted transition hover:text-brand"
         >
           ← {t('backToList')}
         </Link>
@@ -71,7 +71,7 @@ export default async function NewsDetailPage({
             </div>
           </div>
 
-          <h1 className="mt-5 text-2xl font-bold leading-tight tracking-tight text-foreground sm:text-3xl">
+          <h1 className="mt-5 text-fluid-3xl font-bold leading-tight tracking-tight text-foreground">
             {item.title}
           </h1>
           <p className="mt-4 text-lg leading-relaxed text-muted">{item.excerpt}</p>
@@ -95,7 +95,7 @@ export default async function NewsDetailPage({
 
       {related.length > 0 && (
         <section className="border-t border-border-base bg-surface/60">
-          <div className="mx-auto max-w-6xl px-4 py-14 sm:py-20">
+          <div className="shell py-section">
             <h2 className="text-2xl font-bold tracking-tight text-foreground">{t('relatedTitle')}</h2>
             <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {related.map((n) => (
