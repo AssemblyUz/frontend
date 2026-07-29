@@ -18,14 +18,17 @@ import GateOutcomes from './GateOutcomes';
  * presentation identity and setting the section apart from the page around it.
  */
 
-/** The doors, in the order a first-time visitor is most likely to need them.
+/** The doors, in the order a first-time visitor is most likely to need them —
+ *  "who we are" first, as in the header, then the sections that follow from it.
+ *  There is no home door here, the reader already being on it.
+ *
  *  Labels come from the `nav` catalogue so they never drift from the header. */
 const DOORS = [
+  {href: '/haqida', key: 'about'},
   {href: '/uyushmalar', key: 'associations'},
   {href: '/loyihalar', key: 'projects'},
   {href: '/xizmatlar', key: 'services'},
   {href: '/yangiliklar', key: 'news'},
-  {href: '/haqida', key: 'about'},
   {href: '/aloqa', key: 'contact'},
 ] as const;
 

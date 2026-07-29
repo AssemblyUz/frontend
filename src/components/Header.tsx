@@ -7,13 +7,15 @@ import LanguageSwitcher from './LanguageSwitcher';
 import ThemeToggle from './ThemeToggle';
 import Logo from './Logo';
 
+/** Order is what the bar renders, left to right — "who we are" comes straight
+ *  after home, before the sections that follow from it. */
 const NAV = [
   {href: '/', key: 'home'},
+  {href: '/haqida', key: 'about'},
   {href: '/uyushmalar', key: 'associations'},
   {href: '/xizmatlar', key: 'services'},
   {href: '/loyihalar', key: 'projects'},
   {href: '/yangiliklar', key: 'news'},
-  {href: '/haqida', key: 'about'},
   {href: '/aloqa', key: 'contact'},
 ] as const;
 

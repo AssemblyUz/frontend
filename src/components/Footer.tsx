@@ -4,14 +4,15 @@ import Logo from './Logo';
 import SocialIcon from './SocialIcon';
 import {getSiteInfo} from '@/lib/site';
 
+/** Same order as the header and the gate's doors: "who we are" leads. */
 const LINKS = [
+  {href: '/haqida', key: 'about'},
   {href: '/uyushmalar', key: 'associations'},
   {href: '/xizmatlar', key: 'services'},
   {href: '/loyihalar', key: 'projects'},
   {href: '/bloklar', key: 'blocks'},
   {href: '/media', key: 'media'},
   {href: '/yangiliklar', key: 'news'},
-  {href: '/haqida', key: 'about'},
   {href: '/aloqa', key: 'contact'},
 ] as const;
 
