@@ -24,12 +24,6 @@
     "ideaClose": "Yopish",
     "mediaBadge": "Assambleya faoliyatidan",
     "mediaLabel": "Assambleya faoliyatidan fotosuratlar: imzolash marosimlari, xalqaro forumlar, delegatsiyalar va matbuot uchrashuvlari.",
-    "assocTitle": "Uyushmalar",
-    "assocLead": "Turli sohalarni qamrab olgan a'zo uyushmalar",
-    "servicesTitle": "Xizmatlar",
-    "servicesLead": "A'zolar va hamkorlar uchun professional xizmatlar",
-    "projectsTitle": "Loyihalar",
-    "projectsLead": "Jamiyat manfaati uchun amalga oshirilayotgan tashabbuslar",
     "mediaProjectsTitle": "Media loyihalar",
     "mediaProjectsLead": "Assambleya kanallaridagi so‘nggi videolar",
     "newsTitle": "Yangiliklar",
@@ -113,66 +107,6 @@
       {
         "code": "GR",
         "title": "Government Relations"
-      }
-    ],
-    "mediaLabel": "AI MediaNet — kommunikatsiyaning kelajagi",
-    "mediaLead": "Model ishlab chiqqan natijani tashqariga olib chiqadigan qatlam.",
-    "mediaSummary": "Kontent rejasi, monitoring va ta'sir o'lchovi bitta boshqariladigan oqimda — media faoliyatni ko'rinadigan kapitalga aylantiradi.",
-    "mediaVerbs": [
-      "Ulaydi",
-      "Yoritadi",
-      "Tahlil qiladi",
-      "Kuchaytiradi"
-    ],
-    "mediaItems": [
-      "Assambleya rahbarlari va 50 ta uyushma ijtimoiy tarmoqlarda AI orqali sinxronlashtirilgan.",
-      "Faoliyat va erishilgan natijalarni yoritadi, targ'ib qiladi va tahlil qiladi.",
-      "AI yordamida jamoatchilik ishonchi va biznes obro'sini mustahkamlaydi.",
-      "Milliy va xalqaro qamrov, ta'sir va nufuzni kengaytiradi."
-    ],
-    "outputs": [
-      "Natija",
-      "Ishonch",
-      "Ta'sir"
-    ],
-    "outcomesTitle": "Assambleya faoliyati natijalari",
-    "outcomesLead": "Har bir ishtirokchi o'z foydasini oladi — umumiy natija esa kuchli iqtisodiyot.",
-    "outcomes": [
-      {
-        "audience": "Tadbirkorlar uchun",
-        "items": [
-          "Xalqaro hamkorlik",
-          "Investitsiya va moliyalashtirish",
-          "Global bozorlarga chiqish",
-          "Barqaror biznes o'sishi"
-        ]
-      },
-      {
-        "audience": "Davlat uchun",
-        "items": [
-          "Iqtisodiy o'sish va yangi ish o'rinlari",
-          "Soliq tushumlarining ortishi",
-          "Milliy iqtisodiyotning mustahkamlanishi",
-          "Xalqaro nufuz"
-        ]
-      },
-      {
-        "audience": "Investorlar uchun",
-        "items": [
-          "Shaffof va ishonchli loyihalar",
-          "Professional bozorlarga kirish",
-          "Yuqori investitsiya qaytimi",
-          "Turli investitsiya platformalari"
-        ]
-      },
-      {
-        "audience": "Jamiyat uchun",
-        "items": [
-          "Sifatli ish o'rni va munosib daromad",
-          "Innovatsiya, texnologiya va ta'lim",
-          "Ijtimoiy farovonlik",
-          "Kelgusi avlod uchun yorqin kelajak"
-        ]
       }
     ],
     "partnersTitle": "Hamkorlik ekotizimi",

@@ -475,6 +475,17 @@ body {
 }
 
 /*
+ * The footer keeps a section's worth of space above it, which is right when the
+ * page ends on ordinary content. A page ending on a full-bleed band instead —
+ * the home page closes on the gate's motto and doors — put a strip of page
+ * background between two coloured bands, which reads as a gap rather than a
+ * join. Where that happens the two meet edge to edge.
+ */
+main:has(> [data-band]:last-child) + footer {
+  margin-top: 0;
+}
+
+/*
  * A native modal dialog makes the page behind it inert but, in several browsers,
  * still scrollable — so a wheel gesture over the backdrop scrolls the page away
  * beneath the panel the reader just opened. The dialog's own content scrolls on

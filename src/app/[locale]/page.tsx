@@ -1,6 +1,5 @@
 import {getTranslations, setRequestLocale} from 'next-intl/server';
 import {Link} from '@/i18n/navigation';
-import {getAssociations} from '@/data/associations';
 import {getNews} from '@/lib/news';
 import {getMediaVideos} from '@/lib/youtube';
 import HeroMedia from '@/components/HeroMedia';
@@ -22,9 +21,6 @@ import NewsCard from '@/components/NewsCard';
  */
 export const dynamic = 'force-dynamic';
 
-type ServiceItem = {icon: string; name: string; desc: string};
-type ProjectItem = {icon: string; name: string; desc: string};
-
 const HOME_NEWS_COUNT = 3;
 const HOME_VIDEO_COUNT = 3;
 
@@ -36,14 +32,9 @@ export default async function HomePage({
   const {locale} = await params;
   setRequestLocale(locale);
   const t = await getTranslations('home');
-  const tServ = await getTranslations('services');
-  const tProj = await getTranslations('projects');
   const tNews = await getTranslations('news');
   const tMedia = await getTranslations('media');
 
-  const assoc = getAssociations(locale).slice(0, 3);
-  const services = (tServ.raw('items') as ServiceItem[]).slice(0, 3);
-  const projects = (tProj.raw('items') as ProjectItem[]).slice(0, 3);
   const latestNews = (await getNews(locale)).slice(0, HOME_NEWS_COUNT);
   const latestVideos = await getMediaVideos(HOME_VIDEO_COUNT);
 
@@ -97,71 +88,12 @@ export default async function HomePage({
         </div>
       </section>
 
-      {/* The Main Gate: the Assembly's whole overview, and the doors into it.
-          It carries the same figures the stats strip used to — 20 projects, 50
-          associations — on the panels either side of the seal, so the strip was
-          repeating them one screen earlier. */}
+      {/* The Main Gate: the Assembly's structure in one band. Its panels carry
+          the figures — 20 projects, 50 associations — that the stats strip above
+          it used to repeat, and the wings link through to each block, which is
+          what the association, service and project previews here used to do at
+          three times the length. */}
       <MainGate />
-
-      {/* Associations preview */}
-      <div className="bg-surface/60">
-        <HomeSection
-          title={t('assocTitle')}
-          lead={t('assocLead')}
-          href="/uyushmalar"
-          viewAll={t('viewAll')}
-        >
-          {assoc.map((it) => (
-            <Link
-              key={it.id}
-              href={`/uyushmalar/${it.id}`}
-              className="group rounded-2xl border border-border-base bg-card p-5 transition hover:border-brand hover:shadow-lg sm:p-6"
-            >
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand/10 text-lg font-bold text-brand">
-                {(it.name.match(/[A-Za-zА-Яа-я0-9]/)?.[0] ?? it.name[0]).toUpperCase()}
-              </div>
-              <h3 className="mt-4 font-semibold leading-snug text-foreground group-hover:text-brand">
-                {it.name}
-              </h3>
-              {it.activity && <p className="mt-2 text-sm leading-relaxed text-muted">{it.activity}</p>}
-            </Link>
-          ))}
-        </HomeSection>
-      </div>
-
-      {/* Services preview */}
-      <HomeSection
-        title={t('servicesTitle')}
-        lead={t('servicesLead')}
-        href="/xizmatlar"
-        viewAll={t('viewAll')}
-      >
-        {services.map((it) => (
-          <div key={it.name} className="rounded-2xl border border-border-base bg-card p-5 transition hover:border-brand hover:shadow-lg sm:p-6">
-            <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500/15 to-sky-500/15 text-2xl">{it.icon}</div>
-            <h3 className="mt-4 font-semibold text-foreground">{it.name}</h3>
-            <p className="mt-2 text-sm leading-relaxed text-muted">{it.desc}</p>
-          </div>
-        ))}
-      </HomeSection>
-
-      {/* Projects preview */}
-      <div className="bg-surface/60">
-        <HomeSection
-          title={t('projectsTitle')}
-          lead={t('projectsLead')}
-          href="/loyihalar"
-          viewAll={t('viewAll')}
-        >
-          {projects.map((it) => (
-            <div key={it.name} className="rounded-2xl border border-border-base bg-card p-5 transition hover:border-brand hover:shadow-lg sm:p-6">
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand/10 text-2xl">{it.icon}</div>
-              <h3 className="mt-4 font-semibold text-foreground">{it.name}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted">{it.desc}</p>
-            </div>
-          ))}
-        </HomeSection>
-      </div>
 
       {/* Media projects — hidden until at least one channel is connected. */}
       {latestVideos.length > 0 && (

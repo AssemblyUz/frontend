@@ -2,7 +2,6 @@ import {getTranslations} from 'next-intl/server';
 import {Link} from '@/i18n/navigation';
 import GateHub from './GateHub';
 import GateModel from './GateModel';
-import GateMedia from './GateMedia';
 import GateOutcomes from './GateOutcomes';
 import {GateBand} from './GateShell';
 
@@ -10,8 +9,8 @@ import {GateBand} from './GateShell';
  * The Main Gate — the Assembly's structure, as one band on the home page.
  *
  * It reproduces the Assembly's one-page overview as real markup: the five
- * pillars, the operating model, the FR/BR/PR/GR wings, AI MediaNet, the outcomes
- * per audience and the partner ecosystem.
+ * pillars, the operating model, the FR/BR/PR/GR wings and the partner
+ * ecosystem.
  *
  * The motto and the doors used to close it; they now close the page instead —
  * see `GateDoors`.
@@ -45,7 +44,6 @@ export default async function MainGate() {
 
         <GateHub />
         <GateModel />
-        <GateMedia />
         <GateOutcomes />
       </div>
     </GateBand>

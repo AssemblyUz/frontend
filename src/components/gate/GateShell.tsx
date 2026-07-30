@@ -23,6 +23,9 @@ export function GateBand({
   return (
     <section
       {...rest}
+      /* data-band marks this as full-bleed. globals.css uses it to close the gap
+         the footer's top margin would otherwise leave when a page ends on one. */
+      data-band
       className={`relative isolate overflow-hidden bg-gate-bg text-gate-fg ${className}`}
     >
       {/* Content stays visible when JavaScript never arrives: the reveal

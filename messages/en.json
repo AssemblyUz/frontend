@@ -24,12 +24,6 @@
     "ideaClose": "Close",
     "mediaBadge": "From the Assembly's work",
     "mediaLabel": "Photographs from the Assembly's work: signings, international forums, delegations and press briefings.",
-    "assocTitle": "Associations",
-    "assocLead": "Member associations spanning diverse fields",
-    "servicesTitle": "Services",
-    "servicesLead": "Professional services for members and partners",
-    "projectsTitle": "Projects",
-    "projectsLead": "Initiatives carried out for the benefit of society",
     "mediaProjectsTitle": "Media projects",
     "mediaProjectsLead": "The latest videos from the Assembly's channels",
     "newsTitle": "News",
@@ -113,66 +107,6 @@
       {
         "code": "GR",
         "title": "Government Relations"
-      }
-    ],
-    "mediaLabel": "AI MediaNet — the future of communications",
-    "mediaLead": "The layer that carries everything the model produces outward.",
-    "mediaSummary": "Content planning, monitoring and impact measurement in one managed flow — media turns the work into visible capital.",
-    "mediaVerbs": [
-      "Connect",
-      "Cover",
-      "Analyse",
-      "Enhance"
-    ],
-    "mediaItems": [
-      "All Assembly leaders and the 50 associations are AI-synchronised across social platforms.",
-      "Covers, promotes and analyses our activities and achievements.",
-      "Strengthens public trust and business reputation through AI.",
-      "Expands national and international reach, impact and influence."
-    ],
-    "outputs": [
-      "Result",
-      "Trust",
-      "Impact"
-    ],
-    "outcomesTitle": "What the Assembly delivers",
-    "outcomesLead": "Every participant gains something of their own — the shared outcome is a stronger economy.",
-    "outcomes": [
-      {
-        "audience": "For entrepreneurs",
-        "items": [
-          "International partnerships",
-          "Investment and funding",
-          "Access to global markets",
-          "Sustainable business growth"
-        ]
-      },
-      {
-        "audience": "For the state",
-        "items": [
-          "Economic growth and new jobs",
-          "Higher tax revenues",
-          "A stronger national economy",
-          "International prestige"
-        ]
-      },
-      {
-        "audience": "For investors",
-        "items": [
-          "Transparent, reliable projects",
-          "Access to professional markets",
-          "Strong return on investment",
-          "Diverse investment platforms"
-        ]
-      },
-      {
-        "audience": "For society",
-        "items": [
-          "Quality jobs and decent income",
-          "Innovation, technology and education",
-          "Social wellbeing",
-          "A bright future for the next generation"
-        ]
       }
     ],
     "partnersTitle": "Partner ecosystem",
