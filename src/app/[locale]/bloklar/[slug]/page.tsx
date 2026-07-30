@@ -2,6 +2,7 @@ import type {Metadata} from 'next';
 import {notFound} from 'next/navigation';
 import {getTranslations, setRequestLocale} from 'next-intl/server';
 import {Link} from '@/i18n/navigation';
+import RevealScope from '@/components/motion/RevealScope';
 import {routing} from '@/i18n/routing';
 import {
   findBlockContent,
@@ -137,10 +138,11 @@ export default async function FunctionalBlockPage({
             </Link>
           </div>
 
-          <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <RevealScope stagger={80} className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {projects.map((project) => (
               <div
                 key={project.name}
+                data-reveal
                 className="rounded-2xl border border-border-base bg-card p-6 transition hover:border-brand hover:shadow-lg"
               >
                 <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand/10 text-2xl">
@@ -150,7 +152,7 @@ export default async function FunctionalBlockPage({
                 <p className="mt-2 text-sm leading-relaxed text-muted">{project.desc}</p>
               </div>
             ))}
-          </div>
+          </RevealScope>
         </section>
 
         {/* Outcomes */}
@@ -158,10 +160,11 @@ export default async function FunctionalBlockPage({
           <h2 className="text-fluid-3xl font-bold tracking-tight text-foreground">
             {t('outcomesTitle')}
           </h2>
-          <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <RevealScope stagger={70} className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {content.outcomes.map((outcome, i) => (
               <li
                 key={outcome}
+                data-reveal
                 className="flex items-baseline gap-3 rounded-2xl border border-border-base bg-card p-5"
               >
                 <span className={`text-sm font-bold ${block.tone.text}`}>
@@ -170,7 +173,7 @@ export default async function FunctionalBlockPage({
                 <span className="font-medium leading-snug text-foreground">{outcome}</span>
               </li>
             ))}
-          </ul>
+          </RevealScope>
         </section>
 
         {/* Siblings — the four blocks double as navigation between these pages. */}

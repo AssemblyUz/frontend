@@ -2,6 +2,7 @@ import type {Metadata} from 'next';
 import {getTranslations, setRequestLocale} from 'next-intl/server';
 import {Link} from '@/i18n/navigation';
 import PageHero from '@/components/PageHero';
+import RevealScope from '@/components/motion/RevealScope';
 import {
   findBlockContent,
   functionalBlocks,
@@ -33,13 +34,14 @@ export default async function BlocksPage({
       <PageHero title={t('title')} lead={t('lead')} />
 
       <div className="shell py-section-sm">
-        <div className="grid gap-5 sm:grid-cols-2">
+        <RevealScope stagger={90} className="grid gap-5 sm:grid-cols-2">
           {functionalBlocks.map((block) => {
             const content = findBlockContent(items, block.code);
             if (!content) return null;
             return (
               <Link
                 key={block.slug}
+                data-reveal
                 href={`/bloklar/${block.slug}`}
                 className={`group rounded-2xl border bg-card p-5 transition hover:shadow-lg xs:p-6 sm:p-8 ${block.tone.border} ${block.tone.hoverBorder}`}
               >
@@ -65,7 +67,7 @@ export default async function BlocksPage({
               </Link>
             );
           })}
-        </div>
+        </RevealScope>
 
         <p className="mt-8 rounded-2xl border border-border-base bg-surface p-6 leading-relaxed text-muted">
           {t('indexNote')}

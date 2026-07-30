@@ -2,6 +2,7 @@
 
 import {useMemo, useState} from 'react';
 import {Link} from '@/i18n/navigation';
+import RevealScope from '@/components/motion/RevealScope';
 import type {LocalizedAssociation} from '@/data/associations';
 
 type Labels = {
@@ -57,11 +58,15 @@ export default function AssociationsDirectory({
       {filtered.length === 0 ? (
         <p className="mt-12 text-center text-muted">{labels.noResults}</p>
       ) : (
-        <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        /* The grid is replaced on every keystroke, so `RevealScope` watches for
+           new cards and shows them at once — the stagger is for the first
+           arrival on scroll, not for a search result. */
+        <RevealScope stagger={50} className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {filtered.map((it) => (
             <Link
               key={it.id}
               href={`/uyushmalar/${it.id}`}
+              data-reveal
               className="group flex flex-col rounded-2xl border border-border-base bg-card p-5 transition hover:-translate-y-0.5 hover:border-brand hover:shadow-lg"
             >
               <div className="flex items-start gap-3">
@@ -82,7 +87,7 @@ export default function AssociationsDirectory({
               </span>
             </Link>
           ))}
-        </div>
+        </RevealScope>
       )}
     </div>
   );

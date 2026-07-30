@@ -4,6 +4,7 @@ import {getTranslations, setRequestLocale} from 'next-intl/server';
 import {Link} from '@/i18n/navigation';
 import NewsCard from '@/components/NewsCard';
 import ArticleGallery from '@/components/ArticleGallery';
+import RevealScope from '@/components/motion/RevealScope';
 import {getNews, getNewsItem} from '@/lib/news';
 
 const RELATED_COUNT = 3;
@@ -97,11 +98,11 @@ export default async function NewsDetailPage({
         <section className="border-t border-border-base bg-surface/60">
           <div className="shell py-section">
             <h2 className="text-2xl font-bold tracking-tight text-foreground">{t('relatedTitle')}</h2>
-            <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            <RevealScope stagger={80} className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {related.map((n) => (
-                <NewsCard key={n.slug} item={n} readMore={t('readMore')} />
+                <NewsCard key={n.slug} item={n} readMore={t('readMore')} reveal />
               ))}
-            </div>
+            </RevealScope>
           </div>
         </section>
       )}

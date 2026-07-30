@@ -1,10 +1,20 @@
 import {Link} from '@/i18n/navigation';
 import type {LocalizedNewsItem} from '@/lib/news';
 
-export default function NewsCard({item, readMore}: {item: LocalizedNewsItem; readMore: string}) {
+export default function NewsCard({
+  item,
+  readMore,
+  reveal = false,
+}: {
+  item: LocalizedNewsItem;
+  readMore: string;
+  /** Marks the card for the enclosing `RevealScope` to ease in on scroll. */
+  reveal?: boolean;
+}) {
   return (
     <Link
       href={`/yangiliklar/${item.slug}`}
+      data-reveal={reveal ? '' : undefined}
       className="group flex flex-col overflow-hidden rounded-2xl border border-border-base bg-card transition hover:border-brand hover:shadow-lg"
     >
       {item.cover && (

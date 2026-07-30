@@ -133,6 +133,17 @@ export default async function LocaleLayout({
         <Script id="theme-init" strategy="beforeInteractive">
           {themeScript}
         </Script>
+
+        {/* Reveal-on-scroll hides its items in CSS and RevealScope eases them
+            back in. If the script never arrives, nothing would ever reveal them
+            — so the resting state is restored here when JavaScript is off.
+
+            It lives in the layout rather than in each section that animates:
+            the rule is global, and a page that gained a reveal without also
+            remembering to carry this would have rendered blank. */}
+        <noscript>
+          <style>{`[data-reveal]{opacity:1 !important;transform:none !important}`}</style>
+        </noscript>
         {/* The page's background, on every route. Fixed rather than per-section
             so it is one canvas the size of the viewport instead of one per
             page, and so it holds still while the page scrolls over it.

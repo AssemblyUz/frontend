@@ -1,6 +1,7 @@
 import type {Metadata} from 'next';
 import {getTranslations, setRequestLocale} from 'next-intl/server';
 import PageHero from '@/components/PageHero';
+import RevealScope from '@/components/motion/RevealScope';
 import ContactForm from '@/components/ContactForm';
 import SocialIcon from '@/components/SocialIcon';
 import {getSiteInfo} from '@/lib/site';
@@ -47,10 +48,11 @@ export default async function ContactPage({
         <div className="grid gap-10 lg:grid-cols-2">
           {/* Left: info + socials */}
           <div>
-            <div className="space-y-4">
+            <RevealScope stagger={90} className="space-y-4">
               {info.map((it) => (
                 <div
                   key={it.title}
+                  data-reveal
                   className="flex items-start gap-4 rounded-2xl border border-border-base bg-card p-5"
                 >
                   <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand/10 text-xl">
@@ -71,7 +73,7 @@ export default async function ContactPage({
                   </div>
                 </div>
               ))}
-            </div>
+            </RevealScope>
 
             {/* Socials */}
             <div className="mt-8">

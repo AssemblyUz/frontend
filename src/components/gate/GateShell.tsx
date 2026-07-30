@@ -28,11 +28,8 @@ export function GateBand({
       data-band
       className={`relative isolate overflow-hidden bg-gate-bg text-gate-fg ${className}`}
     >
-      {/* Content stays visible when JavaScript never arrives: the reveal
-          animation's resting state is server-rendered. */}
-      <noscript>
-        <style>{`[data-reveal]{opacity:1 !important;transform:none !important}`}</style>
-      </noscript>
+      {/* The no-JavaScript fallback for `data-reveal` used to live here. It is
+          in the layout now, where it covers every page that animates. */}
 
       {/* Atmosphere: a cool glow overhead and a warm one in the far corner,
           drifting slowly, over a faint network field. */}

@@ -1,6 +1,7 @@
 import type {Metadata} from 'next';
 import {getTranslations, setRequestLocale} from 'next-intl/server';
 import PageHero from '@/components/PageHero';
+import RevealScope from '@/components/motion/RevealScope';
 import {getProjectLink} from '@/data/projectLinks';
 
 type Item = {icon: string; name: string; desc: string};
@@ -29,7 +30,7 @@ export default async function ProjectsPage({
     <>
       <PageHero title={t('title')} lead={t('lead')} />
       <section className="shell py-section-sm">
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <RevealScope stagger={80} className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((it, i) => {
             const url = getProjectLink(it.name);
             const cardClass =
@@ -66,6 +67,7 @@ export default async function ProjectsPage({
             return url ? (
               <a
                 key={it.name}
+                data-reveal
                 href={url}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -74,12 +76,12 @@ export default async function ProjectsPage({
                 {inner}
               </a>
             ) : (
-              <article key={it.name} className={cardClass}>
+              <article key={it.name} data-reveal className={cardClass}>
                 {inner}
               </article>
             );
           })}
-        </div>
+        </RevealScope>
       </section>
     </>
   );

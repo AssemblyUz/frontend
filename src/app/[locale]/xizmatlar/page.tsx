@@ -1,6 +1,7 @@
 import type {Metadata} from 'next';
 import {getTranslations, setRequestLocale} from 'next-intl/server';
 import PageHero from '@/components/PageHero';
+import RevealScope from '@/components/motion/RevealScope';
 
 type Item = {icon: string; name: string; desc: string};
 
@@ -28,10 +29,11 @@ export default async function ServicesPage({
     <>
       <PageHero title={t('title')} lead={t('lead')} />
       <section className="shell py-section-sm">
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <RevealScope stagger={80} className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((it, i) => (
             <article
               key={it.name}
+              data-reveal
               className="flex gap-4 rounded-2xl border border-border-base bg-card p-6 transition hover:border-brand hover:shadow-lg"
             >
               <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500/15 to-sky-500/15 text-2xl">
@@ -46,7 +48,7 @@ export default async function ServicesPage({
               </div>
             </article>
           ))}
-        </div>
+        </RevealScope>
       </section>
     </>
   );

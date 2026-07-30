@@ -2,6 +2,7 @@ import type {Metadata} from 'next';
 import {getTranslations, setRequestLocale} from 'next-intl/server';
 import {Link} from '@/i18n/navigation';
 import PageHero from '@/components/PageHero';
+import RevealScope from '@/components/motion/RevealScope';
 import {functionalBlocks} from '@/data/functionalBlocks';
 
 type Highlight = {value: string; label: string};
@@ -127,24 +128,25 @@ export default async function AboutPage({
 
         {/* Values */}
         <Section title={t('valuesTitle')} lead={t('valuesLead')}>
-          <div className="grid gap-3 xs:grid-cols-2 sm:grid-cols-3 sm:gap-4 lg:grid-cols-5">
+          <RevealScope stagger={70} className="grid gap-3 xs:grid-cols-2 sm:grid-cols-3 sm:gap-4 lg:grid-cols-5">
             {values.map((v, i) => (
-              <div key={v.title} className="rounded-2xl border border-border-base bg-card p-5 transition hover:border-brand">
+              <div key={v.title} data-reveal className="rounded-2xl border border-border-base bg-card p-5 transition hover:border-brand">
                 <div className={`text-sm font-bold uppercase tracking-wide ${CYCLE[i % CYCLE.length]}`}>
                   {v.title}
                 </div>
                 <div className="mt-1 text-sm text-muted">{v.sub}</div>
               </div>
             ))}
-          </div>
+          </RevealScope>
         </Section>
 
         {/* Priority directions */}
         <Section title={t('directionsTitle')} lead={t('directionsLead')}>
-          <div className="grid gap-3 xs:grid-cols-2 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4">
+          <RevealScope stagger={60} className="grid gap-3 xs:grid-cols-2 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4">
             {directions.map((d, i) => (
               <div
                 key={d}
+                data-reveal
                 className="flex items-center gap-3 rounded-2xl border border-border-base bg-card p-4 transition hover:border-brand"
               >
                 <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-brand/10 text-sm font-bold text-brand">
@@ -153,7 +155,7 @@ export default async function AboutPage({
                 <span className="text-sm font-medium text-foreground">{d}</span>
               </div>
             ))}
-          </div>
+          </RevealScope>
         </Section>
 
         {/* Strategic architecture (GPPP) */}
@@ -181,9 +183,9 @@ export default async function AboutPage({
 
         {/* Working mechanism */}
         <Section title={t('mechanismTitle')} lead={t('mechanismLead')}>
-          <ol className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <RevealScope stagger={90} className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {mechanism.map((step, i) => (
-              <li key={step.title} className="relative rounded-2xl border border-border-base bg-card p-6">
+              <li key={step.title} data-reveal className="relative rounded-2xl border border-border-base bg-card p-6">
                 <span className="absolute right-5 top-4 text-4xl font-bold leading-none text-brand/10">
                   {i + 1}
                 </span>
@@ -191,7 +193,7 @@ export default async function AboutPage({
                 <div className="mt-1 text-sm leading-relaxed text-muted">{step.desc}</div>
               </li>
             ))}
-          </ol>
+          </RevealScope>
 
           <div className="mt-5 rounded-2xl border border-brand/30 bg-brand/5 p-5 xs:p-6 sm:p-8">
             <span className="text-sm font-semibold uppercase tracking-wide text-brand">
@@ -273,9 +275,9 @@ export default async function AboutPage({
 
         {/* Partner ecosystem */}
         <Section title={t('partnersTitle')} lead={t('partnersLead')}>
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+          <RevealScope stagger={80} className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
             {partners.map((group, i) => (
-              <div key={group.title} className="rounded-2xl border border-border-base bg-card p-6">
+              <div key={group.title} data-reveal className="rounded-2xl border border-border-base bg-card p-6">
                 <h3 className="font-semibold text-foreground">{group.title}</h3>
                 <div className={`mt-3 h-0.5 w-12 rounded-full bg-current ${CYCLE[i % CYCLE.length]}`} />
                 <ul className="mt-4 space-y-2 text-sm text-muted">
@@ -285,19 +287,19 @@ export default async function AboutPage({
                 </ul>
               </div>
             ))}
-          </div>
+          </RevealScope>
         </Section>
 
         {/* Value per stakeholder */}
         <Section title={t('valueTitle')} lead={t('valueLead')}>
-          <div className="grid gap-5 sm:grid-cols-2">
+          <RevealScope stagger={90} className="grid gap-5 sm:grid-cols-2">
             {valueItems.map((v, i) => (
-              <div key={v.title} className="rounded-2xl border border-border-base bg-card p-5 xs:p-6 sm:p-8">
+              <div key={v.title} data-reveal className="rounded-2xl border border-border-base bg-card p-5 xs:p-6 sm:p-8">
                 <h3 className={`font-semibold ${CYCLE[i % CYCLE.length]}`}>{v.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted">{v.desc}</p>
               </div>
             ))}
-          </div>
+          </RevealScope>
         </Section>
 
         {/* Slogan banner */}

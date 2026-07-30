@@ -1,6 +1,7 @@
 import type {Metadata} from 'next';
 import {getTranslations, setRequestLocale} from 'next-intl/server';
 import PageHero from '@/components/PageHero';
+import RevealScope from '@/components/motion/RevealScope';
 import VideoCard from '@/components/VideoCard';
 import {getMediaByChannel} from '@/lib/youtube';
 
@@ -75,17 +76,17 @@ export default async function MediaPage({
                each one reads as its own body of work rather than as entries in
                a single chronological feed. A channel with nothing to show is
                left out entirely — an empty column would just be a gap. */
-            <div className="mt-8 grid gap-5 md:grid-cols-3">
+            <RevealScope stagger={90} className="mt-8 grid gap-5 md:grid-cols-3">
               {columns
                 .filter(({videos}) => videos.length > 0)
                 .map(({channel, videos}) => (
-                  <div key={channel.key} className="flex flex-col gap-5">
+                  <div key={channel.key} data-reveal className="flex flex-col gap-5">
                     {videos.map((video) => (
                       <VideoCard key={video.id} video={video} labels={labels} />
                     ))}
                   </div>
                 ))}
-            </div>
+            </RevealScope>
           )}
         </section>
       </div>

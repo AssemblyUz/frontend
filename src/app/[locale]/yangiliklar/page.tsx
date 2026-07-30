@@ -1,6 +1,7 @@
 import type {Metadata} from 'next';
 import {getTranslations, setRequestLocale} from 'next-intl/server';
 import PageHero from '@/components/PageHero';
+import RevealScope from '@/components/motion/RevealScope';
 import NewsCard from '@/components/NewsCard';
 import {getNews} from '@/lib/news';
 
@@ -49,11 +50,16 @@ export default async function NewsPage({
             {t('empty')}
           </p>
         ) : (
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <RevealScope stagger={80} className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {items.map((item) => (
-              <NewsCard key={item.slug} item={item} readMore={t('readMore')} />
+              <NewsCard
+                key={item.slug}
+                item={item}
+                readMore={t('readMore')}
+                reveal
+              />
             ))}
-          </div>
+          </RevealScope>
         )}
       </div>
     </>
