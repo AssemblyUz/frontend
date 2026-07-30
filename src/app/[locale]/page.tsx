@@ -137,12 +137,16 @@ export default async function HomePage({
           <p className="relative mx-auto mt-3 max-w-xl text-fluid-base text-white/85">
             {t('ctaBannerLead')}
           </p>
-          <a
-            href="mailto:info@assembly.uz"
+          {/* To the contact page, not a mailto. The banner asks the reader to
+              register an association or become a partner, which is a form and a
+              map and a set of numbers — not one email. It also drops a
+              hardcoded address that Site settings already owns. */}
+          <Link
+            href="/aloqa"
             className="relative mt-7 inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-semibold text-teal-700 shadow-sm transition hover:bg-white/90"
           >
             {t('ctaBannerBtn')} →
-          </a>
+          </Link>
         </div>
       </section>
 
