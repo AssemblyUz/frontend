@@ -38,6 +38,9 @@ export const REVALIDATE_SECONDS = 300;
 /** Fail fast rather than hang a page render when the backend is unreachable. */
 const TIMEOUT_MS = 4000;
 
+/** Writes get longer: the contact endpoint sends an email before it answers. */
+const WRITE_TIMEOUT_MS = 10000;
+
 export class ApiError extends Error {
   constructor(
     message: string,
@@ -71,4 +74,53 @@ export async function apiGet<T>(path: string, locale: string): Promise<T> {
   }
 
   return (await response.json()) as T;
+}
+
+/** What the API returns on a 400: field name -> messages. */
+export type FieldErrors = Record<string, string[]>;
+
+export type PostResult =
+  | {ok: true}
+  | {ok: false; status: number; fields?: FieldErrors};
+
+/**
+ * POST to the API, for the one endpoint that accepts writes.
+ *
+ * Never cached, and given a longer timeout than a read: the contact endpoint
+ * sends an email before it answers, and a visitor who has typed a message will
+ * wait a moment for it far more happily than they will retype it.
+ *
+ * Returns the failure rather than throwing it, because every caller has to show
+ * the visitor something either way — a 400 carries the field errors to render,
+ * and anything else is "try again".
+ */
+export async function apiPost(path: string, body: unknown): Promise<PostResult> {
+  assertConfigured();
+  const url = `${API_URL}/api/v1/${path}`;
+
+  let response: Response;
+  try {
+    response = await fetch(url, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(body),
+      cache: 'no-store',
+      signal: AbortSignal.timeout(WRITE_TIMEOUT_MS),
+    });
+  } catch (cause) {
+    throw new ApiError(`POST ${url} failed: ${(cause as Error).message}`);
+  }
+
+  if (response.ok) return {ok: true};
+
+  if (response.status === 400) {
+    try {
+      return {ok: false, status: 400, fields: (await response.json()) as FieldErrors};
+    } catch {
+      // A 400 whose body is not the shape we expect is still a 400.
+      return {ok: false, status: 400};
+    }
+  }
+
+  return {ok: false, status: response.status};
 }

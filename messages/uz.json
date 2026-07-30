@@ -724,9 +724,15 @@
     "formTitle": "Xabar yuborish",
     "formName": "Ismingiz",
     "formEmail": "Email",
+    "formPhone": "Telefon raqamingiz",
     "formMessage": "Xabaringiz",
     "formSubmit": "Yuborish",
-    "formNote": "\"Yuborish\" tugmasi orqali xabaringiz elektron pochtamizga jo'natiladi."
+    "formSending": "Yuborilmoqda…",
+    "formNote": "Email yoki telefon raqamingizdan birini qoldiring — shu orqali javob beramiz.",
+    "formSent": "Xabaringiz yuborildi. Tez orada siz bilan bog‘lanamiz — rahmat!",
+    "formNeedContact": "Email yoki telefon raqamingizdan kamida bittasini kiriting.",
+    "formFailed": "Xabarni yuborib bo‘lmadi. Birozdan so‘ng qayta urinib ko‘ring.",
+    "formThrottled": "Juda ko‘p urinish bo‘ldi. Bir ozdan so‘ng qayta urinib ko‘ring."
   },
   "footer": {
     "about": "O'zbekiston Iqtisodiyot Assambleyasi — barqaror iqtisodiyot, innovatsiya va inson kapitalini rivojlantiruvchi platforma.",

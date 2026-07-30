@@ -724,9 +724,15 @@
     "formTitle": "Send a message",
     "formName": "Your name",
     "formEmail": "Email",
+    "formPhone": "Your phone number",
     "formMessage": "Your message",
     "formSubmit": "Send",
-    "formNote": "The \"Send\" button will forward your message to our email."
+    "formSending": "Sending…",
+    "formNote": "Leave an email address or a phone number — we will reply on whichever you give.",
+    "formSent": "Your message has been sent. We will be in touch shortly — thank you!",
+    "formNeedContact": "Please give an email address or a phone number — at least one.",
+    "formFailed": "The message could not be sent. Please try again in a moment.",
+    "formThrottled": "Too many attempts. Please try again in a little while."
   },
   "footer": {
     "about": "The Uzbekistan Economy Assembly — a platform for developing a sustainable economy, innovation and human capital.",

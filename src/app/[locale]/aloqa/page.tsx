@@ -109,13 +109,19 @@ export default async function ContactPage({
             <h2 className="text-lg font-semibold text-foreground">{t('formTitle')}</h2>
             <div className="mt-5">
               <ContactForm
-                email={site.email}
+                locale={locale}
                 labels={{
                   name: t('formName'),
                   email: t('formEmail'),
+                  phone: t('formPhone'),
                   message: t('formMessage'),
                   submit: t('formSubmit'),
+                  sending: t('formSending'),
                   note: t('formNote'),
+                  sent: t('formSent'),
+                  needContact: t('formNeedContact'),
+                  failed: t('formFailed'),
+                  throttled: t('formThrottled'),
                 }}
               />
             </div>
