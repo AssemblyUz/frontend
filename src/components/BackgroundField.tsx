@@ -4,21 +4,26 @@ import {useEffect, useRef} from 'react';
 import {useReducedMotion} from '@/components/motion/useReducedMotion';
 
 /**
- * The hero's background: a drifting field of nodes that draw lines to each
- * other, and lean toward the pointer as it passes.
+ * The site's background, on every route: a drifting field of nodes that draw
+ * lines to each other, and lean toward the pointer as it passes.
  *
  * It is a network, which is what the Assembly is — fifty associations reaching
  * one another through a centre. The gate band already says that with a static
- * dot grid; this is the same idea where the page opens, and the one place on
- * the site that answers the reader directly.
+ * dot grid; this says it everywhere else, and it is the one thing on the site
+ * that answers the reader directly.
+ *
+ * Fixed to the viewport rather than drawn per section: one canvas the size of
+ * the window costs the same on a short page and a long one, and the field holds
+ * still while the page scrolls over it. Anything with its own opaque background
+ * — a card, the gate's band, the footer — simply covers it.
  *
  * Everything is drawn from the element's own `color`, so it follows the theme
  * without being told about it: `text-brand` on the canvas is the whole palette.
  *
- * It costs nothing when it is not being looked at. The loop runs only while the
- * hero is on screen and the tab is visible, stops entirely for reduced motion
- * after one static frame, and never intercepts a click — the canvas is
- * `pointer-events-none` and the pointer is read from the window.
+ * It costs nothing when nobody is looking. The loop stops with the tab, stops
+ * entirely for reduced motion after one static frame, and never intercepts a
+ * click — the canvas is `pointer-events-none` and the pointer is read from the
+ * window.
  */
 
 /** One node per this many square pixels, up to MAX_NODES. */
@@ -33,7 +38,7 @@ const DRIFT = 0.16;
 
 type Node = {x: number; y: number; vx: number; vy: number};
 
-export default function HeroField({className = ''}: {className?: string}) {
+export default function BackgroundField({className = ''}: {className?: string}) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const reducedMotion = useReducedMotion();
 
@@ -204,15 +209,11 @@ export default function HeroField({className = ''}: {className?: string}) {
     });
     themeWatcher.observe(document.documentElement, {attributes: true, attributeFilter: ['class']});
 
-    // Off screen or in a background tab, the loop is pure waste.
-    const visibility = new IntersectionObserver(
-      ([entry]) => (entry.isIntersecting && !document.hidden ? start() : stop()),
-      {threshold: 0},
-    );
-    visibility.observe(canvas);
-
+    // The canvas is fixed, so it is on screen for as long as the tab is. A
+    // background tab still gets throttled rAF callbacks; stopping is cheaper.
     const onVisibilityChange = () => (document.hidden ? stop() : start());
     document.addEventListener('visibilitychange', onVisibilityChange);
+    if (!document.hidden) start();
 
     return () => {
       stop();
@@ -221,7 +222,6 @@ export default function HeroField({className = ''}: {className?: string}) {
       document.removeEventListener('pointerleave', onPointerLeave);
       document.removeEventListener('visibilitychange', onVisibilityChange);
       themeWatcher.disconnect();
-      visibility.disconnect();
     };
   }, [reducedMotion]);
 
@@ -230,7 +230,9 @@ export default function HeroField({className = ''}: {className?: string}) {
       ref={canvasRef}
       aria-hidden
       // `text-brand` is the palette: everything is drawn from this colour.
-      className={`pointer-events-none absolute inset-0 h-full w-full text-brand ${className}`}
+      /* z-0 rather than a negative index: behind it is the body's background
+         colour, and a negative index would hide the canvas under it. */
+      className={`pointer-events-none fixed inset-0 z-0 h-full w-full text-brand ${className}`}
     />
   );
 }

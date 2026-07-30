@@ -5,6 +5,7 @@ import {notFound} from 'next/navigation';
 import {Inter} from 'next/font/google';
 import Script from 'next/script';
 import {routing} from '@/i18n/routing';
+import BackgroundField from '@/components/BackgroundField';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import {getSiteInfo} from '@/lib/site';
@@ -132,10 +133,23 @@ export default async function LocaleLayout({
         <Script id="theme-init" strategy="beforeInteractive">
           {themeScript}
         </Script>
+        {/* The page's background, on every route. Fixed rather than per-section
+            so it is one canvas the size of the viewport instead of one per
+            page, and so it holds still while the page scrolls over it.
+
+            It sits above the body's background colour and below everything
+            else, which is why `main` and the footer are given a layer of their
+            own — without it, a positioned canvas would paint over the in-flow
+            text. Wherever a section has its own opaque background — the gate's
+            band, a card, the footer — the field is simply covered, which is
+            what should happen. */}
+        <BackgroundField />
         <NextIntlClientProvider>
           <Header />
-          <main className="flex-1">{children}</main>
-          <Footer />
+          <main className="relative z-10 flex-1">{children}</main>
+          <div className="relative z-10">
+            <Footer />
+          </div>
         </NextIntlClientProvider>
       </body>
     </html>

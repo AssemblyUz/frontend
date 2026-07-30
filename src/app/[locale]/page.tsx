@@ -2,7 +2,6 @@ import {getTranslations, setRequestLocale} from 'next-intl/server';
 import {Link} from '@/i18n/navigation';
 import {getNews} from '@/lib/news';
 import {getMediaVideos} from '@/lib/youtube';
-import HeroField from '@/components/HeroField';
 import HeroMedia from '@/components/HeroMedia';
 import IdeaDialog from '@/components/IdeaDialog';
 import Logo from '@/components/Logo';
@@ -45,10 +44,6 @@ export default async function HomePage({
       <section className="relative overflow-hidden">
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-brand/10 to-transparent" />
         <div className="pointer-events-none absolute -top-32 right-0 h-80 w-80 rounded-full bg-brand/10 blur-3xl" />
-        {/* The network the Assembly is, drifting behind the lockup and leaning
-            toward the pointer. Behind everything: the content below is
-            `relative`, and the canvas takes no pointer events. */}
-        <HeroField />
         <div className="relative shell grid gap-10 py-section md:gap-12 lg:grid-cols-2 lg:items-center lg:gap-14">
           <div>
             <span className="inline-flex items-center gap-2 rounded-full border border-border-base bg-surface px-3 py-1 text-xs font-medium text-brand">
