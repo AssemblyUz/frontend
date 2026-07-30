@@ -96,7 +96,21 @@ export default function Header() {
             aria-expanded={open}
             aria-controls="mobile-nav"
           >
-            {open ? '✕' : '☰'}
+            {/* Drawn to match the two buttons beside it. ☰ and ✕ are font
+                glyphs, so their weight and size came from whatever the platform
+                picked rather than from the icon set. */}
+            <svg
+              viewBox="0 0 24 24"
+              className="h-[18px] w-[18px]"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden
+            >
+              {open ? <path d="M18 6 6 18M6 6l12 12" /> : <path d="M3 6h18M3 12h18M3 18h18" />}
+            </svg>
           </button>
         </div>
       </div>
