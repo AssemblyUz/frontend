@@ -46,26 +46,6 @@
     "assocUnit": "ta soha uyushmasi",
     "assocLead": "Har bir tarmoq o'z uyushmasi orqali Assambleyaga bevosita ulanadi. Tadbirkorlar, kompaniyalar va xizmat ko'rsatuvchilar shu tarmoqda birlashadi — ehtiyoj shu yerdan boshlanadi.",
     "assocCta": "Uyushmalarni ko'rish",
-    "modelTitle": "Assambleyaning ishlash modeli",
-    "modelLead": "Soha uyushmasidan tayyor natijaga qadar yagona zanjir.",
-    "modelSteps": [
-      {
-        "title": "50 ta soha uyushmasi",
-        "desc": "Har bir soha Assambleyaga bevosita kanalga ega."
-      },
-      {
-        "title": "Tadbirkorlar va kompaniyalar",
-        "desc": "A'zolar, investorlar va xizmat ko'rsatuvchilar tarmoqqa qo'shiladi."
-      },
-      {
-        "title": "Ehtiyojni aniqlash",
-        "desc": "Muammo va takliflar yig'iladi hamda aniq vazifaga aylantiriladi."
-      },
-      {
-        "title": "Assambleya loyihalari",
-        "desc": "Ehtiyojga 20 strategik loyihadan biri javob beradi."
-      }
-    ],
     "pillars": [
       {
         "word": "Birlik",

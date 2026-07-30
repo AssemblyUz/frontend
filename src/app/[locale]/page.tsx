@@ -95,6 +95,22 @@ export default async function HomePage({
           three times the length. */}
       <MainGate />
 
+      {/* News before the media strip: an article is the newer of the two — the
+          YouTube feed is re-read on a half-hour cycle and often unchanged for
+          weeks — so it is what a returning reader is here for. */}
+      {latestNews.length > 0 && (
+        <HomeSection
+          title={t('newsTitle')}
+          lead={t('newsLead')}
+          href="/yangiliklar"
+          viewAll={t('viewAll')}
+        >
+          {latestNews.map((item) => (
+            <NewsCard key={item.slug} item={item} readMore={tNews('readMore')} />
+          ))}
+        </HomeSection>
+      )}
+
       {/* Media projects — hidden until at least one channel is connected. */}
       {latestVideos.length > 0 && (
         <HomeSection
@@ -109,20 +125,6 @@ export default async function HomePage({
               video={video}
               labels={{play: tMedia('play'), watchOn: tMedia('watchOn')}}
             />
-          ))}
-        </HomeSection>
-      )}
-
-      {/* News */}
-      {latestNews.length > 0 && (
-        <HomeSection
-          title={t('newsTitle')}
-          lead={t('newsLead')}
-          href="/yangiliklar"
-          viewAll={t('viewAll')}
-        >
-          {latestNews.map((item) => (
-            <NewsCard key={item.slug} item={item} readMore={tNews('readMore')} />
           ))}
         </HomeSection>
       )}

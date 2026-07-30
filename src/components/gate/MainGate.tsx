@@ -1,16 +1,15 @@
 import {getTranslations} from 'next-intl/server';
 import {Link} from '@/i18n/navigation';
 import GateHub from './GateHub';
-import GateModel from './GateModel';
 import GateOutcomes from './GateOutcomes';
 import {GateBand} from './GateShell';
 
 /**
  * The Main Gate — the Assembly's structure, as one band on the home page.
  *
- * It reproduces the Assembly's one-page overview as real markup: the five
- * pillars, the operating model, the FR/BR/PR/GR wings and the partner
- * ecosystem.
+ * It reproduces the Assembly's one-page overview as real markup: the
+ * FR/BR/PR/GR wings and the association network flanking the seal, the five
+ * pillars beneath them, and the partner ecosystem.
  *
  * The motto and the doors used to close it; they now close the page instead —
  * see `GateDoors`.
@@ -43,7 +42,6 @@ export default async function MainGate() {
         </div>
 
         <GateHub />
-        <GateModel />
         <GateOutcomes />
       </div>
     </GateBand>

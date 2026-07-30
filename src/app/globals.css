@@ -385,22 +385,6 @@ body {
   }
 }
 
-/* A pulse travelling along the operating-model chain. */
-@keyframes gate-travel {
-  0% {
-    transform: translateX(-60%);
-    opacity: 0;
-  }
-  35%,
-  65% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(60%);
-    opacity: 0;
-  }
-}
-
 .gate-aurora {
   animation: gate-aurora 26s ease-in-out infinite alternate;
 }
@@ -415,10 +399,6 @@ body {
 
 .gate-breathe {
   animation: gate-breathe 7s ease-in-out infinite;
-}
-
-.gate-travel {
-  animation: gate-travel 2.8s ease-in-out infinite;
 }
 
 /* The seal follows the pointer a few pixels; the custom properties are set by
@@ -436,7 +416,6 @@ body {
   .gate-ring-spin,
   .gate-ring-spin-reverse,
   .gate-breathe,
-  .gate-travel,
   .hero-marquee-up,
   .hero-marquee-down,
   .hero-marquee-up-slow,
@@ -456,7 +435,6 @@ body {
   .gate-ring-spin,
   .gate-ring-spin-reverse,
   .gate-breathe,
-  .gate-travel,
   .hero-marquee-up,
   .hero-marquee-down,
   .hero-marquee-up-slow,

@@ -46,26 +46,6 @@
     "assocUnit": "sectoral associations",
     "assocLead": "Every industry reaches the Assembly through its own association. Entrepreneurs, companies and service providers meet in that network — it is where the need begins.",
     "assocCta": "View the associations",
-    "modelTitle": "How the Assembly operates",
-    "modelLead": "A single chain from the sectoral association to the delivered result.",
-    "modelSteps": [
-      {
-        "title": "50 sectoral associations",
-        "desc": "Every industry has a direct channel into the Assembly."
-      },
-      {
-        "title": "Entrepreneurs and companies",
-        "desc": "Members, investors and service providers join the network."
-      },
-      {
-        "title": "Identifying needs",
-        "desc": "Problems and proposals are collected and turned into tasks."
-      },
-      {
-        "title": "Assembly projects",
-        "desc": "The need is answered by one of the 20 strategic projects."
-      }
-    ],
     "pillars": [
       {
         "word": "Unity",
