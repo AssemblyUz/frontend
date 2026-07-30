@@ -18,8 +18,9 @@
     "label": "Language"
   },
   "home": {
-    "heroBadge": "New Uzbekistan — New Renaissance",
+    "heroBadge": "Foundation · People · Purpose · Progress",
     "heroTitle": "Uzbekistan Economy Assembly",
+    "ideaKicker": "Our main idea",
     "ideaClose": "Close",
     "mediaBadge": "From the Assembly's work",
     "mediaLabel": "Photographs from the Assembly's work: signings, international forums, delegations and press briefings.",
@@ -45,7 +46,6 @@
     "ctaBannerBtn": "Get in touch"
   },
   "gate": {
-    "kicker": "Main gate",
     "title": "The Assembly's structure",
     "lead": "The 50 sectoral associations, the 20 strategic projects, the FR/BR/PR/GR wings, the operating model, AI MediaNet and the results they produce — the whole system in one gate.",
     "more": "Full presentation",

@@ -72,13 +72,9 @@ export default async function MainGate() {
       <div className="relative shell py-section">
         <div className="flex flex-wrap items-end justify-between gap-x-8 gap-y-4">
           <div className="max-w-3xl">
-            <span className="inline-flex items-center gap-2 rounded-full border border-gate-gold/40 px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-gate-gold">
-              <span aria-hidden className="h-1 w-1 rounded-full bg-gate-gold" />
-              {t('kicker')}
-            </span>
             <h2
               id="main-gate-title"
-              className="mt-5 text-fluid-4xl font-bold tracking-tight text-balance"
+              className="text-fluid-4xl font-bold tracking-tight text-balance"
             >
               {t('title')}
             </h2>

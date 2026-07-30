@@ -65,7 +65,7 @@ export default async function HomePage({
         <div className="relative shell grid gap-10 py-section md:gap-12 lg:grid-cols-2 lg:items-center lg:gap-14">
           <div>
             <span className="inline-flex items-center gap-2 rounded-full border border-border-base bg-surface px-3 py-1 text-xs font-medium text-brand">
-              <span className="h-1.5 w-1.5 rounded-full bg-brand" />
+              <span aria-hidden className="h-1.5 w-1.5 shrink-0 rounded-full bg-brand" />
               {t('heroBadge')}
             </span>
             {/* The organisation's own lockup stands in for the name in type. The
@@ -88,9 +88,18 @@ export default async function HomePage({
 
                 It follows the lockup directly: the standfirst that used to sit
                 between them said the same thing as the statement this button
-                opens, at less length and with no way to read the rest. */}
+                opens, at less length and with no way to read the rest.
+
+                The badge that used to sit above the lockup is gone with it: it
+                carried the same words as the button itself, so the hero opened
+                by naming the idea twice before offering to explain it. Its
+                place is now the button's own label. */}
             <div className="mt-7 sm:mt-8">
-              <IdeaDialog locale={locale} closeLabel={t('ideaClose')} />
+              <IdeaDialog
+                locale={locale}
+                kicker={t('ideaKicker')}
+                closeLabel={t('ideaClose')}
+              />
             </div>
           </div>
 

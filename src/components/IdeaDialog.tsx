@@ -12,7 +12,16 @@ import {ideaFor} from '@/data/idea';
  * reimplementing any of the three. It is display:none until opened, so no
  * conditional rendering is needed either.
  */
-export default function IdeaDialog({locale, closeLabel}: {locale: string; closeLabel: string}) {
+export default function IdeaDialog({
+  locale,
+  kicker,
+  closeLabel,
+}: {
+  locale: string;
+  /** Small label above the button, naming what it opens. */
+  kicker: string;
+  closeLabel: string;
+}) {
   const dialog = useRef<HTMLDialogElement>(null);
   // Title and body come from one place, so the button cannot name the idea
   // differently from the panel it opens.
@@ -30,6 +39,12 @@ export default function IdeaDialog({locale, closeLabel}: {locale: string; closeL
 
   return (
     <>
+      {/* The button carries the idea's name; this says what that name is. Kept
+          out of the button itself so the accessible name stays the title alone,
+          and set in the eyebrow style the rest of the site uses for labels. */}
+      <p className="mb-2 text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-muted">
+        {kicker}
+      </p>
       <button
         type="button"
         onClick={() => dialog.current?.showModal()}
