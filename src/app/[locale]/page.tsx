@@ -7,8 +7,8 @@ import HeroMedia from '@/components/HeroMedia';
 import IdeaDialog from '@/components/IdeaDialog';
 import Logo from '@/components/Logo';
 import VideoCard from '@/components/VideoCard';
-import CountUp from '@/components/motion/CountUp';
 import MainGate from '@/components/gate/MainGate';
+import GateDoors from '@/components/gate/GateDoors';
 import NewsCard from '@/components/NewsCard';
 
 /**
@@ -24,15 +24,6 @@ export const dynamic = 'force-dynamic';
 
 type ServiceItem = {icon: string; name: string; desc: string};
 type ProjectItem = {icon: string; name: string; desc: string};
-
-/** Counted up on reveal, so the figures are numbers plus an optional suffix.
- *  The association figure matches the registry in `data/associations.ts`. */
-const STATS = [
-  {to: 20, key: 'projects'},
-  {to: 50, key: 'associations'},
-  {to: 15000, suffix: '+', key: 'members'},
-  {to: 12, key: 'years'},
-] as const;
 
 const HOME_NEWS_COUNT = 3;
 const HOME_VIDEO_COUNT = 3;
@@ -90,10 +81,9 @@ export default async function HomePage({
                 between them said the same thing as the statement this button
                 opens, at less length and with no way to read the rest.
 
-                The badge that used to sit above the lockup is gone with it: it
-                carried the same words as the button itself, so the hero opened
-                by naming the idea twice before offering to explain it. Its
-                place is now the button's own label. */}
+                The kicker above the button is what names the idea as one — the
+                button alone gave the idea's title with nothing to say that a
+                statement sat behind it. */}
             <div className="mt-7 sm:mt-8">
               <IdeaDialog
                 locale={locale}
@@ -107,29 +97,11 @@ export default async function HomePage({
         </div>
       </section>
 
-      {/* Stats */}
-      {/* Four figures across from `md` — a tablet has the width for the whole
-          row, and waiting for `lg` left it in the phone's 2×2 block. */}
-      <section className="shell -mt-8">
-        <div className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-border-base bg-border-base shadow-sm md:grid-cols-4">
-          {STATS.map((s) => (
-            <div
-              key={s.key}
-              className="group bg-card px-3 py-5 text-center transition-colors duration-500 hover:bg-brand/5 xs:px-5 sm:px-6 sm:py-7"
-            >
-              <div className="text-fluid-3xl font-bold tracking-tight text-brand transition-transform duration-500 group-hover:scale-105">
-                <CountUp to={s.to} suffix={'suffix' in s ? s.suffix : ''} />
-              </div>
-              <div className="mt-1 text-xs text-muted sm:text-sm">{t(`stats.${s.key}`)}</div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* The Main Gate: the Assembly's whole overview, and the doors into it. */}
-      <div className="mt-section">
-        <MainGate />
-      </div>
+      {/* The Main Gate: the Assembly's whole overview, and the doors into it.
+          It carries the same figures the stats strip used to — 20 projects, 50
+          associations — on the panels either side of the seal, so the strip was
+          repeating them one screen earlier. */}
+      <MainGate />
 
       {/* Associations preview */}
       <div className="bg-surface/60">
@@ -239,6 +211,12 @@ export default async function HomePage({
           </a>
         </div>
       </section>
+
+      {/* The motto and the doors, closing the page. They used to close the Main
+          Gate; down here they close everything above them, and a reader who has
+          scrolled the whole page is given somewhere to go rather than the
+          footer's small print. */}
+      <GateDoors />
     </>
   );
 }

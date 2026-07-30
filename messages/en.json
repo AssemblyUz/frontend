@@ -24,12 +24,6 @@
     "ideaClose": "Close",
     "mediaBadge": "From the Assembly's work",
     "mediaLabel": "Photographs from the Assembly's work: signings, international forums, delegations and press briefings.",
-    "stats": {
-      "associations": "Associations",
-      "projects": "Projects",
-      "members": "Members",
-      "years": "Years of experience"
-    },
     "assocTitle": "Associations",
     "assocLead": "Member associations spanning diverse fields",
     "servicesTitle": "Services",
@@ -47,7 +41,7 @@
   },
   "gate": {
     "title": "The Assembly's structure",
-    "lead": "The 50 sectoral associations, the 20 strategic projects, the FR/BR/PR/GR wings, the operating model, AI MediaNet and the results they produce — the whole system in one gate.",
+    "lead": "The Uzbekistan Economy Assembly is the national economic integrator: it brings the capabilities of government, business, science, international partners and media together around a single result.",
     "more": "Full presentation",
     "hubValue": "20",
     "hubTitle": "Strategic projects",

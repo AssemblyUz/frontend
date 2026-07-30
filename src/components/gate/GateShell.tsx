@@ -6,6 +6,58 @@
  * theme-aware `surface` / `card` / `muted` tokens.
  */
 
+/**
+ * The gate's stage: the band itself, its atmosphere and the gold hairlines that
+ * frame it.
+ *
+ * Shared because the gate is no longer one block — the motto and the doors close
+ * the home page rather than the section, and they only read correctly against
+ * this background, since everything inside uses the `gate-` scale rather than the
+ * page's own.
+ */
+export function GateBand({
+  className = '',
+  children,
+  ...rest
+}: React.ComponentPropsWithoutRef<'section'> & {className?: string}) {
+  return (
+    <section
+      {...rest}
+      className={`relative isolate overflow-hidden bg-gate-bg text-gate-fg ${className}`}
+    >
+      {/* Content stays visible when JavaScript never arrives: the reveal
+          animation's resting state is server-rendered. */}
+      <noscript>
+        <style>{`[data-reveal]{opacity:1 !important;transform:none !important}`}</style>
+      </noscript>
+
+      {/* Atmosphere: a cool glow overhead and a warm one in the far corner,
+          drifting slowly, over a faint network field. */}
+      <div
+        aria-hidden
+        className="gate-aurora pointer-events-none absolute inset-0 [background:radial-gradient(65%_45%_at_50%_-5%,rgba(14,116,144,0.1),transparent_70%),radial-gradient(45%_45%_at_100%_100%,rgba(138,95,20,0.08),transparent_70%)] dark:[background:radial-gradient(65%_45%_at_50%_-5%,rgba(78,195,234,0.16),transparent_70%),radial-gradient(45%_45%_at_100%_100%,rgba(223,180,105,0.12),transparent_70%)]"
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 opacity-[0.14] [background-image:radial-gradient(rgba(15,23,42,0.5)_1px,transparent_1px)] [background-size:44px_44px] dark:opacity-[0.18] dark:[background-image:radial-gradient(rgba(148,172,214,0.55)_1px,transparent_1px)]"
+      />
+      {/* Gold hairlines frame the band. On the dark theme the page behind it is
+          nearly the same value, so these edges are what make it read as its own
+          monument rather than a change of padding. */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gate-gold/60 to-transparent"
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-gate-gold/40 to-transparent"
+      />
+
+      {children}
+    </section>
+  );
+}
+
 /** A glass panel on the gate stage. */
 export function GatePanel({
   className = '',

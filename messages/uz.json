@@ -24,12 +24,6 @@
     "ideaClose": "Yopish",
     "mediaBadge": "Assambleya faoliyatidan",
     "mediaLabel": "Assambleya faoliyatidan fotosuratlar: imzolash marosimlari, xalqaro forumlar, delegatsiyalar va matbuot uchrashuvlari.",
-    "stats": {
-      "associations": "Uyushma",
-      "projects": "Loyiha",
-      "members": "A'zo",
-      "years": "Yillik tajriba"
-    },
     "assocTitle": "Uyushmalar",
     "assocLead": "Turli sohalarni qamrab olgan a'zo uyushmalar",
     "servicesTitle": "Xizmatlar",
@@ -47,7 +41,7 @@
   },
   "gate": {
     "title": "Assambleya tuzilmasi",
-    "lead": "50 ta soha uyushmasi, 20 strategik loyiha, FR/BR/PR/GR qanotlari, ishlash modeli, AI MediaNet va ular keltiradigan natija — butun tizim bitta darvozada.",
+    "lead": "O'zbekiston Iqtisodiyot Assambleyasi — milliy iqtisodiy integrator: davlat, biznes, ilm-fan, xalqaro hamkorlar va media imkoniyatlarini bitta natija atrofida birlashtiradi.",
     "more": "To'liq taqdimot",
     "hubValue": "20",
     "hubTitle": "Strategik loyiha",
