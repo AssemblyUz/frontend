@@ -66,6 +66,41 @@ export default async function AboutPage({
       <PageHero title={t('title')} lead={t('lead')} />
 
       <div className="shell py-section-sm">
+        {/* The chairman, before anything the Assembly says about itself: the
+            reader meets the person who answers for it first. */}
+        <section className="mb-section-sm grid gap-6 rounded-3xl border border-border-base bg-card p-5 xs:p-6 sm:gap-8 sm:p-8 md:grid-cols-[minmax(0,15rem)_minmax(0,1fr)] md:items-center lg:p-10">
+          {/* eslint-disable-next-line @next/next/no-img-element -- matches
+              Logo.tsx; the project has no next/image host configuration. */}
+          <img
+            src="/chairman.webp"
+            alt={t('chairmanName')}
+            width={800}
+            height={1000}
+            /* The source is a 3:2 landscape frame with the subject centred and
+               a flag behind. Cropped to a portrait and biased upward so the
+               face sits where the eye looks first rather than in the middle. */
+            className="aspect-[4/5] w-full rounded-2xl border border-border-base object-cover object-[50%_25%]"
+          />
+
+          <div>
+            <span className="text-sm font-semibold uppercase tracking-wide text-brand">
+              {t('chairmanLabel')}
+            </span>
+            <h2 className="mt-3 text-fluid-3xl font-bold tracking-tight text-foreground">
+              {t('chairmanName')}
+            </h2>
+            <p className="mt-2 text-fluid-lg text-muted">{t('chairmanRole')}</p>
+            <a
+              href="https://muhtorumarov.uz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-5 inline-flex items-center gap-1.5 py-1 text-sm font-semibold text-brand transition-all hover:gap-2.5"
+            >
+              muhtorumarov.uz ↗
+            </a>
+          </div>
+        </section>
+
         {/* Who we are */}
         <section className="grid gap-5 lg:grid-cols-[1.3fr_1fr]">
           <div className="rounded-3xl border border-border-base bg-card p-5 xs:p-6 sm:p-10">

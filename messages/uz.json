@@ -455,6 +455,9 @@
   "about": {
     "title": "Biz haqimizda",
     "lead": "O'zbekiston Iqtisodiyot Assambleyasi — milliy iqtisodiy integrator: davlat, biznes, ilm-fan, xalqaro hamkorlar va media imkoniyatlarini bitta natija atrofida birlashtiradi.",
+    "chairmanLabel": "Assambleya raisi",
+    "chairmanName": "Muhtor Umarov",
+    "chairmanRole": "O‘zbekiston Iqtisodiyot Assambleyasi Raisi",
     "introTitle": "Assambleya haqida qisqacha",
     "intro": "2021-yil 10-fevralda rasmiy ro'yxatdan o'tgan jamoatchilik-iqtisodiy platforma. Yaponiyaning Keidanren modelidan ilhomlangan holda, Yangi O'zbekiston iqtisodiy rivojlanishiga amaliy xizmat qilishga qaratilgan.",
     "principle": "ASOS — inson. MAQSAD — taraqqiyot.",
