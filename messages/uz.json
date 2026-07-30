@@ -46,7 +46,7 @@
   },
   "gate": {
     "kicker": "Bosh darvoza",
-    "title": "Assambleya — bir ko'rinishda",
+    "title": "Assambleya tuzilmasi",
     "lead": "50 ta soha uyushmasi, 20 strategik loyiha, FR/BR/PR/GR qanotlari, ishlash modeli, AI MediaNet va ular keltiradigan natija — butun tizim bitta darvozada.",
     "more": "To'liq taqdimot",
     "hubValue": "20",
@@ -799,67 +799,6 @@
       {
         "title": "Jamiyat uchun",
         "desc": "Yangi ish o'rinlari, iqtisodiy optimizm, yoshlar va ayollar faolligi, innovatsion muhit va ijtimoiy ishonch."
-      }
-    ],
-    "roadmapTitle": "Yo'l xaritasi va KPI",
-    "roadmapLead": "Assambleya mexanizmini amaliy boshqaruv tizimiga aylantirish uchun o'lchanadigan natijalar",
-    "roadmap": [
-      {
-        "period": "0–90 kun",
-        "title": "CRM va xizmatlar katalogi",
-        "desc": "Uyushmalar bazasi, tadbirkor ehtiyojlari va loyihalar kesimida xizmatlar paketi."
-      },
-      {
-        "period": "6 oy",
-        "title": "Hamkorlik va portfel",
-        "desc": "Investorlar, banklar, konsalting va texnologik hamkorlar bilan amaliy loyihalar."
-      },
-      {
-        "period": "12 oy",
-        "title": "Natija va ta'sir",
-        "desc": "Tadbirkorlar uchun real yechimlar, media yoritish, davlat va xalqaro ishonch."
-      }
-    ],
-    "kpiTitle": "Asosiy ko'rsatkichlar",
-    "kpi": [
-      {
-        "value": "50+",
-        "label": "Uyushmalar"
-      },
-      {
-        "value": "10 000+",
-        "label": "Tadbirkorlar bazasi"
-      },
-      {
-        "value": "20",
-        "label": "Loyihalar portfeli"
-      },
-      {
-        "value": "100+",
-        "label": "Hamkorlar"
-      },
-      {
-        "value": "doimiy",
-        "label": "Media qamrov"
-      },
-      {
-        "value": "$ mlrd+",
-        "label": "Investitsiya oqimi"
-      }
-    ],
-    "resultsTitle": "Natijamiz",
-    "results": [
-      {
-        "title": "Barqaror iqtisodiyot",
-        "desc": "Raqobatbardosh, diversifikatsiyalangan va o'sib boruvchi milliy iqtisodiyot."
-      },
-      {
-        "title": "Farovon jamiyat",
-        "desc": "Fuqarolar farovonligi va imkoniyatlar tengligiga asoslangan jamiyat."
-      },
-      {
-        "title": "Yangi renessans",
-        "desc": "Ilm, madaniyat va tadbirkorlik gullab-yashnaydigan Yangi O'zbekiston."
       }
     ],
     "motto": "Bir maqsad — bir yo'l — bir kelajak!",

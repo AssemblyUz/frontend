@@ -10,9 +10,6 @@ type NodeItem = {title: string; desc: string};
 type Step = {title: string; desc: string};
 type Block = {code: string; title: string; desc: string};
 type PartnerGroup = {title: string; items: string[]};
-type RoadmapStage = {period: string; title: string; desc: string};
-type Kpi = {value: string; label: string};
-type Result = {title: string; desc: string};
 
 /** One accent per FR/BR/PR/GR wing, in message order. Full class strings so Tailwind keeps them. */
 const BLOCK_STYLE = [
@@ -62,9 +59,6 @@ export default async function AboutPage({
   const media = t.raw('media') as NodeItem[];
   const partners = t.raw('partners') as PartnerGroup[];
   const valueItems = t.raw('valueItems') as NodeItem[];
-  const roadmap = t.raw('roadmap') as RoadmapStage[];
-  const kpi = t.raw('kpi') as Kpi[];
-  const results = t.raw('results') as Result[];
 
   return (
     <>
@@ -301,47 +295,6 @@ export default async function AboutPage({
               <div key={v.title} className="rounded-2xl border border-border-base bg-card p-5 xs:p-6 sm:p-8">
                 <h3 className={`font-semibold ${CYCLE[i % CYCLE.length]}`}>{v.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted">{v.desc}</p>
-              </div>
-            ))}
-          </div>
-        </Section>
-
-        {/* Roadmap & KPI */}
-        <Section title={t('roadmapTitle')} lead={t('roadmapLead')}>
-          <div className="grid gap-4 xs:grid-cols-2 sm:grid-cols-3 sm:gap-5">
-            {roadmap.map((stage, i) => (
-              <div key={stage.period} className="rounded-2xl border border-border-base bg-card p-6 text-center">
-                <div className={`text-2xl font-bold tracking-tight ${CYCLE[i % CYCLE.length]}`}>
-                  {stage.period}
-                </div>
-                <div className="mt-3 font-semibold text-foreground">{stage.title}</div>
-                <p className="mt-2 text-sm leading-relaxed text-muted">{stage.desc}</p>
-              </div>
-            ))}
-          </div>
-
-          <h3 className="mt-10 text-sm font-semibold uppercase tracking-wide text-brand">
-            {t('kpiTitle')}
-          </h3>
-          <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-6">
-            {kpi.map((k, i) => (
-              <div key={k.label} className="rounded-2xl border border-border-base bg-card p-5 text-center">
-                <div className={`text-xl font-bold tracking-tight ${CYCLE[i % CYCLE.length]}`}>
-                  {k.value}
-                </div>
-                <div className="mt-1 text-xs text-muted">{k.label}</div>
-              </div>
-            ))}
-          </div>
-        </Section>
-
-        {/* Results */}
-        <Section title={t('resultsTitle')}>
-          <div className="grid gap-4 xs:grid-cols-2 sm:grid-cols-3 sm:gap-5">
-            {results.map((r) => (
-              <div key={r.title} className="rounded-2xl border border-border-base bg-card p-6">
-                <h3 className="text-lg font-semibold text-brand">{r.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted">{r.desc}</p>
               </div>
             ))}
           </div>

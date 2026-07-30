@@ -46,7 +46,7 @@
   },
   "gate": {
     "kicker": "Main gate",
-    "title": "The Assembly at a glance",
+    "title": "The Assembly's structure",
     "lead": "The 50 sectoral associations, the 20 strategic projects, the FR/BR/PR/GR wings, the operating model, AI MediaNet and the results they produce — the whole system in one gate.",
     "more": "Full presentation",
     "hubValue": "20",
@@ -799,67 +799,6 @@
       {
         "title": "For society",
         "desc": "New jobs, economic optimism, active youth and women, an innovative environment and social trust."
-      }
-    ],
-    "roadmapTitle": "Roadmap and KPIs",
-    "roadmapLead": "Measurable results that turn the Assembly's mechanism into a working management system",
-    "roadmap": [
-      {
-        "period": "0–90 days",
-        "title": "CRM and service catalogue",
-        "desc": "A register of associations, entrepreneurs' needs and a service package for each project."
-      },
-      {
-        "period": "6 months",
-        "title": "Partnerships and portfolio",
-        "desc": "Practical projects with investors, banks, consulting firms and technology partners."
-      },
-      {
-        "period": "12 months",
-        "title": "Results and impact",
-        "desc": "Real solutions for entrepreneurs, media coverage, and the trust of government and international partners."
-      }
-    ],
-    "kpiTitle": "Key indicators",
-    "kpi": [
-      {
-        "value": "50+",
-        "label": "Associations"
-      },
-      {
-        "value": "10,000+",
-        "label": "Entrepreneur base"
-      },
-      {
-        "value": "20",
-        "label": "Project portfolio"
-      },
-      {
-        "value": "100+",
-        "label": "Partners"
-      },
-      {
-        "value": "continuous",
-        "label": "Media coverage"
-      },
-      {
-        "value": "$ bn+",
-        "label": "Investment flow"
-      }
-    ],
-    "resultsTitle": "Our result",
-    "results": [
-      {
-        "title": "Sustainable economy",
-        "desc": "A competitive, diversified and growing national economy."
-      },
-      {
-        "title": "Prosperous society",
-        "desc": "A society built on citizens' wellbeing and equal opportunity."
-      },
-      {
-        "title": "New renaissance",
-        "desc": "A New Uzbekistan where science, culture and entrepreneurship flourish."
       }
     ],
     "motto": "One goal — one path — one future!",
