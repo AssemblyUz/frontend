@@ -1,5 +1,8 @@
 import {getTranslations, setRequestLocale} from 'next-intl/server';
+import {hasLocale} from 'next-intl';
+import {notFound} from 'next/navigation';
 import {Link} from '@/i18n/navigation';
+import {routing} from '@/i18n/routing';
 import {getNews} from '@/lib/news';
 import {getMediaVideos} from '@/lib/youtube';
 import HeroMedia from '@/components/HeroMedia';
@@ -30,6 +33,15 @@ export default async function HomePage({
   params: Promise<{locale: string}>;
 }) {
   const {locale} = await params;
+  // The layout guards this too, but a page renders in parallel with the layout
+  // above it rather than after it -- so the layout's `notFound()` cannot stop
+  // the fetch below from having already gone out. `/[locale]` matches any single
+  // root segment, and this page is `force-dynamic`, so without this every junk
+  // path a scanner tries was an uncached article query against Django.
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
+
   setRequestLocale(locale);
   const t = await getTranslations('home');
   const tNews = await getTranslations('news');

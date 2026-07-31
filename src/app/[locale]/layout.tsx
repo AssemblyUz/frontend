@@ -91,6 +91,18 @@ export async function generateMetadata({
   params: Promise<{locale: string}>;
 }): Promise<Metadata> {
   const {locale} = await params;
+  // The same guard the layout body runs, hoisted ahead of the fetch.
+  //
+  // `[locale]` matches any single path segment, so every unrouted root path --
+  // Safari's icon probes, and every `/.env` or `/wp-login.php` a scanner tries --
+  // arrived here as a locale. Metadata is resolved before the layout renders, so
+  // the guard down there could not stop this: each junk request had already made
+  // two live calls to Django for site settings by the time it ran, and the reply
+  // was going to be a 404 either way. Bailing first makes those requests free.
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
+
   // Organisation identity is edited in the admin under "Site settings". The
   // fetch is deduplicated with the one the footer makes on the same render.
   const site = await getSiteInfo(locale);
