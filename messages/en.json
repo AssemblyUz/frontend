@@ -106,9 +106,7 @@
         "title": "International financial institutions",
         "items": [
           "Asian Development Bank (ADB)",
-          "Islamic Development Bank (IsDB)",
-          "UzDIF",
-          "UzVC"
+          "Islamic Development Bank (IsDB)"
         ]
       },
       {
@@ -117,7 +115,9 @@
           "Ipoteka Bank (OTP)",
           "TBC Bank",
           "Apexbank",
-          "Uzbekleasing"
+          "Uzbekleasing",
+          "UzDIF",
+          "UzVC"
         ]
       },
       {

@@ -106,9 +106,7 @@
         "title": "Xalqaro moliya institutlari",
         "items": [
           "Osiyo taraqqiyot banki (ADB)",
-          "Islom taraqqiyot banki (IsDB)",
-          "UzDIF",
-          "UzVC"
+          "Islom taraqqiyot banki (IsDB)"
         ]
       },
       {
@@ -117,7 +115,9 @@
           "Ipoteka Bank (OTP)",
           "TBC Bank",
           "Apexbank",
-          "Uzbekleasing"
+          "Uzbekleasing",
+          "UzDIF",
+          "UzVC"
         ]
       },
       {
