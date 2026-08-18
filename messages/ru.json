@@ -105,8 +105,7 @@
       {
         "title": "Международные финансовые институты",
         "items": [
-          "Азиатский банк развития (ADB)",
-          "Исламский банк развития (IsDB)"
+          "Европейский банк реконструкции и развития (EBRD)"
         ]
       },
       {
@@ -131,11 +130,10 @@
       {
         "title": "Международные и локальные партнёры",
         "items": [
-          "Huawei",
           "Samsung C&T",
-          "Japan Development Institute (JDI)",
-          "Arup",
-          "Parsons Corporation"
+          "LG",
+          "Huawei",
+          "Japan Development Institute (JDI)"
         ]
       }
     ],
@@ -332,8 +330,8 @@
           "Продвигает интересы Узбекистана на глобальной экономической арене"
         ],
         "partners": [
-          "Международные финансовые институты: ADB, IsDB, UzDIF, UzVC",
-          "Международные компании: Huawei, Samsung C&T, Japan Development Institute, Arup, Parsons",
+          "Международные финансовые институты: EBRD",
+          "Международные компании: Samsung C&T, LG, Huawei, Japan Development Institute",
           "Посольства и торгово-промышленные палаты",
           "Министерство иностранных дел",
           "Зарубежные инвесторы и фонды"
@@ -657,11 +655,7 @@
       {
         "title": "Международные финансовые институты",
         "items": [
-          "EBRD",
-          "ADB",
-          "IsDB",
-          "UzDIF",
-          "UzVC"
+          "EBRD"
         ]
       },
       {
@@ -684,11 +678,10 @@
       {
         "title": "Технологические партнёры",
         "items": [
-          "Huawei",
           "Samsung C&T",
-          "JDI",
-          "Arup",
-          "Parsons"
+          "LG",
+          "Huawei",
+          "JDI"
         ]
       }
     ],

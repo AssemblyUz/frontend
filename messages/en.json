@@ -105,8 +105,7 @@
       {
         "title": "International financial institutions",
         "items": [
-          "Asian Development Bank (ADB)",
-          "Islamic Development Bank (IsDB)"
+          "European Bank for Reconstruction and Development (EBRD)"
         ]
       },
       {
@@ -131,11 +130,10 @@
       {
         "title": "International and local partners",
         "items": [
-          "Huawei",
           "Samsung C&T",
-          "Japan Development Institute (JDI)",
-          "Arup",
-          "Parsons Corporation"
+          "LG",
+          "Huawei",
+          "Japan Development Institute (JDI)"
         ]
       }
     ],
@@ -332,8 +330,8 @@
           "Advances Uzbekistan's interests in the global economic arena"
         ],
         "partners": [
-          "International financial institutions: ADB, IsDB, UzDIF, UzVC",
-          "International companies: Huawei, Samsung C&T, Japan Development Institute, Arup, Parsons",
+          "International financial institutions: EBRD",
+          "International companies: Samsung C&T, LG, Huawei, Japan Development Institute",
           "Embassies and chambers of commerce",
           "Ministry of Foreign Affairs",
           "Foreign investors and funds"
@@ -657,11 +655,7 @@
       {
         "title": "International financial institutions",
         "items": [
-          "EBRD",
-          "ADB",
-          "IsDB",
-          "UzDIF",
-          "UzVC"
+          "EBRD"
         ]
       },
       {
@@ -684,11 +678,10 @@
       {
         "title": "Technology partners",
         "items": [
-          "Huawei",
           "Samsung C&T",
-          "JDI",
-          "Arup",
-          "Parsons"
+          "LG",
+          "Huawei",
+          "JDI"
         ]
       }
     ],

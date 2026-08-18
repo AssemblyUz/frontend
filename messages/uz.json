@@ -105,8 +105,7 @@
       {
         "title": "Xalqaro moliya institutlari",
         "items": [
-          "Osiyo taraqqiyot banki (ADB)",
-          "Islom taraqqiyot banki (IsDB)"
+          "Yevropa tiklanish va taraqqiyot banki (EBRD)"
         ]
       },
       {
@@ -131,11 +130,10 @@
       {
         "title": "Xalqaro va mahalliy hamkorlar",
         "items": [
-          "Huawei",
           "Samsung C&T",
-          "Japan Development Institute (JDI)",
-          "Arup",
-          "Parsons Corporation"
+          "LG",
+          "Huawei",
+          "Japan Development Institute (JDI)"
         ]
       }
     ],
@@ -332,8 +330,8 @@
           "O'zbekiston manfaatlarini global iqtisodiy maydonda ilgari suradi"
         ],
         "partners": [
-          "Xalqaro moliya institutlari: ADB, IsDB, UzDIF, UzVC",
-          "Xalqaro kompaniyalar: Huawei, Samsung C&T, Japan Development Institute, Arup, Parsons",
+          "Xalqaro moliya institutlari: EBRD",
+          "Xalqaro kompaniyalar: Samsung C&T, LG, Huawei, Japan Development Institute",
           "Elchixonalar va savdo-sanoat palatalari",
           "Tashqi ishlar vazirligi",
           "Xorijiy investorlar va fondlar"
@@ -657,11 +655,7 @@
       {
         "title": "Xalqaro moliya institutlari",
         "items": [
-          "EBRD",
-          "ADB",
-          "IsDB",
-          "UzDIF",
-          "UzVC"
+          "EBRD"
         ]
       },
       {
@@ -684,11 +678,10 @@
       {
         "title": "Texnologik hamkorlar",
         "items": [
-          "Huawei",
           "Samsung C&T",
-          "JDI",
-          "Arup",
-          "Parsons"
+          "LG",
+          "Huawei",
+          "JDI"
         ]
       }
     ],
