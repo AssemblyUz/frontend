@@ -6,7 +6,7 @@ import {usePathname, useRouter} from '@/i18n/navigation';
 import {routing} from '@/i18n/routing';
 import {useState, useRef, useEffect} from 'react';
 
-const LABELS: Record<string, string> = {uz: "O'zbek", ru: 'Русский', en: 'English'};
+const LABELS: Record<string, string> = {uz: 'Õzbek', ru: 'Русский', en: 'English'};
 const SHORT: Record<string, string> = {uz: 'UZ', ru: 'RU', en: 'EN'};
 
 export default function LanguageSwitcher() {

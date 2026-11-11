@@ -5,6 +5,11 @@
  * rather than mapping them to "-" keeps "Yangi oʻzgarishlar" as
  * "yangi-ozgarishlar" instead of "yangi-o-zgarishlar".
  *
+ * The reformed letters are spelled out the way the 1995 alphabet wrote them —
+ * "Şahar çiroqlari" becomes "shahar-chiroqlari", not "sahar-ciroqlari" — so a
+ * title gives the same slug whichever alphabet it was typed in. (õ and ğ need
+ * no entry: stripping their accent already leaves "o" and "g".)
+ *
  * Cyrillic is transliterated. It used to be dropped, on the reasoning that
  * inventing a scheme was worse than asking the editor — but the slug is
  * required, so a Russian-only title produced an empty slug and a form that
@@ -35,10 +40,12 @@ function romanise(value: string): string {
 export function slugify(title: string): string {
   return romanise(
     title
+      .toLowerCase()
+      .replace(/ş/g, 'sh')
+      .replace(/ç/g, 'ch')
       .normalize('NFKD')
       .replace(/[̀-ͯ]/g, '') // strip combining accents
-      .replace(MODIFIERS, '')
-      .toLowerCase(),
+      .replace(MODIFIERS, ''),
   )
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-+|-+$/g, '')
