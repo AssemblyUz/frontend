@@ -127,13 +127,15 @@ export default function ArticleForm({article}: {article?: PanelArticle}) {
       // The server stores Uzbek in the reformed alphabet whatever was typed
       // ("O'zbekiston" is saved as "Õzbekiston"). Show the editor what was
       // actually stored, so the form and the site never disagree.
-      setDraft((current) => ({
-        ...current,
-        tag_uz: result.tag_uz,
-        title_uz: result.title_uz,
-        excerpt_uz: result.excerpt_uz,
-        body_uz: result.body_uz,
-      }));
+      // A field the editor kept typing in while the save was in flight is left
+      // alone — `draft` here is what was submitted.
+      setDraft((current) => {
+        const next = {...current};
+        for (const key of ['tag_uz', 'title_uz', 'excerpt_uz', 'body_uz'] as const) {
+          if (current[key] === draft[key]) next[key] = result[key];
+        }
+        return next;
+      });
       setBusy(false);
       setSaved(true);
       window.setTimeout(() => setSaved(false), 4000);
