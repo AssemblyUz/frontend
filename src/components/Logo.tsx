@@ -19,7 +19,7 @@ export default function Logo({
   className?: string;
   decorative?: boolean;
 }) {
-  const alt = decorative ? '' : 'O‘zbekiston Iqtisodiyot Assambleyasi';
+  const alt = decorative ? '' : 'Õzbekiston Iqtisodiyot Assambleyasi';
   const dimensions = {width: 1667, height: 487};
 
   return (

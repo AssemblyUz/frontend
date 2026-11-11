@@ -3,7 +3,7 @@
 import {LOCALES, type ContentLocale} from '@/lib/adminTypes';
 
 const LABELS: Record<ContentLocale, string> = {
-  uz: "O'zbekcha",
+  uz: 'Õzbekça',
   ru: 'Русский',
   en: 'English',
 };

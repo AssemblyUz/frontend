@@ -25,7 +25,7 @@ export default function Emblem({
   tone?: 'auto' | 'white';
   decorative?: boolean;
 }) {
-  const alt = decorative ? '' : 'O‘zbekiston Iqtisodiyot Assambleyasi';
+  const alt = decorative ? '' : 'Õzbekiston Iqtisodiyot Assambleyasi';
   const dimensions = {width: 528, height: 487};
 
   if (tone === 'white') {

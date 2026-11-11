@@ -1,7 +1,7 @@
 {
   "nav": {
-    "home": "Bosh sahifa",
-    "associations": "Uyushmalar",
+    "home": "Boş sahifa",
+    "associations": "Uyuşmalar",
     "services": "Xizmatlar",
     "projects": "Loyihalar",
     "media": "Media loyihalar",
@@ -11,7 +11,7 @@
     "contact": "Aloqa"
   },
   "theme": {
-    "toLight": "Yorug' rejim",
+    "toLight": "Yoruğ rejim",
     "toDark": "Tungi rejim"
   },
   "lang": {
@@ -19,37 +19,37 @@
   },
   "home": {
     "heroBadge": "Asos · Inson · Maqsad · Taraqqiyot",
-    "heroTitle": "O'zbekiston Iqtisodiyot Assambleyasi",
-    "ideaKicker": "Bosh g'oyamiz",
-    "ideaClose": "Yopish",
+    "heroTitle": "Õzbekiston Iqtisodiyot Assambleyasi",
+    "ideaKicker": "Boş ğoyamiz",
+    "ideaClose": "Yopiş",
     "mediaBadge": "Assambleya faoliyatidan",
-    "mediaLabel": "Assambleya faoliyatidan fotosuratlar: imzolash marosimlari, xalqaro forumlar, delegatsiyalar va matbuot uchrashuvlari.",
+    "mediaLabel": "Assambleya faoliyatidan fotosuratlar: imzolaş marosimlari, xalqaro forumlar, delegatsiyalar va matbuot uçraşuvlari.",
     "mediaProjectsTitle": "Media loyihalar",
-    "mediaProjectsLead": "Assambleya kanallaridagi so‘nggi videolar",
+    "mediaProjectsLead": "Assambleya kanallaridagi sõnggi videolar",
     "newsTitle": "Yangiliklar",
-    "newsLead": "Assambleya faoliyati, loyihalar va hamkorlik bo'yicha so'nggi xabarlar",
-    "viewAll": "Barchasini ko'rish",
-    "ctaBannerTitle": "Bizga qo'shiling",
-    "ctaBannerLead": "Uyushmangizni ro'yxatdan o'tkazing yoki hamkor bo'ling — birgalikda ko'proq narsaga erishamiz.",
-    "ctaBannerBtn": "Bog'lanish"
+    "newsLead": "Assambleya faoliyati, loyihalar va hamkorlik bõyiça sõnggi xabarlar",
+    "viewAll": "Barçasini kõriş",
+    "ctaBannerTitle": "Bizga qõşiling",
+    "ctaBannerLead": "Uyuşmangizni rõyxatdan õtkazing yoki hamkor bõling — birgalikda kõproq narsaga erişamiz.",
+    "ctaBannerBtn": "Boğlaniş"
   },
   "gate": {
     "title": "Assambleya tuzilmasi",
-    "lead": "O'zbekiston Iqtisodiyot Assambleyasi — milliy iqtisodiy integrator: davlat, biznes, ilm-fan, xalqaro hamkorlar va media imkoniyatlarini bitta natija atrofida birlashtiradi.",
-    "more": "To'liq taqdimot",
+    "lead": "Õzbekiston Iqtisodiyot Assambleyasi — milliy iqtisodiy integrator: davlat, biznes, ilm-fan, xalqaro hamkorlar va media imkoniyatlarini bitta natija atrofida birlaştiradi.",
+    "more": "Tõliq taqdimot",
     "hubValue": "20",
     "hubTitle": "Strategik loyiha",
-    "hubLead": "Ta'lim va ish o'rni, investitsiya, sanoat, savdo, ilm-fan, media va ijtimoiy qo'llov — Assambleya portfeli.",
-    "hubCta": "Portfelga kirish",
-    "assocTitle": "Soha uyushmalari",
+    "hubLead": "Ta'lim va iş õrni, investitsiya, sanoat, savdo, ilm-fan, media va ijtimoiy qõllov — Assambleya portfeli.",
+    "hubCta": "Portfelga kiriş",
+    "assocTitle": "Soha uyuşmalari",
     "assocValue": "50",
-    "assocUnit": "ta soha uyushmasi",
-    "assocLead": "Har bir tarmoq o'z uyushmasi orqali Assambleyaga bevosita ulanadi. Tadbirkorlar, kompaniyalar va xizmat ko'rsatuvchilar shu tarmoqda birlashadi — ehtiyoj shu yerdan boshlanadi.",
-    "assocCta": "Uyushmalarni ko'rish",
+    "assocUnit": "ta soha uyuşmasi",
+    "assocLead": "Har bir tarmoq õz uyuşmasi orqali Assambleyaga bevosita ulanadi. Tadbirkorlar, kompaniyalar va xizmat kõrsatuvçilar şu tarmoqda birlaşadi — ehtiyoj şu yerdan boşlanadi.",
+    "assocCta": "Uyuşmalarni kõriş",
     "pillars": [
       {
         "word": "Birlik",
-        "claim": "kuch beradi"
+        "claim": "kuç beradi"
       },
       {
         "word": "Innovatsiya",
@@ -69,8 +69,8 @@
       }
     ],
     "blocksTitle": "Asosiy funksional bloklar",
-    "blocksLead": "Har bir loyiha shu to'rt qanot orqali xalqaro, biznes, jamoatchilik va davlat imkoniyatiga ulanadi.",
-    "blocksCta": "Bloklar bilan tanishish",
+    "blocksLead": "Har bir loyiha şu tõrt qanot orqali xalqaro, biznes, jamoatçilik va davlat imkoniyatiga ulanadi.",
+    "blocksCta": "Bloklar bilan tanişiş",
     "blocks": [
       {
         "code": "FR",
@@ -90,13 +90,13 @@
       }
     ],
     "partnersTitle": "Hamkorlik ekotizimi",
-    "partnersLead": "Davlat institutlari, xalqaro moliya tashkilotlari, banklar, konsalting va texnologiya kompaniyalari.",
+    "partnersLead": "Davlat institutlari, xalqaro moliya taşkilotlari, banklar, konsalting va texnologiya kompaniyalari.",
     "partners": [
       {
         "title": "Davlat institutlari",
         "items": [
           "Loyiha samaradorligi agentligi",
-          "Tashqi ishlar vazirligi",
+          "Taşqi işlar vazirligi",
           "Investitsiyalar, sanoat va savdo vazirligi",
           "Iqtisodiyot va moliya vazirligi",
           "Biznes ombudsmani"
@@ -105,11 +105,11 @@
       {
         "title": "Xalqaro moliya institutlari",
         "items": [
-          "Yevropa tiklanish va taraqqiyot banki (EBRD)"
+          "Yevropa tiklaniş va taraqqiyot banki (EBRD)"
         ]
       },
       {
-        "title": "Banklar va moliya tashkilotlari",
+        "title": "Banklar va moliya taşkilotlari",
         "items": [
           "Ipoteka Bank (OTP)",
           "TBC Bank",
@@ -137,252 +137,252 @@
         ]
       }
     ],
-    "partnersNote": "va boshqa ko'plab e'tiborli tashkilotlar",
+    "partnersNote": "va boşqa kõplab e'tiborli taşkilotlar",
     "motto": "Bir maqsad — bir millat — bir kelajak!",
-    "mottoLead": "Birgalikda Yangi O'zbekiston uchun Yangi Renessansni barpo etamiz.",
-    "doorsLabel": "Bo'limlarga o'tish"
+    "mottoLead": "Birgalikda Yangi Õzbekiston uçun Yangi Renessansni barpo etamiz.",
+    "doorsLabel": "Bõlimlarga õtiş"
   },
   "associations": {
-    "title": "Uyushmalar",
-    "lead": "Assembly platformasiga a'zo uyushmalar ro'yxati — turli tarmoq va yo'nalishlar bo'yicha.",
-    "searchPlaceholder": "Uyushma yoki yo'nalish bo'yicha qidirish...",
+    "title": "Uyuşmalar",
+    "lead": "Assembly platformasiga a'zo uyuşmalar rõyxati — turli tarmoq va yõnalişlar bõyiça.",
+    "searchPlaceholder": "Uyuşma yoki yõnaliş bõyiça qidiriş...",
     "activityLabel": "Faoliyati",
     "details": "Batafsil",
-    "noResults": "Hech narsa topilmadi",
-    "unit": "ta uyushma",
-    "backToList": "Barcha uyushmalar",
-    "aboutTitle": "Uyushma haqida",
-    "notFound": "Uyushma topilmadi",
-    "about": "{name} — O'zbekiston Iqtisodiyot Assambleyasi tarkibiga kiruvchi uyushma bo'lib, o'z sohasidagi tashkilotlar va mutaxassislarni birlashtiradi hamda a'zolari manfaatlarini himoya qiladi."
+    "noResults": "Heç narsa topilmadi",
+    "unit": "ta uyuşma",
+    "backToList": "Barça uyuşmalar",
+    "aboutTitle": "Uyuşma haqida",
+    "notFound": "Uyuşma topilmadi",
+    "about": "{name} — Õzbekiston Iqtisodiyot Assambleyasi tarkibiga kiruvçi uyuşma bõlib, õz sohasidagi taşkilotlar va mutaxassislarni birlaştiradi hamda a'zolari manfaatlarini himoya qiladi."
   },
   "services": {
     "title": "Xizmatlar",
-    "lead": "A'zolarimiz va hamkorlarimiz uchun to'liq professional xizmatlar spektri.",
+    "lead": "A'zolarimiz va hamkorlarimiz uçun tõliq professional xizmatlar spektri.",
     "items": [
       {
         "icon": "⚖️",
         "name": "Konsalting va huquqiy yordam",
-        "desc": "Tashkilotni ro'yxatdan o'tkazish, hujjatlar bilan ishlash va yuridik maslahat."
+        "desc": "Taşkilotni rõyxatdan õtkaziş, hujjatlar bilan işlaş va yuridik maslahat."
       },
       {
         "icon": "🎓",
         "name": "Ta'lim va treninglar",
-        "desc": "Malaka oshirish kurslari, seminarlar va sertifikatlangan dasturlar."
+        "desc": "Malaka oşiriş kurslari, seminarlar va sertifikatlangan dasturlar."
       },
       {
         "icon": "💰",
-        "name": "Grant va moliyalashtirish",
-        "desc": "Grant topish, ariza tayyorlash va loyihalarni moliyalashtirishda ko'mak."
+        "name": "Grant va moliyalaştiriş",
+        "desc": "Grant topiş, ariza tayyorlaş va loyihalarni moliyalaştirişda kõmak."
       },
       {
         "icon": "🌐",
         "name": "Networking va tadbirlar",
-        "desc": "Konferensiyalar, forumlar va hamkorlik uchrashuvlarini tashkil etish."
+        "desc": "Konferensiyalar, forumlar va hamkorlik uçraşuvlarini taşkil etiş."
       },
       {
         "icon": "📣",
         "name": "Media va PR",
-        "desc": "Brend rivoji, ijtimoiy tarmoqlar va ommaviy axborot vositalari bilan ishlash."
+        "desc": "Brend rivoji, ijtimoiy tarmoqlar va ommaviy axborot vositalari bilan işlaş."
       },
       {
         "icon": "🖥️",
         "name": "Raqamli transformatsiya",
-        "desc": "Veb-saytlar, jarayonlarni avtomatlashtirish va raqamli vositalarni joriy etish."
+        "desc": "Veb-saytlar, jarayonlarni avtomatlaştiriş va raqamli vositalarni joriy etiş."
       }
     ]
   },
   "projects": {
     "title": "Loyihalar",
-    "lead": "Assambleyaning 20 ta strategik loyihasi — iqtisodiyot, ta'lim, innovatsiya, media va ijtimoiy rivojlanish yo'nalishlarida.",
-    "visit": "Saytga o'tish",
-    "inDevelopment": "Ishlab chiqilmoqda",
+    "lead": "Assambleyaning 20 ta strategik loyihasi — iqtisodiyot, ta'lim, innovatsiya, media va ijtimoiy rivojlaniş yõnalişlarida.",
+    "visit": "Saytga õtiş",
+    "inDevelopment": "Işlab çiqilmoqda",
     "items": [
       {
         "icon": "🎓",
         "name": "EDU-JOB",
-        "desc": "Ta'lim tizimi va mehnat bozorini bog'lovchi platforma. Yoshlarni kasbga yo'naltirish, malaka va amaliyot orqali real ish imkoniyatlariga yetkazadi."
+        "desc": "Ta'lim tizimi va mehnat bozorini boğlovçi platforma. Yoşlarni kasbga yõnaltiriş, malaka va amaliyot orqali real iş imkoniyatlariga yetkazadi."
       },
       {
         "icon": "📈",
         "name": "INVEST HUB",
-        "desc": "Investorlar, loyihalar, moliya institutlari va xizmat ko'rsatuvchilarni yagona ekotizimga birlashtiradi. G'oyalarni kapital va amaliy loyihalarga aylantiradi."
+        "desc": "Investorlar, loyihalar, moliya institutlari va xizmat kõrsatuvçilarni yagona ekotizimga birlaştiradi. Ğoyalarni kapital va amaliy loyihalarga aylantiradi."
       },
       {
         "icon": "🏙️",
         "name": "CENTRAL ASIAN SMART CITY",
-        "desc": "Markaziy Osiyoda xalqaro savdo, sanoat, logistika, moliya, R&D va yashash muhitini birlashtiruvchi zamonaviy aqlli shahar konsepsiyasi."
+        "desc": "Markaziy Osiyoda xalqaro savdo, sanoat, logistika, moliya, R&D va yaşaş muhitini birlaştiruvçi zamonaviy aqlli şahar konsepsiyasi."
       },
       {
         "icon": "🏭",
         "name": "TERMIZ INDUSTRIAL HUB",
-        "desc": "Termiz orqali Janubiy Osiyo, Afg'oniston va mintaqaviy bozorlarga chiqishni kuchaytiradi. Eksport, ishlab chiqarish va transchegaraviy savdoni rivojlantiradi."
+        "desc": "Termiz orqali Janubiy Osiyo, Afğoniston va mintaqaviy bozorlarga çiqişni kuçaytiradi. Eksport, işlab çiqariş va transçegaraviy savdoni rivojlantiradi."
       },
       {
         "icon": "🧩",
         "name": "KONGLOMERAT",
-        "desc": "O'zbekistonning yirik, raqobatbardosh va xalqaro bozorlarga chiqa oladigan strategik kompaniyalarini shakllantiradi. Milliy biznesni global darajaga olib chiqadi."
+        "desc": "Õzbekistonning yirik, raqobatbardoş va xalqaro bozorlarga çiqa oladigan strategik kompaniyalarini şakllantiradi. Milliy biznesni global darajaga olib çiqadi."
       },
       {
         "icon": "🔬",
         "name": "R&D HUB",
-        "desc": "Ilmiy tadqiqot, tahlil, texnologiya, innovatsiya va yangi mahsulotlarni ishlab chiqishni qo'llab-quvvatlaydi. Ilm-fan va biznes o'rtasida amaliy ko'prik vazifasini bajaradi."
+        "desc": "Ilmiy tadqiqot, tahlil, texnologiya, innovatsiya va yangi mahsulotlarni işlab çiqişni qõllab-quvvatlaydi. Ilm-fan va biznes õrtasida amaliy kõprik vazifasini bajaradi."
       },
       {
         "icon": "🕊️",
         "name": "SOKIN OSMON",
-        "desc": "Dronlar, past balandlikdagi havo hududi va osmon iqtisodiyotini xavfsiz boshqarishga qaratilgan milliy tashabbus. Xavfsizlik, texnologiya va yangi iqtisodiy sektorni birlashtiradi."
+        "desc": "Dronlar, past balandlikdagi havo hududi va osmon iqtisodiyotini xavfsiz boşqarişga qaratilgan milliy taşabbus. Xavfsizlik, texnologiya va yangi iqtisodiy sektorni birlaştiradi."
       },
       {
         "icon": "🏔️",
         "name": "CHAQIRIQ",
-        "desc": "Yoshlar, mutaxassislar va tashabbuskor insonlarni milliy maqsadlar atrofida birlashtiradi. Iqtidor, g'oya va harakatni uyg'otuvchi platforma."
+        "desc": "Yoşlar, mutaxassislar va taşabbuskor insonlarni milliy maqsadlar atrofida birlaştiradi. Iqtidor, ğoya va harakatni uyğotuvçi platforma."
       },
       {
         "icon": "🎥",
         "name": "REPORTAJ GO",
-        "desc": "Jamiyat, iqtisodiyot, islohotlar va real loyihalar haqida tezkor, ochiq va sifatli video-reportajlar tayyorlovchi zamonaviy media platforma."
+        "desc": "Jamiyat, iqtisodiyot, islohotlar va real loyihalar haqida tezkor, oçiq va sifatli video-reportajlar tayyorlovçi zamonaviy media platforma."
       },
       {
         "icon": "🌐",
         "name": "MOEX",
-        "desc": "Xalqaro savdo, eksport-import va B2B hamkorlikni rivojlantiruvchi markaz. O'zbek mahsulotlarini tashqi bozorlarga olib chiqish va savdo jarayonlarini tizimlashtiradi."
+        "desc": "Xalqaro savdo, eksport-import va B2B hamkorlikni rivojlantiruvçi markaz. Õzbek mahsulotlarini taşqi bozorlarga olib çiqiş va savdo jarayonlarini tizimlaştiradi."
       },
       {
         "icon": "👥",
         "name": "YOSHLAR KAPITALI 2030",
-        "desc": "Yoshlar tadbirkorligi, startaplari, bilim kapitali va innovatsion g'oyalarini moliyaviy hamda institutsional qo'llab-quvvatlovchi milliy rivojlanish dasturi."
+        "desc": "Yoşlar tadbirkorligi, startaplari, bilim kapitali va innovatsion ğoyalarini moliyaviy hamda institutsional qõllab-quvvatlovçi milliy rivojlaniş dasturi."
       },
       {
         "icon": "👩‍💼",
         "name": "WOMAN UP",
-        "desc": "Ayollar tadbirkorligi, liderligi, kasbiy rivojlanishi va ijtimoiy faolligini oshirishga qaratilgan platforma. Zamonaviy o'zbek ayolining iqtisodiy salohiyatini kuchaytiradi."
+        "desc": "Ayollar tadbirkorligi, liderligi, kasbiy rivojlanişi va ijtimoiy faolligini oşirişga qaratilgan platforma. Zamonaviy õzbek ayolining iqtisodiy salohiyatini kuçaytiradi."
       },
       {
         "icon": "🧓",
         "name": "OQSOQOLLAR KENGASHI",
-        "desc": "Tajriba, donolik, qadriyat va jamoatchilik ishonchiga tayangan maslahat kengashi. Davlat, jamiyat, yoshlar va katta avlod o'rtasida ishonchli ko'prik yaratadi."
+        "desc": "Tajriba, donolik, qadriyat va jamoatçilik işonçiga tayangan maslahat kengaşi. Davlat, jamiyat, yoşlar va katta avlod õrtasida işonçli kõprik yaratadi."
       },
       {
         "icon": "🤝",
         "name": "IQTISODIY DIPLOMATIYA DEPARTAMENTI",
-        "desc": "Xalqaro tashkilotlar, elchixonalar, investorlar va xorijiy hamkorlar bilan tizimli aloqalarni rivojlantiradi. O'zbekiston manfaatlarini global iqtisodiy maydonda ilgari suradi."
+        "desc": "Xalqaro taşkilotlar, elçixonalar, investorlar va xorijiy hamkorlar bilan tizimli aloqalarni rivojlantiradi. Õzbekiston manfaatlarini global iqtisodiy maydonda ilgari suradi."
       },
       {
         "icon": "📺",
         "name": "BIZNES TV",
-        "desc": "Biznes, iqtisodiyot, investitsiya va bozor tahlillarini ommaga sodda, sifatli va professional formatda yetkazuvchi zamonaviy telemedia platforma."
+        "desc": "Biznes, iqtisodiyot, investitsiya va bozor tahlillarini ommaga sodda, sifatli va professional formatda yetkazuvçi zamonaviy telemedia platforma."
       },
       {
         "icon": "📚",
         "name": "IQTISODIY ILMIY KENGASH",
-        "desc": "Iqtisodiy siyosat, islohotlar, sanoatlashtirish, investitsiya va strategik loyihalar bo'yicha ilmiy-tahliliy xulosalar ishlab chiqaradi. Ekspertiza va tavsiyalar orqali samarali qarorlarga ko'maklashadi."
+        "desc": "Iqtisodiy siyosat, islohotlar, sanoatlaştiriş, investitsiya va strategik loyihalar bõyiça ilmiy-tahliliy xulosalar işlab çiqaradi. Ekspertiza va tavsiyalar orqali samarali qarorlarga kõmaklaşadi."
       },
       {
         "icon": "🤲",
         "name": "TAYANCH CHARITABLE TRUST",
-        "desc": "Ijtimoiy himoyaga muhtoj insonlar, ta'lim, sog'liqni saqlash va xayriya tashabbuslarini tizimli qo'llab-quvvatlaydi. Insonparvarlik va ijtimoiy mas'uliyat orqali jamiyatda ijobiy o'zgarishlar yaratadi."
+        "desc": "Ijtimoiy himoyaga muhtoj insonlar, ta'lim, soğliqni saqlaş va xayriya taşabbuslarini tizimli qõllab-quvvatlaydi. Insonparvarlik va ijtimoiy mas'uliyat orqali jamiyatda ijobiy õzgarişlar yaratadi."
       },
       {
         "icon": "🐫",
         "name": "YANGI BUYUK IPAK YO'LI",
-        "desc": "O'zbekistonning tarixiy savdo yo'llari, transport-logistika salohiyati, madaniy almashinuv va mintaqaviy iqtisodiy integratsiyasini kuchaytiradi. Mintaqa va dunyoni bog'lovchi strategik loyiha."
+        "desc": "Õzbekistonning tarixiy savdo yõllari, transport-logistika salohiyati, madaniy almaşinuv va mintaqaviy iqtisodiy integratsiyasini kuçaytiradi. Mintaqa va dunyoni boğlovçi strategik loyiha."
       },
       {
         "icon": "📱",
         "name": "YA GO",
-        "desc": "Yoshlar va aholi uchun zamonaviy mobil xizmatlar, raqamli servislar va qulay yechimlarni birlashtiruvchi innovatsion platforma. Kundalik hayotni oson va samarali qiladi."
+        "desc": "Yoşlar va aholi uçun zamonaviy mobil xizmatlar, raqamli servislar va qulay yeçimlarni birlaştiruvçi innovatsion platforma. Kundalik hayotni oson va samarali qiladi."
       },
       {
         "icon": "💬",
         "name": "FIKRAT TV",
-        "desc": "Jamiyatdagi muhim masalalar, islohotlar, ekspert fikrlari va strategik g'oyalarni yorituvchi intellektual formatdagi media maydon."
+        "desc": "Jamiyatdagi muhim masalalar, islohotlar, ekspert fikrlari va strategik ğoyalarni yorituvçi intellektual formatdagi media maydon."
       }
     ]
   },
   "blocks": {
-    "title": "FR / BR / PR / GR — to'rt funksional blok",
-    "lead": "Assambleyaning to'rt funksional bloki. Har biri loyihalarni alohida imkoniyat maydoniga ulaydi: xalqaro, biznes, jamoatchilik va davlat.",
+    "title": "FR / BR / PR / GR — tõrt funksional blok",
+    "lead": "Assambleyaning tõrt funksional bloki. Har biri loyihalarni alohida imkoniyat maydoniga ulaydi: xalqaro, biznes, jamoatçilik va davlat.",
     "more": "Batafsil",
-    "backToList": "Barcha bloklar",
-    "indexNote": "Bloklar Assambleya modelining o'rtasida turadi: 50 ta soha uyushmasi tadbirkorni olib keladi, ehtiyoj aniqlanadi, loyiha yechim beradi — bloklar esa shu yechim uchun kerakli eshiklarni ochadi. Natija AI MediaNet orqali yoritiladi.",
-    "roleTitle": "Nima bilan shug'ullanadi",
-    "partnersTitle": "Kim bilan ishlaydi",
-    "projectsTitle": "Bog'liq loyihalar",
-    "projectsNote": "Har bir loyiha to'rt blok orqali ishlaydi — bu ro'yxatda shu blok eng ko'p xizmat qiladigan loyihalar keltirilgan.",
-    "allProjects": "Barcha loyihalar",
+    "backToList": "Barça bloklar",
+    "indexNote": "Bloklar Assambleya modelining õrtasida turadi: 50 ta soha uyuşmasi tadbirkorni olib keladi, ehtiyoj aniqlanadi, loyiha yeçim beradi — bloklar esa şu yeçim uçun kerakli eşiklarni oçadi. Natija AI MediaNet orqali yoritiladi.",
+    "roleTitle": "Nima bilan şuğullanadi",
+    "partnersTitle": "Kim bilan işlaydi",
+    "projectsTitle": "Boğliq loyihalar",
+    "projectsNote": "Har bir loyiha tõrt blok orqali işlaydi — bu rõyxatda şu blok eng kõp xizmat qiladigan loyihalar keltirilgan.",
+    "allProjects": "Barça loyihalar",
     "outcomesTitle": "Qanday natija beradi",
-    "siblingsTitle": "To'rt blok",
-    "ctaTitle": "{code} bloki bo'yicha hamkorlik",
-    "ctaLead": "Taklif, loyiha yoki hamkorlik bo'yicha murojaat qiling — mas'ul yo'nalish bilan bog'laymiz.",
-    "ctaBtn": "Bog'lanish",
+    "siblingsTitle": "Tõrt blok",
+    "ctaTitle": "{code} bloki bõyiça hamkorlik",
+    "ctaLead": "Taklif, loyiha yoki hamkorlik bõyiça murojaat qiling — mas'ul yõnaliş bilan boğlaymiz.",
+    "ctaBtn": "Boğlaniş",
     "items": [
       {
         "code": "FR",
         "name": "Foreign Relations",
         "short": "Xalqaro aloqalar",
-        "tagline": "Xalqaro hamkorlar, elchixonalar va savdo-sanoat palatalari bilan ishlaydi.",
-        "lead": "FR bloki Assambleyani tashqi dunyoga ulaydi: xalqaro moliya institutlari, elchixonalar, savdo-sanoat palatalari, xorijiy kompaniyalar va investorlar bilan tizimli aloqa o'rnatadi. Har bir loyiha shu blok orqali xalqaro imkoniyatga chiqadi.",
+        "tagline": "Xalqaro hamkorlar, elçixonalar va savdo-sanoat palatalari bilan işlaydi.",
+        "lead": "FR bloki Assambleyani taşqi dunyoga ulaydi: xalqaro moliya institutlari, elçixonalar, savdo-sanoat palatalari, xorijiy kompaniyalar va investorlar bilan tizimli aloqa õrnatadi. Har bir loyiha şu blok orqali xalqaro imkoniyatga çiqadi.",
         "role": [
           "Xalqaro moliya institutlari va investorlar bilan muzokaralar olib boradi",
-          "Elchixonalar va savdo-sanoat palatalari bilan doimiy aloqani yuritadi",
-          "Xorijiy kompaniyalar bilan hamkorlik va texnologiya almashinuvini tashkil etadi",
-          "Eksport bozorlarini ochish va xalqaro shartnomalarni tayyorlashda ko'mak beradi",
-          "O'zbekiston manfaatlarini global iqtisodiy maydonda ilgari suradi"
+          "Elçixonalar va savdo-sanoat palatalari bilan doimiy aloqani yuritadi",
+          "Xorijiy kompaniyalar bilan hamkorlik va texnologiya almaşinuvini taşkil etadi",
+          "Eksport bozorlarini oçiş va xalqaro şartnomalarni tayyorlaşda kõmak beradi",
+          "Õzbekiston manfaatlarini global iqtisodiy maydonda ilgari suradi"
         ],
         "partners": [
           "Xalqaro moliya institutlari: EBRD",
           "Xalqaro kompaniyalar: Samsung C&T, LG, Huawei, Japan Development Institute",
-          "Elchixonalar va savdo-sanoat palatalari",
-          "Tashqi ishlar vazirligi",
+          "Elçixonalar va savdo-sanoat palatalari",
+          "Taşqi işlar vazirligi",
           "Xorijiy investorlar va fondlar"
         ],
         "outcomes": [
-          "Xalqaro hamkorlik va qo'shma loyihalar",
-          "Xorijiy investitsiya va moliyalashtirish",
-          "Global bozorlarga chiqish",
-          "Texnologiya va tajriba almashinuvi",
-          "O'zbekistonning xalqaro nufuzi"
+          "Xalqaro hamkorlik va qõşma loyihalar",
+          "Xorijiy investitsiya va moliyalaştiriş",
+          "Global bozorlarga çiqiş",
+          "Texnologiya va tajriba almaşinuvi",
+          "Õzbekistonning xalqaro nufuzi"
         ]
       },
       {
         "code": "BR",
         "name": "Business Relations",
         "short": "Biznes aloqalari",
-        "tagline": "Tadbirkorlar, kompaniyalar, investorlar, xizmat ko'rsatuvchilar va uyushmalar bilan ishlaydi.",
-        "lead": "BR bloki Assambleyaning ichki dvigateli: 50 ta soha uyushmasi, tadbirkorlar, kompaniyalar va investorlarni bitta tarmoqqa bog'laydi, ehtiyojni aniqlab, unga mos xizmat va yechimni topadi.",
+        "tagline": "Tadbirkorlar, kompaniyalar, investorlar, xizmat kõrsatuvçilar va uyuşmalar bilan işlaydi.",
+        "lead": "BR bloki Assambleyaning içki dvigateli: 50 ta soha uyuşmasi, tadbirkorlar, kompaniyalar va investorlarni bitta tarmoqqa boğlaydi, ehtiyojni aniqlab, unga mos xizmat va yeçimni topadi.",
         "role": [
-          "50 ta soha uyushmasi va ularning a'zolari bilan bevosita ishlaydi",
-          "Tadbirkorlarning ehtiyojini aniqlaydi va yechimga ulaydi",
-          "Investor bilan loyihani, xaridor bilan ishlab chiqaruvchini bog'laydi",
-          "Bank, konsalting va xizmat ko'rsatuvchi tashkilotlar bilan shartlarni kelishadi",
-          "Yirik va raqobatbardosh milliy kompaniyalar shakllanishiga ko'mak beradi"
+          "50 ta soha uyuşmasi va ularning a'zolari bilan bevosita işlaydi",
+          "Tadbirkorlarning ehtiyojini aniqlaydi va yeçimga ulaydi",
+          "Investor bilan loyihani, xaridor bilan işlab çiqaruvçini boğlaydi",
+          "Bank, konsalting va xizmat kõrsatuvçi taşkilotlar bilan şartlarni kelişadi",
+          "Yirik va raqobatbardoş milliy kompaniyalar şakllanişiga kõmak beradi"
         ],
         "partners": [
-          "50 ta soha uyushmasi va ularning a'zolari",
+          "50 ta soha uyuşmasi va ularning a'zolari",
           "Banklar: Ipoteka Bank (OTP), TBC Bank, Apexbank, Uzbekleasing",
           "Konsalting: KPMG, Solvex Consulting, Specto Consulting",
-          "Investorlar va venchur fondlari",
-          "Xizmat ko'rsatuvchi kompaniyalar"
+          "Investorlar va vençur fondlari",
+          "Xizmat kõrsatuvçi kompaniyalar"
         ],
         "outcomes": [
-          "Investitsiya va moliyalashtirish",
+          "Investitsiya va moliyalaştiriş",
           "Yangi bozor va buyurtmalar",
-          "Professional xizmatlarga kirish",
-          "Barqaror biznes o'sishi",
+          "Professional xizmatlarga kiriş",
+          "Barqaror biznes õsişi",
           "Turli investitsiya platformalari"
         ]
       },
       {
         "code": "PR",
         "name": "Public Relations",
-        "short": "Jamoatchilik bilan aloqalar",
-        "tagline": "Media, jamoatchilik ishonchi va AI MediaNet qatlamini boshqaradi.",
-        "lead": "PR bloki natijani ko'rinadigan qiladi: Assambleya va uyushmalar faoliyatini media va ijtimoiy tarmoqlarda yoritadi, AI MediaNet orqali auditoriya kayfiyati va kontent samaradorligini tahlil qiladi.",
+        "short": "Jamoatçilik bilan aloqalar",
+        "tagline": "Media, jamoatçilik işonçi va AI MediaNet qatlamini boşqaradi.",
+        "lead": "PR bloki natijani kõrinadigan qiladi: Assambleya va uyuşmalar faoliyatini media va ijtimoiy tarmoqlarda yoritadi, AI MediaNet orqali auditoriya kayfiyati va kontent samaradorligini tahlil qiladi.",
         "role": [
-          "Assambleya va uyushmalar faoliyatini media va ijtimoiy tarmoqlarda yoritadi",
+          "Assambleya va uyuşmalar faoliyatini media va ijtimoiy tarmoqlarda yoritadi",
           "AI MediaNet orqali kontent rejasi, monitoring va tahlilni yuritadi",
           "Tadbirkorlarning real natijalari haqida hikoyalar tayyorlaydi",
-          "Brend va ijtimoiy ishonch kapitalini mustahkamlaydi",
+          "Brend va ijtimoiy işonç kapitalini mustahkamlaydi",
           "Milliy va xalqaro qamrovni kengaytiradi"
         ],
         "partners": [
@@ -390,80 +390,80 @@
           "Media loyihalar: Reportaj GO, Biznes TV, Fikrat TV",
           "Ommaviy axborot vositalari va jurnalistlar",
           "Ijtimoiy tarmoq platformalari",
-          "Assambleya rahbarlari va uyushma sahifalari"
+          "Assambleya rahbarlari va uyuşma sahifalari"
         ],
         "outcomes": [
-          "Jamoatchilik ishonchi",
-          "Biznes obro'si va brend kapitali",
+          "Jamoatçilik işonçi",
+          "Biznes obrõsi va brend kapitali",
           "Kengaygan milliy va xalqaro qamrov",
           "Iqtisodiy optimizm va faollik",
-          "Shaffoflik va ochiq hisobot"
+          "Şaffoflik va oçiq hisobot"
         ]
       },
       {
         "code": "GR",
         "name": "Government Relations",
         "short": "Davlat bilan aloqalar",
-        "tagline": "Davlat organlari, milliy dasturlar, ruxsatlar, siyosat va strategik qo'llovni muvofiqlashtiradi.",
-        "lead": "GR bloki biznes ehtiyojini davlat imkoniyati bilan bog'laydi: vazirliklar, agentliklar va hokimliklar bilan ishlaydi, milliy dasturlar, ruxsat va siyosat masalalarida muvofiqlashtirishni yuritadi.",
+        "tagline": "Davlat organlari, milliy dasturlar, ruxsatlar, siyosat va strategik qõllovni muvofiqlaştiradi.",
+        "lead": "GR bloki biznes ehtiyojini davlat imkoniyati bilan boğlaydi: vazirliklar, agentliklar va hokimliklar bilan işlaydi, milliy dasturlar, ruxsat va siyosat masalalarida muvofiqlaştirişni yuritadi.",
         "role": [
-          "Vazirliklar, agentliklar va hokimliklar bilan tizimli ishlaydi",
+          "Vazirliklar, agentliklar va hokimliklar bilan tizimli işlaydi",
           "Tadbirkorlar muammosini davlat organlariga yetkazadi",
-          "Milliy dasturlar bilan biznes tashabbuslarini bog'laydi",
-          "Ruxsat, litsenziya va tartibga solish masalalarida ko'mak beradi",
-          "Strategik davlat qo'llovini loyihalarga jalb qiladi"
+          "Milliy dasturlar bilan biznes taşabbuslarini boğlaydi",
+          "Ruxsat, litsenziya va tartibga soliş masalalarida kõmak beradi",
+          "Strategik davlat qõllovini loyihalarga jalb qiladi"
         ],
         "partners": [
           "Loyiha samaradorligi agentligi",
           "Investitsiyalar, sanoat va savdo vazirligi",
           "Iqtisodiyot va moliya vazirligi",
           "Biznes ombudsmani",
-          "Hokimliklar va hududiy boshqarmalar"
+          "Hokimliklar va hududiy boşqarmalar"
         ],
         "outcomes": [
-          "Strategik davlat qo'llovi",
+          "Strategik davlat qõllovi",
           "Real ehtiyojga asoslangan dasturlar",
           "Tezroq ruxsat va aniq tartib",
-          "Yangi ish o'rinlari va soliq tushumi",
-          "Davlat va biznes o'rtasida ishonch"
+          "Yangi iş õrinlari va soliq tuşumi",
+          "Davlat va biznes õrtasida işonç"
         ]
       }
     ]
   },
   "media": {
     "title": "Media loyihalar",
-    "lead": "Assambleyaning media loyihalari — reportajlar, biznes va iqtisodiyot ko‘rsatuvlari, tahliliy suhbatlar. Yangi video chiqishi bilan shu yerda paydo bo‘ladi.",
+    "lead": "Assambleyaning media loyihalari — reportajlar, biznes va iqtisodiyot kõrsatuvlari, tahliliy suhbatlar. Yangi video çiqişi bilan şu yerda paydo bõladi.",
     "projectsTitle": "Media loyihalarimiz",
-    "latestTitle": "So‘nggi videolar",
-    "latestLead": "Barcha kanallardagi eng yangi videolar — ro‘yxat o‘zi yangilanadi.",
+    "latestTitle": "Sõnggi videolar",
+    "latestLead": "Barça kanallardagi eng yangi videolar — rõyxat õzi yangilanadi.",
     "videoCount": "{count} video",
     "soon": "tez orada",
-    "empty": "Videolar hozircha ko‘rsatilmayapti. Kanallar ulangach, ular shu yerda o‘zi paydo bo‘ladi.",
-    "play": "Videoni ko‘rish",
-    "watchOn": "YouTube’da ko‘rish"
+    "empty": "Videolar hozirça kõrsatilmayapti. Kanallar ulangaç, ular şu yerda õzi paydo bõladi.",
+    "play": "Videoni kõriş",
+    "watchOn": "YouTube’da kõriş"
   },
   "news": {
     "title": "Yangiliklar",
-    "lead": "Assambleya faoliyati, strategik loyihalar, hamkorlik va media tashabbuslari bo'yicha so'nggi xabarlar.",
-    "readMore": "Batafsil o'qish",
-    "backToList": "Barcha yangiliklar",
-    "relatedTitle": "Boshqa yangiliklar",
-    "empty": "Hozircha yangiliklar yo'q."
+    "lead": "Assambleya faoliyati, strategik loyihalar, hamkorlik va media taşabbuslari bõyiça sõnggi xabarlar.",
+    "readMore": "Batafsil õqiş",
+    "backToList": "Barça yangiliklar",
+    "relatedTitle": "Boşqa yangiliklar",
+    "empty": "Hozirça yangiliklar yõq."
   },
   "about": {
     "title": "Biz haqimizda",
-    "lead": "O'zbekiston Iqtisodiyot Assambleyasi — milliy iqtisodiy integrator: davlat, biznes, ilm-fan, xalqaro hamkorlar va media imkoniyatlarini bitta natija atrofida birlashtiradi.",
+    "lead": "Õzbekiston Iqtisodiyot Assambleyasi — milliy iqtisodiy integrator: davlat, biznes, ilm-fan, xalqaro hamkorlar va media imkoniyatlarini bitta natija atrofida birlaştiradi.",
     "chairmanLabel": "Assambleya raisi",
     "chairmanName": "Muhtor Umarov",
-    "chairmanRole": "O‘zbekiston Iqtisodiyot Assambleyasi Raisi",
-    "introTitle": "Assambleya haqida qisqacha",
-    "intro": "2021-yil 10-fevralda rasmiy ro'yxatdan o'tgan jamoatchilik-iqtisodiy platforma. Yaponiyaning Keidanren modelidan ilhomlangan holda, Yangi O'zbekiston iqtisodiy rivojlanishiga amaliy xizmat qilishga qaratilgan.",
+    "chairmanRole": "Õzbekiston Iqtisodiyot Assambleyasi Raisi",
+    "introTitle": "Assambleya haqida qisqaça",
+    "intro": "2021-yil 10-fevralda rasmiy rõyxatdan õtgan jamoatçilik-iqtisodiy platforma. Yaponiyaning Keidanren modelidan ilhomlangan holda, Yangi Õzbekiston iqtisodiy rivojlanişiga amaliy xizmat qilişga qaratilgan.",
     "principle": "ASOS — inson. MAQSAD — taraqqiyot.",
-    "introNote": "Assambleya tadbirkorlarni, uyushmalarni, davlat organlarini, investorlarni va xalqaro hamkorlarni bitta natijaga yo'naltiruvchi GPPP ekotizim sifatida ishlaydi.",
+    "introNote": "Assambleya tadbirkorlarni, uyuşmalarni, davlat organlarini, investorlarni va xalqaro hamkorlarni bitta natijaga yõnaltiruvçi GPPP ekotizim sifatida işlaydi.",
     "highlights": [
       {
         "value": "50+",
-        "label": "uyushma tarmog'i"
+        "label": "uyuşma tarmoği"
       },
       {
         "value": "20",
@@ -471,37 +471,37 @@
       },
       {
         "value": "FR/BR/PR/GR",
-        "label": "boshqaruv bloklari"
+        "label": "boşqaruv bloklari"
       },
       {
         "value": "AI MediaNet",
-        "label": "yoritish va ta'sir"
+        "label": "yoritiş va ta'sir"
       }
     ],
     "roleTitle": "Strategik rol",
     "role": [
-      "Tadbirkorlar ehtiyojini aniqlash va yechimga ulash",
-      "Davlat dasturlari bilan biznes tashabbuslarini bog'lash",
-      "Investitsiya, eksport, sanoat va innovatsiyani integratsiya qilish",
-      "Jamiyatda iqtisodiy faollik va ishonch yaratish"
+      "Tadbirkorlar ehtiyojini aniqlaş va yeçimga ulaş",
+      "Davlat dasturlari bilan biznes taşabbuslarini boğlaş",
+      "Investitsiya, eksport, sanoat va innovatsiyani integratsiya qiliş",
+      "Jamiyatda iqtisodiy faollik va işonç yaratiş"
     ],
     "missionSectionTitle": "Missiya va asosiy maqsad",
-    "missionSectionLead": "Missiya — nima uchun mavjudmiz. Maqsad — qaysi natijaga xizmat qilamiz.",
+    "missionSectionLead": "Missiya — nima uçun mavjudmiz. Maqsad — qaysi natijaga xizmat qilamiz.",
     "missionTitle": "Missiya",
-    "mission": "O'zbekiston iqtisodiyotini rivojlantirish, tadbirkorlarni qo'llab-quvvatlash, investitsiya, eksport, sanoat, innovatsiya va inson kapitalini rivojlantirish orqali Yangi O'zbekistonning iqtisodiy renessansiga hissa qo'shish.",
+    "mission": "Õzbekiston iqtisodiyotini rivojlantiriş, tadbirkorlarni qõllab-quvvatlaş, investitsiya, eksport, sanoat, innovatsiya va inson kapitalini rivojlantiriş orqali Yangi Õzbekistonning iqtisodiy renessansiga hissa qõşiş.",
     "goalTitle": "Asosiy maqsad",
-    "goal": "O'zbekistonni Markaziy Osiyodagi yirik iqtisodiy, sanoat, savdo, investitsion va innovatsion markazga aylantirishda amaliy integratsion platforma bo'lish.",
-    "goalNote": "Maqsad faqat konsepsiya emas — u 50 ta uyushma, 20 ta loyiha, FR/BR/PR/GR tizimi va AI MediaNet orqali amaliy mexanizmga aylantiriladi.",
+    "goal": "Õzbekistonni Markaziy Osiyodagi yirik iqtisodiy, sanoat, savdo, investitsion va innovatsion markazga aylantirişda amaliy integratsion platforma bõliş.",
+    "goalNote": "Maqsad faqat konsepsiya emas — u 50 ta uyuşma, 20 ta loyiha, FR/BR/PR/GR tizimi va AI MediaNet orqali amaliy mexanizmga aylantiriladi.",
     "valuesTitle": "Qadriyatlar",
-    "valuesLead": "Assambleya faoliyatini yo'naltiruvchi beshta tayanch",
+    "valuesLead": "Assambleya faoliyatini yõnaltiruvçi beşta tayanç",
     "values": [
       {
-        "title": "Birlashuv",
-        "sub": "kuch"
+        "title": "Birlaşuv",
+        "sub": "kuç"
       },
       {
         "title": "Innovatsiya",
-        "sub": "rivojlanish"
+        "sub": "rivojlaniş"
       },
       {
         "title": "Investitsiya",
@@ -513,11 +513,11 @@
       },
       {
         "title": "Renessans",
-        "sub": "yuksalish"
+        "sub": "yuksaliş"
       }
     ],
-    "directionsTitle": "Ustuvor yo'nalishlar",
-    "directionsLead": "Assambleya faoliyatining asosiy tayanch yo'nalishlari",
+    "directionsTitle": "Ustuvor yõnalişlar",
+    "directionsLead": "Assambleya faoliyatining asosiy tayanç yõnalişlari",
     "directions": [
       "Ta'lim",
       "Innovatsiya",
@@ -525,7 +525,7 @@
       "Sanoat",
       "Fan",
       "Texnologiya",
-      "Ijtimoiy rivojlanish",
+      "Ijtimoiy rivojlaniş",
       "Xalqaro hamkorlik"
     ],
     "architectureTitle": "Strategik arxitektura",
@@ -535,7 +535,7 @@
     "architecture": [
       {
         "title": "Davlat",
-        "desc": "strategiya va qo'llov"
+        "desc": "strategiya va qõllov"
       },
       {
         "title": "Biznes",
@@ -546,97 +546,97 @@
         "desc": "tahlil va innovatsiya"
       },
       {
-        "title": "Jamoatchilik",
-        "desc": "ishonch va ishtirok"
+        "title": "Jamoatçilik",
+        "desc": "işonç va iştirok"
       },
       {
         "title": "Media va AI",
-        "desc": "yoritish va boshqaruv"
+        "desc": "yoritiş va boşqaruv"
       },
       {
         "title": "Xalqaro hamkorlar",
         "desc": "investor va texnologiya"
       }
     ],
-    "architectureNote": "Assambleya barcha iqtisodiy kuchlarni yagona milliy natijaga yo'naltiradi.",
-    "mechanismTitle": "Assambleyaning ishlash mexanizmi",
-    "mechanismLead": "Uzluksiz aylanma: ehtiyoj — yechim — yoritish — ishonch — yangi ishtirokchilar",
+    "architectureNote": "Assambleya barça iqtisodiy kuçlarni yagona milliy natijaga yõnaltiradi.",
+    "mechanismTitle": "Assambleyaning işlaş mexanizmi",
+    "mechanismLead": "Uzluksiz aylanma: ehtiyoj — yeçim — yoritiş — işonç — yangi iştirokçilar",
     "mechanism": [
       {
-        "title": "50 ta uyushma",
+        "title": "50 ta uyuşma",
         "desc": "Tadbirkorlar bilan bevosita aloqa"
       },
       {
         "title": "Ehtiyojlar",
-        "desc": "Muammo va takliflarni yig'ish"
+        "desc": "Muammo va takliflarni yiğiş"
       },
       {
         "title": "Loyihalar",
-        "desc": "Amaliy xizmatlar va yechimlar"
+        "desc": "Amaliy xizmatlar va yeçimlar"
       },
       {
         "title": "FR/BR/PR/GR",
-        "desc": "Tizimli qo'llab-quvvatlash"
+        "desc": "Tizimli qõllab-quvvatlaş"
       },
       {
         "title": "AI MediaNet",
-        "desc": "Yoritish va ta'sir"
+        "desc": "Yoritiş va ta'sir"
       },
       {
         "title": "Natija",
-        "desc": "Ishonch va yangi imkoniyat"
+        "desc": "Işonç va yangi imkoniyat"
       }
     ],
     "formulaTitle": "Asosiy formula",
-    "formula": "50 ta uyushma tadbirkorni olib keladi, Assambleya loyihalari unga xizmat qiladi, FR xalqaro imkoniyat beradi, BR biznesni ulaydi, GR davlat bilan muvofiqlashtiradi, PR va AI MediaNet esa natijani xalqqa ko'rsatadi.",
-    "blocksTitle": "FR / BR / PR / GR — to'rt funksional qanot",
-    "blocksLead": "Har bir loyiha shu bloklar orqali xalqaro, biznes, jamoatchilik va davlat imkoniyatlariga ulanadi",
+    "formula": "50 ta uyuşma tadbirkorni olib keladi, Assambleya loyihalari unga xizmat qiladi, FR xalqaro imkoniyat beradi, BR biznesni ulaydi, GR davlat bilan muvofiqlaştiradi, PR va AI MediaNet esa natijani xalqqa kõrsatadi.",
+    "blocksTitle": "FR / BR / PR / GR — tõrt funksional qanot",
+    "blocksLead": "Har bir loyiha şu bloklar orqali xalqaro, biznes, jamoatçilik va davlat imkoniyatlariga ulanadi",
     "blocks": [
       {
         "code": "FR",
         "title": "Foreign Relations",
-        "desc": "Xalqaro hamkorlar, investorlar, elchixonalar, xorijiy kompaniyalar va moliya institutlari bilan aloqalar."
+        "desc": "Xalqaro hamkorlar, investorlar, elçixonalar, xorijiy kompaniyalar va moliya institutlari bilan aloqalar."
       },
       {
         "code": "BR",
         "title": "Business Relations",
-        "desc": "Tadbirkorlar, kompaniyalar, uyushmalar, investorlar va xizmat ko'rsatuvchi tashkilotlar bilan ishlash."
+        "desc": "Tadbirkorlar, kompaniyalar, uyuşmalar, investorlar va xizmat kõrsatuvçi taşkilotlar bilan işlaş."
       },
       {
         "code": "PR",
         "title": "Public Relations",
-        "desc": "Jamoatchilik, media, brend, ijtimoiy ishonch, Chaqiriq va Reportaj GO orqali kommunikatsiya."
+        "desc": "Jamoatçilik, media, brend, ijtimoiy işonç, Çaqiriq va Reportaj GO orqali kommunikatsiya."
       },
       {
         "code": "GR",
         "title": "Government Relations",
-        "desc": "Vazirliklar, agentliklar, hokimliklar, strategik dasturlar va davlat bilan muvofiqlashtirish."
+        "desc": "Vazirliklar, agentliklar, hokimliklar, strategik dasturlar va davlat bilan muvofiqlaştiriş."
       }
     ],
-    "mediaTitle": "AI MediaNet — yoritish, tahlil va ta'sir qatlami",
-    "mediaLead": "Assambleya natijalari ijtimoiy tarmoqlar, media va AI yordamida ko'rinadigan kapitalga aylanadi",
-    "mediaTagline": "Kontent reja • monitoring • ijtimoiy ishonch • media ta'sir • liderlar va uyushmalar sahifalari",
-    "mediaSummary": "AI MediaNet Assambleya faoliyatini faqat yoritmaydi — auditoriya kayfiyati, kontent samaradorligi va iqtisodiy ishonchni ham kuzatadi.",
+    "mediaTitle": "AI MediaNet — yoritiş, tahlil va ta'sir qatlami",
+    "mediaLead": "Assambleya natijalari ijtimoiy tarmoqlar, media va AI yordamida kõrinadigan kapitalga aylanadi",
+    "mediaTagline": "Kontent reja • monitoring • ijtimoiy işonç • media ta'sir • liderlar va uyuşmalar sahifalari",
+    "mediaSummary": "AI MediaNet Assambleya faoliyatini faqat yoritmaydi — auditoriya kayfiyati, kontent samaradorligi va iqtisodiy işonçni ham kuzatadi.",
     "media": [
       {
-        "title": "Loyihalar yoritilishi",
-        "desc": "Har bir loyiha bo'yicha doimiy kontent oqimi"
+        "title": "Loyihalar yoritilişi",
+        "desc": "Har bir loyiha bõyiça doimiy kontent oqimi"
       },
       {
         "title": "Tadbirkor hikoyalari",
-        "desc": "Real muvaffaqiyatlarni ko'rsatish"
+        "desc": "Real muvaffaqiyatlarni kõrsatiş"
       },
       {
         "title": "FR/BR/PR/GR natijalari",
-        "desc": "Ishonch va shaffoflik"
+        "desc": "Işonç va şaffoflik"
       },
       {
         "title": "Tahlil va monitoring",
-        "desc": "Qaysi mavzu ta'sirli ekanini aniqlash"
+        "desc": "Qaysi mavzu ta'sirli ekanini aniqlaş"
       },
       {
         "title": "Brend kapitali",
-        "desc": "Assambleya obro'sini oshirish"
+        "desc": "Assambleya obrõsini oşiriş"
       }
     ],
     "partnersTitle": "Hamkorlar ekotizimi",
@@ -685,70 +685,70 @@
         ]
       }
     ],
-    "valueTitle": "Natija: davlat, biznes, investor va jamiyat uchun qiymat",
-    "valueLead": "Har bir manfaatdor tomon uchun alohida foyda, lekin umumiy natija — barqaror iqtisodiy o'sish",
+    "valueTitle": "Natija: davlat, biznes, investor va jamiyat uçun qiymat",
+    "valueLead": "Har bir manfaatdor tomon uçun alohida foyda, lekin umumiy natija — barqaror iqtisodiy õsiş",
     "valueItems": [
       {
-        "title": "Davlat uchun",
-        "desc": "Tadbirkor muammolarini tizimli ko'rish, strategik dasturlarni biznes ehtiyojlari bilan bog'lash, iqtisodiy faollikni oshirish."
+        "title": "Davlat uçun",
+        "desc": "Tadbirkor muammolarini tizimli kõriş, strategik dasturlarni biznes ehtiyojlari bilan boğlaş, iqtisodiy faollikni oşiriş."
       },
       {
-        "title": "Tadbirkor uchun",
-        "desc": "Investitsiya, eksport, kadr, media, konsalting, davlat bilan ishlash va xalqaro hamkorlikka chiqish imkoniyati."
+        "title": "Tadbirkor uçun",
+        "desc": "Investitsiya, eksport, kadr, media, konsalting, davlat bilan işlaş va xalqaro hamkorlikka çiqiş imkoniyati."
       },
       {
-        "title": "Investor uchun",
-        "desc": "Ishonchli kompaniyalar, tayyor loyihalar, hamkorlik kanali va lokal ekotizimga kirish nuqtasi."
+        "title": "Investor uçun",
+        "desc": "Işonçli kompaniyalar, tayyor loyihalar, hamkorlik kanali va lokal ekotizimga kiriş nuqtasi."
       },
       {
-        "title": "Jamiyat uchun",
-        "desc": "Yangi ish o'rinlari, iqtisodiy optimizm, yoshlar va ayollar faolligi, innovatsion muhit va ijtimoiy ishonch."
+        "title": "Jamiyat uçun",
+        "desc": "Yangi iş õrinlari, iqtisodiy optimizm, yoşlar va ayollar faolligi, innovatsion muhit va ijtimoiy işonç."
       }
     ],
-    "motto": "Bir maqsad — bir yo'l — bir kelajak!",
+    "motto": "Bir maqsad — bir yõl — bir kelajak!",
     "slogan": "Buyuk kelajakni birga quramiz!"
   },
   "contact": {
     "title": "Aloqa",
-    "lead": "Savol, taklif yoki hamkorlik bo'yicha biz bilan bog'laning.",
+    "lead": "Savol, taklif yoki hamkorlik bõyiça biz bilan boğlaning.",
     "addressTitle": "Manzil",
     "phoneTitle": "Telefon",
     "emailTitle": "Email",
     "mapTitle": "Xaritada",
     "socialTitle": "Ijtimoiy tarmoqlar",
-    "socialSoon": "Havolalar tez orada qo'shiladi",
-    "formTitle": "Xabar yuborish",
+    "socialSoon": "Havolalar tez orada qõşiladi",
+    "formTitle": "Xabar yuboriş",
     "formName": "Ismingiz",
     "formEmail": "Email",
     "formPhone": "Telefon raqamingiz",
     "formMessage": "Xabaringiz",
-    "formSubmit": "Yuborish",
+    "formSubmit": "Yuboriş",
     "formSending": "Yuborilmoqda…",
-    "formNote": "Email yoki telefon raqamingizdan birini qoldiring — shu orqali javob beramiz.",
-    "formSent": "Xabaringiz yuborildi. Tez orada siz bilan bog‘lanamiz — rahmat!",
+    "formNote": "Email yoki telefon raqamingizdan birini qoldiring — şu orqali javob beramiz.",
+    "formSent": "Xabaringiz yuborildi. Tez orada siz bilan boğlanamiz — rahmat!",
     "formNeedContact": "Email yoki telefon raqamingizdan kamida bittasini kiriting.",
-    "formFailed": "Xabarni yuborib bo‘lmadi. Birozdan so‘ng qayta urinib ko‘ring.",
-    "formThrottled": "Juda ko‘p urinish bo‘ldi. Bir ozdan so‘ng qayta urinib ko‘ring."
+    "formFailed": "Xabarni yuborib bõlmadi. Birozdan sõng qayta urinib kõring.",
+    "formThrottled": "Juda kõp uriniş bõldi. Bir ozdan sõng qayta urinib kõring."
   },
   "footer": {
-    "about": "O'zbekiston Iqtisodiyot Assambleyasi — barqaror iqtisodiyot, innovatsiya va inson kapitalini rivojlantiruvchi platforma.",
-    "sections": "Bo'limlar",
+    "about": "Õzbekiston Iqtisodiyot Assambleyasi — barqaror iqtisodiyot, innovatsiya va inson kapitalini rivojlantiruvçi platforma.",
+    "sections": "Bõlimlar",
     "contact": "Aloqa",
-    "rights": "Barcha huquqlar himoyalangan."
+    "rights": "Barça huquqlar himoyalangan."
   },
   "admin": {
-    "title": "Boshqaruv paneli",
-    "dashboard": "Boshqaruv paneli",
-    "backToSite": "Saytga qaytish",
-    "backToDashboard": "Boshqaruv paneliga",
+    "title": "Boşqaruv paneli",
+    "dashboard": "Boşqaruv paneli",
+    "backToSite": "Saytga qaytiş",
+    "backToDashboard": "Boşqaruv paneliga",
     "newArticle": "Yangi yangilik",
-    "editArticle": "Yangilikni tahrirlash",
-    "viewOnSite": "Saytda ko‘rish",
-    "signOut": "Chiqish",
-    "signingOut": "Chiqilmoqda…",
-    "noArticles": "Hozircha yangilik yo‘q.",
+    "editArticle": "Yangilikni tahrirlaş",
+    "viewOnSite": "Saytda kõriş",
+    "signOut": "Çiqiş",
+    "signingOut": "Çiqilmoqda…",
+    "noArticles": "Hozirça yangilik yõq.",
     "noMatches": "Mos yangilik topilmadi.",
-    "search": "Qidirish…",
+    "search": "Qidiriş…",
     "noPhoto": "Rasmsiz",
     "photoCount": "{count} ta rasm",
     "nav": {
@@ -758,87 +758,87 @@
     },
     "stats": {
       "total": "Jami",
-      "published": "Chop etilgan",
+      "published": "Çop etilgan",
       "drafts": "Qoralama",
-      "gaps": "Tarjima yetishmaydi"
+      "gaps": "Tarjima yetişmaydi"
     },
     "filter": {
-      "all": "Barchasi",
-      "published": "Chop etilgan",
+      "all": "Barçasi",
+      "published": "Çop etilgan",
       "draft": "Qoralama",
       "gaps": "Tarjimasiz"
     },
     "status": {
-      "published": "Chop etilgan",
-      "scheduled": "Rejalashtirilgan",
+      "published": "Çop etilgan",
+      "scheduled": "Rejalaştirilgan",
       "draft": "Qoralama"
     },
     "login": {
-      "title": "Boshqaruv paneli",
-      "lead": "Davom etish uchun tizimga kiring.",
-      "username": "Foydalanuvchi nomi",
+      "title": "Boşqaruv paneli",
+      "lead": "Davom etiş uçun tizimga kiring.",
+      "username": "Foydalanuvçi nomi",
       "password": "Parol",
-      "signIn": "Kirish",
+      "signIn": "Kiriş",
       "signingIn": "Kirilmoqda…",
-      "throttled": "Juda ko‘p urinish. Bir ozdan keyin qayta urinib ko‘ring.",
-      "unreachable": "Server bilan bog‘lanib bo‘lmadi."
+      "throttled": "Juda kõp uriniş. Bir ozdan keyin qayta urinib kõring.",
+      "unreachable": "Server bilan boğlanib bõlmadi."
     },
     "form": {
       "settings": "Sozlamalar",
       "content": "Matn",
       "slug": "Havola (slug)",
       "slugHint": "Sarlavhadan avtomatik yaratiladi.",
-      "slugWarning": "O‘zgartirilsa, eski havolalar ishlamay qoladi.",
-      "slugRequired": "Manzil (slug) to‘ldirilishi shart. Sarlavhani kiriting yoki manzilni qo‘lda yozing.",
+      "slugWarning": "Õzgartirilsa, eski havolalar işlamay qoladi.",
+      "slugRequired": "Manzil (slug) tõldirilişi şart. Sarlavhani kiriting yoki manzilni qõlda yozing.",
       "date": "Sana",
-      "dateHint": "Kelajakdagi sana — rejalashtirilgan e’lon.",
+      "dateHint": "Kelajakdagi sana — rejalaştirilgan e’lon.",
       "icon": "Belgi",
       "iconHint": "Bitta emoji.",
-      "published": "Chop etilgan",
+      "published": "Çop etilgan",
       "titleField": "Sarlavha",
       "tag": "Rukn",
-      "excerpt": "Qisqacha",
-      "excerptHint": "Kartochkada ko‘rinadi.",
+      "excerpt": "Qisqaça",
+      "excerptHint": "Kartoçkada kõrinadi.",
       "body": "Matn",
-      "bodyHint": "Bo‘sh qator — yangi xat boshi.",
+      "bodyHint": "Bõş qator — yangi xat boşi.",
       "photosTitle": "Rasmlar",
-      "photosAfterSave": "Rasmlarni saqlagandan keyin qo‘shasiz.",
-      "create": "Yaratish",
-      "save": "Saqlash",
+      "photosAfterSave": "Rasmlarni saqlagandan keyin qõşasiz.",
+      "create": "Yaratiş",
+      "save": "Saqlaş",
       "saving": "Saqlanmoqda…",
-      "saveFailed": "Saqlab bo‘lmadi.",
+      "saveFailed": "Saqlab bõlmadi.",
       "saved": "Saqlandi.",
-      "serverError": "Server javob bermadi (xato {status}). Bir oz kutib, qayta urinib ko‘ring.",
-      "checkFields": "Ba’zi maydonlarni tekshiring — xatolar quyida ko‘rsatilgan.",
-      "delete": "O‘chirish",
+      "serverError": "Server javob bermadi (xato {status}). Bir oz kutib, qayta urinib kõring.",
+      "checkFields": "Ba’zi maydonlarni tekşiring — xatolar quyida kõrsatilgan.",
+      "delete": "Õçiriş",
       "confirmDelete": "Tasdiqlang",
-      "deleting": "O‘chirilmoqda…",
-      "deleteFailed": "O‘chirib bo‘lmadi."
+      "deleting": "Õçirilmoqda…",
+      "deleteFailed": "Õçirib bõlmadi."
     },
     "photos": {
       "title": "Rasmlar",
       "counter": "{count} / {limit}",
-      "firstIsCover": "birinchisi muqova",
+      "firstIsCover": "birinçisi muqova",
       "cover": "Muqova",
-      "choose": "Rasm tanlash",
+      "choose": "Rasm tanlaş",
       "uploading": "Yuklanmoqda…",
-      "hint": "Yana {room} ta qo‘shish mumkin.",
-      "full": "Chegaraga yetdingiz ({limit}).",
-      "toomany": "Ko‘pi bilan {limit} ta rasm. Yana {room} ta qo‘shishingiz mumkin.",
-      "toolarge": "{name} juda katta ({limit} MB dan oshmasin).",
-      "uploadFailed": "Yuklab bo‘lmadi.",
-      "saveFailed": "Saqlab bo‘lmadi.",
-      "deleteFailed": "O‘chirib bo‘lmadi.",
+      "hint": "Yana {room} ta qõşiş mumkin.",
+      "full": "Çegaraga yetdingiz ({limit}).",
+      "toomany": "Kõpi bilan {limit} ta rasm. Yana {room} ta qõşişingiz mumkin.",
+      "toolarge": "{name} juda katta ({limit} MB dan oşmasin).",
+      "uploadFailed": "Yuklab bõlmadi.",
+      "saveFailed": "Saqlab bõlmadi.",
+      "deleteFailed": "Õçirib bõlmadi.",
       "altPlaceholder": "Rasm tavsifi",
-      "remove": "O‘chirish",
+      "remove": "Õçiriş",
       "confirmRemove": "Tasdiqlang",
-      "removing": "O‘chirilmoqda…",
+      "removing": "Õçirilmoqda…",
       "moveUp": "Yuqoriga",
       "moveDown": "Pastga",
       "size": {
-        "full": "To‘liq",
+        "full": "Tõliq",
         "half": "Yarim",
-        "thumb": "Kichik"
+        "thumb": "Kiçik"
       }
     }
   }

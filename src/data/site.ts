@@ -25,12 +25,12 @@ export type SiteDetails = {
 
 export const site: Record<'uz' | 'ru' | 'en', SiteDetails> = {
   uz: {
-    name: "O'zbekiston Iqtisodiyot Assambleyasi",
+    name: "Õzbekiston Iqtisodiyot Assambleyasi",
     short: 'Assambleya',
-    tagline: "Yangi O'zbekiston — Yangi Renessans",
+    tagline: "Yangi Õzbekiston — Yangi Renessans",
     description:
-      "Birlashib, barqaror iqtisodiyot, innovatsiyalar va inson kapitalini rivojlantirish orqali Yangi O'zbekistonning yangi renessansini barpo etamiz.",
-    address: "Toshkent sh., Shayxontohur tumani, Furqat ko'chasi, 1",
+      "Birlaşib, barqaror iqtisodiyot, innovatsiyalar va inson kapitalini rivojlantiriş orqali Yangi Õzbekistonning yangi renessansini barpo etamiz.",
+    address: "Toşkent ş., Şayxontohur tumani, Furqat kõçasi, 1",
     email: 'info@assembly.uz',
     phone: '+998 77 3035665',
   },

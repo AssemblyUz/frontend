@@ -4,6 +4,7 @@ import {useState} from 'react';
 import {useTranslations} from 'next-intl';
 import {Link} from '@/i18n/navigation';
 import {articleStatus, type PanelArticleRow} from '@/lib/adminTypes';
+import {matchesUzbek} from '@/lib/uzLatin';
 import {StatusPill, TranslationGaps} from './Badges';
 
 type Filter = 'all' | 'published' | 'draft' | 'gaps';
@@ -26,9 +27,8 @@ export default function ArticleList({
     if (filter === 'gaps' && row.missing_translations.length === 0) return false;
 
     if (!query.trim()) return true;
-    const needle = query.trim().toLowerCase();
     return [row.title_uz, row.title_ru, row.title_en, row.slug].some((v) =>
-      v.toLowerCase().includes(needle),
+      matchesUzbek(v, query.trim()),
     );
   });
 

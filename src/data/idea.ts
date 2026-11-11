@@ -24,7 +24,7 @@ export type IdeaBlock =
 export type IdeaLocale = 'uz' | 'ru' | 'en';
 
 export const IDEA_TITLE: Record<IdeaLocale, string> = {
-  uz: '«Yangi Oʻzbekiston — Yangi Renessans»',
+  uz: '«Yangi Õzbekiston — Yangi Renessans»',
   ru: '«Новый Узбекистан — новый Ренессанс»',
   en: '“New Uzbekistan — New Renaissance”',
 };
@@ -34,67 +34,67 @@ export const IDEA_BLOCKS: Record<IdeaLocale, readonly IdeaBlock[]> = {
     {
       kind: 'paragraph',
       text:
-        '«Yangi Oʻzbekiston — Yangi Renessans» gʻoyasining bosh maqsadi — Oʻzbekistonni dunyoning yetakchi iqtisodiy, investitsiyaviy, innovatsion va ilmiy markazlaridan biriga aylantirishdir.',
+        '«Yangi Õzbekiston — Yangi Renessans» ğoyasining boş maqsadi — Õzbekistonni dunyoning yetakçi iqtisodiy, investitsiyaviy, innovatsion va ilmiy markazlaridan biriga aylantirişdir.',
     },
     {
       kind: 'paragraph',
       text:
-        'Mazkur gʻoya mamlakatimizning geografik joylashuvi, boy tabiiy resurslari, inson kapitali, tarixiy merosi, tadbirkorlik salohiyati va xalqaro hamkorlik imkoniyatlarini yagona strategik maqsad yoʻlida birlashtirishni nazarda tutadi.',
+        'Mazkur ğoya mamlakatimizning geografik joylaşuvi, boy tabiiy resurslari, inson kapitali, tarixiy merosi, tadbirkorlik salohiyati va xalqaro hamkorlik imkoniyatlarini yagona strategik maqsad yõlida birlaştirişni nazarda tutadi.',
     },
     {
       kind: 'list',
-      lead: 'Gʻoyani amalga oshirish orqali:',
+      lead: 'Ğoyani amalga oşiriş orqali:',
       items: [
-        'Oʻzbekiston Markaziy Osiyoning iqtisodiy markaziga aylantiriladi;',
-        'yirik xalqaro investitsiyalar va ilgʻor texnologiyalar jalb qilinadi;',
-        'milliy kompaniyalar global bozorlarga olib chiqiladi;',
+        'Õzbekiston Markaziy Osiyoning iqtisodiy markaziga aylantiriladi;',
+        'yirik xalqaro investitsiyalar va ilğor texnologiyalar jalb qilinadi;',
+        'milliy kompaniyalar global bozorlarga olib çiqiladi;',
         'sanoat, logistika, moliya, savdo, turizm va raqamli iqtisodiyot rivojlantiriladi;',
-        'yangi ish oʻrinlari va yuqori daromadli kasblar yaratiladi;',
-        'ilm-fan, taʼlim va innovatsiyalar iqtisodiy taraqqiyotning asosiy kuchiga aylantiriladi;',
-        'Oʻzbekistonning xalqaro iqtisodiy nufuzi va raqobatbardoshligi oshiriladi.',
+        'yangi iş õrinlari va yuqori daromadli kasblar yaratiladi;',
+        'ilm-fan, taʼlim va innovatsiyalar iqtisodiy taraqqiyotning asosiy kuçiga aylantiriladi;',
+        'Õzbekistonning xalqaro iqtisodiy nufuzi va raqobatbardoşligi oşiriladi.',
       ],
     },
     {
       kind: 'paragraph',
       text:
-        '«Yangi Oʻzbekiston — Yangi Renessans» — bu mamlakatimizni isteʼmolchi iqtisodiyotdan ishlab chiqaruvchi, eksport qiluvchi, innovatsiya yaratuvchi va mintaqaviy jarayonlarni boshqaruvchi qudratli iqtisodiy davlatga aylantirish gʻoyasidir.',
+        '«Yangi Õzbekiston — Yangi Renessans» — bu mamlakatimizni isteʼmolçi iqtisodiyotdan işlab çiqaruvçi, eksport qiluvçi, innovatsiya yaratuvçi va mintaqaviy jarayonlarni boşqaruvçi qudratli iqtisodiy davlatga aylantiriş ğoyasidir.',
     },
     {
       kind: 'paragraph',
       text:
-        '«Yangi Oʻzbekiston — Yangi Renessans» — mamlakatimizda amalga oshirilayotgan keng koʻlamli islohotlarni qoʻllab-quvvatlash, jamiyatning intellektual, iqtisodiy va maʼnaviy salohiyatini safarbar etishga qaratilgan strategik gʻoyadir.',
+        '«Yangi Õzbekiston — Yangi Renessans» — mamlakatimizda amalga oşirilayotgan keng kõlamli islohotlarni qõllab-quvvatlaş, jamiyatning intellektual, iqtisodiy va maʼnaviy salohiyatini safarbar etişga qaratilgan strategik ğoyadir.',
     },
     {
       kind: 'paragraph',
       text:
-        'Mazkur gʻoyaning asosiy maqsadi — davlat, jamoatchilik, xususiy sektor, ilm-fan, taʼlim, ommaviy axborot vositalari va xalqaro hamkorlarning imkoniyatlarini yagona taraqqiyot maqsadi atrofida birlashtirishdir.',
+        'Mazkur ğoyaning asosiy maqsadi — davlat, jamoatçilik, xususiy sektor, ilm-fan, taʼlim, ommaviy axborot vositalari va xalqaro hamkorlarning imkoniyatlarini yagona taraqqiyot maqsadi atrofida birlaştirişdir.',
     },
     {
       kind: 'list',
-      lead: 'Gʻoya quyidagi ustuvor yoʻnalishlarni qamrab oladi:',
+      lead: 'Ğoya quyidagi ustuvor yõnalişlarni qamrab oladi:',
       items: [
-        'inson kapitalini rivojlantirish, ilm-fan va taʼlimni yuksaltirish;',
-        'tadbirkorlik, investitsiya va innovatsiyalarni qoʻllab-quvvatlash;',
-        'yoshlar va xotin-qizlarning iqtisodiy faolligini oshirish;',
-        'zamonaviy texnologiyalar va raqamli boshqaruv tizimlarini joriy etish;',
-        'milliy qadriyatlar, bunyodkorlik va vatanparvarlik ruhini mustahkamlash;',
-        'Oʻzbekistonning xalqaro iqtisodiy va siyosiy nufuzini oshirish.',
+        'inson kapitalini rivojlantiriş, ilm-fan va taʼlimni yuksaltiriş;',
+        'tadbirkorlik, investitsiya va innovatsiyalarni qõllab-quvvatlaş;',
+        'yoşlar va xotin-qizlarning iqtisodiy faolligini oşiriş;',
+        'zamonaviy texnologiyalar va raqamli boşqaruv tizimlarini joriy etiş;',
+        'milliy qadriyatlar, bunyodkorlik va vatanparvarlik ruhini mustahkamlaş;',
+        'Õzbekistonning xalqaro iqtisodiy va siyosiy nufuzini oşiriş.',
       ],
     },
     {
       kind: 'paragraph',
       text:
-        'Oʻzbekiston Iqtisodiyoti Assambleyasi ushbu gʻoyani amalga oshirishda davlat–jamoatchilik–xususiy sektor hamkorligi asosida 4 ta strategik yoʻnalish, 20 ta loyiha va 50 ta tarmoq uyushmasini yagona tizimga birlashtirishni nazarda tutadi.',
+        'Õzbekiston Iqtisodiyoti Assambleyasi uşbu ğoyani amalga oşirişda davlat–jamoatçilik–xususiy sektor hamkorligi asosida 4 ta strategik yõnaliş, 20 ta loyiha va 50 ta tarmoq uyuşmasini yagona tizimga birlaştirişni nazarda tutadi.',
     },
     {
       kind: 'paragraph',
       text:
-        'Mazkur tizim orqali tadbirkorlar, olimlar, yoshlar, investorlar, xalqaro tashkilotlar va davlat idoralari oʻrtasida amaliy hamkorlik mexanizmlari shakllantirilib, yangi ish oʻrinlari, investitsiyalar, eksport, innovatsion loyihalar va ijtimoiy tashabbuslarni rivojlantirish koʻzda tutiladi.',
+        'Mazkur tizim orqali tadbirkorlar, olimlar, yoşlar, investorlar, xalqaro taşkilotlar va davlat idoralari õrtasida amaliy hamkorlik mexanizmlari şakllantirilib, yangi iş õrinlari, investitsiyalar, eksport, innovatsion loyihalar va ijtimoiy taşabbuslarni rivojlantiriş kõzda tutiladi.',
     },
     {
       kind: 'paragraph',
       text:
-        '«Yangi Oʻzbekiston — Yangi Renessans» — bu faqat gʻoya emas, balki xalqimizning bilim, mehnat, birlik va bunyodkorlik salohiyatiga tayangan holda yangi taraqqiyot bosqichini barpo etishga qaratilgan umumxalq harakatidir.',
+        '«Yangi Õzbekiston — Yangi Renessans» — bu faqat ğoya emas, balki xalqimizning bilim, mehnat, birlik va bunyodkorlik salohiyatiga tayangan holda yangi taraqqiyot bosqiçini barpo etişga qaratilgan umumxalq harakatidir.',
     },
   ],
   ru: [

@@ -12,7 +12,9 @@ import {getSiteInfo} from '@/lib/site';
 import '../globals.css';
 
 const inter = Inter({
-  subsets: ['latin', 'cyrillic'],
+  // latin-ext carries ğ and ş: without it the reformed Uzbek alphabet renders
+  // those two letters in a fallback font, mid-word.
+  subsets: ['latin', 'latin-ext', 'cyrillic'],
   variable: '--font-sans',
   display: 'swap',
 });

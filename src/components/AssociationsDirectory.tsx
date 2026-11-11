@@ -4,6 +4,7 @@ import {useMemo, useState} from 'react';
 import {Link} from '@/i18n/navigation';
 import RevealScope from '@/components/motion/RevealScope';
 import type {LocalizedAssociation} from '@/data/associations';
+import {matchesUzbek, monogram} from '@/lib/uzLatin';
 
 type Labels = {
   searchPlaceholder: string;
@@ -12,11 +13,6 @@ type Labels = {
   noResults: string;
   unit: string;
 };
-
-function monogram(name: string) {
-  const m = name.match(/[A-Za-zА-Яа-яЁёЎўҚқҒғҲҳ0-9]/);
-  return (m ? m[0] : name.charAt(0)).toUpperCase();
-}
 
 export default function AssociationsDirectory({
   items,
@@ -28,10 +24,12 @@ export default function AssociationsDirectory({
   const [query, setQuery] = useState('');
 
   const filtered = useMemo(() => {
-    const q = query.trim().toLowerCase();
+    const q = query.trim();
     if (!q) return items;
+    // Spelling-independent: "o'zbekiston" and "shahar" must still find
+    // "Õzbekiston" and "şahar".
     return items.filter((it) =>
-      [it.name, it.activity].filter(Boolean).some((v) => v!.toLowerCase().includes(q)),
+      [it.name, it.activity].filter(Boolean).some((v) => matchesUzbek(v!, q)),
     );
   }, [items, query]);
 

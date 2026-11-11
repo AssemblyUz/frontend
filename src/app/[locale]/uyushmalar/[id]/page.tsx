@@ -4,6 +4,7 @@ import {getTranslations, setRequestLocale} from 'next-intl/server';
 import {Link} from '@/i18n/navigation';
 import {routing} from '@/i18n/routing';
 import {getAssociation, allAssociationIds} from '@/data/associations';
+import {monogram} from '@/lib/uzLatin';
 
 export function generateStaticParams() {
   const ids = allAssociationIds();
@@ -19,11 +20,6 @@ export async function generateMetadata({
   const assoc = getAssociation(id, locale);
   if (!assoc) return {};
   return {title: assoc.name, description: assoc.activity};
-}
-
-function monogram(name: string) {
-  const m = name.match(/[A-Za-zА-Яа-яЁёЎўҚқҒғҲҳ0-9]/);
-  return (m ? m[0] : name.charAt(0)).toUpperCase();
 }
 
 export default async function AssociationDetailPage({
